@@ -1,0 +1,27 @@
+Z:/GitHub/digital-design/Lab-1/counter/simulation/modelsim/counter.vho {1 {vcom -work work -2002 -explicit -stats=none Z:/GitHub/digital-design/Lab-1/counter/simulation/modelsim/counter.vho
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package VITAL_Timing
+-- Loading package VITAL_Primitives
+-- Loading package maxii_atom_pack
+-- Loading package maxii_components
+-- Compiling entity counter
+-- Compiling architecture structure of counter
+
+} {} {}} Z:/GitHub/digital-design/Lab-1/counter_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/GitHub/digital-design/Lab-1/counter_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_tb
+-- Compiling architecture TB of counter_tb
+-- Loading package VITAL_Timing
+-- Loading package VITAL_Primitives
+-- Loading package maxii_atom_pack
+-- Loading package maxii_components
+-- Loading entity counter
+
+} {} {}}

@@ -1,0 +1,103 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/17.1
+Ecounter
+Z0 w1548027090
+Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z2 DPx5 maxii 15 maxii_atom_pack 0 22 0AkPE6`BcAMTVDnhGOIT:1
+Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z4 DPx5 maxii 16 maxii_components 0 22 eRFH09VjTO<GE<HQHm1Nk1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 dZ:/GitHub/digital-design/Lab-1/counter-test
+Z8 8Z:/GitHub/digital-design/Lab-1/counter/simulation/modelsim/counter.vho
+Z9 FZ:/GitHub/digital-design/Lab-1/counter/simulation/modelsim/counter.vho
+l0
+L34
+VAd3MB;jlc]10:`b=T]clM0
+!s100 Z9]`Ob]]_hfV_^Lc6]<fB2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1548027220
+!i10b 1
+Z12 !s108 1548027220.000000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/GitHub/digital-design/Lab-1/counter/simulation/modelsim/counter.vho|
+Z14 !s107 Z:/GitHub/digital-design/Lab-1/counter/simulation/modelsim/counter.vho|
+!i113 1
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+Z17 DEx4 work 7 counter 0 22 Ad3MB;jlc]10:`b=T]clM0
+l143
+L63
+Z18 V3dol93j;9A?l:1NTHIaRV1
+Z19 !s100 WinPAlUEjH0=TORW;i^?H1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Ecounter_tb
+Z20 w1548015450
+Z21 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R5
+R6
+R7
+Z22 8Z:/GitHub/digital-design/Lab-1/counter_tb.vhd
+Z23 FZ:/GitHub/digital-design/Lab-1/counter_tb.vhd
+l0
+L8
+VS>Ya]0C>iIkha9`J>B87W3
+!s100 S1[Bdaelf6PZgfC@f;JDz2
+R10
+32
+R11
+!i10b 1
+Z24 !s108 1548027219.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/GitHub/digital-design/Lab-1/counter_tb.vhd|
+Z26 !s107 Z:/GitHub/digital-design/Lab-1/counter_tb.vhd|
+!i113 1
+R15
+R16
+Atb
+R1
+R2
+R3
+R4
+R17
+R21
+R5
+R6
+DEx4 work 10 counter_tb 0 22 S>Ya]0C>iIkha9`J>B87W3
+l41
+L11
+VX@22A`2H047S_X2Q`[HZK0
+!s100 7AWDWjZMhg8JN4l[cj4C?3
+R10
+32
+R11
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R15
+R16
