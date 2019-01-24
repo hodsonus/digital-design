@@ -1,0 +1,11 @@
+Fitter Status : Successful - Wed Jan 23 19:32:25 2019
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : alu_sla
+Top-level Entity Name : alu_sla
+Family : MAX II
+Device : EPM570T100C3
+Timing Models : Final
+Total logic elements : 534 / 570 ( 94 % )
+Total pins : 53 / 76 ( 70 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

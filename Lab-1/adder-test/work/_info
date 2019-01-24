@@ -1,0 +1,103 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dZ:/GitHub/digital-design/Lab-1/counter-test
+Eadder
+Z0 w1548120208
+Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z2 DPx5 maxii 15 maxii_atom_pack 0 22 0AkPE6`BcAMTVDnhGOIT:1
+Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z4 DPx5 maxii 16 maxii_components 0 22 eRFH09VjTO<GE<HQHm1Nk1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 dZ:/GitHub/digital-design/Lab-1/adder-test
+Z8 8Z:/GitHub/digital-design/Lab-1/adder/simulation/modelsim/adder.vho
+Z9 FZ:/GitHub/digital-design/Lab-1/adder/simulation/modelsim/adder.vho
+l0
+L34
+VmEHGXJ_@gK:EYGcPmICUN1
+!s100 m<MIaUPVUh9oa3fYegmLY2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1548121068
+!i10b 1
+Z12 !s108 1548121067.000000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/GitHub/digital-design/Lab-1/adder/simulation/modelsim/adder.vho|
+Z14 !s107 Z:/GitHub/digital-design/Lab-1/adder/simulation/modelsim/adder.vho|
+!i113 1
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+Z17 DEx4 work 5 adder 0 22 mEHGXJ_@gK:EYGcPmICUN1
+l74
+L47
+VaL<K]12ejPWYN8kE7izbJ0
+!s100 MP3IgmNYz<XPjdoGY5@LY1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eadder_tb
+Z18 w1548015446
+Z19 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R5
+R6
+R7
+Z20 8Z:/GitHub/digital-design/Lab-1/adder_tb.vhd
+Z21 FZ:/GitHub/digital-design/Lab-1/adder_tb.vhd
+l0
+L8
+VlNzV;BRTo_:<@RIU:K?>L1
+!s100 PDNPhQNIQ4JdmiNVWd5YI3
+R10
+32
+R11
+!i10b 1
+Z22 !s108 1548121068.000000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/GitHub/digital-design/Lab-1/adder_tb.vhd|
+Z24 !s107 Z:/GitHub/digital-design/Lab-1/adder_tb.vhd|
+!i113 1
+R15
+R16
+Atb
+R1
+R2
+R3
+R4
+R17
+R19
+R5
+R6
+Z25 DEx4 work 8 adder_tb 0 22 lNzV;BRTo_:<@RIU:K?>L1
+l16
+L11
+Z26 Vn^JjCSfc]loAPWMfo=8:N0
+Z27 !s100 2E?IVF`@j[8^@^TA`74R82
+R10
+32
+R11
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R15
+R16

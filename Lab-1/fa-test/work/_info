@@ -1,0 +1,116 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dZ:/GitHub/digital-design/Lab-1/adder-test
+Efa
+Z0 w1548117291
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dZ:/GitHub/digital-design/Lab-1/fa-test
+Z4 8Z:/GitHub/digital-design/Lab-1/adder/fa.vhd
+Z5 FZ:/GitHub/digital-design/Lab-1/adder/fa.vhd
+l0
+L4
+VCzEHn>YV@@;[FGGUV]AGg3
+!s100 IXNnQEg=N3SCF7I]UY>6Y0
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1548122233
+!i10b 1
+Z8 !s108 1548122232.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/GitHub/digital-design/Lab-1/adder/fa.vhd|
+Z10 !s107 Z:/GitHub/digital-design/Lab-1/adder/fa.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abhv
+R1
+R2
+Z13 DEx4 work 2 fa 0 22 CzEHn>YV@@;[FGGUV]AGg3
+l14
+L13
+Z14 VbIH=Kbo20JDL[oY=1cNAR2
+Z15 !s100 894[DS_k0TXC?D;=hJ4?<3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Astructure
+DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+DPx5 maxii 15 maxii_atom_pack 0 22 0AkPE6`BcAMTVDnhGOIT:1
+DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+DPx5 maxii 16 maxii_components 0 22 eRFH09VjTO<GE<HQHm1Nk1
+R1
+R2
+DEx4 work 2 fa 0 22 JhO=W_@LeDj18oJ<6UA141
+l68
+L47
+V1EgKWR0D<>mm?e^G]jCXA0
+!s100 9V5iWgTBV7=:kLQz=5Pdz3
+R6
+32
+!s110 1548121740
+!i10b 1
+!s108 1548121740.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/GitHub/digital-design/Lab-1/fa/simulation/modelsim/fa.vho|
+!s107 Z:/GitHub/digital-design/Lab-1/fa/simulation/modelsim/fa.vho|
+!i113 1
+R11
+R12
+FZ:/GitHub/digital-design/Lab-1/fa/simulation/modelsim/fa.vho
+w1548121681
+8Z:/GitHub/digital-design/Lab-1/fa/simulation/modelsim/fa.vho
+Efa_tb
+Z16 w1548015457
+Z17 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z18 8Z:/GitHub/digital-design/Lab-1/fa_tb.vhd
+Z19 FZ:/GitHub/digital-design/Lab-1/fa_tb.vhd
+l0
+L8
+VI_3P48INb@BMb3ij>;@EP1
+!s100 3_abXP8hnMOG:JhJ230mZ2
+R6
+32
+Z20 !s110 1548122232
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/GitHub/digital-design/Lab-1/fa_tb.vhd|
+Z22 !s107 Z:/GitHub/digital-design/Lab-1/fa_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+R13
+R17
+R1
+R2
+DEx4 work 5 fa_tb 0 22 I_3P48INb@BMb3ij>;@EP1
+l15
+L11
+V;71bgaGFnXX6ZEYW?:eG81
+!s100 FO=:8hk>d::o5CB`_T0@f0
+R6
+32
+R20
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12

@@ -1,0 +1,19 @@
+Z:/GitHub/digital-design/Lab-1/fa_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/GitHub/digital-design/Lab-1/fa_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fa_tb
+-- Compiling architecture TB of fa_tb
+-- Loading entity fa
+
+} {} {}} Z:/GitHub/digital-design/Lab-1/adder/fa.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/GitHub/digital-design/Lab-1/adder/fa.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fa
+-- Compiling architecture BHV of fa
+
+} {} {}}
