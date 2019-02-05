@@ -1,10 +1,10 @@
 vendor_name = ModelSim
-source_file = 1, Z:/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd
+source_file = 1, Y:/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd
 source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, Z:/GitHub/digital-design/Lab-2/decoder7seg/db/decoder7seg.cbx.xml
+source_file = 1, Y:/GitHub/digital-design/Lab-2/decoder7seg/db/decoder7seg.cbx.xml
 design_name = decoder7seg
 instance = comp, \input[0]~I\, input[0], decoder7seg, 1
 instance = comp, \input[2]~I\, input[2], decoder7seg, 1

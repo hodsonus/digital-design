@@ -1,5 +1,5 @@
 Fitter report for top_level
-Wed Jan 23 20:22:58 2019
+Mon Feb 04 20:25:53 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -62,15 +62,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jan 23 20:22:58 2019       ;
+; Fitter Status                      ; Successful - Mon Feb 04 20:25:53 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_level                                   ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 82 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 82 / 49,760 ( < 1 % )                       ;
+; Total logic elements               ; 83 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 83 / 49,760 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 0 / 49,760 ( 0 % )                          ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 60 / 360 ( 17 % )                           ;
@@ -89,6 +89,8 @@ refer to the applicable agreement for further details.
 ; Option                                                                     ; Setting             ; Default Value                         ;
 +----------------------------------------------------------------------------+---------------------+---------------------------------------+
 ; Device                                                                     ; 10M50DAF484C6GES    ;                                       ;
+; Minimum Core Junction Temperature                                          ; 0                   ;                                       ;
+; Maximum Core Junction Temperature                                          ; 85                  ;                                       ;
 ; Fit Attempts to Skip                                                       ; 0                   ; 0.0                                   ;
 ; Reserve all unused pins                                                    ; As input tri-stated ; As input tri-stated with weak pull-up ;
 ; Use smart compilation                                                      ; Off                 ; Off                                   ;
@@ -151,7 +153,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.8%      ;
+;     Processor 2            ;   1.5%      ;
 +----------------------------+-------------+
 
 
@@ -161,8 +163,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 221 ) ; 0.00 % ( 0 / 221 )         ; 0.00 % ( 0 / 221 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 221 ) ; 0.00 % ( 0 / 221 )         ; 0.00 % ( 0 / 221 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 222 ) ; 0.00 % ( 0 / 222 )         ; 0.00 % ( 0 / 222 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 222 ) ; 0.00 % ( 0 / 222 )         ; 0.00 % ( 0 / 222 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -185,7 +187,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 205 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 206 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -193,7 +195,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /GitHub/digital-design/Lab-2/board/output_files/top_level.pin.
+The pin-out file can be found in //vmware-host/Shared Folders/GitHub/digital-design/Lab-2/board/output_files/top_level.pin.
 
 
 +---------------------------------------------------------------------+
@@ -201,26 +203,26 @@ The pin-out file can be found in /GitHub/digital-design/Lab-2/board/output_files
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 82 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 82                    ;
+; Total logic elements                        ; 83 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 83                    ;
 ;     -- Register only                        ; 0                     ;
 ;     -- Combinational with a register        ; 0                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
 ;     -- 4 input functions                    ; 51                    ;
-;     -- 3 input functions                    ; 20                    ;
-;     -- <=2 input functions                  ; 11                    ;
+;     -- 3 input functions                    ; 23                    ;
+;     -- <=2 input functions                  ; 9                     ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
 ;     -- normal mode                          ; 64                    ;
-;     -- arithmetic mode                      ; 18                    ;
+;     -- arithmetic mode                      ; 19                    ;
 ;                                             ;                       ;
 ; Total registers*                            ; 0 / 51,509 ( 0 % )    ;
 ;     -- Dedicated logic registers            ; 0 / 49,760 ( 0 % )    ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )     ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 8 / 3,110 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 7 / 3,110 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 60 / 360 ( 17 % )     ;
 ;     -- Clock pins                           ; 0 / 8 ( 0 % )         ;
@@ -241,11 +243,11 @@ The pin-out file can be found in /GitHub/digital-design/Lab-2/board/output_files
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%    ;
-; Peak interconnect usage (total/H/V)         ; 0.7% / 0.9% / 0.5%    ;
+; Peak interconnect usage (total/H/V)         ; 0.6% / 0.9% / 0.4%    ;
 ; Maximum fan-out                             ; 24                    ;
 ; Highest non-global fan-out                  ; 24                    ;
-; Total fan-out                               ; 356                   ;
-; Average fan-out                             ; 1.61                  ;
+; Total fan-out                               ; 366                   ;
+; Average fan-out                             ; 1.65                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -258,26 +260,26 @@ The pin-out file can be found in /GitHub/digital-design/Lab-2/board/output_files
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 82 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 82                   ; 0                              ;
+; Total logic elements                        ; 83 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 83                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;     -- Combinational with a register        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
 ;     -- 4 input functions                    ; 51                   ; 0                              ;
-;     -- 3 input functions                    ; 20                   ; 0                              ;
-;     -- <=2 input functions                  ; 11                   ; 0                              ;
+;     -- 3 input functions                    ; 23                   ; 0                              ;
+;     -- <=2 input functions                  ; 9                    ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
 ;     -- normal mode                          ; 64                   ; 0                              ;
-;     -- arithmetic mode                      ; 18                   ; 0                              ;
+;     -- arithmetic mode                      ; 19                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 0                    ; 0                              ;
 ;     -- Dedicated logic registers            ; 0 / 49760 ( 0 % )    ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 8 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 7 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 60                   ; 0                              ;
@@ -294,7 +296,7 @@ The pin-out file can be found in /GitHub/digital-design/Lab-2/board/output_files
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 362                  ; 8                              ;
+;     -- Total Connections                    ; 372                  ; 8                              ;
 ;     -- Registered Connections               ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -332,12 +334,12 @@ The pin-out file can be found in /GitHub/digital-design/Lab-2/board/output_files
 ; switch[0] ; C10   ; 7        ; 51           ; 54           ; 28           ; 24                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; switch[1] ; C11   ; 7        ; 51           ; 54           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; switch[2] ; D12   ; 7        ; 51           ; 54           ; 0            ; 9                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; switch[3] ; C12   ; 7        ; 54           ; 54           ; 28           ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; switch[4] ; A12   ; 7        ; 54           ; 54           ; 21           ; 10                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; switch[5] ; B12   ; 7        ; 49           ; 54           ; 0            ; 15                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; switch[6] ; A13   ; 7        ; 54           ; 54           ; 14           ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; switch[7] ; A14   ; 7        ; 58           ; 54           ; 28           ; 12                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; switch[8] ; B14   ; 7        ; 56           ; 54           ; 0            ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; switch[3] ; C12   ; 7        ; 54           ; 54           ; 28           ; 21                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; switch[4] ; A12   ; 7        ; 54           ; 54           ; 21           ; 12                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; switch[5] ; B12   ; 7        ; 49           ; 54           ; 0            ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; switch[6] ; A13   ; 7        ; 54           ; 54           ; 14           ; 12                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; switch[7] ; A14   ; 7        ; 58           ; 54           ; 28           ; 13                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; switch[8] ; B14   ; 7        ; 56           ; 54           ; 0            ; 12                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; switch[9] ; F15   ; 7        ; 69           ; 54           ; 0            ; 13                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
@@ -977,8 +979,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; led5[5]   ; Incomplete set of assignments ;
 ; led5[6]   ; Incomplete set of assignments ;
 ; led5_dp   ; Incomplete set of assignments ;
-; switch[2] ; Incomplete set of assignments ;
 ; switch[6] ; Incomplete set of assignments ;
+; switch[2] ; Incomplete set of assignments ;
 ; button[1] ; Incomplete set of assignments ;
 ; switch[0] ; Incomplete set of assignments ;
 ; button[0] ; Incomplete set of assignments ;
@@ -997,10 +999,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node         ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                            ; Entity Name ; Library Name ;
 +------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------------+-------------+--------------+
-; |top_level                         ; 82 (1)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 60   ; 0            ; 82 (1)       ; 0 (0)             ; 0 (0)            ; 0          ; |top_level                                                     ; top_level   ; work         ;
-;    |alu_ns:U_ALU|                  ; 74 (45)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 74 (45)      ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|alu_ns:U_ALU                                        ; alu_ns      ; work         ;
-;       |lpm_mult:Mult0|             ; 29 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|alu_ns:U_ALU|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
-;          |mult_6cs:auto_generated| ; 29 (29)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated ; mult_6cs    ; work         ;
+; |top_level                         ; 83 (1)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 60   ; 0            ; 83 (1)       ; 0 (0)             ; 0 (0)            ; 0          ; |top_level                                                     ; top_level   ; work         ;
+;    |alu_ns:U_ALU|                  ; 75 (45)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 75 (45)      ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|alu_ns:U_ALU                                        ; alu_ns      ; work         ;
+;       |lpm_mult:Mult0|             ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|alu_ns:U_ALU|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
+;          |mult_9js:auto_generated| ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated ; mult_9js    ; work         ;
 ;    |decoder7seg:U_LED0|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|decoder7seg:U_LED0                                  ; decoder7seg ; work         ;
 +------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1059,221 +1061,227 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led5[5]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led5[6]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led5_dp   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; switch[2] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; switch[6] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; button[1] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; switch[0] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; switch[2] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; button[1] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; switch[0] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; button[0] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; switch[8] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; switch[1] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; switch[3] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; switch[9] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; switch[7] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; switch[7] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; switch[4] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; switch[5] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                             ;
-+------------------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                          ; Pad To Core Index ; Setting ;
-+------------------------------------------------------------------------------+-------------------+---------+
-; switch[2]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Add0~0                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Add1~0                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~1                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~3                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[0]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[1]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[2]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[3]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[4]           ; 0                 ; 6       ;
-; switch[6]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Add0~0                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Add1~0                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~1                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~3                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~6                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~10                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~18                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[0]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[1]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le4a[0]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[1]           ; 0                 ; 6       ;
-; button[1]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Mux0~0                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~1                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~2                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~3                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~5                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~6                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~7                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~10                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~11                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~13                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~14                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~15                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~18                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux4~0                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux4~2                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~20                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~21                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~22                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~23                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~24                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~25                                                  ; 1                 ; 6       ;
-; switch[0]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Mux0~0                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~2                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~3                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~4                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~5                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~6                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~7                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~8                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~9                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~10                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~11                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~12                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~13                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~14                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~15                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~16                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~18                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux4~3                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~20                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~21                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~22                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~23                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~24                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~25                                                  ; 0                 ; 6       ;
-; button[0]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Mux3~0                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux3~1                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux2~0                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux1~0                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux1~1                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~17                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux4~3                                                   ; 1                 ; 6       ;
-; switch[8]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Add1~4                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Add0~4                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~2                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~9                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~11                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~14                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[2]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[3]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le4a[2]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[3]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~22                                                  ; 0                 ; 6       ;
-; switch[1]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Mux3~0                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux2~0                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux2~1                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux1~0                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~17                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~19                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux4~0                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux4~2                                                   ; 0                 ; 6       ;
-; switch[3]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Add1~2                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Add0~2                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|add6_result[0]~0  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~7                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[0]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[1]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[2]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|cs3a[1]~0         ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[3]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[4]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[0]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[1]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[2]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[3]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[4]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~24                                                  ; 1                 ; 6       ;
-; switch[9]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Add1~6                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Add0~6                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~5                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~6                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~13                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~15                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux4~0                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[3]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[4]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[4]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le4a[3]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le4a[4]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~20                                                  ; 0                 ; 6       ;
-; switch[7]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Add1~2                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Add0~2                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~5                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~7                                                   ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~10                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~13                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~14                                                  ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[1]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le5a[2]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le4a[1]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[2]           ; 1                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~24                                                  ; 1                 ; 6       ;
-; switch[4]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Add1~4                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Add0~4                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~11                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|cs3a[1]~0         ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[0]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[1]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[2]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[3]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[4]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~22                                                  ; 0                 ; 6       ;
-; switch[5]                                                                    ;                   ;         ;
-;      - alu_ns:U_ALU|Add1~6                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Add0~6                                                   ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|add10_result[0]~0 ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~15                                                  ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le4a[0]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le4a[1]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le4a[2]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[0]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[1]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[2]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[3]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le2a[4]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le4a[3]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_6cs:auto_generated|le4a[4]           ; 0                 ; 6       ;
-;      - alu_ns:U_ALU|Mux0~20                                                  ; 0                 ; 6       ;
-+------------------------------------------------------------------------------+-------------------+---------+
++----------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                     ;
++----------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                  ; Pad To Core Index ; Setting ;
++----------------------------------------------------------------------+-------------------+---------+
+; switch[6]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Add0~0                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Add1~0                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~6                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~9                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~12                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~14                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~18                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[0]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[1]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[0]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[1]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[0]   ; 0                 ; 6       ;
+; switch[2]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Add0~0                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Add1~0                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~6                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~9                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[0]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[1]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[2]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[3]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[4]   ; 0                 ; 6       ;
+; button[1]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Mux0~6                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~7                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~8                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~9                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~11                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~12                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~14                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~15                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~16                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~18                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux4~0                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux4~2                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~20                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~22                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~23                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~24                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~26                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~27                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~28                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~30                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~31                                          ; 0                 ; 6       ;
+; switch[0]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Mux0~6                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~8                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~9                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~10                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~11                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~12                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~13                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~14                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~15                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~16                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~18                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux4~3                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~20                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~21                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~22                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~23                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~24                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~25                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~26                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~27                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~28                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~29                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~30                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~31                                          ; 1                 ; 6       ;
+; button[0]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Mux3~0                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux3~1                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux2~0                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux1~0                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux1~1                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~17                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux4~3                                           ; 1                 ; 6       ;
+; switch[8]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Add1~4                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Add0~4                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~8                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~13                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~16                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[2]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[3]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[2]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[3]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[2]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~25                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~26                                          ; 0                 ; 6       ;
+; switch[1]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Mux3~0                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux2~0                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux2~1                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux1~0                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~17                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~19                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux4~0                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux4~2                                           ; 0                 ; 6       ;
+; switch[3]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Add1~2                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Add0~2                                           ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|op_3~0    ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[5]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[0]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[1]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[2]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[0]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[3]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|cs2a[1]~0 ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[4]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[0]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[1]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[4]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[2]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[3]   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~29                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~30                                          ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|op_3~14   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|op_3~12   ; 1                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|op_3~10   ; 1                 ; 6       ;
+; switch[9]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Add1~6                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Add0~6                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~11                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~12                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~15                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux4~0                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[3]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[4]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[3]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[4]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[3]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~21                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~22                                          ; 0                 ; 6       ;
+; switch[7]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Add1~2                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Add0~2                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~11                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~14                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~15                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~16                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[1]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le3a[2]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[1]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[2]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[1]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~29                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~30                                          ; 0                 ; 6       ;
+; switch[4]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Add1~4                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Add0~4                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[5]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[0]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|cs2a[1]~0 ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[0]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[1]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[4]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[2]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[3]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~25                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~26                                          ; 0                 ; 6       ;
+; switch[5]                                                            ;                   ;         ;
+;      - alu_ns:U_ALU|Add1~6                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Add0~6                                           ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[5]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[0]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[0]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[1]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le4a[4]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[2]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|lpm_mult:Mult0|mult_9js:auto_generated|le5a[3]   ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~21                                          ; 0                 ; 6       ;
+;      - alu_ns:U_ALU|Mux0~22                                          ; 0                 ; 6       ;
++----------------------------------------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------+
-; Routing Usage Summary                          ;
-+-----------------------+------------------------+
-; Routing Resource Type ; Usage                  ;
-+-----------------------+------------------------+
-; Block interconnects   ; 95 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 1 / 5,382 ( < 1 % )    ;
-; C4 interconnects      ; 33 / 106,704 ( < 1 % ) ;
-; Direct links          ; 7 / 148,641 ( < 1 % )  ;
-; Global clocks         ; 0 / 20 ( 0 % )         ;
-; Local interconnects   ; 44 / 49,760 ( < 1 % )  ;
-; NSLEEPs               ; 0 / 500 ( 0 % )        ;
-; R24 interconnects     ; 2 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 70 / 147,764 ( < 1 % ) ;
-+-----------------------+------------------------+
++-------------------------------------------------+
+; Routing Usage Summary                           ;
++-----------------------+-------------------------+
+; Routing Resource Type ; Usage                   ;
++-----------------------+-------------------------+
+; Block interconnects   ; 105 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 2 / 5,382 ( < 1 % )     ;
+; C4 interconnects      ; 38 / 106,704 ( < 1 % )  ;
+; Direct links          ; 23 / 148,641 ( < 1 % )  ;
+; Global clocks         ; 0 / 20 ( 0 % )          ;
+; Local interconnects   ; 38 / 49,760 ( < 1 % )   ;
+; NSLEEPs               ; 0 / 500 ( 0 % )         ;
+; R24 interconnects     ; 4 / 5,406 ( < 1 % )     ;
+; R4 interconnects      ; 57 / 147,764 ( < 1 % )  ;
++-----------------------+-------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 10.25) ; Number of LABs  (Total = 8) ;
+; Number of Logic Elements  (Average = 11.86) ; Number of LABs  (Total = 7) ;
 +---------------------------------------------+-----------------------------+
-; 1                                           ; 2                           ;
+; 1                                           ; 1                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
@@ -1286,19 +1294,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
 ; 13                                          ; 1                           ;
-; 14                                          ; 1                           ;
+; 14                                          ; 0                           ;
 ; 15                                          ; 2                           ;
-; 16                                          ; 1                           ;
+; 16                                          ; 2                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 10.25) ; Number of LABs  (Total = 8) ;
+; Number of Signals Sourced  (Average = 11.86) ; Number of LABs  (Total = 7) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
-; 1                                            ; 2                           ;
+; 1                                            ; 1                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
@@ -1311,55 +1319,57 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
 ; 13                                           ; 1                           ;
-; 14                                           ; 1                           ;
+; 14                                           ; 0                           ;
 ; 15                                           ; 2                           ;
-; 16                                           ; 1                           ;
+; 16                                           ; 2                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 4.50) ; Number of LABs  (Total = 8) ;
+; Number of Signals Sourced Out  (Average = 6.00) ; Number of LABs  (Total = 7) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 2                           ;
-; 2                                               ; 2                           ;
+; 1                                               ; 1                           ;
+; 2                                               ; 0                           ;
 ; 3                                               ; 0                           ;
-; 4                                               ; 0                           ;
-; 5                                               ; 1                           ;
-; 6                                               ; 0                           ;
+; 4                                               ; 1                           ;
+; 5                                               ; 0                           ;
+; 6                                               ; 2                           ;
 ; 7                                               ; 1                           ;
-; 8                                               ; 1                           ;
-; 9                                               ; 0                           ;
-; 10                                              ; 1                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 2                           ;
 +-------------------------------------------------+-----------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.38) ; Number of LABs  (Total = 8) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 2                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 1                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 2                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 1                           ;
-; 17                                          ; 1                           ;
-+---------------------------------------------+-----------------------------+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++----------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 11.43) ; Number of LABs  (Total = 7) ;
++----------------------------------------------+-----------------------------+
+; 0                                            ; 0                           ;
+; 1                                            ; 0                           ;
+; 2                                            ; 0                           ;
+; 3                                            ; 0                           ;
+; 4                                            ; 1                           ;
+; 5                                            ; 0                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 0                           ;
+; 8                                            ; 0                           ;
+; 9                                            ; 0                           ;
+; 10                                           ; 0                           ;
+; 11                                           ; 1                           ;
+; 12                                           ; 0                           ;
+; 13                                           ; 1                           ;
+; 14                                           ; 0                           ;
+; 15                                           ; 0                           ;
+; 16                                           ; 2                           ;
+; 17                                           ; 0                           ;
+; 18                                           ; 0                           ;
+; 19                                           ; 0                           ;
+; 20                                           ; 1                           ;
++----------------------------------------------+-----------------------------+
 
 
 +------------------------------------------+
@@ -1471,8 +1481,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led5[5]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; led5[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; led5_dp            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; switch[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; switch[6]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; switch[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; button[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; switch[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; button[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1529,8 +1539,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device 10M50DAF484C6GES for design "top_level"
-Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
-Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
@@ -1558,7 +1568,7 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1567,30 +1577,30 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X45_Y44 to location X55_Y54
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X56_Y44 to location X66_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
-Info (144001): Generated suppressed messages file /GitHub/digital-design/Lab-2/board/output_files/top_level.fit.smsg
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (144001): Generated suppressed messages file //vmware-host/Shared Folders/GitHub/digital-design/Lab-2/board/output_files/top_level.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5389 megabytes
-    Info: Processing ended: Wed Jan 23 20:22:59 2019
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 5392 megabytes
+    Info: Processing ended: Mon Feb 04 20:25:54 2019
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /GitHub/digital-design/Lab-2/board/output_files/top_level.fit.smsg.
+The suppressed messages can be found in //vmware-host/Shared Folders/GitHub/digital-design/Lab-2/board/output_files/top_level.fit.smsg.
 
 

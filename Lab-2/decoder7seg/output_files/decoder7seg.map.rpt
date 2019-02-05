@@ -1,5 +1,5 @@
 Analysis & Synthesis report for decoder7seg
-Wed Jan 23 19:36:29 2019
+Fri Jan 25 12:38:22 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jan 23 19:36:29 2019       ;
+; Analysis & Synthesis Status ; Successful - Fri Jan 25 12:38:22 2019       ;
 ; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name               ; decoder7seg                                 ;
 ; Top-level Entity Name       ; decoder7seg                                 ;
@@ -143,7 +143,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                               ; Library ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
-; decoder7seg.vhd                  ; yes             ; User VHDL File  ; Z:/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd ;         ;
+; decoder7seg.vhd                  ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd ;         ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
 
 
@@ -212,22 +212,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jan 23 19:36:01 2019
+    Info: Processing started: Fri Jan 25 12:37:42 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off decoder7seg -c decoder7seg
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file decoder7seg.vhd
-    Info (12022): Found design unit 1: decoder7seg-BHV File: Z:/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd Line: 14
-    Info (12023): Found entity 1: decoder7seg File: Z:/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd Line: 7
+    Info (12022): Found design unit 1: decoder7seg-BHV File: Y:/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd Line: 14
+    Info (12023): Found entity 1: decoder7seg File: Y:/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd Line: 7
 Info (12127): Elaborating entity "decoder7seg" for the top level hierarchy
 Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 7 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4776 megabytes
-    Info: Processing ended: Wed Jan 23 19:36:29 2019
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Fri Jan 25 12:38:22 2019
+    Info: Elapsed time: 00:00:40
+    Info: Total CPU time (on all processors): 00:00:38
 
 

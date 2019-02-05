@@ -1,0 +1,21 @@
+Y:/GitHub/digital-design/Lab-2/alu_sla/alu_sla.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-2/alu_sla/alu_sla.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity alu_sla
+-- Compiling architecture BHV of alu_sla
+
+} {} {}} Y:/GitHub/digital-design/Lab-2/alu_sla_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-2/alu_sla_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity alu_sla_tb
+-- Compiling architecture TB of alu_sla_tb
+
+} {} {}}

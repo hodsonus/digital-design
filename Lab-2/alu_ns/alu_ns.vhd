@@ -32,6 +32,7 @@ architecture BHV of alu_ns is
     constant C_SHIFT_RIGHT : std_logic_vector(3 downto 0) := "1001";
     constant C_SWAP        : std_logic_vector(3 downto 0) := "1010";
     constant C_REVERSE     : std_logic_vector(3 downto 0) := "1011";
+    constant C_DIVIDE_4    : std_logic_vector(3 downto 0) := "1100";
 	 
 begin --BHV
     process(input1, input2, sel)
@@ -45,11 +46,11 @@ begin --BHV
                 output <= temp_add(width-1 downto 0);
                 overflow <= temp_add(width);
             when C_SUB =>
-                output <= std_logic_vector(signed(input1) - signed(input2));
+                output <= std_logic_vector(unsigned(input1) - unsigned(input2));
             when C_MULT => 
-                temp_mult := std_logic_vector(signed(input1) * signed(input2));
+                temp_mult := std_logic_vector(unsigned(input1) * unsigned(input2));
                 output <= temp_mult(width-1 downto 0);
-                if (unsigned(temp_mult) >= 16) then
+                if (unsigned(temp_mult(width*2-1 downto width)) > 0) then
                     overflow <= '1';
                 end if;
             when C_AND => 
@@ -82,6 +83,8 @@ begin --BHV
                 for i in 0 to width-1 loop
                     output(i) <= input1(width-1-i);
                 end loop;
+            when C_DIVIDE_4 =>
+                output <= std_logic_vector(SHIFT_RIGHT(unsigned(input1), 2));
             when others =>
                 output <= std_logic_vector(to_unsigned(0, width));
                 --output <= (others => '0');

@@ -3,6 +3,7 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity decoder7seg is
     port (
@@ -48,6 +49,8 @@ begin -- BHV
                 output <= "0000110";
             when "1111" =>
                 output <= "0001110";
+            when others =>
+                output <= "0000000";
         end case;
     end process;
 end BHV;

@@ -1,0 +1,3 @@
+use the "for generate" to generate all of the blocks required for the ripple carry adder
+	go back to lab 1 and copy/paste this part
+

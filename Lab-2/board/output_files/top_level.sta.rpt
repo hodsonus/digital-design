@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for top_level
-Wed Jan 23 20:23:17 2019
+Mon Feb 04 20:26:11 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -89,12 +89,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.3%      ;
+;     Processor 2            ;   3.2%      ;
 +----------------------------+-------------+
 
 
@@ -296,8 +296,8 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
-; switch[2]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch[6]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; switch[2]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; button[1]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch[0]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; button[0]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
@@ -599,13 +599,13 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jan 23 20:23:10 2019
+    Info: Processing started: Mon Feb 04 20:26:04 2019
 Info: Command: quartus_sta Lab-2-board -c top_level
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
-Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'top_level.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -650,7 +650,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4803 megabytes
-    Info: Processing ended: Wed Jan 23 20:23:17 2019
+    Info: Processing ended: Mon Feb 04 20:26:11 2019
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:05
 

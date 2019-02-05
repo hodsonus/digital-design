@@ -1,5 +1,5 @@
 vendor_name = ModelSim
-source_file = 1, //vmware-host/Shared Folders/GitHub/digital-design/Lab-1/counter_board/counter.bdf
+source_file = 1, Y:/GitHub/digital-design/Lab-1/counter-board/counter.bdf
 source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/others/maxplus2/74163.tdf
 source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal.inc
 source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/others/maxplus2/f74163.bdf
@@ -16,8 +16,9 @@ instance = comp, \output6~output\, output6~output, counter, 1
 instance = comp, \output7~output\, output7~output, counter, 1
 instance = comp, \rco~output\, rco~output, counter, 1
 instance = comp, \clk~input\, clk~input, counter, 1
-instance = comp, \clr_n~input\, clr_n~input, counter, 1
+instance = comp, \clk~inputclkctrl\, clk~inputclkctrl, counter, 1
 instance = comp, \ld_n~input\, ld_n~input, counter, 1
+instance = comp, \clr_n~input\, clr_n~input, counter, 1
 instance = comp, \enable~input\, enable~input, counter, 1
 instance = comp, \inst|sub|68~0\, inst|sub|68~0, counter, 1
 instance = comp, \data0~input\, data0~input, counter, 1

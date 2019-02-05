@@ -69,9 +69,9 @@ set_location_assignment PIN_B12 -to data5
 set_location_assignment PIN_A13 -to data6
 set_location_assignment PIN_A14 -to data7
 set_location_assignment PIN_B14 -to enable
-set_location_assignment PIN_F15 -to clk
-set_location_assignment PIN_B8 -to clr_n
-set_location_assignment PIN_A7 -to ld_n
+set_location_assignment PIN_V9 -to clk
+set_location_assignment PIN_A7 -to clr_n
+set_location_assignment PIN_B8 -to ld_n
 set_location_assignment PIN_A8 -to output0
 set_location_assignment PIN_A9 -to output1
 set_location_assignment PIN_A10 -to output2

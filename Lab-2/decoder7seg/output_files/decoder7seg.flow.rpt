@@ -1,5 +1,5 @@
 Flow report for decoder7seg
-Wed Jan 23 19:36:51 2019
+Fri Jan 25 12:38:46 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Wed Jan 23 19:36:51 2019       ;
+; Flow Status           ; Successful - Fri Jan 25 12:38:46 2019       ;
 ; Quartus Prime Version ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name         ; decoder7seg                                 ;
 ; Top-level Entity Name ; decoder7seg                                 ;
@@ -59,7 +59,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/23/2019 19:36:03 ;
+; Start date & time ; 01/25/2019 12:37:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; decoder7seg         ;
 +-------------------+---------------------+
@@ -70,7 +70,7 @@ refer to the applicable agreement for further details.
 +--------------------------+-----------------------------+---------------+-------------+----------------+
 ; Assignment Name          ; Value                       ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------+-----------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID    ; 52235553468.154829016201984 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID    ; 52235553468.154843786409800 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT   ; Vhdl                        ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL      ; ModelSim-Altera (VHDL)      ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE           ; 1 ps                        ; --            ; --          ; eda_simulation ;
@@ -83,12 +83,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:28     ; 1.0                     ; 4776 MB             ; 00:00:36                           ;
-; Fitter                    ; 00:00:07     ; 1.0                     ; 5082 MB             ; 00:00:04                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4668 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:40     ; 1.0                     ; 4790 MB             ; 00:00:38                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 5082 MB             ; 00:00:04                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4668 MB             ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4665 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4630 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:43     ; --                      ; --                  ; 00:00:46                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4630 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:57     ; --                      ; --                  ; 00:00:49                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

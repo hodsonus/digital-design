@@ -1,5 +1,5 @@
 Fitter report for decoder7seg
-Wed Jan 23 19:36:38 2019
+Fri Jan 25 12:38:32 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Wed Jan 23 19:36:38 2019       ;
+; Fitter Status         ; Successful - Fri Jan 25 12:38:32 2019       ;
 ; Quartus Prime Version ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name         ; decoder7seg                                 ;
 ; Top-level Entity Name ; decoder7seg                                 ;
@@ -133,7 +133,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in Z:/GitHub/digital-design/Lab-2/decoder7seg/output_files/decoder7seg.pin.
+The pin-out file can be found in Y:/GitHub/digital-design/Lab-2/decoder7seg/output_files/decoder7seg.pin.
 
 
 +------------------------------------------------------------------+
@@ -533,20 +533,20 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.07 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file Z:/GitHub/digital-design/Lab-2/decoder7seg/output_files/decoder7seg.fit.smsg
+Info (144001): Generated suppressed messages file Y:/GitHub/digital-design/Lab-2/decoder7seg/output_files/decoder7seg.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 5082 megabytes
-    Info: Processing ended: Wed Jan 23 19:36:38 2019
-    Info: Elapsed time: 00:00:07
+    Info: Processing ended: Fri Jan 25 12:38:32 2019
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in Z:/GitHub/digital-design/Lab-2/decoder7seg/output_files/decoder7seg.fit.smsg.
+The suppressed messages can be found in Y:/GitHub/digital-design/Lab-2/decoder7seg/output_files/decoder7seg.fit.smsg.
 
 

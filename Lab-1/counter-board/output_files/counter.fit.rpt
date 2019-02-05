@@ -1,5 +1,5 @@
 Fitter report for counter
-Mon Jan 21 21:30:30 2019
+Mon Jan 28 20:51:29 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -26,21 +26,20 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  18. Delay Chain Summary
  19. Pad To Core Delay Chain Fanout
  20. Control Signals
- 21. Routing Usage Summary
- 22. LAB Logic Elements
- 23. LAB-wide Signals
- 24. LAB Signals Sourced
- 25. LAB Signals Sourced Out
- 26. LAB Distinct Inputs
- 27. I/O Rules Summary
- 28. I/O Rules Details
- 29. I/O Rules Matrix
- 30. Fitter Device Options
- 31. Operating Settings and Conditions
- 32. Estimated Delay Added for Hold Timing Summary
- 33. Estimated Delay Added for Hold Timing Details
- 34. Fitter Messages
- 35. Fitter Suppressed Messages
+ 21. Global & Other Fast Signals
+ 22. Routing Usage Summary
+ 23. LAB Logic Elements
+ 24. LAB-wide Signals
+ 25. LAB Signals Sourced
+ 26. LAB Signals Sourced Out
+ 27. LAB Distinct Inputs
+ 28. I/O Rules Summary
+ 29. I/O Rules Details
+ 30. I/O Rules Matrix
+ 31. Fitter Device Options
+ 32. Operating Settings and Conditions
+ 33. Fitter Messages
+ 34. Fitter Suppressed Messages
 
 
 
@@ -66,7 +65,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jan 21 21:30:30 2019       ;
+; Fitter Status                      ; Successful - Mon Jan 28 20:51:29 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; counter                                     ;
 ; Top-level Entity Name              ; counter                                     ;
@@ -150,12 +149,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.9%      ;
 +----------------------------+-------------+
 
 
@@ -165,8 +164,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 93 ) ; 0.00 % ( 0 / 93 )          ; 0.00 % ( 0 / 93 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 93 ) ; 0.00 % ( 0 / 93 )          ; 0.00 % ( 0 / 93 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 94 ) ; 0.00 % ( 0 / 94 )          ; 0.00 % ( 0 / 94 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 94 ) ; 0.00 % ( 0 / 94 )          ; 0.00 % ( 0 / 94 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -189,7 +188,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 77 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 78 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -197,7 +196,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/output_files/counter.pin.
+The pin-out file can be found in Y:/GitHub/digital-design/Lab-1/counter-board/output_files/counter.pin.
 
 
 +---------------------------------------------------------------------+
@@ -227,7 +226,7 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 ; Total LABs:  partially or completely used   ; 3 / 3,110 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 21 / 360 ( 6 % )      ;
-;     -- Clock pins                           ; 0 / 8 ( 0 % )         ;
+;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
 ;     -- Dedicated input pins                 ; 1 / 1 ( 100 % )       ;
 ;                                             ;                       ;
 ; M9Ks                                        ; 0 / 182 ( 0 % )       ;
@@ -237,19 +236,19 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 ; Total block memory implementation bits      ; 0 / 1,677,312 ( 0 % ) ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )       ;
 ; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global signals                              ; 0                     ;
-;     -- Global clocks                        ; 0 / 20 ( 0 % )        ;
+; Global signals                              ; 1                     ;
+;     -- Global clocks                        ; 1 / 20 ( 5 % )        ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; Remote update blocks                        ; 0 / 1 ( 0 % )         ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%    ;
-; Peak interconnect usage (total/H/V)         ; 0.5% / 0.5% / 0.4%    ;
+; Peak interconnect usage (total/H/V)         ; 0.3% / 0.4% / 0.3%    ;
 ; Maximum fan-out                             ; 17                    ;
 ; Highest non-global fan-out                  ; 17                    ;
-; Total fan-out                               ; 144                   ;
-; Average fan-out                             ; 1.55                  ;
+; Total fan-out                               ; 145                   ;
+; Average fan-out                             ; 1.54                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -288,6 +287,7 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 ; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )      ; 0 / 288 ( 0 % )                ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
+; Clock control block                         ; 1 / 24 ( 4 % )       ; 0 / 24 ( 0 % )                 ;
 ; User Flash Memory                           ; 1 / 1 ( 100 % )      ; 0 / 1 ( 0 % )                  ;
 ; Analog-to-Digital Converter                 ; 2 / 2 ( 100 % )      ; 0 / 2 ( 0 % )                  ;
 ;                                             ;                      ;                                ;
@@ -298,7 +298,7 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 150                  ; 8                              ;
+;     -- Total Connections                    ; 151                  ; 8                              ;
 ;     -- Registered Connections               ; 39                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -331,8 +331,8 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; clk    ; F15   ; 7        ; 69           ; 54           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; clr_n  ; B8    ; 7        ; 46           ; 54           ; 28           ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; clk    ; V9    ; 3        ; 31           ; 0            ; 28           ; 8                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; clr_n  ; A7    ; 7        ; 49           ; 54           ; 28           ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; data0  ; C10   ; 7        ; 51           ; 54           ; 28           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; data1  ; C11   ; 7        ; 51           ; 54           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; data2  ; D12   ; 7        ; 51           ; 54           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
@@ -342,7 +342,7 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 ; data6  ; A13   ; 7        ; 54           ; 54           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; data7  ; A14   ; 7        ; 58           ; 54           ; 28           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; enable ; B14   ; 7        ; 56           ; 54           ; 0            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; ld_n   ; A7    ; 7        ; 49           ; 54           ; 28           ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; ld_n   ; B8    ; 7        ; 46           ; 54           ; 28           ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -387,11 +387,11 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 ; 1A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ;
 ; 1B       ; 4 / 24 ( 17 % )  ; 2.5V          ; --           ;
 ; 2        ; 0 / 36 ( 0 % )   ; 2.5V          ; --           ;
-; 3        ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ;
+; 3        ; 1 / 48 ( 2 % )   ; 2.5V          ; --           ;
 ; 4        ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ;
 ; 5        ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ;
 ; 6        ; 0 / 60 ( 0 % )   ; 2.5V          ; --           ;
-; 7        ; 21 / 52 ( 40 % ) ; 2.5V          ; --           ;
+; 7        ; 20 / 52 ( 38 % ) ; 2.5V          ; --           ;
 ; 8        ; 4 / 36 ( 11 % )  ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -407,7 +407,7 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 ; A4       ; 475        ; 8        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A5       ; 473        ; 8        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A6       ; 471        ; 8        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; A7       ; 445        ; 7        ; ld_n                                           ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; A7       ; 445        ; 7        ; clr_n                                          ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A8       ; 447        ; 7        ; output0                                        ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A9       ; 449        ; 7        ; output1                                        ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A10      ; 439        ; 7        ; output2                                        ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
@@ -474,7 +474,7 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 ; B5       ; 485        ; 8        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B6       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; B7       ; 469        ; 8        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; B8       ; 451        ; 7        ; clr_n                                          ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; B8       ; 451        ; 7        ; ld_n                                           ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; B9       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; B10      ; 448        ; 7        ; output3                                        ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; B11      ; 443        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -569,7 +569,7 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 ; F12      ;            ; 7        ; VCCIO7                                         ; power  ;                       ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; F13      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; F14      ;            ; 7        ; VCCIO7                                         ; power  ;                       ; 2.5V    ; --         ;                 ; --       ; --           ;
-; F15      ; 398        ; 7        ; clk                                            ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; F15      ; 398        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F16      ; 396        ; 7        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F17      ; 364        ; 6        ; RESERVED_INPUT                                 ;        ;                       ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F18      ; 354        ; 6        ; RESERVED_INPUT                                 ;        ;                       ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -827,7 +827,7 @@ The pin-out file can be found in /GitHub/digital-design/Lab-1/counter_board/outp
 ; V6       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; V7       ; 136        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V8       ; 138        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; V9       ; 160        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
+; V9       ; 160        ; 3        ; clk                                            ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; V10      ; 162        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V11      ; 172        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V12      ; 174        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -946,14 +946,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; output6 ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; output7 ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; rco     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; enable  ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; enable  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; clr_n   ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; ld_n    ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; data0   ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; clk     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; data1   ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; data1   ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; data2   ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; data3   ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; data3   ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; data4   ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; data5   ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; data6   ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
@@ -967,13 +967,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                 ; Pad To Core Index ; Setting ;
 +-------------------------------------+-------------------+---------+
 ; enable                              ;                   ;         ;
-;      - inst3~0                      ; 0                 ; 6       ;
-;      - 74163:inst|f74163:sub|68~0   ; 0                 ; 6       ;
-;      - 74163:inst|f74163:sub|109    ; 0                 ; 6       ;
-;      - 74163:inst|f74163:sub|120    ; 0                 ; 6       ;
-;      - 74163:inst|f74163:sub|130~0  ; 0                 ; 6       ;
-;      - 74163:inst|f74163:sub|108~0  ; 0                 ; 6       ;
-;      - 74163:inst1|f74163:sub|131~2 ; 0                 ; 6       ;
+;      - inst3~0                      ; 1                 ; 6       ;
+;      - 74163:inst|f74163:sub|68~0   ; 1                 ; 6       ;
+;      - 74163:inst|f74163:sub|109    ; 1                 ; 6       ;
+;      - 74163:inst|f74163:sub|120    ; 1                 ; 6       ;
+;      - 74163:inst|f74163:sub|130~0  ; 1                 ; 6       ;
+;      - 74163:inst|f74163:sub|108~0  ; 1                 ; 6       ;
+;      - 74163:inst1|f74163:sub|131~2 ; 1                 ; 6       ;
 ; clr_n                               ;                   ;         ;
 ;      - 74163:inst|f74163:sub|68~0   ; 1                 ; 6       ;
 ;      - 74163:inst|f74163:sub|68~1   ; 1                 ; 6       ;
@@ -1001,20 +1001,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; data0                               ;                   ;         ;
 ;      - 74163:inst|f74163:sub|68~1   ; 0                 ; 6       ;
 ; clk                                 ;                   ;         ;
-;      - 74163:inst|f74163:sub|134    ; 0                 ; 0       ;
-;      - 74163:inst|f74163:sub|122    ; 0                 ; 0       ;
-;      - 74163:inst|f74163:sub|111    ; 0                 ; 0       ;
-;      - 74163:inst|f74163:sub|34     ; 0                 ; 0       ;
-;      - 74163:inst1|f74163:sub|134   ; 0                 ; 0       ;
-;      - 74163:inst1|f74163:sub|122   ; 0                 ; 0       ;
-;      - 74163:inst1|f74163:sub|111   ; 0                 ; 0       ;
-;      - 74163:inst1|f74163:sub|34    ; 0                 ; 0       ;
 ; data1                               ;                   ;         ;
-;      - 74163:inst|f74163:sub|115~0  ; 1                 ; 6       ;
+;      - 74163:inst|f74163:sub|115~0  ; 0                 ; 6       ;
 ; data2                               ;                   ;         ;
 ;      - 74163:inst|f74163:sub|126~0  ; 0                 ; 6       ;
 ; data3                               ;                   ;         ;
-;      - 74163:inst|f74163:sub|137~1  ; 0                 ; 6       ;
+;      - 74163:inst|f74163:sub|137~1  ; 1                 ; 6       ;
 ; data4                               ;                   ;         ;
 ;      - 74163:inst1|f74163:sub|68~0  ; 1                 ; 6       ;
 ; data5                               ;                   ;         ;
@@ -1031,8 +1023,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
-; clk  ; PIN_F15  ; 8       ; Clock ; no     ; --                   ; --               ; --                        ;
+; clk  ; PIN_V9   ; 8       ; Clock ; yes    ; Global Clock         ; GCLK17           ; --                        ;
 +------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                            ;
++------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; clk  ; PIN_V9   ; 8       ; 2                                    ; Global Clock         ; GCLK17           ; --                        ;
++------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +------------------------------------------------+
@@ -1040,15 +1041,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 37 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 1 / 5,382 ( < 1 % )    ;
-; C4 interconnects      ; 24 / 106,704 ( < 1 % ) ;
-; Direct links          ; 7 / 148,641 ( < 1 % )  ;
-; Global clocks         ; 0 / 20 ( 0 % )         ;
-; Local interconnects   ; 21 / 49,760 ( < 1 % )  ;
+; Block interconnects   ; 38 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 0 / 5,382 ( 0 % )      ;
+; C4 interconnects      ; 25 / 106,704 ( < 1 % ) ;
+; Direct links          ; 10 / 148,641 ( < 1 % ) ;
+; Global clocks         ; 1 / 20 ( 5 % )         ;
+; Local interconnects   ; 18 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )        ;
-; R24 interconnects     ; 2 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 24 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 1 / 5,406 ( < 1 % )    ;
+; R4 interconnects      ; 23 / 147,764 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
@@ -1272,25 +1273,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
-
-
-+----------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                  ;
-+-----------------+--------------------------+-------------------+
-; Source Register ; Destination Register     ; Delay Added in ns ;
-+-----------------+--------------------------+-------------------+
-; clk             ; 74163:inst|f74163:sub|34 ; 0.075             ;
-+-----------------+--------------------------+-------------------+
-Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
-
-
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
@@ -1321,10 +1303,12 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (176353): Automatically promoted node clk~input (placed in PIN V9 (CLK6n, DIFFIO_TX_RX_B18n, DIFFOUT_B18n, High_Speed))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G17
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1337,25 +1321,25 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.17 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file /GitHub/digital-design/Lab-1/counter_board/output_files/counter.fit.smsg
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (144001): Generated suppressed messages file Y:/GitHub/digital-design/Lab-1/counter-board/output_files/counter.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5393 megabytes
-    Info: Processing ended: Mon Jan 21 21:30:31 2019
+    Info: Peak virtual memory: 5392 megabytes
+    Info: Processing ended: Mon Jan 28 20:51:31 2019
     Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /GitHub/digital-design/Lab-1/counter_board/output_files/counter.fit.smsg.
+The suppressed messages can be found in Y:/GitHub/digital-design/Lab-1/counter-board/output_files/counter.fit.smsg.
 
 

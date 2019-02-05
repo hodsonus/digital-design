@@ -75,7 +75,7 @@ RESERVED_INPUT               : A3        :        :                   :         
 RESERVED_INPUT               : A4        :        :                   :         : 8         :                
 RESERVED_INPUT               : A5        :        :                   :         : 8         :                
 RESERVED_INPUT               : A6        :        :                   :         : 8         :                
-ld_n                         : A7        : input  : 2.5 V             :         : 7         : Y              
+clr_n                        : A7        : input  : 2.5 V             :         : 7         : Y              
 output0                      : A8        : output : 2.5 V             :         : 7         : Y              
 output1                      : A9        : output : 2.5 V             :         : 7         : Y              
 output2                      : A10       : output : 2.5 V             :         : 7         : Y              
@@ -142,7 +142,7 @@ RESERVED_INPUT               : B4        :        :                   :         
 RESERVED_INPUT               : B5        :        :                   :         : 8         :                
 GND                          : B6        : gnd    :                   :         :           :                
 RESERVED_INPUT               : B7        :        :                   :         : 8         :                
-clr_n                        : B8        : input  : 2.5 V             :         : 7         : Y              
+ld_n                         : B8        : input  : 2.5 V             :         : 7         : Y              
 GND                          : B9        : gnd    :                   :         :           :                
 output3                      : B10       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : B11       :        :                   :         : 7         :                
@@ -237,7 +237,7 @@ VCCIO8                       : F11       : power  :                   : 2.5V    
 VCCIO7                       : F12       : power  :                   : 2.5V    : 7         :                
 GND                          : F13       : gnd    :                   :         :           :                
 VCCIO7                       : F14       : power  :                   : 2.5V    : 7         :                
-clk                          : F15       : input  : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : F15       :        :                   :         : 7         :                
 RESERVED_INPUT               : F16       :        :                   :         : 7         :                
 RESERVED_INPUT               : F17       :        :                   :         : 6         :                
 RESERVED_INPUT               : F18       :        :                   :         : 6         :                
@@ -495,7 +495,7 @@ RESERVED_INPUT               : V5        :        :                   :         
 GND                          : V6        : gnd    :                   :         :           :                
 RESERVED_INPUT               : V7        :        :                   :         : 3         :                
 RESERVED_INPUT               : V8        :        :                   :         : 3         :                
-RESERVED_INPUT               : V9        :        :                   :         : 3         :                
+clk                          : V9        : input  : 2.5 V             :         : 3         : Y              
 RESERVED_INPUT               : V10       :        :                   :         : 3         :                
 RESERVED_INPUT               : V11       :        :                   :         : 4         :                
 RESERVED_INPUT               : V12       :        :                   :         : 4         :                

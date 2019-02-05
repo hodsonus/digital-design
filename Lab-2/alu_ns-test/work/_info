@@ -1,0 +1,137 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dY:/GitHub/digital-design/Lab-2/decoder7seg-test
+Ealu_ns
+Z0 w1548962163
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dY:/GitHub/digital-design/Lab-2/alu_ns-test
+Z5 8Y:/GitHub/digital-design/Lab-2/alu_ns/alu_ns.vhd
+Z6 FY:/GitHub/digital-design/Lab-2/alu_ns/alu_ns.vhd
+l0
+L8
+VUl2m6j`21JZNUgIOj=a_Z1
+!s100 fmBfOW5g;?`8DFHeYg_l<1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1548962400
+!i10b 1
+Z9 !s108 1548962400.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-2/alu_ns/alu_ns.vhd|
+Z11 !s107 Y:/GitHub/digital-design/Lab-2/alu_ns/alu_ns.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abhv
+R1
+R2
+R3
+DEx4 work 6 alu_ns 0 22 Ul2m6j`21JZNUgIOj=a_Z1
+l36
+L21
+V7C`4zj@6DO5XcLZGhXZL=1
+!s100 lGPP3a>@I2iULZP9ZF[jh1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu_ns_tb
+Z14 w1548955949
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z16 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+R4
+Z17 8Y:/GitHub/digital-design/Lab-2/alu_ns_tb.vhd
+Z18 FY:/GitHub/digital-design/Lab-2/alu_ns_tb.vhd
+l0
+L6
+VOGZhL4?il>cg3OT0<;aDh1
+!s100 YWcT;Q?>gYMKFVRRM=8dc0
+R7
+32
+!s110 1548962399
+!i10b 1
+Z19 !s108 1548962399.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-2/alu_ns_tb.vhd|
+Z21 !s107 Y:/GitHub/digital-design/Lab-2/alu_ns_tb.vhd|
+!i113 1
+R12
+R13
+Atb
+R15
+R16
+R2
+R3
+DEx4 work 9 alu_ns_tb 0 22 OGZhL4?il>cg3OT0<;aDh1
+l33
+L9
+VWeIGKIEOnf^Iaji?X_I0;3
+!s100 LVJMEJ5iV?d1c:NVD1T=F0
+R7
+32
+R8
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Ealu_ns_tb2
+Z22 w1548962375
+R15
+R16
+R2
+R3
+R4
+Z23 8Y:/GitHub/digital-design/Lab-2/alu_ns_tb2.vhd
+Z24 FY:/GitHub/digital-design/Lab-2/alu_ns_tb2.vhd
+l0
+L6
+VTc`]Qd1anLm6@RMZ1g@463
+!s100 5E?zmSFlK]^RJk3X9d5Vj3
+R7
+32
+Z25 !s110 1548962401
+!i10b 1
+R9
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-2/alu_ns_tb2.vhd|
+Z27 !s107 Y:/GitHub/digital-design/Lab-2/alu_ns_tb2.vhd|
+!i113 1
+R12
+R13
+Atb
+R15
+R16
+R2
+R3
+Z28 DEx4 work 10 alu_ns_tb2 0 22 Tc`]Qd1anLm6@RMZ1g@463
+l33
+L9
+V5NNRoFoCXX4fXB3g==<?W3
+!s100 iT3^;O;VYmeUFVAdffL=N2
+R7
+32
+R25
+!i10b 1
+R9
+R26
+R27
+!i113 1
+R12
+R13

@@ -1,0 +1,20 @@
+Y:/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity decoder7seg
+-- Compiling architecture BHV of decoder7seg
+
+} {} {}} Y:/GitHub/digital-design/Lab-2/decoder7seg_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-2/decoder7seg_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity decoder7seg_tb
+-- Compiling architecture TB of decoder7seg_tb
+-- Loading entity decoder7seg
+
+} {} {}}

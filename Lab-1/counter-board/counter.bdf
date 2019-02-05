@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 600 584 768 600)
+	(rect 144 504 312 520)
 	(text "INPUT" (rect 125 0 184 18)(font "Arial" (font_size 6)))
 	(text "clr_n" (rect 5 0 54 25)(font "Intel Clear" ))
 	(pt 168 8)
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 600 536 768 552)
+	(rect 336 232 504 248)
 	(text "INPUT" (rect 125 0 184 18)(font "Arial" (font_size 6)))
 	(text "ld_n" (rect 5 0 48 25)(font "Intel Clear" ))
 	(pt 168 8)
@@ -612,19 +612,9 @@ refer to the applicable agreement for further details.
 	)
 )
 (connector
-	(text "ld" (rect 1020 328 1038 353)(font "Intel Clear" ))
-	(pt 1152 344)
-	(pt 1048 344)
-)
-(connector
 	(text "en" (rect 1020 424 1044 449)(font "Intel Clear" ))
 	(pt 1152 440)
 	(pt 1048 440)
-)
-(connector
-	(text "clr" (rect 1018 440 1042 465)(font "Intel Clear" ))
-	(pt 1152 456)
-	(pt 1048 456)
 )
 (connector
 	(text "clk" (rect 1020 464 1048 489)(font "Intel Clear" ))
@@ -640,19 +630,9 @@ refer to the applicable agreement for further details.
 	(pt 520 424)
 )
 (connector
-	(text "clr" (rect 482 424 506 449)(font "Intel Clear" ))
-	(pt 608 440)
-	(pt 504 440)
-)
-(connector
 	(text "clk" (rect 481 448 509 473)(font "Intel Clear" ))
 	(pt 608 464)
 	(pt 504 464)
-)
-(connector
-	(text "ld" (rect 475 312 493 337)(font "Intel Clear" ))
-	(pt 608 328)
-	(pt 504 328)
 )
 (connector
 	(pt 728 360)
@@ -739,16 +719,6 @@ refer to the applicable agreement for further details.
 	(pt 792 616)
 )
 (connector
-	(text "clr" (rect 794 576 818 601)(font "Intel Clear" ))
-	(pt 768 592)
-	(pt 792 592)
-)
-(connector
-	(text "ld" (rect 800 528 818 553)(font "Intel Clear" ))
-	(pt 768 544)
-	(pt 792 544)
-)
-(connector
 	(text "en" (rect 797 552 821 577)(font "Intel Clear" ))
 	(pt 768 568)
 	(pt 792 568)
@@ -776,4 +746,68 @@ refer to the applicable agreement for further details.
 	(pt 520 424)
 	(pt 608 424)
 )
+(connector
+	(text "<<__$DEF_ALIAS62>>" (rect 536 224 761 249)(font "Intel Clear" )(invisible))
+	(pt 504 240)
+	(pt 528 240)
+)
+(connector
+	(text "<<__$DEF_ALIAS64>>" (rect 475 312 700 337)(font "Intel Clear" )(invisible))
+	(pt 608 328)
+	(pt 504 328)
+)
+(connector
+	(pt 528 240)
+	(pt 528 280)
+)
+(connector
+	(pt 504 280)
+	(pt 504 328)
+)
+(connector
+	(text "<<__$DEF_ALIAS66>>" (rect 1020 328 1245 353)(font "Intel Clear" )(invisible))
+	(pt 1040 344)
+	(pt 1152 344)
+)
+(connector
+	(pt 1040 344)
+	(pt 1040 280)
+)
+(connector
+	(pt 504 280)
+	(pt 528 280)
+)
+(connector
+	(pt 528 280)
+	(pt 1040 280)
+)
+(connector
+	(text "<<__$DEF_ALIAS103>>" (rect 1018 440 1256 465)(font "Intel Clear" )(invisible))
+	(pt 880 456)
+	(pt 1152 456)
+)
+(connector
+	(pt 880 512)
+	(pt 880 456)
+)
+(connector
+	(text "<<__$DEF_ALIAS101>>" (rect 482 424 720 449)(font "Intel Clear" )(invisible))
+	(pt 360 440)
+	(pt 608 440)
+)
+(connector
+	(pt 360 440)
+	(pt 360 512)
+)
+(connector
+	(pt 312 512)
+	(pt 360 512)
+)
+(connector
+	(text "<<__$DEF_ALIAS78>>" (rect 338 496 563 521)(font "Intel Clear" )(invisible))
+	(pt 360 512)
+	(pt 880 512)
+)
 (junction (pt 520 424))
+(junction (pt 528 280))
+(junction (pt 360 512))

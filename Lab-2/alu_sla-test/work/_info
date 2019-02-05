@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dY:/GitHub/digital-design/Lab-2/alu_ns-test
+Ealu_sla
+Z0 w1548962528
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dY:/GitHub/digital-design/Lab-2/alu_sla-test
+Z6 8Y:/GitHub/digital-design/Lab-2/alu_sla/alu_sla.vhd
+Z7 FY:/GitHub/digital-design/Lab-2/alu_sla/alu_sla.vhd
+l0
+L6
+VP<dB`n7Y@IXazDh14m_O51
+!s100 jUKXkhAC@>eYCJ2KOi>aF0
+Z8 OV;C;10.5b;63
+32
+Z9 !s110 1548962595
+!i10b 1
+Z10 !s108 1548962595.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-2/alu_sla/alu_sla.vhd|
+Z12 !s107 Y:/GitHub/digital-design/Lab-2/alu_sla/alu_sla.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Abhv
+R1
+R2
+R3
+R4
+Z15 DEx4 work 7 alu_sla 0 22 P<dB`n7Y@IXazDh14m_O51
+l34
+L19
+Ve1`34FM=z7c2@h7nIfEKZ1
+!s100 Ia;?JXF;oGK?E?b8N>6W@2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ealu_sla_tb
+Z16 w1548956179
+R1
+R2
+R3
+R4
+R5
+Z17 8Y:/GitHub/digital-design/Lab-2/alu_sla_tb.vhd
+Z18 FY:/GitHub/digital-design/Lab-2/alu_sla_tb.vhd
+l0
+L6
+VASSfzo0g@bO`cK2gQLTf40
+!s100 ekC7gY^[3W8iWBGeQUD242
+R8
+32
+R9
+!i10b 1
+Z19 !s108 1548962594.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-2/alu_sla_tb.vhd|
+Z21 !s107 Y:/GitHub/digital-design/Lab-2/alu_sla_tb.vhd|
+!i113 1
+R13
+R14
+Atb
+R1
+R2
+R3
+R4
+DEx4 work 10 alu_sla_tb 0 22 ASSfzo0g@bO`cK2gQLTf40
+l33
+L9
+VXN==Pk_N>RIZ@7GjAETcd3
+!s100 0mIIJLOam7GSf@nK[CjA61
+R8
+32
+R9
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R13
+R14

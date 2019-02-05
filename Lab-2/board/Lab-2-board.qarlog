@@ -1,0 +1,17 @@
+Quartus Prime Archive log --	//vmware-host/Shared Folders/GitHub/digital-design/Lab-2/board/Lab-2-board.qarlog
+
+Archive:	//vmware-host/Shared Folders/GitHub/digital-design/Lab-2/board/Lab-2-board.qar
+Date:		Sat Feb 02 20:01:35 2019
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+//vmware-host/Shared Folders/GitHub/digital-design/Lab-2/alu_ns/alu_ns.vhd
+//vmware-host/Shared Folders/GitHub/digital-design/Lab-2/board/Lab-2-board.qpf
+//vmware-host/Shared Folders/GitHub/digital-design/Lab-2/board/top_level.qsf
+//vmware-host/Shared Folders/GitHub/digital-design/Lab-2/board/top_level.vhd
+//vmware-host/Shared Folders/GitHub/digital-design/Lab-2/decoder7seg/decoder7seg.vhd
+c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 6 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

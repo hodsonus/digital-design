@@ -48,7 +48,7 @@ begin --BHV
             when C_MULT => 
                 temp_mult := input1 * input2;
                 output <= temp_mult(width-1 downto 0);
-                if (temp_mult >= 16) then
+                if (unsigned(temp_mult(width*2-1 downto width)) > 0) then
                     overflow <= '1';
                 end if;
             when C_AND => 
