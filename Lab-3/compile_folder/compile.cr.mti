@@ -1,0 +1,45 @@
+Y:/GitHub/digital-design/Lab-3/cla2.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-3/cla2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cla2
+-- Compiling architecture BHV of cla2
+-- Loading entity pfa
+
+} {} {}} Y:/GitHub/digital-design/Lab-3/cla2_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-3/cla2_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cla2_tb
+-- Compiling architecture TB of cla2_tb
+
+} {} {}} Y:/GitHub/digital-design/Lab-3/pfa.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-3/pfa.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pfa
+-- Compiling architecture BHV of pfa
+
+} {} {}} Y:/GitHub/digital-design/Lab-3/cla4.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-3/cla4.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity cla4
+-- Compiling architecture BHV of cla4
+-- Loading entity cla2
+-- Loading entity cgen2
+
+} {} {}} {//vmware-host/Shared Folders/GitHub/digital-design/Lab-3/cgen2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {//vmware-host/Shared Folders/GitHub/digital-design/Lab-3/cgen2.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cgen2
+-- Compiling architecture BHV of cgen2
+
+} {} {}}

@@ -1,0 +1,249 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dY:/GitHub/digital-design/Lab-2/alu_sla-test
+Ecgen2
+Z0 w1549458763
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dY:/GitHub/digital-design/Lab-3/compile_folder
+Z4 8//vmware-host/Shared Folders/GitHub/digital-design/Lab-3/cgen2.vhd
+Z5 F//vmware-host/Shared Folders/GitHub/digital-design/Lab-3/cgen2.vhd
+l0
+L4
+VHD[HZhDTQRC:lRFR`K1b10
+!s100 fz^J0W426?2mB^F7mIF_e3
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1549472520
+!i10b 1
+Z8 !s108 1549472519.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//vmware-host/Shared Folders/GitHub/digital-design/Lab-3/cgen2.vhd|
+Z10 !s107 //vmware-host/Shared Folders/GitHub/digital-design/Lab-3/cgen2.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abhv
+R1
+R2
+Z13 DEx4 work 5 cgen2 0 22 HD[HZhDTQRC:lRFR`K1b10
+l22
+L21
+VO_dMCzc^L3K7P3;D7E8lb3
+!s100 2CVc73a2mHj4jC_mm<SQU2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ecla2
+Z14 w1549468410
+R1
+R2
+R3
+Z15 8Y:/GitHub/digital-design/Lab-3/cla2.vhd
+Z16 FY:/GitHub/digital-design/Lab-3/cla2.vhd
+l0
+L4
+Vi9@YC8jITRm>[W`n2;m]z2
+!s100 mgN;nW>C[J1jVSVj0OHDR1
+R6
+32
+Z17 !s110 1549472519
+!i10b 1
+Z18 !s108 1549472518.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-3/cla2.vhd|
+Z20 !s107 Y:/GitHub/digital-design/Lab-3/cla2.vhd|
+!i113 1
+R11
+R12
+Abhv
+Z21 DEx4 work 3 pfa 0 22 N=j=nJI1CO?HRQbbETP;f3
+R1
+R2
+Z22 DEx4 work 4 cla2 0 22 i9@YC8jITRm>[W`n2;m]z2
+l30
+L16
+V125o;_2?@o2gLO11QG1oM0
+!s100 P=mSVR]jPWL?F>9VS[6b[0
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Ecla2_tb
+Z23 w1549470858
+R1
+R2
+R3
+Z24 8Y:/GitHub/digital-design/Lab-3/cla2_tb.vhd
+Z25 FY:/GitHub/digital-design/Lab-3/cla2_tb.vhd
+l0
+L4
+V4=20mE6`O`:[5GSbA[k^N3
+!s100 5^Sjlb:cg;VNNkjBdGe4Y2
+R6
+32
+R7
+!i10b 1
+Z26 !s108 1549472520.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-3/cla2_tb.vhd|
+Z28 !s107 Y:/GitHub/digital-design/Lab-3/cla2_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+R1
+R2
+DEx4 work 7 cla2_tb 0 22 4=20mE6`O`:[5GSbA[k^N3
+l29
+L7
+VF85annF]`D;PPVELD5fJJ0
+!s100 [j@ThjzE8^<W9BSPb78Cb3
+R6
+32
+R7
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R11
+R12
+Ecla4
+Z29 w1549471750
+Z30 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z31 8Y:/GitHub/digital-design/Lab-3/cla4.vhd
+Z32 FY:/GitHub/digital-design/Lab-3/cla4.vhd
+l0
+L5
+VOSPIJ02UCWG^d[hW`1Cf60
+!s100 5X7eS@o6cae;o4=mke0B63
+R6
+32
+Z33 !s110 1549472521
+!i10b 1
+R26
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-3/cla4.vhd|
+Z35 !s107 Y:/GitHub/digital-design/Lab-3/cla4.vhd|
+!i113 1
+R11
+R12
+Abhv
+R13
+R22
+R30
+R1
+R2
+DEx4 work 4 cla4 0 22 OSPIJ02UCWG^d[hW`1Cf60
+l21
+L17
+Vb@l5zHR>iVUg@GTRcIBOJ0
+!s100 <C=J?8KKJ4b9^BFV=lC6I2
+R6
+32
+R33
+!i10b 1
+R26
+R34
+R35
+!i113 1
+R11
+R12
+Ecla4_tb
+Z36 w1549472500
+R1
+R2
+R3
+Z37 8Y:/GitHub/digital-design/Lab-3/cla4_tb.vhd
+Z38 FY:/GitHub/digital-design/Lab-3/cla4_tb.vhd
+l0
+L4
+VEe]?Ua79VzkQRLMaP_IEL2
+!s100 nb@:Y]Ib6[dh@C3nlM8l?3
+R6
+32
+R33
+!i10b 1
+Z39 !s108 1549472521.000000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-3/cla4_tb.vhd|
+Z41 !s107 Y:/GitHub/digital-design/Lab-3/cla4_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+R1
+R2
+Z42 DEx4 work 7 cla4_tb 0 22 Ee]?Ua79VzkQRLMaP_IEL2
+l29
+L7
+V:G7N_1T[28=_2<5<2G0D40
+!s100 FzRXLemN6jf2d[Yk^TVUU1
+R6
+32
+R33
+!i10b 1
+R39
+R40
+R41
+!i113 1
+R11
+R12
+Epfa
+Z43 w1549402228
+R1
+R2
+R3
+Z44 8Y:/GitHub/digital-design/Lab-3/pfa.vhd
+Z45 FY:/GitHub/digital-design/Lab-3/pfa.vhd
+l0
+L4
+VN=j=nJI1CO?HRQbbETP;f3
+!s100 09PH`aoFFfoSc]cmT<3R[3
+R6
+32
+R17
+!i10b 1
+R8
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-3/pfa.vhd|
+Z47 !s107 Y:/GitHub/digital-design/Lab-3/pfa.vhd|
+!i113 1
+R11
+R12
+Abhv
+R1
+R2
+R21
+l15
+L14
+VGUlLXkAPcUC;kjGaVhhaM3
+!s100 Q?Y=4WMIeWlGRY7XXlgB?2
+R6
+32
+R17
+!i10b 1
+R8
+R46
+R47
+!i113 1
+R11
+R12
