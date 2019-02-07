@@ -44,6 +44,8 @@ begin  -- CARRY_LOOKAHEAD
         -- calculate generate (g) and propogate (p) values
         for i in 0 to WIDTH-1 loop
         -- fill in code that defines each g and p bit
+        g(i) := x(i) and y(i);
+        p(i) := x(i) or y(i);
         end loop;  -- i
         carry(0) := cin;
         -- calculate each carry bit
@@ -119,7 +121,7 @@ architecture HIERARCHICAL of adder is
     --   s    : out std_logic_vector(7 downto 0);
     --   cout : out std_logic
 
-    signal c0, p0, g0, c1, c1_cgen, p1, g1, c2: std_logic;
+    signal c0, p0, g0, c1, c1_cgen, p1, g1, c2, bp, bg: std_logic;
 
     begin -- HIERARCHICAL
         U_CLA4_0: entity work.cla4 port map(
@@ -165,8 +167,8 @@ architecture HIERARCHICAL of adder is
             Gip1 => g1,
             Cip1 => c1_cgen,
             Cip2 => c2,
-            BP   => BP,
-            BG   => BG);
+            BP   => bp,
+            BG   => bg);
     
         cout <= c2;
 end HIERARCHICAL;

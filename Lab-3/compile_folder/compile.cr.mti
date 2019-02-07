@@ -7,6 +7,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture BHV of cla2
 -- Loading entity pfa
 
+} {} {}} Y:/GitHub/digital-design/Lab-3/fa.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-3/fa.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fa
+-- Compiling architecture BHV of fa
+
 } {} {}} Y:/GitHub/digital-design/Lab-3/cla2_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-3/cla2_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -41,5 +49,26 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package std_logic_1164
 -- Compiling entity cgen2
 -- Compiling architecture BHV of cgen2
+
+} {} {}} Y:/GitHub/digital-design/Lab-3/adder_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-3/adder_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity adder_tb
+-- Compiling architecture TB of adder_tb
+-- Compiling configuration TB_CONFIG
+-- Loading entity adder_tb
+-- Loading architecture TB of adder_tb
+-- Loading entity adder
+
+} {} {}} Y:/GitHub/digital-design/Lab-3/cla4_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-3/cla4_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cla4_tb
+-- Compiling architecture TB of cla4_tb
 
 } {} {}}
