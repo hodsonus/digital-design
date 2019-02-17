@@ -40,7 +40,7 @@ end STR;
 configuration ADDER_TOP_CONFIG of adder_top is
   for STR
     for U_ADDER : adder
-      use entity work.adder(RIPPLE_CARRY);
+      use entity work.adder(CARRY_LOOKAHEAD);
     end for;
   end for;
 end ADDER_TOP_CONFIG;

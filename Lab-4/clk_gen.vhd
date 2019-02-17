@@ -14,3 +14,45 @@ entity clk_gen is
         clk_out  : out std_logic);
 end clk_gen;
 
+architecture default of clk_gen is
+begin --default
+    U_CLK_DIV : entity work.clk_div
+        generic map (
+            clk_in_freq => 50000000
+            clk_out_freq => 1000
+        )
+        port map (
+            clk_out => clk_1000Hz
+        );
+
+        process(clk_1000Hz, rst)
+        begin
+            if (rst = '1') then
+
+            elsif (rising_edge(clk_1000Hz)) then
+                if (button_n = '0') then
+                    --count
+                else
+                    --reset count
+                end if;
+            end if;
+        end process;
+end default;
+
+--the below also handles swith bouncing
+--you must handle the case that a button is pressed inbetween clock cycles. this will result in the delay of 1ms
+--the trick is to realize that a continued button press results in waiting for slightly more than when teh button press is for the next 1 Hz clocks
+--when you have to reset the count, reset it one less than what 
+
+--                                                                                  clk_gen
+--           -------------------------------------------------------------------------------
+--          |                                                                               |
+--   50 MHz |    -------    1000 Hz    --------------------------------------      1 Hz     |
+--  ----------> |  clk  | ----------> |  another counter entity that checks  | --------------->  state machines
+--          |   |  div  |             |  checks the status of a button press |              |
+--          |    -------               --------------------------------------               |
+--          |                                            ^                                  |
+--          |                                            |                                  |
+--           -------------------------------------------------------------------------------
+--                                                       |
+--                                                     button

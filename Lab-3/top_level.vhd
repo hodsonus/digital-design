@@ -8,7 +8,7 @@
 -- I/O Explanation (assumes the switches are on side of the
 --                  board that is closest to you)
 -- switch(9) is the leftmost switch
--- button(1) is the top button
+-- button(1) is the top button (key0)
 -- led5 is the leftmost 7-segment LED
 -- ledx_dp is the decimal point on the 7-segment LED for LED x
 
@@ -126,7 +126,7 @@ end STR;
 configuration top_level_cfg of top_level is
     for STR
         for U_ADDER : adder
-            use entity work.adder(RIPPLE_CARRY);  -- change this line for other
+            use entity work.adder(CARRY_LOOKAHEAD);  -- change this line for other
                                                   -- architectures 
         end for;
     end for;

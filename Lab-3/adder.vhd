@@ -57,25 +57,24 @@ begin  -- CARRY_LOOKAHEAD
                 p_ands(j) := '1';
                 -- and everything from Pj to Pi-1
                 for k in j to i-1 loop
-                -- fill code
+                    p_ands(j) := p_ands(j) and p(k);
                 end loop;
             end loop;
             carry(i) := g(i-1);
             -- handle all of the pg minterms
-            for j in 1 to i-1 loop
-            -- fill in code
+            for j in 1 to i-1 loop 
+                carry(i) := carry(i) or (p_ands(j) and g(j-1));
             end loop;
             -- handle the final propagate of the carry in
             carry(i) := carry(i) or (p_ands(0) and cin);
         end loop;  -- i
         -- set the outputs
         for i in 0 to WIDTH-1 loop
-        -- fill in code
+            s(i) <= x(i) xor y(i) xor carry(i);
         end loop;  -- i
         cout <= carry(WIDTH);
     end process;
 end CARRY_LOOKAHEAD;
-
 
 -- You don't have to change any of the code for the following
 -- architecture. However, read the lab instructions to create

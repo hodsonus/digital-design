@@ -28,11 +28,11 @@ begin  -- TB
 
     UUT : clk_div
         generic map (
-            clk_in_freq  => RATIO,      -- NOTE: This is not how you should
+            clk_in_freq  => 50000000,      -- NOTE: This is not how you should
                                         -- instantiate the clk_div in clk_gen.
                                         -- You should specify the actual
                                         -- frequencies 
-            clk_out_freq => 1)
+            clk_out_freq => 1000)
         port map (
             clk_in  => clk1,
             clk_out => clk2,
@@ -53,6 +53,14 @@ begin  -- TB
         wait for 5 ns;
 
         rst <= '0';
+
+        -- assert(output = "0001") aaaasdasdas;
+        -- wait until rising_edge(clk);
+        -- assert(output = "0010") aaaasdasdas;
+        -- wait until rising_edge(clk);
+        -- assert(output = "0011") aaaasdasdas;
+        -- wait until rising_edge(clk);
+        -- assert(output = "0100") aaaasdasdas;
 
         wait;
 
