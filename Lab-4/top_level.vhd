@@ -35,7 +35,8 @@ entity top_level is
         led4     : out std_logic_vector(6 downto 0);
         led4_dp  : out std_logic;
         led5     : out std_logic_vector(6 downto 0);
-        led5_dp  : out std_logic
+        led5_dp  : out std_logic;
+        clk_gen_out : inout std_logic --TODO, remove this line
         );
 end top_level;
 
@@ -79,7 +80,7 @@ architecture STR of top_level is
 
     signal gray_out    : std_logic_vector(3 downto 0);
     signal counter_out : std_logic_vector(3 downto 0);
-    signal clk_gen_out : std_logic;
+    -- TODO, uncomment this -- signal clk_gen_out : std_logic;
 
 begin  -- STR
 

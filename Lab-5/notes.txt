@@ -1,0 +1,12 @@
+fsm+d
+    fsm is a finite state machine
+    d is a datapath
+    combine them together
+    start with an explicit datapath
+
+fsmd
+
+exactly what stitt did today in class
+gce calculator
+first make an fsmd using the same strategy as stitt define everything in the states
+second part

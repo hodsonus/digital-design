@@ -15,25 +15,34 @@ entity clk_gen is
 end clk_gen;
 
 architecture default of clk_gen is
+    signal count: integer;
+    signal clk1000Hz: std_logic;
 begin --default
     U_CLK_DIV : entity work.clk_div
         generic map (
-            clk_in_freq => 50000000
+            clk_in_freq => 50000000,
             clk_out_freq => 1000
         )
         port map (
-            clk_out => clk_1000Hz
+            clk_in => clk50MHz,
+            clk_out => clk1000Hz,
+            rst => rst
         );
 
-        process(clk_1000Hz, rst)
+        process(clk1000Hz, rst)
         begin
             if (rst = '1') then
-
-            elsif (rising_edge(clk_1000Hz)) then
+                count <= 0;
+                clk_out <= '0';
+            elsif (rising_edge(clk1000Hz)) then
                 if (button_n = '0') then
-                    --count
+                    count <= count + 1;
+                    if ( count = ms_period ) then
+                        clk_out <= '1';
+                        count <= 1;
+                    end if;
                 else
-                    --reset count
+                    count <= 0;
                 end if;
             end if;
         end process;

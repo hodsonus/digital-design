@@ -9,7 +9,7 @@ z2
 cModel Technology
 dY:/GitHub/digital-design/Lab-3/compile_folder
 Eclk_div
-Z0 w1550366723
+Z0 w1550367957
 Z1 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
@@ -23,9 +23,9 @@ V<XWOg2533F`5HMo2dbk;A0
 !s100 NDeimK<gE>S3i_`ODcX?V2
 Z8 OV;C;10.5b;63
 32
-Z9 !s110 1550366729
+Z9 !s110 1550424411
 !i10b 1
-Z10 !s108 1550366728.000000
+Z10 !s108 1550424411.000000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/clk_div.vhd|
 Z12 !s107 Y:/GitHub/digital-design/Lab-4/clk_div.vhd|
 !i113 1
@@ -36,11 +36,11 @@ R1
 R2
 R3
 R4
-DEx4 work 7 clk_div 0 22 <XWOg2533F`5HMo2dbk;A0
+Z15 DEx4 work 7 clk_div 0 22 <XWOg2533F`5HMo2dbk;A0
 l20
 L15
-VPjT1B<WMmcV]M8LR]85991
-!s100 L`PVMhElBDjVB`TROSR@o3
+VMj?K;d<GmaBQG9_[[;FL62
+!s100 om>z^^2XN<@1SRc[;^QWm3
 R8
 32
 R9
@@ -52,24 +52,24 @@ R12
 R13
 R14
 Eclk_div_tb
-Z15 w1550366301
+Z16 w1550366301
 R2
 R3
 R4
 R5
-Z16 8Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd
-Z17 FY:/GitHub/digital-design/Lab-4/clk_div_tb.vhd
+Z17 8Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd
+Z18 FY:/GitHub/digital-design/Lab-4/clk_div_tb.vhd
 l0
 L5
 Vg=<6<EUHjhNDjk=c>7l=H0
 !s100 5;;2kz8FVec:7gRXafWcL1
 R8
 32
-R9
+Z19 !s110 1550424412
 !i10b 1
-Z18 !s108 1550366729.000000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd|
-Z20 !s107 Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd|
+Z20 !s108 1550424412.000000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd|
+Z22 !s107 Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd|
 !i113 1
 R13
 R14
@@ -77,18 +77,350 @@ Atb
 R2
 R3
 R4
-Z21 DEx4 work 10 clk_div_tb 0 22 g=<6<EUHjhNDjk=c>7l=H0
+DEx4 work 10 clk_div_tb 0 22 g=<6<EUHjhNDjk=c>7l=H0
 l27
 L9
-Z22 Vl:jk=MIzKfRU`_HC?1cLG3
-Z23 !s100 WaI6W8MFYYT1iz538X`UF2
+Vl:jk=MIzKfRU`_HC?1cLG3
+!s100 WaI6W8MFYYT1iz538X`UF2
 R8
 32
-R9
-!i10b 1
-R18
 R19
+!i10b 1
 R20
+R21
+R22
+!i113 1
+R13
+R14
+Eclk_gen
+Z23 w1550373155
+R1
+R2
+R3
+R4
+R5
+Z24 8Y:\GitHub\digital-design\Lab-4\clk_gen.vhd
+Z25 FY:\GitHub\digital-design\Lab-4\clk_gen.vhd
+l0
+L6
+V:EZc1n9mNZz<1LYdV>I4F2
+!s100 W]az3YBlM?oMDcF^oAefZ2
+R8
+32
+Z26 !s110 1550424413
+!i10b 1
+R20
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:\GitHub\digital-design\Lab-4\clk_gen.vhd|
+Z28 !s107 Y:\GitHub\digital-design\Lab-4\clk_gen.vhd|
+!i113 1
+R13
+R14
+Adefault
+R15
+R1
+R2
+R3
+R4
+Z29 DEx4 work 7 clk_gen 0 22 :EZc1n9mNZz<1LYdV>I4F2
+l20
+L17
+V:e_Bm1P0R4MYd0n<aK4gT0
+!s100 W8<lIb38TI9EKXEaIT^hO2
+R8
+32
+R26
+!i10b 1
+R20
+R27
+R28
+!i113 1
+R13
+R14
+Eclk_gen_tb
+Z30 w1550376410
+R2
+R3
+R4
+R5
+Z31 8Y:/GitHub/digital-design/Lab-4/clk_gen_tb.vhd
+Z32 FY:/GitHub/digital-design/Lab-4/clk_gen_tb.vhd
+l0
+L5
+VGn2HT?FBh3o]gVo``42>N3
+!s100 7zX3A40Uziz8MMcZjSa0R0
+R8
+32
+R19
+!i10b 1
+R20
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/clk_gen_tb.vhd|
+Z34 !s107 Y:/GitHub/digital-design/Lab-4/clk_gen_tb.vhd|
+!i113 1
+R13
+R14
+Atb
+R1
+R29
+R2
+R3
+R4
+DEx4 work 10 clk_gen_tb 0 22 Gn2HT?FBh3o]gVo``42>N3
+l25
+L8
+Vd7lRX?@z9:lT48ka?QP0Z3
+!s100 DR12^2dFZ@bWf^C<LO:zX2
+R8
+32
+R19
+!i10b 1
+R20
+R33
+R34
+!i113 1
+R13
+R14
+Ecounter
+Z35 w1550424651
+R2
+R3
+R4
+R5
+Z36 8Y:\GitHub\digital-design\Lab-4\counter.vhd
+Z37 FY:\GitHub\digital-design\Lab-4\counter.vhd
+l0
+L5
+VDea`gMLCR13]Cm9SXfM7G0
+!s100 166BN2NSBJeAdjoV8PVHN2
+R8
+32
+Z38 !s110 1550424661
+!i10b 1
+Z39 !s108 1550424661.000000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:\GitHub\digital-design\Lab-4\counter.vhd|
+Z41 !s107 Y:\GitHub\digital-design\Lab-4\counter.vhd|
+!i113 1
+R13
+R14
+Adefault
+R2
+R3
+R4
+Z42 DEx4 work 7 counter 0 22 Dea`gMLCR13]Cm9SXfM7G0
+l36
+L15
+VLMTUma@]`j;FI114fbPa60
+!s100 >Z9AATiNL1a6cnN45mbT;0
+R8
+32
+R38
+!i10b 1
+R39
+R40
+R41
+!i113 1
+R13
+R14
+Ecounter_tb
+Z43 w1550376749
+R2
+R3
+R4
+R5
+Z44 8Y:/GitHub/digital-design/Lab-4/counter_tb.vhd
+Z45 FY:/GitHub/digital-design/Lab-4/counter_tb.vhd
+l0
+L5
+Vj5F5Bao6:LV2IPE1Y]8LB3
+!s100 0i<0jazA_Qe:QJjfSD1Ld1
+R8
+32
+R26
+!i10b 1
+Z46 !s108 1550424413.000000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/counter_tb.vhd|
+Z48 !s107 Y:/GitHub/digital-design/Lab-4/counter_tb.vhd|
+!i113 1
+R13
+R14
+Atb
+R42
+R2
+R3
+R4
+DEx4 work 10 counter_tb 0 22 j5F5Bao6:LV2IPE1Y]8LB3
+l19
+L8
+VDNGEVnh;T]N:k0:ChS7I_1
+!s100 FRHnS>V:0[<2LDmCJ]e4I0
+R8
+32
+R26
+!i10b 1
+R46
+R47
+R48
+!i113 1
+R13
+R14
+Egray1
+Z49 w1550376516
+R3
+R4
+R5
+Z50 8Y:/GitHub/digital-design/Lab-4/gray1.vhd
+Z51 FY:/GitHub/digital-design/Lab-4/gray1.vhd
+l0
+L4
+V1i<DzW9`7lYJ1:>aEd_j_2
+!s100 WcgQ?n3g9zh<=C=E<K@PX1
+R8
+32
+Z52 !s110 1550424414
+!i10b 1
+R46
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray1.vhd|
+Z54 !s107 Y:/GitHub/digital-design/Lab-4/gray1.vhd|
+!i113 1
+R13
+R14
+Adefault
+R3
+R4
+Z55 DEx4 work 5 gray1 0 22 1i<DzW9`7lYJ1:>aEd_j_2
+l18
+L11
+Vj2f]2MDb<KEEIQ`_ELDE80
+!s100 >>QbOdPc7D@aE?;ScIO;f2
+R8
+32
+R52
+!i10b 1
+R46
+R53
+R54
+!i113 1
+R13
+R14
+Egray1_tb
+Z56 w1550376514
+R2
+R3
+R4
+R5
+Z57 8Y:/GitHub/digital-design/Lab-4/gray1_tb.vhd
+Z58 FY:/GitHub/digital-design/Lab-4/gray1_tb.vhd
+l0
+L5
+VenbIk;eKF4HPoUMhn0dNW0
+!s100 _L<J2FULZhoKi1T[SGz4K3
+R8
+32
+R52
+!i10b 1
+Z59 !s108 1550424414.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray1_tb.vhd|
+Z61 !s107 Y:/GitHub/digital-design/Lab-4/gray1_tb.vhd|
+!i113 1
+R13
+R14
+Atb
+R55
+R2
+R3
+R4
+DEx4 work 8 gray1_tb 0 22 enbIk;eKF4HPoUMhn0dNW0
+l16
+L8
+V`Fl25gWO[0E6Qc5eo9H1L1
+!s100 0=Ai8BSM9z[RU`C1@k8kB3
+R8
+32
+R52
+!i10b 1
+R59
+R60
+R61
+!i113 1
+R13
+R14
+Egray2
+Z62 w1550377340
+R3
+R4
+R5
+Z63 8Y:/GitHub/digital-design/Lab-4/gray2.vhd
+Z64 FY:/GitHub/digital-design/Lab-4/gray2.vhd
+l0
+L4
+V9GWN[WABD3j17`<?`KmMU0
+!s100 zH^i;NDQ<;:^T26T[hSLI0
+R8
+32
+Z65 !s110 1550424415
+!i10b 1
+R59
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray2.vhd|
+Z67 !s107 Y:/GitHub/digital-design/Lab-4/gray2.vhd|
+!i113 1
+R13
+R14
+Adefault
+R3
+R4
+Z68 DEx4 work 5 gray2 0 22 9GWN[WABD3j17`<?`KmMU0
+l18
+L11
+V=RaaUV4@DcBYiCVA54Da93
+!s100 ;Aja:5JI?JJ6d?U0K9RP70
+R8
+32
+R65
+!i10b 1
+R59
+R66
+R67
+!i113 1
+R13
+R14
+Egray2_tb
+Z69 w1550376513
+R2
+R3
+R4
+R5
+Z70 8Y:/GitHub/digital-design/Lab-4/gray2_tb.vhd
+Z71 FY:/GitHub/digital-design/Lab-4/gray2_tb.vhd
+l0
+L5
+VHNHaP=@NJP<UYA7R3nU7g0
+!s100 6YPN7]Z4W[:968YF02mij3
+R8
+32
+R65
+!i10b 1
+Z72 !s108 1550424415.000000
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray2_tb.vhd|
+Z74 !s107 Y:/GitHub/digital-design/Lab-4/gray2_tb.vhd|
+!i113 1
+R13
+R14
+Atb
+R68
+R2
+R3
+R4
+DEx4 work 8 gray2_tb 0 22 HNHaP=@NJP<UYA7R3nU7g0
+l16
+L8
+VM3e;X56OaHjUiOo?n<2b10
+!s100 ;k6iCX>=`TL^0;7?ZS]iX3
+R8
+32
+R65
+!i10b 1
+R72
+R73
+R74
 !i113 1
 R13
 R14
