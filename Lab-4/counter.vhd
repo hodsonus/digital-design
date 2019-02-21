@@ -42,7 +42,7 @@ begin --default
             if (load_n = '0') then --load
                 state <= input;
             elsif (up_n = '0') then --count up
-                state <= next_state;
+                state <= next_state;--std_logic_vector(unsigned(state) + unsi;
             elsif (up_n = '1') then --count down
                 state <= prev_state;
             end if;

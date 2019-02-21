@@ -1,12 +1,4 @@
-Y:/GitHub/digital-design/Lab-4/gray2.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-4/gray2.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity gray2
--- Compiling architecture default of gray2
-
-} {} {}} Y:/GitHub/digital-design/Lab-4/gray1_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-4/gray1_tb.vhd
+Y:/GitHub/digital-design/Lab-4/gray1_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none {Y:\GitHub\digital-design\Lab-4\gray1_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -16,15 +8,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture TB of gray1_tb
 -- Loading entity gray1
 
-} {} {}} Y:/GitHub/digital-design/Lab-4/counter_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-4/counter_tb.vhd
+} {} {}} Y:/GitHub/digital-design/Lab-4/gray2.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-4/gray2.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity counter_tb
--- Compiling architecture TB of counter_tb
--- Loading entity counter
+-- Compiling entity gray2
+-- Compiling architecture default of gray2
 
 } {} {}} Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -45,7 +35,18 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture TB of gray2_tb
 -- Loading entity gray2
 
-} {} {}} Y:/GitHub/digital-design/Lab-4/counter.vhd {1 {vcom -work work -2002 -explicit -stats=none {Y:\GitHub\digital-design\Lab-4\counter.vhd}
+} {} {}} Y:/GitHub/digital-design/Lab-4/clk_gen.vhd {1 {vcom -work work -2002 -explicit -stats=none {Y:\GitHub\digital-design\Lab-4\clk_gen.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity clk_gen
+-- Compiling architecture default of clk_gen
+-- Loading entity clk_div
+
+} {} {}} Y:/GitHub/digital-design/Lab-4/counter.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-4/counter.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO

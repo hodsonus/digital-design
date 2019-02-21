@@ -23,9 +23,9 @@ V<XWOg2533F`5HMo2dbk;A0
 !s100 NDeimK<gE>S3i_`ODcX?V2
 Z8 OV;C;10.5b;63
 32
-Z9 !s110 1550424411
+Z9 !s110 1550780939
 !i10b 1
-Z10 !s108 1550424411.000000
+Z10 !s108 1550780938.000000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/clk_div.vhd|
 Z12 !s107 Y:/GitHub/digital-design/Lab-4/clk_div.vhd|
 !i113 1
@@ -65,11 +65,11 @@ Vg=<6<EUHjhNDjk=c>7l=H0
 !s100 5;;2kz8FVec:7gRXafWcL1
 R8
 32
-Z19 !s110 1550424412
+R9
 !i10b 1
-Z20 !s108 1550424412.000000
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd|
-Z22 !s107 Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd|
+Z19 !s108 1550780939.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd|
+Z21 !s107 Y:/GitHub/digital-design/Lab-4/clk_div_tb.vhd|
 !i113 1
 R13
 R14
@@ -84,32 +84,32 @@ Vl:jk=MIzKfRU`_HC?1cLG3
 !s100 WaI6W8MFYYT1iz538X`UF2
 R8
 32
-R19
+R9
 !i10b 1
+R19
 R20
 R21
-R22
 !i113 1
 R13
 R14
 Eclk_gen
-Z23 w1550373155
+Z22 w1550776884
 R1
 R2
 R3
 R4
 R5
-Z24 8Y:\GitHub\digital-design\Lab-4\clk_gen.vhd
-Z25 FY:\GitHub\digital-design\Lab-4\clk_gen.vhd
+Z23 8Y:\GitHub\digital-design\Lab-4\clk_gen.vhd
+Z24 FY:\GitHub\digital-design\Lab-4\clk_gen.vhd
 l0
 L6
 V:EZc1n9mNZz<1LYdV>I4F2
 !s100 W]az3YBlM?oMDcF^oAefZ2
 R8
 32
-Z26 !s110 1550424413
+Z25 !s110 1550780944
 !i10b 1
-R20
+Z26 !s108 1550780944.000000
 Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:\GitHub\digital-design\Lab-4\clk_gen.vhd|
 Z28 !s107 Y:\GitHub\digital-design\Lab-4\clk_gen.vhd|
 !i113 1
@@ -128,9 +128,9 @@ V:e_Bm1P0R4MYd0n<aK4gT0
 !s100 W8<lIb38TI9EKXEaIT^hO2
 R8
 32
-R26
+R25
 !i10b 1
-R20
+R26
 R27
 R28
 !i113 1
@@ -150,11 +150,11 @@ VGn2HT?FBh3o]gVo``42>N3
 !s100 7zX3A40Uziz8MMcZjSa0R0
 R8
 32
-R19
+R25
 !i10b 1
-R20
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/clk_gen_tb.vhd|
-Z34 !s107 Y:/GitHub/digital-design/Lab-4/clk_gen_tb.vhd|
+Z33 !s108 1550780943.000000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/clk_gen_tb.vhd|
+Z35 !s107 Y:/GitHub/digital-design/Lab-4/clk_gen_tb.vhd|
 !i113 1
 R13
 R14
@@ -171,33 +171,33 @@ Vd7lRX?@z9:lT48ka?QP0Z3
 !s100 DR12^2dFZ@bWf^C<LO:zX2
 R8
 32
-R19
+R25
 !i10b 1
-R20
 R33
 R34
+R35
 !i113 1
 R13
 R14
 Ecounter
-Z35 w1550424651
+Z36 w1550780055
 R2
 R3
 R4
 R5
-Z36 8Y:\GitHub\digital-design\Lab-4\counter.vhd
-Z37 FY:\GitHub\digital-design\Lab-4\counter.vhd
+Z37 8Y:/GitHub/digital-design/Lab-4/counter.vhd
+Z38 FY:/GitHub/digital-design/Lab-4/counter.vhd
 l0
 L5
 VDea`gMLCR13]Cm9SXfM7G0
 !s100 166BN2NSBJeAdjoV8PVHN2
 R8
 32
-Z38 !s110 1550424661
+Z39 !s110 1550780947
 !i10b 1
-Z39 !s108 1550424661.000000
-Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:\GitHub\digital-design\Lab-4\counter.vhd|
-Z41 !s107 Y:\GitHub\digital-design\Lab-4\counter.vhd|
+Z40 !s108 1550780947.000000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/counter.vhd|
+Z42 !s107 Y:/GitHub/digital-design/Lab-4/counter.vhd|
 !i113 1
 R13
 R14
@@ -205,222 +205,222 @@ Adefault
 R2
 R3
 R4
-Z42 DEx4 work 7 counter 0 22 Dea`gMLCR13]Cm9SXfM7G0
+Z43 DEx4 work 7 counter 0 22 Dea`gMLCR13]Cm9SXfM7G0
 l36
 L15
-VLMTUma@]`j;FI114fbPa60
-!s100 >Z9AATiNL1a6cnN45mbT;0
+Z44 VLMTUma@]`j;FI114fbPa60
+Z45 !s100 >Z9AATiNL1a6cnN45mbT;0
 R8
 32
-R38
-!i10b 1
 R39
+!i10b 1
 R40
 R41
+R42
 !i113 1
 R13
 R14
 Ecounter_tb
-Z43 w1550376749
+Z46 w1550780931
 R2
 R3
 R4
 R5
-Z44 8Y:/GitHub/digital-design/Lab-4/counter_tb.vhd
-Z45 FY:/GitHub/digital-design/Lab-4/counter_tb.vhd
+Z47 8Y:/GitHub/digital-design/Lab-4/counter_tb.vhd
+Z48 FY:/GitHub/digital-design/Lab-4/counter_tb.vhd
 l0
 L5
 Vj5F5Bao6:LV2IPE1Y]8LB3
 !s100 0i<0jazA_Qe:QJjfSD1Ld1
 R8
 32
-R26
+Z49 !s110 1550780945
 !i10b 1
-Z46 !s108 1550424413.000000
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/counter_tb.vhd|
-Z48 !s107 Y:/GitHub/digital-design/Lab-4/counter_tb.vhd|
+Z50 !s108 1550780945.000000
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/counter_tb.vhd|
+Z52 !s107 Y:/GitHub/digital-design/Lab-4/counter_tb.vhd|
 !i113 1
 R13
 R14
 Atb
-R42
+R43
 R2
 R3
 R4
 DEx4 work 10 counter_tb 0 22 j5F5Bao6:LV2IPE1Y]8LB3
 l19
 L8
-VDNGEVnh;T]N:k0:ChS7I_1
-!s100 FRHnS>V:0[<2LDmCJ]e4I0
+ViHY=KEAG?1l:OkdhUiKKd3
+!s100 CHJaRTNj0LSHS6nTMg9Wo0
 R8
 32
-R26
+R49
 !i10b 1
-R46
-R47
-R48
+R50
+R51
+R52
 !i113 1
 R13
 R14
 Egray1
-Z49 w1550376516
+Z53 w1550376516
 R3
 R4
 R5
-Z50 8Y:/GitHub/digital-design/Lab-4/gray1.vhd
-Z51 FY:/GitHub/digital-design/Lab-4/gray1.vhd
+Z54 8Y:/GitHub/digital-design/Lab-4/gray1.vhd
+Z55 FY:/GitHub/digital-design/Lab-4/gray1.vhd
 l0
 L4
 V1i<DzW9`7lYJ1:>aEd_j_2
 !s100 WcgQ?n3g9zh<=C=E<K@PX1
 R8
 32
-Z52 !s110 1550424414
+R49
 !i10b 1
-R46
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray1.vhd|
-Z54 !s107 Y:/GitHub/digital-design/Lab-4/gray1.vhd|
+R50
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray1.vhd|
+Z57 !s107 Y:/GitHub/digital-design/Lab-4/gray1.vhd|
 !i113 1
 R13
 R14
 Adefault
 R3
 R4
-Z55 DEx4 work 5 gray1 0 22 1i<DzW9`7lYJ1:>aEd_j_2
+Z58 DEx4 work 5 gray1 0 22 1i<DzW9`7lYJ1:>aEd_j_2
 l18
 L11
 Vj2f]2MDb<KEEIQ`_ELDE80
 !s100 >>QbOdPc7D@aE?;ScIO;f2
 R8
 32
-R52
+R49
 !i10b 1
-R46
-R53
-R54
+R50
+R56
+R57
 !i113 1
 R13
 R14
 Egray1_tb
-Z56 w1550376514
+Z59 w1550778414
 R2
 R3
 R4
 R5
-Z57 8Y:/GitHub/digital-design/Lab-4/gray1_tb.vhd
-Z58 FY:/GitHub/digital-design/Lab-4/gray1_tb.vhd
+Z60 8Y:\GitHub\digital-design\Lab-4\gray1_tb.vhd
+Z61 FY:\GitHub\digital-design\Lab-4\gray1_tb.vhd
 l0
 L5
 VenbIk;eKF4HPoUMhn0dNW0
 !s100 _L<J2FULZhoKi1T[SGz4K3
 R8
 32
-R52
+Z62 !s110 1550780946
 !i10b 1
-Z59 !s108 1550424414.000000
-Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray1_tb.vhd|
-Z61 !s107 Y:/GitHub/digital-design/Lab-4/gray1_tb.vhd|
+Z63 !s108 1550780946.000000
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:\GitHub\digital-design\Lab-4\gray1_tb.vhd|
+Z65 !s107 Y:\GitHub\digital-design\Lab-4\gray1_tb.vhd|
 !i113 1
 R13
 R14
 Atb
-R55
+R58
 R2
 R3
 R4
 DEx4 work 8 gray1_tb 0 22 enbIk;eKF4HPoUMhn0dNW0
 l16
 L8
-V`Fl25gWO[0E6Qc5eo9H1L1
-!s100 0=Ai8BSM9z[RU`C1@k8kB3
+VkX]0Zz7lTB0=QHG4Qzm?h1
+!s100 _c?VgE36O_8Dnm8MJUi`21
 R8
 32
-R52
+R62
 !i10b 1
-R59
-R60
-R61
+R63
+R64
+R65
 !i113 1
 R13
 R14
 Egray2
-Z62 w1550377340
+Z66 w1550377340
 R3
 R4
 R5
-Z63 8Y:/GitHub/digital-design/Lab-4/gray2.vhd
-Z64 FY:/GitHub/digital-design/Lab-4/gray2.vhd
+Z67 8Y:/GitHub/digital-design/Lab-4/gray2.vhd
+Z68 FY:/GitHub/digital-design/Lab-4/gray2.vhd
 l0
 L4
 V9GWN[WABD3j17`<?`KmMU0
 !s100 zH^i;NDQ<;:^T26T[hSLI0
 R8
 32
-Z65 !s110 1550424415
+R62
 !i10b 1
-R59
-Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray2.vhd|
-Z67 !s107 Y:/GitHub/digital-design/Lab-4/gray2.vhd|
+R63
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray2.vhd|
+Z70 !s107 Y:/GitHub/digital-design/Lab-4/gray2.vhd|
 !i113 1
 R13
 R14
 Adefault
 R3
 R4
-Z68 DEx4 work 5 gray2 0 22 9GWN[WABD3j17`<?`KmMU0
+Z71 DEx4 work 5 gray2 0 22 9GWN[WABD3j17`<?`KmMU0
 l18
 L11
 V=RaaUV4@DcBYiCVA54Da93
 !s100 ;Aja:5JI?JJ6d?U0K9RP70
 R8
 32
-R65
+R62
 !i10b 1
-R59
-R66
-R67
+R63
+R69
+R70
 !i113 1
 R13
 R14
 Egray2_tb
-Z69 w1550376513
+Z72 w1550778966
 R2
 R3
 R4
 R5
-Z70 8Y:/GitHub/digital-design/Lab-4/gray2_tb.vhd
-Z71 FY:/GitHub/digital-design/Lab-4/gray2_tb.vhd
+Z73 8Y:/GitHub/digital-design/Lab-4/gray2_tb.vhd
+Z74 FY:/GitHub/digital-design/Lab-4/gray2_tb.vhd
 l0
 L5
 VHNHaP=@NJP<UYA7R3nU7g0
 !s100 6YPN7]Z4W[:968YF02mij3
 R8
 32
-R65
+R39
 !i10b 1
-Z72 !s108 1550424415.000000
-Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray2_tb.vhd|
-Z74 !s107 Y:/GitHub/digital-design/Lab-4/gray2_tb.vhd|
+R40
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-4/gray2_tb.vhd|
+Z76 !s107 Y:/GitHub/digital-design/Lab-4/gray2_tb.vhd|
 !i113 1
 R13
 R14
 Atb
-R68
+R71
 R2
 R3
 R4
 DEx4 work 8 gray2_tb 0 22 HNHaP=@NJP<UYA7R3nU7g0
 l16
 L8
-VM3e;X56OaHjUiOo?n<2b10
-!s100 ;k6iCX>=`TL^0;7?ZS]iX3
+VHW>QD:Q<?jm4PZeeBf@2D1
+!s100 eJ@2S20e6hF44`_C^E_`?2
 R8
 32
-R65
+R39
 !i10b 1
-R72
-R73
-R74
+R40
+R75
+R76
 !i113 1
 R13
 R14
