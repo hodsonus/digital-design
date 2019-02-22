@@ -30,13 +30,12 @@ begin --default
             rst => rst
         );
 
-        process(clk1000Hz, rst)
+        process(clk1000Hz, rst, button_n)
         begin
-            if (rst = '1') then
+            if (rst = '1' or button_n = '1') then
                 count <= 0;
                 clk_out <= '0';
             elsif (rising_edge(clk1000Hz)) then
-                if (button_n = '0') then
                     count <= count + 1;
                     if ( count = ms_period ) then
                         clk_out <= '1';
@@ -44,23 +43,7 @@ begin --default
                     elsif ( count = ms_period/2 ) then
                         clk_out <= '0';
                     end if;
-                else
-                    count <= 0;
-                end if;
             end if;
-            -- if (rst = '1') then
-            --     count <= 0;
-            --     clk_out <= '0';
-            -- elsif (rising_edge(clk1000Hz)) then
-            --     count <= count + 1;
-            --     if ( count = ms_period ) then
-            --         clk_out <= '1';
-            --         count <= 1;
-            --     end if;
-            --     if ( count = ms_period/2 ) then
-            --         clk_out <= '0';
-            --     end if;
-            -- end if;
         end process;
 end default;
 
