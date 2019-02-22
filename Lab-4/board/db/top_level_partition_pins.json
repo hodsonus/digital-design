@@ -60,10 +60,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk_gen_out",
-					"strict" : false
-				},
-				{
 					"name" : "switch[6]",
 					"strict" : false
 				},
@@ -76,11 +72,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "switch[7]",
+					"name" : "switch[5]",
 					"strict" : false
 				},
 				{
-					"name" : "switch[5]",
+					"name" : "switch[7]",
 					"strict" : false
 				},
 				{

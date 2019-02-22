@@ -17,6 +17,7 @@ end clk_gen;
 architecture default of clk_gen is
     signal count: integer;
     signal clk1000Hz: std_logic;
+    constant ms_period_half : integer := ms_period/2;
 begin --default
     U_CLK_DIV : entity work.clk_div
         generic map (
@@ -40,11 +41,26 @@ begin --default
                     if ( count = ms_period ) then
                         clk_out <= '1';
                         count <= 1;
+                    elsif ( count = ms_period/2 ) then
+                        clk_out <= '0';
                     end if;
                 else
                     count <= 0;
                 end if;
             end if;
+            -- if (rst = '1') then
+            --     count <= 0;
+            --     clk_out <= '0';
+            -- elsif (rising_edge(clk1000Hz)) then
+            --     count <= count + 1;
+            --     if ( count = ms_period ) then
+            --         clk_out <= '1';
+            --         count <= 1;
+            --     end if;
+            --     if ( count = ms_period/2 ) then
+            --         clk_out <= '0';
+            --     end if;
+            -- end if;
         end process;
 end default;
 

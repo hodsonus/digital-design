@@ -42,9 +42,9 @@ begin --default
             if (load_n = '0') then --load
                 state <= input;
             elsif (up_n = '0') then --count up
-                state <= next_state;--std_logic_vector(unsigned(state) + unsi;
+                state <= std_logic_vector(unsigned(state) + to_unsigned(1,4));
             elsif (up_n = '1') then --count down
-                state <= prev_state;
+                state <= std_logic_vector(unsigned(state) - to_unsigned(1,4));
             end if;
         end if;
     end process; -- process(clk,rst)
@@ -52,70 +52,22 @@ begin --default
     process(state)
     begin -- process(state)
         case state is
-            when STATE_0 =>
-                next_state <= STATE_1;
-                output <= STATE_0;
-                prev_state <= STATE_F;
-            when STATE_1 =>
-                next_state <= STATE_2;
-                output <= STATE_1;
-                prev_state <= STATE_0;
-            when STATE_2 =>
-                next_state <= STATE_3;
-                output <= STATE_2;
-                prev_state <= STATE_1;
-            when STATE_3 =>
-                next_state <= STATE_4;
-                output <= STATE_3;
-                prev_state <= STATE_2;
-            when STATE_4 =>
-                next_state <= STATE_5;
-                output <= STATE_4;
-                prev_state <= STATE_3;
-            when STATE_5 =>
-                next_state <= STATE_6;
-                output <= STATE_5;
-                prev_state <= STATE_4;
-            when STATE_6 =>
-                next_state <= STATE_7;
-                output <= STATE_6;
-                prev_state <= STATE_5;
-            when STATE_7 =>
-                next_state <= STATE_8;
-                output <= STATE_7;
-                prev_state <= STATE_6;
-            when STATE_8 =>
-                next_state <= STATE_9;
-                output <= STATE_8;
-                prev_state <= STATE_7;
-            when STATE_9 =>
-                next_state <= STATE_A;
-                output <= STATE_9;
-                prev_state <= STATE_8;
-            when STATE_A =>
-                next_state <= STATE_B;
-                output <= STATE_A;
-                prev_state <= STATE_9;
-            when STATE_B =>
-                next_state <= STATE_C;
-                output <= STATE_B;
-                prev_state <= STATE_A;
-            when STATE_C =>
-                next_state <= STATE_D;
-                output <= STATE_C;
-                prev_state <= STATE_B;
-            when STATE_D =>
-                next_state <= STATE_E;
-                output <= STATE_D;
-                prev_state <= STATE_C;
-            when STATE_E =>
-                next_state <= STATE_F;
-                output <= STATE_E;
-                prev_state <= STATE_D;
-            when STATE_F =>
-                next_state <= STATE_0;
-                output <= STATE_F;
-                prev_state <= STATE_E;
+            when STATE_0 => output <= STATE_0;
+            when STATE_1 => output <= STATE_1;
+            when STATE_2 => output <= STATE_2;
+            when STATE_3 => output <= STATE_3;
+            when STATE_4 => output <= STATE_4;
+            when STATE_5 => output <= STATE_5;
+            when STATE_6 => output <= STATE_6;
+            when STATE_7 => output <= STATE_7;
+            when STATE_8 => output <= STATE_8;
+            when STATE_9 => output <= STATE_9;
+            when STATE_A => output <= STATE_A;
+            when STATE_B => output <= STATE_B;
+            when STATE_C => output <= STATE_C;
+            when STATE_D => output <= STATE_D;
+            when STATE_E => output <= STATE_E;
+            when STATE_F => output <= STATE_F;
             when others => null;
         end case;
     end process; -- process(state)

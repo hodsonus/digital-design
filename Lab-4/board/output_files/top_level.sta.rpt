@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for top_level
-Tue Feb 19 13:27:55 2019
+Thu Feb 21 19:27:49 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -91,12 +91,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.2%      ;
+;     Processor 2            ;   3.6%      ;
 +----------------------------+-------------+
 
 
@@ -116,9 +116,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                  ; Note                                                          ;
 +------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
-; 218.63 MHz ; 218.63 MHz      ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ;                                                               ;
-; 338.29 MHz ; 250.0 MHz       ; clk50MHz                                    ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 718.39 MHz ; 450.05 MHz      ; clk_gen:U_CLK_GEN|clk_out                   ; limit due to minimum period restriction (tmin)                ;
+; 189.47 MHz ; 189.47 MHz      ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ;                                                               ;
+; 339.21 MHz ; 250.0 MHz       ; clk50MHz                                    ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 611.62 MHz ; 450.05 MHz      ; clk_gen:U_CLK_GEN|clk_out                   ; limit due to minimum period restriction (tmin)                ;
 +------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -128,9 +128,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------+--------+---------------+
 ; Clock                                       ; Slack  ; End Point TNS ;
 +---------------------------------------------+--------+---------------+
-; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -3.574 ; -73.317       ;
-; clk50MHz                                    ; -1.956 ; -46.119       ;
-; clk_gen:U_CLK_GEN|clk_out                   ; -0.392 ; -1.189        ;
+; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -4.278 ; -88.536       ;
+; clk50MHz                                    ; -1.948 ; -45.445       ;
+; clk_gen:U_CLK_GEN|clk_out                   ; -0.635 ; -1.731        ;
 +---------------------------------------------+--------+---------------+
 
 
@@ -139,9 +139,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------+-------+---------------+
 ; Clock                                       ; Slack ; End Point TNS ;
 +---------------------------------------------+-------+---------------+
-; clk_gen:U_CLK_GEN|clk_out                   ; 0.331 ; 0.000         ;
-; clk50MHz                                    ; 0.545 ; 0.000         ;
-; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 1.155 ; 0.000         ;
+; clk_gen:U_CLK_GEN|clk_out                   ; 0.343 ; 0.000         ;
+; clk50MHz                                    ; 0.553 ; 0.000         ;
+; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 1.092 ; 0.000         ;
 +---------------------------------------------+-------+---------------+
 
 
@@ -179,9 +179,9 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                  ; Note                                                          ;
 +------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
-; 239.64 MHz ; 239.64 MHz      ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ;                                                               ;
-; 375.09 MHz ; 250.0 MHz       ; clk50MHz                                    ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 786.16 MHz ; 450.05 MHz      ; clk_gen:U_CLK_GEN|clk_out                   ; limit due to minimum period restriction (tmin)                ;
+; 205.34 MHz ; 205.34 MHz      ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ;                                                               ;
+; 375.94 MHz ; 250.0 MHz       ; clk50MHz                                    ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 672.04 MHz ; 450.05 MHz      ; clk_gen:U_CLK_GEN|clk_out                   ; limit due to minimum period restriction (tmin)                ;
 +------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -191,9 +191,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------+--------+---------------+
 ; Clock                                       ; Slack  ; End Point TNS ;
 +---------------------------------------------+--------+---------------+
-; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -3.173 ; -63.275       ;
-; clk50MHz                                    ; -1.666 ; -38.820       ;
-; clk_gen:U_CLK_GEN|clk_out                   ; -0.272 ; -0.559        ;
+; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -3.870 ; -78.091       ;
+; clk50MHz                                    ; -1.660 ; -38.078       ;
+; clk_gen:U_CLK_GEN|clk_out                   ; -0.488 ; -0.973        ;
 +---------------------------------------------+--------+---------------+
 
 
@@ -202,9 +202,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------+-------+---------------+
 ; Clock                                       ; Slack ; End Point TNS ;
 +---------------------------------------------+-------+---------------+
-; clk_gen:U_CLK_GEN|clk_out                   ; 0.300 ; 0.000         ;
-; clk50MHz                                    ; 0.501 ; 0.000         ;
-; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 1.076 ; 0.000         ;
+; clk_gen:U_CLK_GEN|clk_out                   ; 0.313 ; 0.000         ;
+; clk50MHz                                    ; 0.508 ; 0.000         ;
+; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 1.009 ; 0.000         ;
 +---------------------------------------------+-------+---------------+
 
 
@@ -242,9 +242,9 @@ No synchronizer chains to report.
 +---------------------------------------------+--------+---------------+
 ; Clock                                       ; Slack  ; End Point TNS ;
 +---------------------------------------------+--------+---------------+
-; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -1.210 ; -18.913       ;
-; clk50MHz                                    ; -0.416 ; -6.462        ;
-; clk_gen:U_CLK_GEN|clk_out                   ; 0.338  ; 0.000         ;
+; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -1.605 ; -24.687       ;
+; clk50MHz                                    ; -0.411 ; -6.222        ;
+; clk_gen:U_CLK_GEN|clk_out                   ; 0.231  ; 0.000         ;
 +---------------------------------------------+--------+---------------+
 
 
@@ -253,9 +253,9 @@ No synchronizer chains to report.
 +---------------------------------------------+-------+---------------+
 ; Clock                                       ; Slack ; End Point TNS ;
 +---------------------------------------------+-------+---------------+
-; clk_gen:U_CLK_GEN|clk_out                   ; 0.152 ; 0.000         ;
-; clk50MHz                                    ; 0.245 ; 0.000         ;
-; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 0.423 ; 0.000         ;
+; clk_gen:U_CLK_GEN|clk_out                   ; 0.156 ; 0.000         ;
+; clk50MHz                                    ; 0.250 ; 0.000         ;
+; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 0.471 ; 0.000         ;
 +---------------------------------------------+-------+---------------+
 
 
@@ -276,7 +276,7 @@ No paths to report.
 +---------------------------------------------+--------+---------------+
 ; Clock                                       ; Slack  ; End Point TNS ;
 +---------------------------------------------+--------+---------------+
-; clk50MHz                                    ; -3.000 ; -37.066       ;
+; clk50MHz                                    ; -3.000 ; -37.122       ;
 ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -1.000 ; -33.000       ;
 ; clk_gen:U_CLK_GEN|clk_out                   ; -1.000 ; -20.000       ;
 +---------------------------------------------+--------+---------------+
@@ -293,14 +293,14 @@ No synchronizer chains to report.
 +----------------------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                                        ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                             ; -3.574   ; 0.152 ; N/A      ; N/A     ; -3.000              ;
-;  clk50MHz                                    ; -1.956   ; 0.245 ; N/A      ; N/A     ; -3.000              ;
-;  clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -3.574   ; 0.423 ; N/A      ; N/A     ; -1.222              ;
-;  clk_gen:U_CLK_GEN|clk_out                   ; -0.392   ; 0.152 ; N/A      ; N/A     ; -1.222              ;
-; Design-wide TNS                              ; -120.625 ; 0.0   ; 0.0      ; 0.0     ; -108.092            ;
-;  clk50MHz                                    ; -46.119  ; 0.000 ; N/A      ; N/A     ; -43.326             ;
-;  clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -73.317  ; 0.000 ; N/A      ; N/A     ; -40.326             ;
-;  clk_gen:U_CLK_GEN|clk_out                   ; -1.189   ; 0.000 ; N/A      ; N/A     ; -24.440             ;
+; Worst-case Slack                             ; -4.278   ; 0.156 ; N/A      ; N/A     ; -3.000              ;
+;  clk50MHz                                    ; -1.948   ; 0.250 ; N/A      ; N/A     ; -3.000              ;
+;  clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -4.278   ; 0.471 ; N/A      ; N/A     ; -1.222              ;
+;  clk_gen:U_CLK_GEN|clk_out                   ; -0.635   ; 0.156 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS                              ; -135.712 ; 0.0   ; 0.0      ; 0.0     ; -108.092            ;
+;  clk50MHz                                    ; -45.445  ; 0.000 ; N/A      ; N/A     ; -43.326             ;
+;  clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; -88.536  ; 0.000 ; N/A      ; N/A     ; -40.326             ;
+;  clk_gen:U_CLK_GEN|clk_out                   ; -1.731   ; 0.000 ; N/A      ; N/A     ; -24.440             ;
 +----------------------------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -357,7 +357,6 @@ No synchronizer chains to report.
 ; led5[5]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led5[6]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led5_dp      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; clk_gen_out  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
@@ -372,12 +371,11 @@ No synchronizer chains to report.
 ; switch[2]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch[3]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; button[0]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; clk_gen_out         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch[6]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch[4]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; rst                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; switch[7]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch[5]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; switch[7]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch[8]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch[9]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; button[1]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
@@ -445,7 +443,6 @@ No synchronizer chains to report.
 ; led5[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
 ; led5[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
 ; led5_dp      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
-; clk_gen_out  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.41 V              ; -0.055 V            ; 0.153 V                              ; 0.113 V                              ; 4.49e-10 s                  ; 4.13e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.41 V             ; -0.055 V           ; 0.153 V                             ; 0.113 V                             ; 4.49e-10 s                 ; 4.13e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-08 V                   ; 2.4 V               ; -0.023 V            ; 0.201 V                              ; 0.081 V                              ; 4.59e-10 s                  ; 5.51e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-08 V                  ; 2.4 V              ; -0.023 V           ; 0.201 V                             ; 0.081 V                             ; 4.59e-10 s                 ; 5.51e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -503,7 +500,6 @@ No synchronizer chains to report.
 ; led5[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
 ; led5[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
 ; led5_dp      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
-; clk_gen_out  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.036 V            ; 0.183 V                              ; 0.07 V                               ; 4.76e-10 s                  ; 4.7e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.036 V           ; 0.183 V                             ; 0.07 V                              ; 4.76e-10 s                 ; 4.7e-10 s                  ; Yes                       ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.04e-06 V                   ; 2.37 V              ; -0.0108 V           ; 0.13 V                               ; 0.066 V                              ; 6.32e-10 s                  ; 6.45e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.04e-06 V                  ; 2.37 V             ; -0.0108 V          ; 0.13 V                              ; 0.066 V                             ; 6.32e-10 s                 ; 6.45e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -561,7 +557,6 @@ No synchronizer chains to report.
 ; led5[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; led5[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; led5_dp      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; clk_gen_out  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.77 V              ; -0.0486 V           ; 0.285 V                              ; 0.06 V                               ; 2.8e-10 s                   ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.77 V             ; -0.0486 V          ; 0.285 V                             ; 0.06 V                              ; 2.8e-10 s                  ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -572,7 +567,7 @@ No synchronizer chains to report.
 ; From Clock                                  ; To Clock                                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------+---------------------------------------------+----------+----------+----------+----------+
 ; clk50MHz                                    ; clk50MHz                                    ; 752      ; 0        ; 0        ; 0        ;
-; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 1584     ; 0        ; 0        ; 0        ;
+; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 1616     ; 0        ; 0        ; 0        ;
 ; clk_gen:U_CLK_GEN|clk_out                   ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 1        ; 1        ; 0        ; 0        ;
 ; clk_gen:U_CLK_GEN|clk_out                   ; clk_gen:U_CLK_GEN|clk_out                   ; 26       ; 0        ; 0        ; 0        ;
 +---------------------------------------------+---------------------------------------------+----------+----------+----------+----------+
@@ -585,7 +580,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                                  ; To Clock                                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------+---------------------------------------------+----------+----------+----------+----------+
 ; clk50MHz                                    ; clk50MHz                                    ; 752      ; 0        ; 0        ; 0        ;
-; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 1584     ; 0        ; 0        ; 0        ;
+; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 1616     ; 0        ; 0        ; 0        ;
 ; clk_gen:U_CLK_GEN|clk_out                   ; clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out ; 1        ; 1        ; 0        ; 0        ;
 ; clk_gen:U_CLK_GEN|clk_out                   ; clk_gen:U_CLK_GEN|clk_out                   ; 26       ; 0        ; 0        ; 0        ;
 +---------------------------------------------+---------------------------------------------+----------+----------+----------+----------+
@@ -613,8 +608,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 8     ; 8    ;
 ; Unconstrained Input Port Paths  ; 130   ; 130  ;
-; Unconstrained Output Ports      ; 15    ; 15   ;
-; Unconstrained Output Port Paths ; 134   ; 134  ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 133   ; 133  ;
 +---------------------------------+-------+------+
 
 
@@ -650,7 +645,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; clk_gen_out ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led4[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led4[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led4[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -689,7 +683,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; clk_gen_out ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led4[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led4[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led4[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -713,7 +706,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Feb 19 13:27:46 2019
+    Info: Processing started: Thu Feb 21 19:27:38 2019
 Info: Command: quartus_sta board -c top_level
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -723,27 +716,27 @@ Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'top_level.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_gen:U_CLK_GEN|clk_out clk_gen:U_CLK_GEN|clk_out
     Info (332105): create_clock -period 1.000 -name clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out
     Info (332105): create_clock -period 1.000 -name clk50MHz clk50MHz
-    Info (332105): create_clock -period 1.000 -name clk_gen:U_CLK_GEN|clk_out clk_gen:U_CLK_GEN|clk_out
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.574
+Info (332146): Worst-case setup slack is -4.278
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.574             -73.317 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
-    Info (332119):    -1.956             -46.119 clk50MHz 
-    Info (332119):    -0.392              -1.189 clk_gen:U_CLK_GEN|clk_out 
-Info (332146): Worst-case hold slack is 0.331
+    Info (332119):    -4.278             -88.536 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
+    Info (332119):    -1.948             -45.445 clk50MHz 
+    Info (332119):    -0.635              -1.731 clk_gen:U_CLK_GEN|clk_out 
+Info (332146): Worst-case hold slack is 0.343
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.331               0.000 clk_gen:U_CLK_GEN|clk_out 
-    Info (332119):     0.545               0.000 clk50MHz 
-    Info (332119):     1.155               0.000 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
+    Info (332119):     0.343               0.000 clk_gen:U_CLK_GEN|clk_out 
+    Info (332119):     0.553               0.000 clk50MHz 
+    Info (332119):     1.092               0.000 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -758,18 +751,18 @@ Warning (334000): Timing characteristics of device 10M50DAF484C6GES are prelimin
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.173
+Info (332146): Worst-case setup slack is -3.870
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.173             -63.275 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
-    Info (332119):    -1.666             -38.820 clk50MHz 
-    Info (332119):    -0.272              -0.559 clk_gen:U_CLK_GEN|clk_out 
-Info (332146): Worst-case hold slack is 0.300
+    Info (332119):    -3.870             -78.091 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
+    Info (332119):    -1.660             -38.078 clk50MHz 
+    Info (332119):    -0.488              -0.973 clk_gen:U_CLK_GEN|clk_out 
+Info (332146): Worst-case hold slack is 0.313
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.300               0.000 clk_gen:U_CLK_GEN|clk_out 
-    Info (332119):     0.501               0.000 clk50MHz 
-    Info (332119):     1.076               0.000 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
+    Info (332119):     0.313               0.000 clk_gen:U_CLK_GEN|clk_out 
+    Info (332119):     0.508               0.000 clk50MHz 
+    Info (332119):     1.009               0.000 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -781,32 +774,32 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.210
+Info (332146): Worst-case setup slack is -1.605
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.210             -18.913 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
-    Info (332119):    -0.416              -6.462 clk50MHz 
-    Info (332119):     0.338               0.000 clk_gen:U_CLK_GEN|clk_out 
-Info (332146): Worst-case hold slack is 0.152
+    Info (332119):    -1.605             -24.687 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
+    Info (332119):    -0.411              -6.222 clk50MHz 
+    Info (332119):     0.231               0.000 clk_gen:U_CLK_GEN|clk_out 
+Info (332146): Worst-case hold slack is 0.156
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.152               0.000 clk_gen:U_CLK_GEN|clk_out 
-    Info (332119):     0.245               0.000 clk50MHz 
-    Info (332119):     0.423               0.000 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
+    Info (332119):     0.156               0.000 clk_gen:U_CLK_GEN|clk_out 
+    Info (332119):     0.250               0.000 clk50MHz 
+    Info (332119):     0.471               0.000 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -37.066 clk50MHz 
+    Info (332119):    -3.000             -37.122 clk50MHz 
     Info (332119):    -1.000             -33.000 clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|clk_out 
     Info (332119):    -1.000             -20.000 clk_gen:U_CLK_GEN|clk_out 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4802 megabytes
-    Info: Processing ended: Tue Feb 19 13:27:55 2019
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 4803 megabytes
+    Info: Processing ended: Thu Feb 21 19:27:49 2019
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -63,7 +63,6 @@ led5[4] << decoder7seg:U_LED5.output[4]
 led5[5] << decoder7seg:U_LED5.output[5]
 led5[6] << decoder7seg:U_LED5.output[6]
 led5_dp << <VCC>
-clk_gen_out <> clk_gen_out
 
 
 |top_level|gray2:U_GRAY

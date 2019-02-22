@@ -42,73 +42,83 @@ begin  -- TB
         up_n <= '0';
 
         wait until clk = '1';
-        assert(output = "0000") report "Error!" severity failure;
-        
-        wait until clk = '1';
-        assert(output = "0001") report "Error!" severity failure;
 
+        assert(output = "0000") report "Error!" severity failure;
         wait until clk = '1';
+
+        assert(output = "0001") report "Error!" severity failure;
+        wait until clk = '1';
+
         assert(output = "0010") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "0011") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "0100") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "0101") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "0110") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "0111") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "1000") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "1001") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "1010") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "1011") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "1100") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "1101") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "1110") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "1111") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "0000") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "0001") report "Error!" severity failure;
-
         up_n <= '1';
-
         wait until clk = '1';
+
+        assert(output = "0010") report "Error!" severity failure;
+        wait until clk = '1';
+
+        assert(output = "0001") report "Error!" severity failure;
+        wait until clk = '1';
+
         assert(output = "0000") report "Error!" severity failure;
-
         wait until clk = '1';
+
         assert(output = "1111") report "Error!" severity failure;
-
+        load_n <= '0';
+        input <= "1010";
         wait until clk = '1';
+
         assert(output = "1110") report "Error!" severity failure;
-
         wait until clk = '1';
-        assert(output = "1101") report "Error!" severity failure;
 
+        assert(output = "1010") report "Error!" severity failure;
+        wait until clk = '1';
+
+        wait for 100 ps;
         done <= '1';
     wait;
     end process;

@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="b5b6466267f5f4acc378"/>
+    <hash md5_digest_80b="2e2744ace1c9d2276219"/>
   </project>
   <file_info>
-    <file device="10M50DAF484C6GES" path="top_level.sof" usercode="0xFFFFFFFF"/>
+    <file device="10M50DAF484C6GES" path="//vmware-host/Shared Folders/GitHub/digital-design/Lab-4/board/output_files/top_level.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>
