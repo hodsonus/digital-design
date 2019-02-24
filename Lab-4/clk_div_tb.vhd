@@ -54,14 +54,6 @@ begin  -- TB
 
         rst <= '0';
 
-        -- assert(output = "0001") aaaasdasdas;
-        -- wait until rising_edge(clk);
-        -- assert(output = "0010") aaaasdasdas;
-        -- wait until rising_edge(clk);
-        -- assert(output = "0011") aaaasdasdas;
-        -- wait until rising_edge(clk);
-        -- assert(output = "0100") aaaasdasdas;
-
         wait;
 
     end process;

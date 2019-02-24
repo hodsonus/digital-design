@@ -43,79 +43,79 @@ begin  -- TB
 
         wait until clk = '1';
 
-        assert(output = "0000") report "Error!" severity failure;
+        assert(output = "0000") report "Error! State should be '0000'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0001") report "Error!" severity failure;
+        assert(output = "0001") report "Error! State should be '0001'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0010") report "Error!" severity failure;
+        assert(output = "0010") report "Error! State should be '0010'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0011") report "Error!" severity failure;
+        assert(output = "0011") report "Error! State should be '0011'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0100") report "Error!" severity failure;
+        assert(output = "0100") report "Error! State should be '0100'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0101") report "Error!" severity failure;
+        assert(output = "0101") report "Error! State should be '0101'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0110") report "Error!" severity failure;
+        assert(output = "0110") report "Error! State should be '0110'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0111") report "Error!" severity failure;
+        assert(output = "0111") report "Error! State should be '0111'" severity failure;
         wait until clk = '1';
 
-        assert(output = "1000") report "Error!" severity failure;
+        assert(output = "1000") report "Error! State should be '1000'" severity failure;
         wait until clk = '1';
 
-        assert(output = "1001") report "Error!" severity failure;
+        assert(output = "1001") report "Error! State should be '1001'" severity failure;
         wait until clk = '1';
 
-        assert(output = "1010") report "Error!" severity failure;
+        assert(output = "1010") report "Error! State should be '1010'" severity failure;
         wait until clk = '1';
 
-        assert(output = "1011") report "Error!" severity failure;
+        assert(output = "1011") report "Error! State should be '1011'" severity failure;
         wait until clk = '1';
 
-        assert(output = "1100") report "Error!" severity failure;
+        assert(output = "1100") report "Error! State should be '1100'" severity failure;
         wait until clk = '1';
 
-        assert(output = "1101") report "Error!" severity failure;
+        assert(output = "1101") report "Error! State should be '1101'" severity failure;
         wait until clk = '1';
 
-        assert(output = "1110") report "Error!" severity failure;
+        assert(output = "1110") report "Error! State should be '1110'" severity failure;
         wait until clk = '1';
 
-        assert(output = "1111") report "Error!" severity failure;
+        assert(output = "1111") report "Error! State should be '1111'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0000") report "Error!" severity failure;
+        assert(output = "0000") report "Error! State should be '0000'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0001") report "Error!" severity failure;
+        assert(output = "0001") report "Error! State should be '0001'" severity failure;
         up_n <= '1';
         wait until clk = '1';
 
-        assert(output = "0010") report "Error!" severity failure;
+        assert(output = "0010") report "Error! State should be '0010'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0001") report "Error!" severity failure;
+        assert(output = "0001") report "Error! State should be '0001'" severity failure;
         wait until clk = '1';
 
-        assert(output = "0000") report "Error!" severity failure;
+        assert(output = "0000") report "Error! State should be '0000'" severity failure;
         wait until clk = '1';
 
-        assert(output = "1111") report "Error!" severity failure;
+        assert(output = "1111") report "Error! State should be '1111'" severity failure;
         load_n <= '0';
         input <= "1010";
         wait until clk = '1';
 
-        assert(output = "1110") report "Error!" severity failure;
+        assert(output = "1110") report "Error! State should be '1110'" severity failure;
         wait until clk = '1';
 
-        assert(output = "1010") report "Error!" severity failure;
+        assert(output = "1010") report "Error! State should be '1010'" severity failure;
         wait until clk = '1';
 
         wait for 100 ps;

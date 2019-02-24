@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Thu Feb 21 19:26:51 2019
+Fri Feb 22 08:53:36 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -50,13 +50,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 21 19:26:51 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Feb 22 08:53:36 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_level                                   ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 173                                         ;
-;     Total combinational functions  ; 159                                         ;
+; Total logic elements               ; 171                                         ;
+;     Total combinational functions  ; 157                                         ;
 ;     Dedicated logic registers      ; 86                                          ;
 ; Total registers                    ; 86                                          ;
 ; Total pins                         ; 62                                          ;
@@ -191,16 +191,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 173       ;
+; Estimated Total logic elements              ; 171       ;
 ;                                             ;           ;
-; Total combinational functions               ; 159       ;
+; Total combinational functions               ; 157       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 45        ;
-;     -- 3 input functions                    ; 34        ;
-;     -- <=2 input functions                  ; 80        ;
+;     -- 4 input functions                    ; 75        ;
+;     -- 3 input functions                    ; 3         ;
+;     -- <=2 input functions                  ; 79        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 94        ;
+;     -- normal mode                          ; 92        ;
 ;     -- arithmetic mode                      ; 65        ;
 ;                                             ;           ;
 ; Total registers                             ; 86        ;
@@ -213,8 +213,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; rst~input ;
 ; Maximum fan-out                             ; 86        ;
-; Total fan-out                               ; 778       ;
-; Average fan-out                             ; 2.11      ;
+; Total fan-out                               ; 803       ;
+; Average fan-out                             ; 2.19      ;
 +---------------------------------------------+-----------+
 
 
@@ -223,8 +223,8 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                            ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+-------------+--------------+
-; |top_level                 ; 159 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 62   ; 0            ; 0          ; |top_level                                     ; top_level   ; work         ;
-;    |clk_gen:U_CLK_GEN|     ; 128 (79)            ; 66 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|clk_gen:U_CLK_GEN                   ; clk_gen     ; work         ;
+; |top_level                 ; 157 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 62   ; 0            ; 0          ; |top_level                                     ; top_level   ; work         ;
+;    |clk_gen:U_CLK_GEN|     ; 126 (77)            ; 66 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|clk_gen:U_CLK_GEN                   ; clk_gen     ; work         ;
 ;       |clk_div:U_CLK_DIV|  ; 49 (49)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV ; clk_div     ; work         ;
 ;    |counter:U_COUNTER|     ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|counter:U_COUNTER                   ; counter     ; work         ;
 ;    |decoder7seg:U_LED4|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED4                  ; decoder7seg ; work         ;
@@ -350,19 +350,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 86                          ;
 ;     CLR               ; 83                          ;
 ;     CLR SLD           ; 3                           ;
-; cycloneiii_lcell_comb ; 165                         ;
+; cycloneiii_lcell_comb ; 163                         ;
 ;     arith             ; 65                          ;
 ;         2 data inputs ; 63                          ;
 ;         3 data inputs ; 2                           ;
-;     normal            ; 100                         ;
+;     normal            ; 98                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 13                          ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 45                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 75                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 3.60                        ;
+; Average LUT depth     ; 3.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -371,7 +371,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -381,7 +381,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Feb 21 19:25:26 2019
+    Info: Processing started: Fri Feb 22 08:52:57 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off board -c top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -458,14 +458,14 @@ Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "switch[2]" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 25
     Warning (15610): No output dependent on input pin "switch[3]" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 25
     Warning (15610): No output dependent on input pin "button[0]" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 26
-Info (21057): Implemented 236 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 234 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 174 logic cells
+    Info (21061): Implemented 172 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
-    Info: Peak virtual memory: 4802 megabytes
-    Info: Processing ended: Thu Feb 21 19:26:52 2019
-    Info: Elapsed time: 00:01:26
-    Info: Total CPU time (on all processors): 00:00:49
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Fri Feb 22 08:53:36 2019
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:00:36
 
 

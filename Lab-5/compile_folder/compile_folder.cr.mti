@@ -1,0 +1,45 @@
+Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mux_2x1
+-- Compiling architecture DEF of mux_2x1
+
+} {} {}} Y:/GitHub/digital-design/Lab-5/datapath1.vhd {0 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/datapath1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+** Error (suppressible): Y:/GitHub/digital-design/Lab-5/datapath1.vhd(1): (vcom-1491) Empty source files.
+
+} {} {}} Y:/GitHub/digital-design/Lab-5/ctrl1.vhd {0 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/ctrl1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+** Error (suppressible): Y:/GitHub/digital-design/Lab-5/ctrl1.vhd(1): (vcom-1491) Empty source files.
+
+} {} {}} Y:/GitHub/digital-design/Lab-5/gcd.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/gcd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity gcd
+-- Compiling architecture FSMD of gcd
+-- Compiling architecture FSM_D1 of gcd
+-- Loading entity gcd
+-- Compiling architecture FSM_D2 of gcd
+-- Loading entity gcd
+-- Compiling architecture FSMD2 of gcd
+-- Loading entity gcd
+
+} {} {}} Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity gcd_tb
+-- Compiling architecture TB of gcd_tb
+-- Loading entity gcd
+
+} {} {}}
