@@ -11,6 +11,7 @@ entity datapath2 is
         x          : in   std_logic_vector(WIDTH-1 downto 0);
         y          : in   std_logic_vector(WIDTH-1 downto 0);
         x_sel      : in   std_logic;
+        sub_sel    : in   std_logic;
         x_en       : in   std_logic;
         y_sel      : in   std_logic;
         y_en       : in   std_logic;
@@ -22,20 +23,20 @@ end datapath2;
 
 architecture DEF of datapath2 is
     --variables here
-    signal tmp_x, tmp_y, x_min_y, y_min_x, x_mux_out, y_mux_out : std_logic_vector(WIDTH-1 downto 0);
+    signal tmp_x, tmp_y, sub_out, x_mux_out, y_mux_out, left_mux_out, right_mux_out : std_logic_vector(WIDTH-1 downto 0);
 begin --DEF
     U_MUX_X : entity work.mux_2x1 
         generic map (WIDTH => WIDTH)
         port map (
             in1 => x,
-            in2 => x_min_y,
+            in2 => sub_out,
             sel => x_sel,
             output => x_mux_out);
     U_MUX_Y : entity work.mux_2x1 
         generic map (WIDTH => WIDTH)
         port map (
             in1 => y,
-            in2 => y_min_x,
+            in2 => sub_out,
             sel => y_sel,
             output => y_mux_out);
     U_TMP_X_REG : entity work.reg
@@ -54,18 +55,26 @@ begin --DEF
             en  => y_en,
             input  => y_mux_out,
             output => tmp_y);
-    U_X_SUB_Y : entity work.sub(UNSIGNED_INPUTS)
+    U_MUX_LEFT : entity work.mux_2x1 
         generic map (WIDTH => WIDTH)
         port map (
-            in1     => tmp_x,
-            in2     => tmp_y,
-            output  => x_min_y);
-    U_Y_SUB_X : entity work.sub(UNSIGNED_INPUTS)
+            in1 => tmp_x,
+            in2 => tmp_y,
+            sel => sub_sel,
+            output => left_mux_out);
+    U_MUX_RIGHT : entity work.mux_2x1 
         generic map (WIDTH => WIDTH)
         port map (
-            in1     => tmp_y,
-            in2     => tmp_x,
-            output  => y_min_x);
+            in1 => tmp_y,
+            in2 => tmp_x,
+            sel => sub_sel,
+            output => right_mux_out);
+    U_SUB : entity work.sub(UNSIGNED_INPUTS)
+        generic map (WIDTH => WIDTH)
+        port map (
+            in1     => left_mux_out,
+            in2     => right_mux_out,
+            output  => sub_out);
     U_COMP : entity work.comp(UNSIGNED_INPUTS)
         generic map (WIDTH => WIDTH)
         port map (

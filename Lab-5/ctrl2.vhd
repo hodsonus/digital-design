@@ -14,11 +14,12 @@ entity ctrl2 is
         x_sel      : out std_logic;
         x_en       : out std_logic;
         y_sel      : out std_logic;
+        sub_sel    : out std_logic;
         y_en       : out std_logic);
 end ctrl2;
 
 architecture FSM_2P of ctrl2 is 
-    type STATE_TYPE is (START, WAIT_1, INIT, LOOP_COND, LOOP_BODY, DISP, WAIT_0);
+    type STATE_TYPE is (START, WAIT_1, INIT, LOOP_COND, LOOP_BODY_A, LOOP_BODY_B, DISP, WAIT_0);
     signal state, next_state : STATE_TYPE;
 begin -- FSM_2P
     process(clk, rst)
@@ -61,6 +62,19 @@ begin -- FSM_2P
                 x_sel <= '0';
                 y_sel <= '0';
                 next_state <= LOOP_COND;
+
+
+
+
+
+
+
+
+
+
+
+
+
             when LOOP_COND =>
                 done <= '0';
                 x_en <= '0';
@@ -69,28 +83,43 @@ begin -- FSM_2P
                 x_sel <= '0';
                 y_sel <= '0';
                 if (x_ne_y = '1') then
-                    next_state <= LOOP_BODY;
+                    if (x_lt_y = '1') then
+                        next_state <= LOOP_BODY_A;
+                    else
+                        next_state <= LOOP_BODY_B;
+                    end if;
                 else
                     next_state <= DISP;
-                    -- output_en <= '1';
                 end if;
-            when LOOP_BODY =>
-                if (x_lt_y = '1') then 
-                    x_en <= '0';
-                    x_sel <= '0';
-                    y_en <= '1';
-                    y_sel <= '1';
-                else 
-                    x_en <= '1';
-                    x_sel <= '1';
-                    y_en <= '0';
-                    y_sel <= '0';
-                end if;
+            when LOOP_BODY_A =>
                 output_en <= '0';
                 done <= '0';
+                x_en <= '0';
+                x_sel <= '0';
+                y_en <= '1';
+                y_sel <= '1';
+                sub_sel <= '1';
                 next_state <= LOOP_COND;
+            when LOOP_BODY_B =>
+                output_en <= '0';
+                done <= '0';
+                x_en <= '1';
+                x_sel <= '1';
+                y_en <= '0';
+                y_sel <= '0';
+                sub_sel <= '0';
+                next_state <= LOOP_COND;
+
+
+
+
+
+
+
+
+
             when DISP =>
-                done <= '0'; -- change this to done = 1
+                done <= '0';
                 output_en <= '1';
                 x_en <= '0';
                 y_en <= '0';

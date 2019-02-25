@@ -108,7 +108,39 @@ begin  -- FSM_D1
 end FSM_D1;
 
 architecture FSM_D2 of gcd is
+    signal x_sel, x_en, y_sel, y_en, output_en, x_lt_y, x_ne_y, sub_sel : std_logic;
 begin  -- FSM_D2
+    U_DATAPATH : entity work.datapath2
+    generic map (WIDTH => WIDTH)
+    port map (
+        clk       => clk,
+        rst       => rst,
+        x         => x,
+        y         => y,
+        x_sel     => x_sel,
+        x_en      => x_en,
+        y_sel     => y_sel,
+        y_en      => y_en,
+        output_en => output_en,
+        x_lt_y    => x_lt_y,
+        x_ne_y    => x_ne_y,
+        sub_sel    => sub_sel,
+        output    => output);
+    U_CTRL : entity work.ctrl2
+    generic map (WIDTH => WIDTH)
+    port map (
+        clk        => clk,
+        rst        => rst,
+        go         => go,
+        done       => done,
+        x_sel      => x_sel,
+        x_en       => x_en,
+        y_sel      => y_sel,
+        y_en       => y_en,
+        output_en  => output_en,
+        x_lt_y     => x_lt_y,
+        x_ne_y     => x_ne_y,
+        sub_sel    => sub_sel);
 end FSM_D2;
 
 
