@@ -21,7 +21,7 @@ architecture TB of gcd_tb is
 
 begin
 
-    UUT : entity work.gcd(FSMD)
+    UUT : entity work.gcd(FSM_D1)
         generic map (
             WIDTH => WIDTH)
         port map (

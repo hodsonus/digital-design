@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity ctrl1 is
+entity ctrl2 is
     port (
         clk        : in  std_logic;
         rst        : in  std_logic;
@@ -15,9 +15,9 @@ entity ctrl1 is
         x_en       : out std_logic;
         y_sel      : out std_logic;
         y_en       : out std_logic);
-end ctrl1;
+end ctrl2;
 
-architecture FSM_2P of ctrl1 is 
+architecture FSM_2P of ctrl2 is 
     type STATE_TYPE is (START, WAIT_1, INIT, LOOP_COND, LOOP_BODY, DISP, WAIT_0);
     signal state, next_state : STATE_TYPE;
 begin -- FSM_2P

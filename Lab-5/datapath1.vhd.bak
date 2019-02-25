@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity datapath1 is
     generic (
         WIDTH : positive := 8);
-    port (
+    port(
         clk        : in   std_logic;
         rst        : in   std_logic;
         x          : in   std_logic_vector(WIDTH-1 downto 0);
@@ -41,44 +41,9 @@ begin --DEF
     U_TMP_X_REG : entity work.reg
         generic map (WIDTH => WIDTH)
         port map (
-            clk => clk,
-            rst => rst,
-            en  => x_en,
-            input  => x_mux_out,
+            clk => clk;
+            rst => rst;
+            en  => x_en;
+            input  => x_mux_out;
             output => tmp_x);
-    U_TMP_Y_REG : entity work.reg
-        generic map (WIDTH => WIDTH)
-        port map (
-            clk => clk,
-            rst => rst,
-            en  => y_en,
-            input  => y_mux_out,
-            output => tmp_y);
-    U_X_SUB_Y : entity work.sub(UNSIGNED_INPUTS)
-        generic map (WIDTH => WIDTH)
-        port map (
-            in1     => tmp_x,
-            in2     => tmp_y,
-            output  => x_min_y);
-    U_Y_SUB_X : entity work.sub(UNSIGNED_INPUTS)
-        generic map (WIDTH => WIDTH)
-        port map (
-            in1     => tmp_y,
-            in2     => tmp_x,
-            output  => y_min_x);
-    U_COMP : entity work.comp(UNSIGNED_INPUTS)
-        generic map (WIDTH => WIDTH)
-        port map (
-            in1 => tmp_x,
-            in2 => tmp_y,
-            lt  => x_lt_y,
-            neq => x_ne_y);
-    U_OUT_REG : entity work.reg
-        generic map (WIDTH => WIDTH)
-        port map (
-            clk => clk,
-            rst => rst,
-            en  => output_en,
-            input  => tmp_x,
-            output => output);
 end DEF;

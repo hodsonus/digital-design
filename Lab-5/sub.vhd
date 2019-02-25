@@ -11,7 +11,12 @@ entity sub is
         output   : out std_logic_vector(WIDTH-1 downto 0));
 end sub;
 
-architecture DEF of sub is
-begin -- DEF
+architecture UNSIGNED_INPUTS of sub is
+begin -- UNSIGNED_INPUTS
     output <= std_logic_vector(unsigned(in1) - unsigned(in2));
-end DEF;
+end UNSIGNED_INPUTS;
+
+architecture SIGNED_INPUTS of sub is
+begin -- SIGNED_INPUTS
+    output <= std_logic_vector(signed(in1) - signed(in2));
+end SIGNED_INPUTS;

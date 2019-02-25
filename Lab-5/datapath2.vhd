@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity datapath1 is
+entity datapath2 is
     generic (
         WIDTH : positive := 8);
     port (
@@ -18,9 +18,9 @@ entity datapath1 is
         x_lt_y     : out  std_logic;
         x_ne_y     : out  std_logic;
         output     : out  std_logic_vector(WIDTH-1 downto 0));
-end datapath1;
+end datapath2;
 
-architecture DEF of datapath1 is
+architecture DEF of datapath2 is
     --variables here
     signal tmp_x, tmp_y, x_min_y, y_min_x, x_mux_out, y_mux_out : std_logic_vector(WIDTH-1 downto 0);
 begin --DEF

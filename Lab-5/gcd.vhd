@@ -16,7 +16,7 @@ entity gcd is
 end gcd;
 
 architecture FSMD of gcd is
-    type STATE_TYPE is (START, WAIT_1, INIT, LOOP_COND, LOOP_BODY, OUTPUT_RES, WAIT_0);
+    type STATE_TYPE is (START, WAIT_1, INIT, LOOP_COND, LOOP_BODY, DISP, WAIT_0);
     signal state: STATE_TYPE;
     signal tmpX, tmpY   : unsigned(WIDTH-1 downto 0);
 begin  -- FSMD
@@ -49,7 +49,7 @@ begin  -- FSMD
                     if (tmpX /= tmpY) then
                         state <= LOOP_BODY;
                     else
-                        state <= OUTPUT_RES;
+                        state <= DISP;
                     end if;
                 WHEN LOOP_BODY =>
                     if (tmpX < tmpY) then
@@ -58,7 +58,7 @@ begin  -- FSMD
                         tmpX <= tmpX-tmpY;
                     end if;
                     state <= LOOP_COND;
-                WHEN OUTPUT_RES =>
+                WHEN DISP =>
                     output <= std_logic_vector(tmpX);
                     done <= '1';
                     state <= WAIT_0;
@@ -73,36 +73,46 @@ begin  -- FSMD
     end process;
 end FSMD;
 
-
---Therefore, you will also need a register entity, a 2x1 mux entity, a subtractor entity, and a comparator entity
-
-
-
-
-
-
 architecture FSM_D1 of gcd is
-
+    signal x_sel, x_en, y_sel, y_en, output_en, x_lt_y, x_ne_y : std_logic;
 begin  -- FSM_D1
-
-
-
+    U_DATAPATH : entity work.datapath1 
+        generic map (WIDTH => WIDTH)
+        port map (
+            clk       => clk,
+            rst       => rst,
+            x         => x,
+            y         => y,
+            x_sel     => x_sel,
+            x_en      => x_en,
+            y_sel     => y_sel,
+            y_en      => y_en,
+            output_en => output_en,
+            x_lt_y    => x_lt_y,
+            x_ne_y    => x_ne_y,
+            output    => output);
+    U_CTRL : entity work.ctrl1 
+        generic map (WIDTH => WIDTH)
+        port map (
+            clk        => clk,
+            rst        => rst,
+            go         => go,
+            done       => done,
+            x_sel      => x_sel,
+            x_en       => x_en,
+            y_sel      => y_sel,
+            y_en       => y_en,
+            output_en  => output_en,
+            x_lt_y     => x_lt_y,
+            x_ne_y     => x_ne_y);
 end FSM_D1;
 
 architecture FSM_D2 of gcd is
-
 begin  -- FSM_D2
-
-
-
 end FSM_D2;
 
 
 -- EXTRA CREDIT
 architecture FSMD2 of gcd is
-
 begin  -- FSMD2
-
-
-
 end FSMD2;
