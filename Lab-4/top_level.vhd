@@ -83,7 +83,8 @@ architecture STR of top_level is
 
 begin  -- STR
 
-    U_GRAY : gray2 port map (
+    U_GRAY : entity work.gray2(quiz)
+        port map (
         clk    => clk_gen_out,
         rst    => rst,
         output => gray_out);

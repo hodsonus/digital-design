@@ -1,19 +1,11 @@
 
 State Machine - |top_level|gray2:U_GRAY|state
-Name state.STATE_8 state.STATE_9 state.STATE_B state.STATE_A state.STATE_E state.STATE_F state.STATE_D state.STATE_C state.STATE_4 state.STATE_5 state.STATE_7 state.STATE_6 state.STATE_2 state.STATE_3 state.STATE_1 state.STATE_0 
-state.STATE_0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-state.STATE_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-state.STATE_3 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-state.STATE_2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-state.STATE_6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-state.STATE_7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-state.STATE_5 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-state.STATE_4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-state.STATE_C 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-state.STATE_D 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-state.STATE_F 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-state.STATE_E 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-state.STATE_A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-state.STATE_B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.STATE_9 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.STATE_8 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name state.STATE_5B state.STATE_1A state.STATE_4C state.STATE_0A state.STATE_4B state.STATE_4A state.STATE_2A state.STATE_5A 
+state.STATE_5A 0 0 0 0 0 0 0 0 
+state.STATE_2A 0 0 0 0 0 0 1 1 
+state.STATE_4A 0 0 0 0 0 1 0 1 
+state.STATE_4B 0 0 0 0 1 0 0 1 
+state.STATE_0A 0 0 0 1 0 0 0 1 
+state.STATE_4C 0 0 1 0 0 0 0 1 
+state.STATE_1A 0 1 0 0 0 0 0 1 
+state.STATE_5B 1 0 0 0 0 0 0 1 

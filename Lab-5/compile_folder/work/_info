@@ -22,9 +22,9 @@ VQa4JfIQKEzIAJTQKR3JhP3
 !s100 KdQO2T6@J`Nl1A3oM<3mD2
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1551125570
+Z8 !s110 1551140786
 !i10b 1
-Z9 !s108 1551125570.000000
+Z9 !s108 1551140786.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/comp.vhd|
 Z11 !s107 Y:/GitHub/digital-design/Lab-5/comp.vhd|
 !i113 1
@@ -82,9 +82,9 @@ V>WPY98a65AOHM1^0l=A?`2
 !s100 [GM:gG2]A?;;<9D1CHU=40
 R7
 32
-Z18 !s110 1551125571
+Z18 !s110 1551140787
 !i10b 1
-Z19 !s108 1551125571.000000
+Z19 !s108 1551140787.000000
 Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/ctrl1.vhd|
 Z21 !s107 Y:/GitHub/digital-design/Lab-5/ctrl1.vhd|
 !i113 1
@@ -143,9 +143,9 @@ VT<1G?Ch5oFSOK0ZYZj=6^0
 !s100 d5<?Z<3G=U5OS5JH<iolY3
 R7
 32
-Z26 !s110 1551125573
+Z26 !s110 1551140789
 !i10b 1
-Z27 !s108 1551125572.000000
+Z27 !s108 1551140788.000000
 Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/ctrl2.vhd|
 Z29 !s107 Y:/GitHub/digital-design/Lab-5/ctrl2.vhd|
 !i113 1
@@ -184,45 +184,45 @@ VoQDXfmMml:S?56VKR=NPf2
 !s100 JOj06^MW0=7f^:oX^c73f2
 R7
 32
-R18
+Z34 !s110 1551140788
 !i10b 1
 R19
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/datapath1.vhd|
-Z35 !s107 Y:/GitHub/digital-design/Lab-5/datapath1.vhd|
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/datapath1.vhd|
+Z36 !s107 Y:/GitHub/digital-design/Lab-5/datapath1.vhd|
 !i113 1
 R12
 R13
 Adef
 R14
-Z36 DEx4 work 3 sub 0 22 3=mc4cTz8>GTOa==aK8e:0
-Z37 DEx4 work 3 reg 0 22 5F3o1170o^aX>lM2TV8OB2
-Z38 DEx4 work 7 mux_2x1 0 22 08L9]U8JV4nOeeZXInl9n2
+Z37 DEx4 work 3 sub 0 22 3=mc4cTz8>GTOa==aK8e:0
+Z38 DEx4 work 3 reg 0 22 5F3o1170o^aX>lM2TV8OB2
+Z39 DEx4 work 7 mux_2x1 0 22 08L9]U8JV4nOeeZXInl9n2
 R1
 R2
 R3
-Z39 DEx4 work 9 datapath1 0 22 oQDXfmMml:S?56VKR=NPf2
+Z40 DEx4 work 9 datapath1 0 22 oQDXfmMml:S?56VKR=NPf2
 l26
 L23
 VDNF3JF@kao^@Y3mHf;<6c3
 !s100 8WX7W94aeQo=_1fIMVA3D3
 R7
 32
-R18
+R34
 !i10b 1
 R19
-R34
 R35
+R36
 !i113 1
 R12
 R13
 Edatapath2
-Z40 w1551117378
+Z41 w1551117378
 R1
 R2
 R3
 R4
-Z41 8Y:/GitHub/digital-design/Lab-5/datapath2.vhd
-Z42 FY:/GitHub/digital-design/Lab-5/datapath2.vhd
+Z42 8Y:/GitHub/digital-design/Lab-5/datapath2.vhd
+Z43 FY:/GitHub/digital-design/Lab-5/datapath2.vhd
 l0
 L5
 VmafIOP<WS5E=?kei`=n<K2
@@ -231,54 +231,95 @@ R7
 32
 R26
 !i10b 1
-Z43 !s108 1551125573.000000
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/datapath2.vhd|
-Z45 !s107 Y:/GitHub/digital-design/Lab-5/datapath2.vhd|
+Z44 !s108 1551140789.000000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/datapath2.vhd|
+Z46 !s107 Y:/GitHub/digital-design/Lab-5/datapath2.vhd|
 !i113 1
 R12
 R13
 Adef
 R14
-R36
 R37
 R38
+R39
 R1
 R2
 R3
-Z46 DEx4 work 9 datapath2 0 22 mafIOP<WS5E=?kei`=n<K2
+Z47 DEx4 work 9 datapath2 0 22 mafIOP<WS5E=?kei`=n<K2
 l27
 L24
-Z47 Vk?fDT=D51]:lV8`d:a6iJ2
-Z48 !s100 FeVWPT8M^8Q=g3fJz2CfD2
+Vk?fDT=D51]:lV8`d:a6iJ2
+!s100 FeVWPT8M^8Q=g3fJz2CfD2
 R7
 32
 R26
 !i10b 1
-R43
 R44
 R45
+R46
 !i113 1
 R12
 R13
-Egcd
-Z49 w1551125555
+Edecoder7seg
+Z48 w1548900257
 R1
 R2
 R3
 R4
-Z50 8Y:/GitHub/digital-design/Lab-5/gcd.vhd
-Z51 FY:/GitHub/digital-design/Lab-5/gcd.vhd
+Z49 8Y:/GitHub/digital-design/Lab-5/decoder7seg.vhd
+Z50 FY:/GitHub/digital-design/Lab-5/decoder7seg.vhd
 l0
-L5
-V56Mi86@PY7HR>5TOk5]=o0
-!s100 8A1flM3]Bg6kGeiS?]go=1
+L8
+V^TnURn>OP[OD1Q73C1R8D2
+!s100 gHb;5`RVH[Z^KccSZ=jVm2
 R7
 32
-Z52 !s110 1551125568
+Z51 !s110 1551140790
 !i10b 1
-Z53 !s108 1551125567.000000
-Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/gcd.vhd|
-Z55 !s107 Y:/GitHub/digital-design/Lab-5/gcd.vhd|
+Z52 !s108 1551140790.000000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/decoder7seg.vhd|
+Z54 !s107 Y:/GitHub/digital-design/Lab-5/decoder7seg.vhd|
+!i113 1
+R12
+R13
+Abhv
+R1
+R2
+R3
+Z55 DEx4 work 11 decoder7seg 0 22 ^TnURn>OP[OD1Q73C1R8D2
+l16
+L15
+Z56 VDWo:k0TXG`YK:AL_=ShUL1
+Z57 !s100 NU>_DAONC?[GU<UfW7Rf60
+R7
+32
+R51
+!i10b 1
+R52
+R53
+R54
+!i113 1
+R12
+R13
+Egcd
+Z58 w1551140080
+R1
+R2
+R3
+R4
+Z59 8Y:/GitHub/digital-design/Lab-5/gcd.vhd
+Z60 FY:/GitHub/digital-design/Lab-5/gcd.vhd
+l0
+L5
+VV:nedb5oGLL86:]KihBJU2
+!s100 MWoSFl;Xl?MjBmgCQVCXY1
+R7
+32
+Z61 !s110 1551140784
+!i10b 1
+Z62 !s108 1551140783.000000
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/gcd.vhd|
+Z64 !s107 Y:/GitHub/digital-design/Lab-5/gcd.vhd|
 !i113 1
 R12
 R13
@@ -286,60 +327,60 @@ Afsmd2
 R1
 R2
 R3
-Z56 DEx4 work 3 gcd 0 22 56Mi86@PY7HR>5TOk5]=o0
+Z65 DEx4 work 3 gcd 0 22 V:nedb5oGLL86:]KihBJU2
 l149
 L148
 VWVL6T:XVleZzgbbKzFJ7D1
 !s100 <=VnPg8iLD?U@fUajIUl=0
 R7
 32
-R52
+R61
 !i10b 1
-R53
-R54
-R55
+R62
+R63
+R64
 !i113 1
 R12
 R13
 Afsm_d2
 R30
-R46
+R47
 R1
 R2
 R3
-R56
+R65
 l112
 L110
 VDF6Z=6fXCZk@j4h@RNkL[0
 !s100 nDI=h^n?h?7WkMDAOTRXY3
 R7
 32
-R52
+R61
 !i10b 1
-R53
-R54
-R55
+R62
+R63
+R64
 !i113 1
 R12
 R13
 Afsm_d1
 R22
-R39
+R40
 R1
 R2
 R3
-R56
+R65
 l78
 L76
 V?neGHFaX:WFGFabgib7:82
 !s100 :P8d_`NVajm9TjD?k3En^3
 R7
 32
-R52
+R61
 !i10b 1
-R53
-R54
-R55
+R62
+R63
+R64
 !i113 1
 R12
 R13
@@ -347,45 +388,45 @@ Afsmd
 R1
 R2
 R3
-R56
+R65
 l22
 L18
 VA1:VSRQ<SWhTYlUdNOoOD3
 !s100 <KmRbCJOS3E;NFiRm[IP<3
 R7
 32
-R52
+R61
 !i10b 1
-R53
-R54
-R55
+R62
+R63
+R64
 !i113 1
 R12
 R13
 Egcd_tb
-Z57 w1551125423
+Z66 w1551125423
 R1
 R2
 R3
 R4
-Z58 8Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd
-Z59 FY:/GitHub/digital-design/Lab-5/gcd_tb.vhd
+Z67 8Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd
+Z68 FY:/GitHub/digital-design/Lab-5/gcd_tb.vhd
 l0
 L5
 V?`3VzR3DdPa6QGR;I[Q>B0
 !s100 PVI?=LYIXmK9N80ONB]dL1
 R7
 32
-R52
+Z69 !s110 1551140785
 !i10b 1
-Z60 !s108 1551125568.000000
-Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd|
-Z62 !s107 Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd|
+Z70 !s108 1551140784.000000
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd|
+Z72 !s107 Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd|
 !i113 1
 R12
 R13
 Atb
-R56
+R65
 R1
 R2
 R3
@@ -396,33 +437,33 @@ V5>7UUB6Z<n2;Q?hE3h;9b1
 !s100 cNI=<gS1z=gG?ACz4DO:V2
 R7
 32
-R52
+R69
 !i10b 1
-R60
-R61
-R62
+R70
+R71
+R72
 !i113 1
 R12
 R13
 Emux_2x1
-Z63 w1551051232
+Z73 w1551051232
 R1
 R2
 R3
 R4
-Z64 8Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd
-Z65 FY:/GitHub/digital-design/Lab-5/mux_2x1.vhd
+Z74 8Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd
+Z75 FY:/GitHub/digital-design/Lab-5/mux_2x1.vhd
 l0
 L5
 V08L9]U8JV4nOeeZXInl9n2
 !s100 UAVGmSlMWDDYTW^J7J0I_2
 R7
 32
-Z66 !s110 1551125569
+R69
 !i10b 1
-Z67 !s108 1551125569.000000
-Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd|
-Z69 !s107 Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd|
+Z76 !s108 1551140785.000000
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd|
+Z78 !s107 Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd|
 !i113 1
 R12
 R13
@@ -430,29 +471,29 @@ Adef
 R1
 R2
 R3
-R38
+R39
 l16
 L15
 V<Tf<mZBgoHl6iTFKQz9;?0
 !s100 hOLEk9:9<]]56QBGQ1z]j0
 R7
 32
-R66
-!i10b 1
-R67
-R68
 R69
+!i10b 1
+R76
+R77
+R78
 !i113 1
 R12
 R13
 Ereg
-Z70 w1551051987
+Z79 w1551051987
 R1
 R2
 R3
 R4
-Z71 8Y:/GitHub/digital-design/Lab-5/reg.vhd
-Z72 FY:/GitHub/digital-design/Lab-5/reg.vhd
+Z80 8Y:/GitHub/digital-design/Lab-5/reg.vhd
+Z81 FY:/GitHub/digital-design/Lab-5/reg.vhd
 l0
 L5
 V5F3o1170o^aX>lM2TV8OB2
@@ -461,9 +502,9 @@ R7
 32
 R8
 !i10b 1
-R67
-Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/reg.vhd|
-Z74 !s107 Y:/GitHub/digital-design/Lab-5/reg.vhd|
+R9
+Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/reg.vhd|
+Z83 !s107 Y:/GitHub/digital-design/Lab-5/reg.vhd|
 !i113 1
 R12
 R13
@@ -471,7 +512,7 @@ Aasync_rst
 R1
 R2
 R3
-R37
+R38
 l17
 L16
 VPENN51D>UWc];kV]PdVB:1
@@ -480,31 +521,31 @@ R7
 32
 R8
 !i10b 1
-R67
-R73
-R74
+R9
+R82
+R83
 !i113 1
 R12
 R13
 Esub
-Z75 w1551060095
+Z84 w1551060095
 R1
 R2
 R3
 R4
-Z76 8Y:/GitHub/digital-design/Lab-5/sub.vhd
-Z77 FY:/GitHub/digital-design/Lab-5/sub.vhd
+Z85 8Y:/GitHub/digital-design/Lab-5/sub.vhd
+Z86 FY:/GitHub/digital-design/Lab-5/sub.vhd
 l0
 L5
 V3=mc4cTz8>GTOa==aK8e:0
 !s100 nf;V=?F2Mb^>^8ZdAOClD1
 R7
 32
-Z78 !s110 1551125572
+R34
 !i10b 1
 R27
-Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/sub.vhd|
-Z80 !s107 Y:/GitHub/digital-design/Lab-5/sub.vhd|
+Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/sub.vhd|
+Z88 !s107 Y:/GitHub/digital-design/Lab-5/sub.vhd|
 !i113 1
 R12
 R13
@@ -512,18 +553,18 @@ Asigned_inputs
 R1
 R2
 R3
-R36
+R37
 l20
 L19
 VHVlj2?]i_4hBWfo70BlE`2
 !s100 8=@kH<jV:e<QR[:XfiCj;1
 R7
 32
-R78
+R34
 !i10b 1
 R27
-R79
-R80
+R87
+R88
 !i113 1
 R12
 R13
@@ -531,18 +572,18 @@ Aunsigned_inputs
 R1
 R2
 R3
-R36
+R37
 l15
 L14
 Vadk:1>55Led>FUiBMD5h73
 !s100 9``ib8:[aY:o9PB9gFYOR2
 R7
 32
-R78
+R34
 !i10b 1
 R27
-R79
-R80
+R87
+R88
 !i113 1
 R12
 R13
@@ -550,7 +591,7 @@ Adef
 R1
 R2
 R3
-R36
+R37
 l15
 L14
 VXPfdac4Mom^RANg3OOdkc3
@@ -560,8 +601,8 @@ R7
 !s110 1551060040
 !i10b 1
 !s108 1551060040.000000
-R79
-R80
+R87
+R88
 !i113 1
 R12
 R13
@@ -580,9 +621,51 @@ R7
 !s110 1551051192
 !i10b 1
 !s108 1551051191.000000
-R79
-R80
+R87
+R88
 !i113 1
 R12
 R13
 w1551051147
+Etop_level
+Z89 w1551140083
+R2
+R3
+R4
+Z90 8Y:/GitHub/digital-design/Lab-5/top_level.vhd
+Z91 FY:/GitHub/digital-design/Lab-5/top_level.vhd
+l0
+L20
+Vk09oi<E_5<YGL3`@ONag80
+!s100 =kP=mQ9ZXFicg1Y^;3<=X1
+R7
+32
+R51
+!i10b 1
+R44
+Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/GitHub/digital-design/Lab-5/top_level.vhd|
+Z93 !s107 Y:/GitHub/digital-design/Lab-5/top_level.vhd|
+!i113 1
+R12
+R13
+Astr
+R55
+R1
+R65
+R2
+R3
+DEx4 work 9 top_level 0 22 k09oi<E_5<YGL3`@ONag80
+l44
+L40
+V5;dHP<`oWQ2AEhJYczXcU2
+!s100 79l0Zm6WecDJb^THIMMH42
+R7
+32
+R51
+!i10b 1
+R44
+R92
+R93
+!i113 1
+R12
+R13

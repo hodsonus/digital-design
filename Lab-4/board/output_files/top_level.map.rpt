@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Fri Feb 22 08:53:36 2019
+Mon Feb 25 20:41:32 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -15,16 +15,15 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |top_level|gray2:U_GRAY|state
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: clk_gen:U_CLK_GEN
- 12. Parameter Settings for User Entity Instance: clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV
- 13. Port Connectivity Checks: "decoder7seg:U_LED0"
- 14. Port Connectivity Checks: "decoder7seg:U_LED1"
- 15. Port Connectivity Checks: "decoder7seg:U_LED2"
- 16. Port Connectivity Checks: "decoder7seg:U_LED3"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: clk_gen:U_CLK_GEN
+ 11. Parameter Settings for User Entity Instance: clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV
+ 12. Port Connectivity Checks: "decoder7seg:U_LED0"
+ 13. Port Connectivity Checks: "decoder7seg:U_LED1"
+ 14. Port Connectivity Checks: "decoder7seg:U_LED2"
+ 15. Port Connectivity Checks: "decoder7seg:U_LED3"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -50,15 +49,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 22 08:53:36 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 25 20:41:31 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_level                                   ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 171                                         ;
-;     Total combinational functions  ; 157                                         ;
-;     Dedicated logic registers      ; 86                                          ;
-; Total registers                    ; 86                                          ;
+; Total logic elements               ; 127                                         ;
+;     Total combinational functions  ; 121                                         ;
+;     Dedicated logic registers      ; 78                                          ;
+; Total registers                    ; 78                                          ;
 ; Total pins                         ; 62                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -191,20 +190,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 171       ;
+; Estimated Total logic elements              ; 127       ;
 ;                                             ;           ;
-; Total combinational functions               ; 157       ;
+; Total combinational functions               ; 121       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 75        ;
-;     -- 3 input functions                    ; 3         ;
-;     -- <=2 input functions                  ; 79        ;
+;     -- 4 input functions                    ; 39        ;
+;     -- 3 input functions                    ; 6         ;
+;     -- <=2 input functions                  ; 76        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 92        ;
+;     -- normal mode                          ; 56        ;
 ;     -- arithmetic mode                      ; 65        ;
 ;                                             ;           ;
-; Total registers                             ; 86        ;
-;     -- Dedicated logic registers            ; 86        ;
+; Total registers                             ; 78        ;
+;     -- Dedicated logic registers            ; 78        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 62        ;
@@ -212,9 +211,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 86        ;
-; Total fan-out                               ; 803       ;
-; Average fan-out                             ; 2.19      ;
+; Maximum fan-out                             ; 46        ;
+; Total fan-out                               ; 638       ;
+; Average fan-out                             ; 1.98      ;
 +---------------------------------------------+-----------+
 
 
@@ -223,40 +222,32 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                            ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+-------------+--------------+
-; |top_level                 ; 157 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 62   ; 0            ; 0          ; |top_level                                     ; top_level   ; work         ;
-;    |clk_gen:U_CLK_GEN|     ; 126 (77)            ; 66 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|clk_gen:U_CLK_GEN                   ; clk_gen     ; work         ;
+; |top_level                 ; 121 (0)             ; 78 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 62   ; 0            ; 0          ; |top_level                                     ; top_level   ; work         ;
+;    |clk_gen:U_CLK_GEN|     ; 101 (52)            ; 66 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|clk_gen:U_CLK_GEN                   ; clk_gen     ; work         ;
 ;       |clk_div:U_CLK_DIV|  ; 49 (49)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV ; clk_div     ; work         ;
 ;    |counter:U_COUNTER|     ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|counter:U_COUNTER                   ; counter     ; work         ;
 ;    |decoder7seg:U_LED4|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED4                  ; decoder7seg ; work         ;
-;    |decoder7seg:U_LED5|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED5                  ; decoder7seg ; work         ;
-;    |gray2:U_GRAY|          ; 12 (12)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gray2:U_GRAY                        ; gray2       ; work         ;
+;    |decoder7seg:U_LED5|    ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED5                  ; decoder7seg ; work         ;
+;    |gray2:U_GRAY|          ; 3 (3)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gray2:U_GRAY                        ; gray2       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top_level|gray2:U_GRAY|state                                                                                                                                                                                                                                 ;
-+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
-; Name          ; state.STATE_8 ; state.STATE_9 ; state.STATE_B ; state.STATE_A ; state.STATE_E ; state.STATE_F ; state.STATE_D ; state.STATE_C ; state.STATE_4 ; state.STATE_5 ; state.STATE_7 ; state.STATE_6 ; state.STATE_2 ; state.STATE_3 ; state.STATE_1 ; state.STATE_0 ;
-+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
-; state.STATE_0 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ;
-; state.STATE_1 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 1             ;
-; state.STATE_3 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 1             ;
-; state.STATE_2 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 1             ;
-; state.STATE_6 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_7 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_5 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_4 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_C ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_D ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_F ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_E ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_A ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_B ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_9 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-; state.STATE_8 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
-+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|gray2:U_GRAY|state                                                                                                          ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+; Name           ; state.STATE_5B ; state.STATE_1A ; state.STATE_4C ; state.STATE_0A ; state.STATE_4B ; state.STATE_4A ; state.STATE_2A ; state.STATE_5A ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+; state.STATE_5A ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ;
+; state.STATE_2A ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 1              ;
+; state.STATE_4A ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 1              ;
+; state.STATE_4B ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 1              ;
+; state.STATE_0A ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 1              ;
+; state.STATE_4C ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; state.STATE_1A ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; state.STATE_5B ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
 
 
 +------------------------------------------------------+
@@ -264,24 +255,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 86    ;
+; Total registers                              ; 78    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 3     ;
-; Number of registers using Asynchronous Clear ; 86    ;
+; Number of registers using Asynchronous Clear ; 78    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |top_level|clk_gen:U_CLK_GEN|count[1]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_level|clk_gen:U_CLK_GEN|count[31] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -347,22 +328,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 62                          ;
-; cycloneiii_ff         ; 86                          ;
-;     CLR               ; 83                          ;
+; cycloneiii_ff         ; 78                          ;
+;     CLR               ; 75                          ;
 ;     CLR SLD           ; 3                           ;
-; cycloneiii_lcell_comb ; 163                         ;
+; cycloneiii_lcell_comb ; 125                         ;
 ;     arith             ; 65                          ;
 ;         2 data inputs ; 63                          ;
 ;         3 data inputs ; 2                           ;
-;     normal            ; 98                          ;
+;     normal            ; 60                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 75                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 39                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 3.68                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 3.13                        ;
 +-----------------------+-----------------------------+
 
 
@@ -371,7 +352,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -381,15 +362,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Feb 22 08:52:57 2019
+    Info: Processing started: Mon Feb 25 20:40:51 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off board -c top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file //vmware-host/shared folders/github/digital-design/lab-4/top_level.vhd
     Info (12022): Found design unit 1: top_level-STR File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 42
     Info (12023): Found entity 1: top_level File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 21
-Info (12021): Found 2 design units, including 1 entities, in source file //vmware-host/shared folders/github/digital-design/lab-4/gray2.vhd
+Info (12021): Found 3 design units, including 1 entities, in source file //vmware-host/shared folders/github/digital-design/lab-4/gray2.vhd
     Info (12022): Found design unit 1: gray2-default File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/gray2.vhd Line: 11
+    Info (12022): Found design unit 2: gray2-quiz File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/gray2.vhd Line: 84
     Info (12023): Found entity 1: gray2 File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/gray2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file //vmware-host/shared folders/github/digital-design/lab-4/decoder7seg.vhd
     Info (12022): Found design unit 1: decoder7seg-BHV File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/decoder7seg.vhd Line: 15
@@ -404,11 +386,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file //vmwar
     Info (12022): Found design unit 1: clk_div-BHV File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/clk_div.vhd Line: 15
     Info (12023): Found entity 1: clk_div File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/clk_div.vhd Line: 6
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
-Info (12128): Elaborating entity "gray2" for hierarchy "gray2:U_GRAY" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 86
-Info (12128): Elaborating entity "counter" for hierarchy "counter:U_COUNTER" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 91
-Info (12128): Elaborating entity "clk_gen" for hierarchy "clk_gen:U_CLK_GEN" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 99
+Info (12129): Elaborating entity "gray2" using architecture "A:quiz" for hierarchy "gray2:U_GRAY" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 86
+Info (12128): Elaborating entity "counter" for hierarchy "counter:U_COUNTER" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 92
+Info (12128): Elaborating entity "clk_gen" for hierarchy "clk_gen:U_CLK_GEN" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 100
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/clk_gen.vhd Line: 22
-Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED5" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 108
+Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED5" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 109
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "led0[0]" is stuck at GND File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 27
     Warning (13410): Pin "led0[1]" is stuck at GND File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 27
@@ -446,8 +428,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "led5_dp" is stuck at VCC File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 38
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register clk_gen:U_CLK_GEN|count[31] will power up to Low File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/clk_gen.vhd Line: 35
-    Critical Warning (18010): Register clk_gen:U_CLK_GEN|count[0] will power up to Low File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/clk_gen.vhd Line: 35
+    Critical Warning (18010): Register clk_gen:U_CLK_GEN|count[31] will power up to Low File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/clk_gen.vhd Line: 57
+    Critical Warning (18010): Register clk_gen:U_CLK_GEN|count[0] will power up to Low File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/clk_gen.vhd Line: 57
     Critical Warning (18010): Register clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|count[31] will power up to Low File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/clk_div.vhd Line: 24
     Critical Warning (18010): Register clk_gen:U_CLK_GEN|clk_div:U_CLK_DIV|count[0] will power up to Low File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/clk_div.vhd Line: 24
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -458,14 +440,14 @@ Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "switch[2]" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 25
     Warning (15610): No output dependent on input pin "switch[3]" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 25
     Warning (15610): No output dependent on input pin "button[0]" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-4/top_level.vhd Line: 26
-Info (21057): Implemented 234 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 190 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 172 logic cells
+    Info (21061): Implemented 128 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Fri Feb 22 08:53:36 2019
-    Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Mon Feb 25 20:41:32 2019
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:44
 
 

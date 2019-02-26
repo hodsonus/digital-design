@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity gcd is
     generic (
-        WIDTH : positive := 16);
+        WIDTH : positive := 8);
     port (
         clk    : in  std_logic;
         rst    : in  std_logic;
@@ -92,7 +92,6 @@ begin  -- FSM_D1
             x_ne_y    => x_ne_y,
             output    => output);
     U_CTRL : entity work.ctrl1 
-        generic map (WIDTH => WIDTH)
         port map (
             clk        => clk,
             rst        => rst,
@@ -127,7 +126,6 @@ begin  -- FSM_D2
         sub_sel    => sub_sel,
         output    => output);
     U_CTRL : entity work.ctrl2
-    generic map (WIDTH => WIDTH)
     port map (
         clk        => clk,
         rst        => rst,

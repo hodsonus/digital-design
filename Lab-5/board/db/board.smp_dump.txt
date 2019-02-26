@@ -1,0 +1,10 @@
+
+State Machine - |top_level|gcd:U_GCD|state
+Name state.WAIT_0 state.DISP state.LOOP_BODY state.LOOP_COND state.INIT state.WAIT_1 state.START 
+state.START 0 0 0 0 0 0 0 
+state.WAIT_1 0 0 0 0 0 1 1 
+state.INIT 0 0 0 0 1 0 1 
+state.LOOP_COND 0 0 0 1 0 0 1 
+state.LOOP_BODY 0 0 1 0 0 0 1 
+state.DISP 0 1 0 0 0 0 1 
+state.WAIT_0 1 0 0 0 0 0 1 
