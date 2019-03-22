@@ -1,0 +1,52 @@
+VGA_sync_gen
+
+	all provided code -> hmax in VGA_LIB package on his website
+
+	every cycle we should update the horizontal counter
+
+	some process()
+		hcount++
+		if (hcount = MAX_VALUE) --MAX_VALUE = ???
+			hcount = 0;
+		if (hcount = appropriate_count_val) 
+			--increment vcount
+		if (vcount = some_other_max_val)
+			vcount = 0
+
+	pseudocode for counting logic ^
+
+	same entity, probably not in the same process (should PROBABLY make it combinational logic)
+
+	go through and assign a counter value for every event in the waveform
+		if we are between this_count and this_other_count, then HORIZ_SYNC should be 0
+		VSYNC should be 0 except for a smalllll P region of time
+
+	TEST THIS VERY THOROUGHLY BEFORE MOVING ON TO THE NEXT PART
+
+the entire output for the vga interface is the RAM and the VGA_SYNC_GEN
+	translate the hcount and the vcount into addresses on the RAM using some logic
+
+each pixel in the actual image (in ram) gets mapped to a 2x2 block of pixels on the screen
+
+divide hcount by 2 tog et the column address on the screen
+
+
+
+
+the two column and row mapping entities are very very siumilar
+	once you get one working, copy and paste it to the other entity
+	first, check to see if there is a button pressed
+		if you arent in the D region (check hcount !?) then output black
+		draw in the appropriate corner
+			top left corner -> linear mapping with no changes
+			top right corner -> create a mapping fxn for the column addresses (nothing for rows, rows dont chage), its just subtracting off some offset
+
+
+
+SOME CONSTANTS ARE NOT CORRECT AND STITT DID THIS PURPOSELY
+
+RAM is one cycle behind the controller
+	register the output of the VGA_SYNC_GEN to match it
+	delay registers
+	really big deal in industry and DD
+		proabbly a question on the next midterm (;
