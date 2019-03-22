@@ -43,14 +43,14 @@ begin --BHV
 
             --logic to decode the Vert_sync signal
             Vert_Sync <= '1';
-            if (VSYNC_BEGIN < vert_count and vert_count < VSYNC_END) then
+            if (VSYNC_BEGIN <= vert_count and vert_count <= VSYNC_END) then
                 Vert_Sync <= '0';
             end if;
             --
 
             --logic to decode the Video_on signal
             Video_on <= '0';
-            if (0 < horiz_count and horiz_count < H_DISPLAY_END) then
+            if (0 <= horiz_count and horiz_count <= H_DISPLAY_END) then
                 Video_on <= '1';
             end if;
             --
@@ -67,28 +67,4 @@ begin --BHV
 
         end if;
     end process;
-
-    -- combinational logic to determine the outputs
-    -- process(horiz_count,vert_count)
-    -- begin
-
-    --     -- The following must be set through every path
-    --     -- Horiz_Sync
-    --     -- Vert_Sync
-    --     -- Video_On
-
-    --     Hcount <= std_logic_vector(horiz_count);
-    --     Vcount <= std_logic_vector(vert_count);
-    --     Horiz_Sync <= '0';
-    --     Vert_Sync <= '0';
-    --     Video_On <= '0';
-
-    --     -- if () then
-    --     --     --do something
-    --     -- elsif () then
-    --     --     --do something else
-    --     -- elsif () then
-    --     --     -- do something else
-    --     -- end if;
-    -- end process;
 end BHV;
