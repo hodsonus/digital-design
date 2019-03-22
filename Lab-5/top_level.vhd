@@ -48,7 +48,7 @@ begin  -- STR
     gcd_x <= "000" & switch(9 downto 5);
     gcd_y <= "000" & switch(4 downto 0);
 
-    U_GCD : entity work.gcd(FSMD)
+    U_GCD : entity work.gcd(FSM_D2)
 		  generic map (WIDTH => 8)
         port map (
             clk    => clk50MHz,

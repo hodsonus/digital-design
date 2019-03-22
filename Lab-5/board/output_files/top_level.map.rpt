@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Mon Feb 25 20:13:28 2019
+Mon Mar 11 20:38:59 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -13,18 +13,30 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |top_level|gcd:U_GCD|state
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: gcd:U_GCD
- 12. Port Connectivity Checks: "decoder7seg:U_LED0"
- 13. Port Connectivity Checks: "decoder7seg:U_LED1"
- 14. Port Connectivity Checks: "decoder7seg:U_LED2"
- 15. Port Connectivity Checks: "decoder7seg:U_LED3"
- 16. Port Connectivity Checks: "gcd:U_GCD"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  8. State Machine - |top_level|gcd:U_GCD|ctrl2:U_CTRL|state
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: gcd:U_GCD
+ 13. Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH
+ 14. Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_X
+ 15. Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_Y
+ 16. Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|reg:U_TMP_X_REG
+ 17. Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|reg:U_TMP_Y_REG
+ 18. Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_LEFT
+ 19. Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_RIGHT
+ 20. Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|sub:U_SUB
+ 21. Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|comp:U_COMP
+ 22. Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|reg:U_OUT_REG
+ 23. Port Connectivity Checks: "decoder7seg:U_LED0"
+ 24. Port Connectivity Checks: "decoder7seg:U_LED1"
+ 25. Port Connectivity Checks: "decoder7seg:U_LED2"
+ 26. Port Connectivity Checks: "decoder7seg:U_LED3"
+ 27. Port Connectivity Checks: "gcd:U_GCD|datapath2:U_DATAPATH|comp:U_COMP"
+ 28. Port Connectivity Checks: "gcd:U_GCD"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -50,12 +62,12 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 25 20:13:28 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 11 20:38:59 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_level                                   ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 79                                          ;
+; Total logic elements               ; 87                                          ;
 ;     Total combinational functions  ; 78                                          ;
 ;     Dedicated logic registers      ; 32                                          ;
 ; Total registers                    ; 32                                          ;
@@ -178,6 +190,7 @@ refer to the applicable agreement for further details.
 ; File Name with User-Entered Path                                         ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
 +--------------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
 ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/top_level.vhd   ; yes             ; User VHDL File  ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/top_level.vhd   ;         ;
+; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/sub.vhd         ; yes             ; User VHDL File  ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/sub.vhd         ;         ;
 ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/reg.vhd         ; yes             ; User VHDL File  ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/reg.vhd         ;         ;
 ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/mux_2x1.vhd     ; yes             ; User VHDL File  ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/mux_2x1.vhd     ;         ;
 ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/gcd.vhd         ; yes             ; User VHDL File  ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/gcd.vhd         ;         ;
@@ -186,6 +199,7 @@ refer to the applicable agreement for further details.
 ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/datapath1.vhd   ; yes             ; User VHDL File  ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/datapath1.vhd   ;         ;
 ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/ctrl2.vhd       ; yes             ; User VHDL File  ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/ctrl2.vhd       ;         ;
 ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/ctrl1.vhd       ; yes             ; User VHDL File  ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/ctrl1.vhd       ;         ;
+; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/comp.vhd        ; yes             ; User VHDL File  ; //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/comp.vhd        ;         ;
 +--------------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
 
 
@@ -194,17 +208,17 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 79             ;
+; Estimated Total logic elements              ; 87             ;
 ;                                             ;                ;
 ; Total combinational functions               ; 78             ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 21             ;
-;     -- 3 input functions                    ; 35             ;
-;     -- <=2 input functions                  ; 22             ;
+;     -- 4 input functions                    ; 20             ;
+;     -- 3 input functions                    ; 45             ;
+;     -- <=2 input functions                  ; 13             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 57             ;
-;     -- arithmetic mode                      ; 21             ;
+;     -- normal mode                          ; 64             ;
+;     -- arithmetic mode                      ; 14             ;
 ;                                             ;                ;
 ; Total registers                             ; 32             ;
 ;     -- Dedicated logic registers            ; 32             ;
@@ -216,38 +230,61 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clk50MHz~input ;
 ; Maximum fan-out                             ; 32             ;
-; Total fan-out                               ; 428            ;
-; Average fan-out                             ; 1.84           ;
+; Total fan-out                               ; 436            ;
+; Average fan-out                             ; 1.88           ;
 +---------------------------------------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                          ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name           ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------+-------------+--------------+
-; |top_level                 ; 78 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 61   ; 0            ; 0          ; |top_level                    ; top_level   ; work         ;
-;    |decoder7seg:U_LED4|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED4 ; decoder7seg ; work         ;
-;    |decoder7seg:U_LED5|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED5 ; decoder7seg ; work         ;
-;    |gcd:U_GCD|             ; 64 (64)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD          ; gcd         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                              ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                           ; Entity Name ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------+-------------+--------------+
+; |top_level                     ; 78 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 61   ; 0            ; 0          ; |top_level                                                    ; top_level   ; work         ;
+;    |decoder7seg:U_LED4|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED4                                 ; decoder7seg ; work         ;
+;    |decoder7seg:U_LED5|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED5                                 ; decoder7seg ; work         ;
+;    |gcd:U_GCD|                 ; 64 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD                                          ; gcd         ; work         ;
+;       |ctrl2:U_CTRL|           ; 11 (11)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|ctrl2:U_CTRL                             ; ctrl2       ; work         ;
+;       |datapath2:U_DATAPATH|   ; 53 (0)              ; 24 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|datapath2:U_DATAPATH                     ; datapath2   ; work         ;
+;          |comp:U_COMP|         ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|datapath2:U_DATAPATH|comp:U_COMP         ; comp        ; work         ;
+;          |mux_2x1:U_MUX_LEFT|  ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_LEFT  ; mux_2x1     ; work         ;
+;          |mux_2x1:U_MUX_RIGHT| ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_RIGHT ; mux_2x1     ; work         ;
+;          |mux_2x1:U_MUX_X|     ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_X     ; mux_2x1     ; work         ;
+;          |mux_2x1:U_MUX_Y|     ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_Y     ; mux_2x1     ; work         ;
+;          |reg:U_OUT_REG|       ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|datapath2:U_DATAPATH|reg:U_OUT_REG       ; reg         ; work         ;
+;          |reg:U_TMP_X_REG|     ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|datapath2:U_DATAPATH|reg:U_TMP_X_REG     ; reg         ; work         ;
+;          |reg:U_TMP_Y_REG|     ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|datapath2:U_DATAPATH|reg:U_TMP_Y_REG     ; reg         ; work         ;
+;          |sub:U_SUB|           ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|gcd:U_GCD|datapath2:U_DATAPATH|sub:U_SUB           ; sub         ; work         ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top_level|gcd:U_GCD|state                                                                                ;
-+-----------------+--------------+------------+-----------------+-----------------+------------+--------------+-------------+
-; Name            ; state.WAIT_0 ; state.DISP ; state.LOOP_BODY ; state.LOOP_COND ; state.INIT ; state.WAIT_1 ; state.START ;
-+-----------------+--------------+------------+-----------------+-----------------+------------+--------------+-------------+
-; state.START     ; 0            ; 0          ; 0               ; 0               ; 0          ; 0            ; 0           ;
-; state.WAIT_1    ; 0            ; 0          ; 0               ; 0               ; 0          ; 1            ; 1           ;
-; state.INIT      ; 0            ; 0          ; 0               ; 0               ; 1          ; 0            ; 1           ;
-; state.LOOP_COND ; 0            ; 0          ; 0               ; 1               ; 0          ; 0            ; 1           ;
-; state.LOOP_BODY ; 0            ; 0          ; 1               ; 0               ; 0          ; 0            ; 1           ;
-; state.DISP      ; 0            ; 1          ; 0               ; 0               ; 0          ; 0            ; 1           ;
-; state.WAIT_0    ; 1            ; 0          ; 0               ; 0               ; 0          ; 0            ; 1           ;
-+-----------------+--------------+------------+-----------------+-----------------+------------+--------------+-------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|gcd:U_GCD|ctrl2:U_CTRL|state                                                                                           ;
++-------------------+--------------+------------+-------------------+-------------------+-----------------+------------+--------------+-------------+
+; Name              ; state.WAIT_0 ; state.DISP ; state.LOOP_BODY_B ; state.LOOP_BODY_A ; state.LOOP_COND ; state.INIT ; state.WAIT_1 ; state.START ;
++-------------------+--------------+------------+-------------------+-------------------+-----------------+------------+--------------+-------------+
+; state.START       ; 0            ; 0          ; 0                 ; 0                 ; 0               ; 0          ; 0            ; 0           ;
+; state.WAIT_1      ; 0            ; 0          ; 0                 ; 0                 ; 0               ; 0          ; 1            ; 1           ;
+; state.INIT        ; 0            ; 0          ; 0                 ; 0                 ; 0               ; 1          ; 0            ; 1           ;
+; state.LOOP_COND   ; 0            ; 0          ; 0                 ; 0                 ; 1               ; 0          ; 0            ; 1           ;
+; state.LOOP_BODY_A ; 0            ; 0          ; 0                 ; 1                 ; 0               ; 0          ; 0            ; 1           ;
+; state.LOOP_BODY_B ; 0            ; 0          ; 1                 ; 0                 ; 0               ; 0          ; 0            ; 1           ;
+; state.DISP        ; 0            ; 1          ; 0                 ; 0                 ; 0               ; 0          ; 0            ; 1           ;
+; state.WAIT_0      ; 1            ; 0          ; 0                 ; 0                 ; 0               ; 0          ; 0            ; 1           ;
++-------------------+--------------+------------+-------------------+-------------------+-----------------+------------+--------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++----------------------------------------------------+--------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal            ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------------+------------------------+
+; gcd:U_GCD|ctrl2:U_CTRL|sub_sel                     ; gcd:U_GCD|ctrl2:U_CTRL|WideOr3 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                                ;                        ;
++----------------------------------------------------+--------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -265,14 +302,13 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_level|gcd:U_GCD|tmpY[4] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_level|gcd:U_GCD|tmpX[4] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_level|gcd:U_GCD|ctrl2:U_CTRL|next_state.LOOP_BODY_A ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
 +--------------------------------------------------------+
@@ -282,6 +318,106 @@ Encoding Type:  One-Hot
 +----------------+-------+-------------------------------+
 ; width          ; 8     ; Signed Integer                ;
 +----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; width          ; 8     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_X ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_Y ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|reg:U_TMP_X_REG ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|reg:U_TMP_Y_REG ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_LEFT ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_RIGHT ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|sub:U_SUB ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|comp:U_COMP ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gcd:U_GCD|datapath2:U_DATAPATH|reg:U_OUT_REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -321,6 +457,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+---------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "gcd:U_GCD|datapath2:U_DATAPATH|comp:U_COMP"                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; gt   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------+
 ; Port Connectivity Checks: "gcd:U_GCD"     ;
 +---------+-------+----------+--------------+
@@ -341,17 +486,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 8                           ;
 ;     ENA CLR           ; 24                          ;
 ; cycloneiii_lcell_comb ; 83                          ;
-;     arith             ; 21                          ;
-;         3 data inputs ; 21                          ;
-;     normal            ; 62                          ;
+;     arith             ; 14                          ;
+;         3 data inputs ; 14                          ;
+;     normal            ; 69                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 22                          ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 21                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 20                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.98                        ;
+; Max LUT depth         ; 3.70                        ;
+; Average LUT depth     ; 2.43                        ;
 +-----------------------+-----------------------------+
 
 
@@ -370,7 +515,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Feb 25 20:12:59 2019
+    Info: Processing started: Mon Mar 11 20:38:35 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off board -c top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -413,8 +558,18 @@ Info (12021): Found 3 design units, including 1 entities, in source file //vmwar
     Info (12022): Found design unit 2: comp-SIGNED_INPUTS File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/comp.vhd Line: 23
     Info (12023): Found entity 1: comp File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/comp.vhd Line: 5
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
-Info (12129): Elaborating entity "gcd" using architecture "A:fsmd" for hierarchy "gcd:U_GCD" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/top_level.vhd Line: 51
+Info (12129): Elaborating entity "gcd" using architecture "A:fsm_d2" for hierarchy "gcd:U_GCD" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/top_level.vhd Line: 51
+Info (12128): Elaborating entity "datapath2" for hierarchy "gcd:U_GCD|datapath2:U_DATAPATH" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/gcd.vhd Line: 112
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "gcd:U_GCD|datapath2:U_DATAPATH|mux_2x1:U_MUX_X" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/datapath2.vhd Line: 28
+Info (12128): Elaborating entity "reg" for hierarchy "gcd:U_GCD|datapath2:U_DATAPATH|reg:U_TMP_X_REG" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/datapath2.vhd Line: 42
+Info (12129): Elaborating entity "sub" using architecture "A:unsigned_inputs" for hierarchy "gcd:U_GCD|datapath2:U_DATAPATH|sub:U_SUB" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/datapath2.vhd Line: 72
+Info (12129): Elaborating entity "comp" using architecture "A:unsigned_inputs" for hierarchy "gcd:U_GCD|datapath2:U_DATAPATH|comp:U_COMP" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/datapath2.vhd Line: 78
+Info (12128): Elaborating entity "ctrl2" for hierarchy "gcd:U_GCD|ctrl2:U_CTRL" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/gcd.vhd Line: 128
+Warning (10631): VHDL Process Statement warning at ctrl2.vhd(34): inferring latch(es) for signal or variable "sub_sel", which holds its previous value in one or more paths through the process File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/ctrl2.vhd Line: 34
+Info (10041): Inferred latch for "sub_sel" at ctrl2.vhd(34) File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/ctrl2.vhd Line: 34
 Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED5" File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/top_level.vhd Line: 62
+Warning (13012): Latch gcd:U_GCD|ctrl2:U_CTRL|sub_sel has unsafe behavior File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/ctrl2.vhd Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal gcd:U_GCD|ctrl2:U_CTRL|state.LOOP_BODY_B File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/ctrl2.vhd Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "led0[0]" is stuck at GND File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/top_level.vhd Line: 25
     Warning (13410): Pin "led0[1]" is stuck at GND File: //vmware-host/Shared Folders/GitHub/digital-design/Lab-5/top_level.vhd Line: 25
@@ -452,14 +607,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 140 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 148 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 79 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info (21061): Implemented 87 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
     Info: Peak virtual memory: 4806 megabytes
-    Info: Processing ended: Mon Feb 25 20:13:28 2019
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:37
+    Info: Processing ended: Mon Mar 11 20:38:59 2019
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:35
 
 

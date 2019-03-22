@@ -72,6 +72,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "button[1]",
+					"strict" : false
+				},
+				{
 					"name" : "switch[5]",
 					"strict" : false
 				},
@@ -88,10 +92,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "button[1]",
-					"strict" : false
-				},
-				{
 					"name" : "switch[9]",
 					"strict" : false
 				},
@@ -100,7 +100,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "switch[4]",
+					"name" : "switch[1]",
 					"strict" : false
 				},
 				{
@@ -112,7 +112,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "switch[1]",
+					"name" : "switch[4]",
 					"strict" : false
 				}
 			]

@@ -1,23 +1,20 @@
-Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd
+Y:/GitHub/digital-design/Lab-5/decoder7seg.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/decoder7seg.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity gcd_tb
--- Compiling architecture TB of gcd_tb
--- Loading entity gcd
+-- Compiling entity decoder7seg
+-- Compiling architecture BHV of decoder7seg
 
-} {} {}} Y:/GitHub/digital-design/Lab-5/comp.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/comp.vhd
+} {} {}} Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity comp
--- Compiling architecture UNSIGNED_INPUTS of comp
--- Compiling architecture SIGNED_INPUTS of comp
--- Loading entity comp
+-- Compiling entity mux_2x1
+-- Compiling architecture DEF of mux_2x1
 
 } {} {}} Y:/GitHub/digital-design/Lab-5/datapath1.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/datapath1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -45,6 +42,24 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading entity sub
 -- Loading entity comp
 
+} {} {}} Y:/GitHub/digital-design/Lab-5/reg.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity reg
+-- Compiling architecture ASYNC_RST of reg
+
+} {} {}} Y:/GitHub/digital-design/Lab-5/ctrl1.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/ctrl1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ctrl1
+-- Compiling architecture FSM_2P of ctrl1
+
 } {} {}} Y:/GitHub/digital-design/Lab-5/sub.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/sub.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -56,42 +71,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture SIGNED_INPUTS of sub
 -- Loading entity sub
 
-} {} {}} Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/mux_2x1.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity mux_2x1
--- Compiling architecture DEF of mux_2x1
-
-} {} {}} Y:/GitHub/digital-design/Lab-5/decoder7seg.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/decoder7seg.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity decoder7seg
--- Compiling architecture BHV of decoder7seg
-
-} {} {}} Y:/GitHub/digital-design/Lab-5/ctrl1.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/ctrl1.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ctrl1
--- Compiling architecture FSM_2P of ctrl1
-
-} {} {}} Y:/GitHub/digital-design/Lab-5/reg.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/reg.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity reg
--- Compiling architecture ASYNC_RST of reg
-
 } {} {}} Y:/GitHub/digital-design/Lab-5/ctrl2.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/ctrl2.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -100,5 +79,26 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity ctrl2
 -- Compiling architecture FSM_2P of ctrl2
+
+} {} {}} Y:/GitHub/digital-design/Lab-5/comp.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/comp.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity comp
+-- Compiling architecture UNSIGNED_INPUTS of comp
+-- Compiling architecture SIGNED_INPUTS of comp
+-- Loading entity comp
+
+} {} {}} Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/GitHub/digital-design/Lab-5/gcd_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity gcd_tb
+-- Compiling architecture TB of gcd_tb
+-- Loading entity gcd
 
 } {} {}}
