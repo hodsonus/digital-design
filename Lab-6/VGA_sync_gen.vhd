@@ -27,6 +27,10 @@ begin --BHV
         if (rst = '1') then
             horiz_count <= (others => '0');
             vert_count <= (others => '0');
+
+            Horiz_sync <= '1';
+		    Vert_sync <= '1';
+		    Video_On <= '0';
         elsif (rising_edge(pixel_clock)) then
 
             horiz_count <= horiz_count + 1;
@@ -55,10 +59,10 @@ begin --BHV
             end if;
             --
 
-            if (horiz_count = H_MAX) then
+            if (horiz_count >= H_MAX) then
                 horiz_count <= "0000000000";
             end if;
-            if (vert_count = V_MAX) then
+            if (vert_count >= V_MAX) then
                 vert_count <= "0000000000";
             end if;
 

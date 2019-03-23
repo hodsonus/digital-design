@@ -1,3 +1,4 @@
 *.bak
 /compile_folder/
 /Spr18/
+/board/

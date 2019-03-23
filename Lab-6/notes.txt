@@ -1,7 +1,0 @@
-make a 25 mHZ clock and divide the clock using the clock divider defined in a previous lab
-	use that for EVERY component
-
-the VGA_sync_gen is the most importnat entity
-	no code given, but he has explicitly outlined how this should be done
-
-define 2 counts, one for the horizontal sync and one for the vertical sync

@@ -30,8 +30,13 @@ each pixel in the actual image (in ram) gets mapped to a 2x2 block of pixels on 
 
 divide hcount by 2 tog et the column address on the screen
 
+make a 25 mHZ clock and divide the clock using the clock divider defined in a previous lab
+	use that for EVERY component
 
+the VGA_sync_gen is the most importnat entity
+	no code given, but he has explicitly outlined how this should be done
 
+define 2 counts, one for the horizontal sync and one for the vertical sync
 
 the two column and row mapping entities are very very siumilar
 	once you get one working, copy and paste it to the other entity

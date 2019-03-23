@@ -32,30 +32,40 @@ package VGA_LIB is
   -----------------------------------------------------------------------------
   -- CONSTANTS DEFINING PIXEL BOUNDARIES OF THE IMAGE FOR EACH IMAGE LOCATION
   
-  constant TOP_LEFT_X_START : integer := 0;
-  constant TOP_LEFT_X_END   : integer := 127;
-  constant TOP_LEFT_Y_START : integer := 0;
-  constant TOP_LEFT_Y_END   : integer := 127;
+ -- constant TOP_LEFT_X_START : integer := 0;       -- 0/0
+ -- constant TOP_LEFT_X_END   : integer := 127;     -- 127/255
+ -- constant TOP_LEFT_Y_START : integer := 0;       -- 0/0
+ -- constant TOP_LEFT_Y_END   : integer := 127;     -- 127/255
 
-  constant TOP_RIGHT_X_START : integer := 511;
-  constant TOP_RIGHT_X_END   : integer := 639;
-  constant TOP_RIGHT_Y_START : integer := 0;
-  constant TOP_RIGHT_Y_END   : integer := 127;
+  constant TOP_LEFT_X_START : integer := 25;       -- 0/0
+  constant TOP_LEFT_X_END   : integer := 152;     -- 127/255
+  constant TOP_LEFT_Y_START : integer := 0;       -- 0/0
+  constant TOP_LEFT_Y_END   : integer := 127;     -- 127/255
 
-  constant BOTTOM_RIGHT_X_START : integer := 511;
-  constant BOTTOM_RIGHT_X_END   : integer := 639;
-  constant BOTTOM_RIGHT_Y_START : integer := 351;
-  constant BOTTOM_RIGHT_Y_END   : integer := 479;
+  constant TOP_RIGHT_X_START : integer := 511;    -- 511/384
+  constant TOP_RIGHT_X_END   : integer := 639;    -- 639/639
+  constant TOP_RIGHT_Y_START : integer := 0;      -- 0/0
+  constant TOP_RIGHT_Y_END   : integer := 127;    -- 127/255
 
-  constant BOTTOM_LEFT_X_START : integer := 0;
-  constant BOTTOM_LEFT_X_END   : integer := 127;
-  constant BOTTOM_LEFT_Y_START : integer := 351;
-  constant BOTTOM_LEFT_Y_END   : integer := 479;
+  constant BOTTOM_RIGHT_X_START : integer := 511; -- 511/384
+  constant BOTTOM_RIGHT_X_END   : integer := 639; -- 639/639
+  constant BOTTOM_RIGHT_Y_START : integer := 351; -- 351/224
+  constant BOTTOM_RIGHT_Y_END   : integer := 479; -- 479/479
 
-  constant CENTERED_X_START : integer := 255;
-  constant CENTERED_X_END   : integer := 383;
-  constant CENTERED_Y_START : integer := 175;
-  constant CENTERED_Y_END   : integer := 303;
+  -- constant BOTTOM_LEFT_X_START : integer := 0;    -- 0/0
+  -- constant BOTTOM_LEFT_X_END   : integer := 127;  -- 127/255
+  -- constant BOTTOM_LEFT_Y_START : integer := 351;  -- 351/224
+  -- constant BOTTOM_LEFT_Y_END   : integer := 479;  -- 479/479
+
+  constant BOTTOM_LEFT_X_START : integer := 25;    -- 0/0
+  constant BOTTOM_LEFT_X_END   : integer := 152;  -- 127/255
+  constant BOTTOM_LEFT_Y_START : integer := 351;  -- 351/224
+  constant BOTTOM_LEFT_Y_END   : integer := 479;  -- 479/479
+
+  constant CENTERED_X_START : integer := 255;     -- 255/191
+  constant CENTERED_X_END   : integer := 383;     -- 383/447
+  constant CENTERED_Y_START : integer := 175;     -- 175/111
+  constant CENTERED_Y_END   : integer := 303;     -- 303/367
 
   -----------------------------------------------------------------------------
   -- CONSTANTS FOR BUTTON PRESSES
