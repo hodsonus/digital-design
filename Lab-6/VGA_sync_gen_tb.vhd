@@ -48,16 +48,13 @@ begin
 
         rst <= '0';
 
-
         --start testing
-
 
         wait for 150 ms;
         clkEn <= '0';
         report "DONE!!!!!!" severity note;
 
         wait;
-
     end process;
 
 end TB;

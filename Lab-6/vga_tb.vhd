@@ -8,50 +8,61 @@ end vga_tb;
 
 architecture TB of vga_tb is
 
-  -- MODIFY TO MATCH YOUR TOP LEVEL
-  component vga
-    port ( clk              : in  std_logic;
-           rst              : in  std_logic;
-           buttons_n        : in  std_logic_vector(3 downto 0);
-           red, green, blue : out std_logic_vector(3 downto 0);
-           h_sync, v_sync   : out std_logic);
+  component top_level
+    port ( clk50MHz         : in  std_logic;
+           switch           : in  std_logic_vector(9 downto 0);
+           button           : in  std_logic_vector(1 downto 0);
+           RED              : out std_logic_vector(3 downto 0);
+           GRN              : out std_logic_vector(3 downto 0);
+           BLU              : out std_logic_vector(3 downto 0);
+           Horiz_Sync       : out std_logic;
+           Vert_Sync        : out std_logic);
   end component;
 
-  signal clk              : std_logic := '0';
-  signal rst              : std_logic := '1';
-  signal buttons_n        : std_logic_vector(3 downto 0);
-  signal red, green, blue : std_logic_vector(3 downto 0);
-  signal h_sync, v_sync   : std_logic;
-
+  signal clkEn      : std_logic := '1';
+  signal clk50MHz   : std_logic := '1';
+  signal switch     : std_logic_vector(9 downto 0) := "0000000000";
+  signal button     : std_logic_vector(1 downto 0) := "00";
+  signal RED        : std_logic_vector(3 downto 0);
+  signal GRN        : std_logic_vector(3 downto 0);
+  signal BLU        : std_logic_vector(3 downto 0);
+  signal Horiz_Sync : std_logic;
+  signal Vert_Sync  : std_logic;
+  
 begin  -- TB
 
   -- MODIFY TO MATCH YOUR TOP LEVEL
-  UUT : vga port map (
-    clk       => clk,
-    rst       => rst,
-    buttons_n => buttons_n,
-    red       => red,
-    green     => green,
-    blue      => blue,
-    h_sync    => h_sync,
-    v_sync    => v_sync);
+  UUT : top_level port map (
+    clk50MHz   => clk50MHz,
+    switch     => switch,
+    button     => button,
+    RED        => RED,
+    GRN        => GRN,
+    BLU        => BLU,
+    Horiz_Sync => Horiz_Sync,
+    Vert_Sync  => Vert_Sync
+  );
 
-
-  clk <= not clk after 10 ns;
+  clk50MHz <= not clk50MHz and clkEn after 10 ns;
 
   process
   begin
 
-    buttons_n <= (others => '1');
-    rst       <= '1';
+    -- reset
+    clkEn <= '1';
+    button(0) <= '1';
     wait for 200 ns;
+    
+    --disable the rst
+    button(0) <= '0';
 
-    buttons_n(TOP_LEFT) <= '0';
-    rst                 <= '0';
+    --ADD YOUR OWN TESTS
+
+    wait for 500 ms;
+    clkEn <= '0';
+    report "DONE!!!!!!" severity note;
+
     wait;
-
-	-- ADD YOUR OWN TESTS
-	
   end process;
 
 end TB;
