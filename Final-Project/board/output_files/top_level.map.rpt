@@ -1,0 +1,690 @@
+Analysis & Synthesis report for top_level
+Mon Apr 01 23:18:10 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER
+ 10. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER
+ 11. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER
+ 12. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A
+ 13. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B
+ 14. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_C
+ 15. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_REGISTER_A
+ 16. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_REGISTER_B
+ 17. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_D
+ 18. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A
+ 19. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A
+ 20. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|alu:U_ALU
+ 21. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B
+ 22. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_C
+ 23. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER
+ 24. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_LO_REGISTER
+ 25. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_HI_REGISTER
+ 26. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER"
+ 27. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_C"
+ 28. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B"
+ 29. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A"
+ 30. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_REGISTER_B"
+ 31. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_REGISTER_A"
+ 32. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER"
+ 33. Port Connectivity Checks: "datapath:U_DATAPATH"
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Apr 01 23:18:09 2019       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; top_level                                   ;
+; Top-level Entity Name              ; top_level                                   ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 71                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; 10M50DAF484C6GES   ;                    ;
+; Top-level entity name                                                      ; top_level          ; top_level          ;
+; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++--------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
++--------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; ../vhdl/alu/alu_ctrl.vhd             ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/alu/alu_ctrl.vhd             ;         ;
+; ../vhdl/alu/alu.vhd                  ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/alu/alu.vhd                  ;         ;
+; ../vhdl/comb_logic/mux_4x1.vhd       ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_4x1.vhd       ;         ;
+; ../vhdl/comb_logic/mux_2x1.vhd       ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_2x1.vhd       ;         ;
+; ../vhdl/comb_logic/extender.vhd      ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/extender.vhd      ;         ;
+; ../vhdl/comb_logic/decoder7seg.vhd   ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/decoder7seg.vhd   ;         ;
+; ../vhdl/seq_logic/registers_file.vhd ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/registers_file.vhd ;         ;
+; ../vhdl/seq_logic/reg.vhd            ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/reg.vhd            ;         ;
+; ../vhdl/seq_logic/memory.vhd         ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/memory.vhd         ;         ;
+; ../vhdl/top_level.vhd                ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd                ;         ;
+; ../vhdl/MIPS_LIB.vhd                 ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/MIPS_LIB.vhd                 ;         ;
+; ../vhdl/datapath.vhd                 ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd                 ;         ;
+; ../vhdl/controller.vhd               ; yes             ; User VHDL File  ; Y:/GitHub/digital-design/Final-Project/vhdl/controller.vhd               ;         ;
++--------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+;                                             ;          ;
+; Total combinational functions               ; 0        ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 0        ;
+;     -- <=2 input functions                  ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 0        ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+;     -- Dedicated logic registers            ; 0        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 71       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; clk50MHz ;
+; Maximum fan-out                             ; 1        ;
+; Total fan-out                               ; 71       ;
+; Average fan-out                             ; 0.50     ;
++---------------------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |top_level                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 71   ; 0            ; 0          ; |top_level          ; top_level   ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 5     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_C ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_REGISTER_A ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_REGISTER_B ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_D ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; in_width       ; 16    ; Signed Integer                                                        ;
+; out_width      ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|alu:U_ALU ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; width          ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_C ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_LO_REGISTER ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_HI_REGISTER ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER" ;
++------+-------+----------+----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                      ;
++------+-------+----------+----------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                 ;
++------+-------+----------+----------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_C" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; in3  ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B" ;
++-----------+-------+----------+--------------------------------------+
+; Port      ; Type  ; Severity ; Details                              ;
++-----------+-------+----------+--------------------------------------+
+; in2[1..0] ; Input ; Info     ; Stuck at GND                         ;
+; in3       ; Input ; Info     ; Stuck at GND                         ;
++-----------+-------+----------+--------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A" ;
++------------+-------+----------+-------------------------------------+
+; Port       ; Type  ; Severity ; Details                             ;
++------------+-------+----------+-------------------------------------+
+; in1[31..3] ; Input ; Info     ; Stuck at GND                        ;
+; in1[1..0]  ; Input ; Info     ; Stuck at GND                        ;
+; in1[2]     ; Input ; Info     ; Stuck at VCC                        ;
+; in3[1..0]  ; Input ; Info     ; Stuck at GND                        ;
++------------+-------+----------+-------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_REGISTER_B" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                           ;
++------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_REGISTER_A" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                           ;
++------+-------+----------+----------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:U_DATAPATH"                                                                           ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; inport[31..9]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; outport[31..24] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 71                          ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Apr 01 23:16:50 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Final-Project -c top_level
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/alu/alu_ctrl.vhd
+    Info (12022): Found design unit 1: alu_ctrl-BHV File: Y:/GitHub/digital-design/Final-Project/vhdl/alu/alu_ctrl.vhd Line: 19
+    Info (12023): Found entity 1: alu_ctrl File: Y:/GitHub/digital-design/Final-Project/vhdl/alu/alu_ctrl.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/alu/alu.vhd
+    Info (12022): Found design unit 1: alu-BHV File: Y:/GitHub/digital-design/Final-Project/vhdl/alu/alu.vhd Line: 24
+    Info (12023): Found entity 1: alu File: Y:/GitHub/digital-design/Final-Project/vhdl/alu/alu.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/comb_logic/mux_4x1.vhd
+    Info (12022): Found design unit 1: mux_4x1-BHV File: Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_4x1.vhd Line: 21
+    Info (12023): Found entity 1: mux_4x1 File: Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_4x1.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/comb_logic/mux_2x1.vhd
+    Info (12022): Found design unit 1: mux_2x1-BHV File: Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_2x1.vhd Line: 19
+    Info (12023): Found entity 1: mux_2x1 File: Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_2x1.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/comb_logic/extender.vhd
+    Info (12022): Found design unit 1: extender-BHV File: Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/extender.vhd Line: 21
+    Info (12023): Found entity 1: extender File: Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/extender.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/comb_logic/decoder7seg.vhd
+    Info (12022): Found design unit 1: decoder7seg-BHV File: Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/decoder7seg.vhd Line: 15
+    Info (12023): Found entity 1: decoder7seg File: Y:/GitHub/digital-design/Final-Project/vhdl/comb_logic/decoder7seg.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/seq_logic/registers_file.vhd
+    Info (12022): Found design unit 1: registers_file-async_read File: Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/registers_file.vhd Line: 27
+    Info (12023): Found entity 1: registers_file File: Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/registers_file.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/seq_logic/reg.vhd
+    Info (12022): Found design unit 1: reg-ASYNC_RST File: Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/reg.vhd Line: 22
+    Info (12023): Found entity 1: reg File: Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/reg.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/seq_logic/memory.vhd
+    Info (12022): Found design unit 1: memory-IO_WRAP File: Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/memory.vhd Line: 28
+    Info (12023): Found entity 1: memory File: Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/memory.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/top_level.vhd
+    Info (12022): Found design unit 1: top_level-STR File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 32
+    Info (12023): Found entity 1: top_level File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 9
+Info (12021): Found 1 design units, including 0 entities, in source file /github/digital-design/final-project/vhdl/mips_lib.vhd
+    Info (12022): Found design unit 1: MIPS_LIB File: Y:/GitHub/digital-design/Final-Project/vhdl/MIPS_LIB.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/datapath.vhd
+    Info (12022): Found design unit 1: datapath-STR File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 37
+    Info (12023): Found entity 1: datapath File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/controller.vhd
+    Info (12022): Found design unit 1: controller-FSM File: Y:/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 34
+    Info (12023): Found entity 1: controller File: Y:/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /github/digital-design/final-project/vhdl/seq_logic/ram.vhd
+    Info (12022): Found design unit 1: ram-SYN File: Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/ram.vhd Line: 54
+    Info (12023): Found entity 1: ram File: Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/ram.vhd Line: 42
+Info (12127): Elaborating entity "top_level" for the top level hierarchy
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:U_DATAPATH" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 66
+Info (12128): Elaborating entity "reg" for hierarchy "datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER" File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 70
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:U_DATAPATH|memory:U_MEMORY" File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 84
+Warning (10541): VHDL Signal Declaration warning at memory.vhd(15): used implicit default value for signal "data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/memory.vhd Line: 15
+Warning (10541): VHDL Signal Declaration warning at memory.vhd(22): used implicit default value for signal "OutPort" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Y:/GitHub/digital-design/Final-Project/vhdl/seq_logic/memory.vhd Line: 22
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A" File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 122
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B" File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 133
+Info (12128): Elaborating entity "registers_file" for hierarchy "datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE" File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 155
+Info (12128): Elaborating entity "extender" for hierarchy "datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A" File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 204
+Info (12128): Elaborating entity "mux_4x1" for hierarchy "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A" File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 217
+Info (12128): Elaborating entity "alu_ctrl" for hierarchy "datapath:U_DATAPATH|alu_ctrl:U_ALU_CONTROLLER" File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 230
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:U_DATAPATH|alu:U_ALU" File: Y:/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 240
+Info (12128): Elaborating entity "controller" for hierarchy "controller:U_CONTROLLER" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 93
+Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED5" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 117
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led[0]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 16
+    Warning (13410): Pin "led[1]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 16
+    Warning (13410): Pin "led[2]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 16
+    Warning (13410): Pin "led[3]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 16
+    Warning (13410): Pin "led[4]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 16
+    Warning (13410): Pin "led[5]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 16
+    Warning (13410): Pin "led[6]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 16
+    Warning (13410): Pin "led[7]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 16
+    Warning (13410): Pin "led[8]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 16
+    Warning (13410): Pin "led[9]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 16
+    Warning (13410): Pin "led0[0]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 17
+    Warning (13410): Pin "led0[1]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 17
+    Warning (13410): Pin "led0[2]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 17
+    Warning (13410): Pin "led0[3]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 17
+    Warning (13410): Pin "led0[4]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 17
+    Warning (13410): Pin "led0[5]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 17
+    Warning (13410): Pin "led0[6]" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 17
+    Warning (13410): Pin "led0_dp" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 18
+    Warning (13410): Pin "led1[0]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 19
+    Warning (13410): Pin "led1[1]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 19
+    Warning (13410): Pin "led1[2]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 19
+    Warning (13410): Pin "led1[3]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 19
+    Warning (13410): Pin "led1[4]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 19
+    Warning (13410): Pin "led1[5]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 19
+    Warning (13410): Pin "led1[6]" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 19
+    Warning (13410): Pin "led1_dp" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 20
+    Warning (13410): Pin "led2[0]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 21
+    Warning (13410): Pin "led2[1]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 21
+    Warning (13410): Pin "led2[2]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 21
+    Warning (13410): Pin "led2[3]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 21
+    Warning (13410): Pin "led2[4]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 21
+    Warning (13410): Pin "led2[5]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 21
+    Warning (13410): Pin "led2[6]" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 21
+    Warning (13410): Pin "led2_dp" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 22
+    Warning (13410): Pin "led3[0]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 23
+    Warning (13410): Pin "led3[1]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 23
+    Warning (13410): Pin "led3[2]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 23
+    Warning (13410): Pin "led3[3]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 23
+    Warning (13410): Pin "led3[4]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 23
+    Warning (13410): Pin "led3[5]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 23
+    Warning (13410): Pin "led3[6]" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 23
+    Warning (13410): Pin "led3_dp" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 24
+    Warning (13410): Pin "led4[0]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 25
+    Warning (13410): Pin "led4[1]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 25
+    Warning (13410): Pin "led4[2]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 25
+    Warning (13410): Pin "led4[3]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 25
+    Warning (13410): Pin "led4[4]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 25
+    Warning (13410): Pin "led4[5]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 25
+    Warning (13410): Pin "led4[6]" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 25
+    Warning (13410): Pin "led4_dp" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 26
+    Warning (13410): Pin "led5[0]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 27
+    Warning (13410): Pin "led5[1]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 27
+    Warning (13410): Pin "led5[2]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 27
+    Warning (13410): Pin "led5[3]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 27
+    Warning (13410): Pin "led5[4]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 27
+    Warning (13410): Pin "led5[5]" is stuck at GND File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 27
+    Warning (13410): Pin "led5[6]" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 27
+    Warning (13410): Pin "led5_dp" is stuck at VCC File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 28
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk50MHz" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 11
+    Warning (15610): No output dependent on input pin "switches[0]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 13
+    Warning (15610): No output dependent on input pin "switches[1]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 13
+    Warning (15610): No output dependent on input pin "switches[2]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 13
+    Warning (15610): No output dependent on input pin "switches[3]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 13
+    Warning (15610): No output dependent on input pin "switches[4]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 13
+    Warning (15610): No output dependent on input pin "switches[5]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 13
+    Warning (15610): No output dependent on input pin "switches[6]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 13
+    Warning (15610): No output dependent on input pin "switches[7]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 13
+    Warning (15610): No output dependent on input pin "switches[8]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 13
+    Warning (15610): No output dependent on input pin "switches[9]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 13
+    Warning (15610): No output dependent on input pin "buttons[0]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 14
+    Warning (15610): No output dependent on input pin "buttons[1]" File: Y:/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 14
+Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 58 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 76 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Mon Apr 01 23:18:10 2019
+    Info: Elapsed time: 00:01:20
+    Info: Total CPU time (on all processors): 00:00:49
+
+

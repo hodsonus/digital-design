@@ -25,8 +25,10 @@ begin  -- ASYNC_RST
         begin
         if (rst = '1') then
             output <= (others => '0');
-        elsif (clk'event and clk='1' and en = '1') then
-            output <= input;
+        elsif (clk'event and clk='1') then
+				if (en = '1') then
+					output <= input;
+				end if;
         end if;
     end process;
 end ASYNC_RST;

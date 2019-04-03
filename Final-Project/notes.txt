@@ -1,0 +1,53 @@
+branch instructions
+
+jump instructions
+
+as the name suggests, these instructiosn change the control flow of out program
+
+the difference between tehm is taht jumps are unconditional and branchs are conditional
+
+some people call them conditional and unconditional jumps
+
+one of them is easier
+
+jump is unconditional so its easier to explain
+
+jump register
+
+take a value in the register file and store it back into the PC
+
+jump to address is a little different than this
+	has a 6 bit op code, 26 bit instruction idex
+
+it takes the instruction index, shifts it left 2 bits, 
+
+ignore the remaining upper bits are the corresponding bits of the address ofd the instruction 
+
+jump and link
+	99% of funcitonality is the same as jump
+	a jump and link is used for a fxn call
+	its a jump to another place in the program and then a jump back to where you were called from
+	the "and link" does the jump and saves the address of the next instruction after the fxn call (do PC+4)
+		store it in register 31
+
+you can put assertions in synthesizable code
+
+
+PCWrite - assert this one if you definitely want to update the PC from teh controller
+PCWriteCond - PC Write Conditional - assert this one if you MIGHT want to update PC, this means that circuits outside fo the 
+
+Computer the branch target befoer you compute - and to do this you need to compute PC+4. turns out, PC+4 has already been implemented 
+
+offset is the amount fo instructiosn you are going to be offset from - since instructions are 4 bytes you need to shift this to the left twice to get the target offset
+
+route IR 20 downto 16 back to the controller to decode whether its a bgte or blt
+
+2 things u need to know how to do fort eh project and the test
+
+need to be able to go between a mif file and the assembly instructions
+
+always start with the first 6 bits to see what type of nistruction you are dealing with
+
+r type instructions have the top 6 bits all 0
+	this sucks
+	gotta decode from the lower 6ish bits

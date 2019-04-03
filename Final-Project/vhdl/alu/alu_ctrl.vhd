@@ -19,4 +19,8 @@ end alu_ctrl;
 architecture BHV of alu_ctrl is
 begin --BHV
     --TODO, implement this
+    OPSelect    <= std_logic_vector(to_unsigned(0,ALU_SEL_SIZE));
+    ALU_LO_HI   <= "00";
+    HI_en       <= '0';
+    LO_en       <= '0';
 end BHV;

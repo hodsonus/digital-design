@@ -8,8 +8,12 @@ use work.MIPS_LIB.all;
 
 entity datapath is
     port(
-        clk         : in  std_logic;
-        rst         : in  std_logic;
+        clk         : in  std_logic; -- 50 MHz internal clock
+        rst         : in  std_logic; -- rst for the entire circuit, does NOT reset the input ports
+
+        InPort_en   : in  std_logic_vector(1 downto 0); -- InPort1_en concatenated with InPort0_en
+        InPort      : in  std_logic_vector(31 downto 0); -- InPort0/InPort1, 23 0's concatenated with switche(8 downto 0)
+        OutPort     : out std_logic_vector(31 downto 0); -- Output to the 7 segment LEDS
 
         PCWriteCond : in  std_logic; -- enables the PC register if the “Branch” signal is asserted.
         PCWrite     : in  std_logic; -- enables the PC register.
@@ -63,15 +67,6 @@ architecture STR of datapath is
     signal LO_en          : std_logic; -- condition for updating the LO reg, output from the ALU control
 begin --STR
 
-    -- X IMPLEMENT MUXES
-    -- X IMPLEMENT ALU
-    -- X IMPLEMENT REGISTERS
-    -- O IMPLEMENT MEMORY
-    -- O IMPLEMENT REGISTER FILE
-    -- X IMPLEMENT EXTENDERS
-    -- X IMPLEMENT SHIFTERS
-    -- X IMPLEMENT CONCATENATOR
-
     U_PROGRAM_COUNTER: entity work.reg
         generic map (
             WIDTH => 32
@@ -86,7 +81,19 @@ begin --STR
 
     PC_en <= ((Branch and PCWriteCond) or PCWrite);
 
-    --TODO, Memory entity here
+    U_MEMORY: entity work.memory
+        port map (
+            clk        => clk,
+            rst        => rst,
+            address    => MemAddr,
+            data       => MemData,
+            MemRead    => MemRead,
+            MemWrite   => MemWrite,
+            InPort_en  => InPort_en,
+            InPort     => InPort,
+            OutPort    => OutPort,
+            RegB       => RegBOut
+        );
 
     U_INSTRUCTION_REGISTER: entity work.reg
         generic map (
@@ -145,7 +152,19 @@ begin --STR
             output => WriteData
         );
 
-    -- TODO, Register file here
+    U_REGISTERS_FILE: entity work.registers_file
+        port map (
+            clk           => clk,
+            rst           => rst,
+            ReadReg1      => IR(25 downto 21),
+            ReadReg2      => IR(20 downto 16),
+            ReadData1     => RegAIn,
+            ReadData2     => RegBIn,
+            WriteRegister => WriteRegister,
+            WriteData     => WriteData,
+            RegWrite      => RegWrite,
+            JumpAndLink   => JumpAndLink
+        );
 
     U_REGISTER_A: entity work.reg
         generic map (
@@ -295,5 +314,7 @@ begin --STR
             input  => HI,
             output => HIReg
         );
+
+    OpCode <= IR(31 downto 26);
 
 end STR;
