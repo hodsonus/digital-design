@@ -11,7 +11,8 @@ entity datapath is
         clk         : in  std_logic; -- 50 MHz internal clock
         rst         : in  std_logic; -- rst for the entire circuit, does NOT reset the input ports
 
-        InPort_en   : in  std_logic_vector(1 downto 0); -- InPort1_en concatenated with InPort0_en
+        InPort1_en  : in  std_logic;
+        InPort0_en  : in  std_logic;
         InPort      : in  std_logic_vector(31 downto 0); -- InPort0/InPort1, 23 0's concatenated with switche(8 downto 0)
         OutPort     : out std_logic_vector(31 downto 0); -- Output to the 7 segment LEDS
 
@@ -89,7 +90,8 @@ begin --STR
             data       => MemData,
             MemRead    => MemRead,
             MemWrite   => MemWrite,
-            InPort_en  => InPort_en,
+            InPort1_en => InPort1_en,
+            InPort0_en => InPort0_en,
             InPort     => InPort,
             OutPort    => OutPort,
             RegB       => RegBOut

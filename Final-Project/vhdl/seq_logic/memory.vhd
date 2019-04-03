@@ -18,16 +18,15 @@ entity memory is
         MemRead   : in std_logic;
         MemWrite  : in std_logic;
 
-        InPort_en : in  std_logic_vector(1 downto 0); -- InPort0_en / InPort1_en
-        InPort    : in  std_logic_vector(31 downto 0); -- InPort0/InPort1
-        OutPort   : out std_logic_vector(31 downto 0)
+        InPort1_en : in  std_logic;
+        InPort0_en : in  std_logic;
+        InPort     : in  std_logic_vector(31 downto 0); -- InPort0/InPort1
+        OutPort    : out std_logic_vector(31 downto 0)
     );
 end memory;
 
 architecture IO_WRAP of memory is
 
-    signal InPort0_en : std_logic;
-    signal InPort1_en : std_logic;
     signal OutPort_en : std_logic;
     signal Ram_en     : std_logic;
 
@@ -38,9 +37,6 @@ architecture IO_WRAP of memory is
     signal OutMuxSel  : std_logic_vector(1 downto 0);
 
 begin --IO_WRAP
-
-    InPort0_en <= InPort_en(0);
-    InPort1_en <= InPort_en(1);
 
     -- decode the three inputs to the circuit (as below) and assert the
     -- internal signals to turn the components on and off and select the
@@ -98,7 +94,7 @@ begin --IO_WRAP
         port map (
             clk    => clk,
             rst    => '0',
-            en     => InPort1_en,
+            en     => InPort0_en,
             input  => InPort,
             output => InPort0
         );
@@ -113,7 +109,7 @@ begin --IO_WRAP
         port map (
             clk    => clk,
             rst    => '0',
-            en     => InPort0_en,
+            en     => InPort1_en,
             input  => InPort,
             output => InPort1
         );

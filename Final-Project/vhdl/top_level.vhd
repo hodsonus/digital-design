@@ -60,7 +60,6 @@ begin --STR
 
     InPort1_en <= switches(9) and (not buttons(0));
     InPort0_en <= (not switches(9)) and (not buttons(0));
-    InPort_en <= InPort1_en & InPort0_en;
     InPort <= std_logic_vector(to_unsigned(0,23) & unsigned(switches(8 downto 0)));
 
     U_DATAPATH: entity work.datapath
@@ -68,7 +67,9 @@ begin --STR
             clk         => clk50MHz, -- 50 MHz internal clock
             rst         => rst, -- rst for the entire circuit, does NOT reset the input ports
 
-            InPort_en  => InPort_en, -- InPort1_en concatenated with InPort0_en.
+            InPort1_en  => InPort1_en,
+            InPort0_en  => InPort0_en,
+            
             InPort     => InPort, -- InPort0/InPort1, concatenate 23 '0's with switches(8 downto 0)
             OutPort     => OutPort, -- output to the 7 segment LEDS
 
