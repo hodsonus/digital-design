@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
--- DATE "04/03/2019 17:58:21"
+-- DATE "04/04/2019 23:56:20"
 
 -- 
 -- Device: Altera 10M50DAF484C6GES Package FBGA484
@@ -107,19 +107,6 @@ ENTITY 	top_level IS
 END top_level;
 
 -- Design Ports Information
--- clk50MHz	=>  Location: PIN_P11,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- switches[0]	=>  Location: PIN_C10,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- switches[1]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- switches[2]	=>  Location: PIN_D12,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- switches[3]	=>  Location: PIN_C12,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- switches[4]	=>  Location: PIN_A12,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- switches[5]	=>  Location: PIN_B12,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- switches[6]	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- switches[7]	=>  Location: PIN_A14,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- switches[8]	=>  Location: PIN_B14,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- switches[9]	=>  Location: PIN_F15,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- buttons[0]	=>  Location: PIN_B8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- buttons[1]	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- led[0]	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- led[1]	=>  Location: PIN_A9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- led[2]	=>  Location: PIN_A10,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -178,6 +165,19 @@ END top_level;
 -- led5[5]	=>  Location: PIN_N19,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- led5[6]	=>  Location: PIN_N20,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- led5_dp	=>  Location: PIN_L19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- switches[0]	=>  Location: PIN_C10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- switches[9]	=>  Location: PIN_F15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- buttons[0]	=>  Location: PIN_B8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- switches[1]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- switches[2]	=>  Location: PIN_D12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- switches[3]	=>  Location: PIN_C12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- switches[4]	=>  Location: PIN_A12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- switches[5]	=>  Location: PIN_B12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- switches[8]	=>  Location: PIN_B14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- switches[7]	=>  Location: PIN_A14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- switches[6]	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- clk50MHz	=>  Location: PIN_P11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- buttons[1]	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF top_level IS
@@ -208,18 +208,18 @@ SIGNAL ww_led5 : std_logic_vector(6 DOWNTO 0);
 SIGNAL ww_led5_dp : std_logic;
 SIGNAL \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \clk50MHz~input_o\ : std_logic;
 SIGNAL \switches[0]~input_o\ : std_logic;
+SIGNAL \switches[9]~input_o\ : std_logic;
+SIGNAL \buttons[0]~input_o\ : std_logic;
 SIGNAL \switches[1]~input_o\ : std_logic;
 SIGNAL \switches[2]~input_o\ : std_logic;
 SIGNAL \switches[3]~input_o\ : std_logic;
 SIGNAL \switches[4]~input_o\ : std_logic;
 SIGNAL \switches[5]~input_o\ : std_logic;
-SIGNAL \switches[6]~input_o\ : std_logic;
-SIGNAL \switches[7]~input_o\ : std_logic;
 SIGNAL \switches[8]~input_o\ : std_logic;
-SIGNAL \switches[9]~input_o\ : std_logic;
-SIGNAL \buttons[0]~input_o\ : std_logic;
+SIGNAL \switches[7]~input_o\ : std_logic;
+SIGNAL \switches[6]~input_o\ : std_logic;
+SIGNAL \clk50MHz~input_o\ : std_logic;
 SIGNAL \buttons[1]~input_o\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_UNVM~~busy\ : std_logic;
@@ -1031,18 +1031,6 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \led5_dp~output_o\);
 
--- Location: IOIBUF_X34_Y0_N29
-\clk50MHz~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_clk50MHz,
-	o => \clk50MHz~input_o\);
-
 -- Location: IOIBUF_X51_Y54_N29
 \switches[0]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
@@ -1054,6 +1042,30 @@ GENERIC MAP (
 PORT MAP (
 	i => ww_switches(0),
 	o => \switches[0]~input_o\);
+
+-- Location: IOIBUF_X69_Y54_N1
+\switches[9]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_switches(9),
+	o => \switches[9]~input_o\);
+
+-- Location: IOIBUF_X46_Y54_N29
+\buttons[0]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_buttons(0),
+	o => \buttons[0]~input_o\);
 
 -- Location: IOIBUF_X51_Y54_N22
 \switches[1]~input\ : fiftyfivenm_io_ibuf
@@ -1115,8 +1127,8 @@ PORT MAP (
 	i => ww_switches(5),
 	o => \switches[5]~input_o\);
 
--- Location: IOIBUF_X54_Y54_N15
-\switches[6]~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X56_Y54_N1
+\switches[8]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -1124,8 +1136,8 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_switches(6),
-	o => \switches[6]~input_o\);
+	i => ww_switches(8),
+	o => \switches[8]~input_o\);
 
 -- Location: IOIBUF_X58_Y54_N29
 \switches[7]~input\ : fiftyfivenm_io_ibuf
@@ -1139,8 +1151,8 @@ PORT MAP (
 	i => ww_switches(7),
 	o => \switches[7]~input_o\);
 
--- Location: IOIBUF_X56_Y54_N1
-\switches[8]~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X54_Y54_N15
+\switches[6]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -1148,11 +1160,11 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_switches(8),
-	o => \switches[8]~input_o\);
+	i => ww_switches(6),
+	o => \switches[6]~input_o\);
 
--- Location: IOIBUF_X69_Y54_N1
-\switches[9]~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X34_Y0_N29
+\clk50MHz~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -1160,20 +1172,8 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_switches(9),
-	o => \switches[9]~input_o\);
-
--- Location: IOIBUF_X46_Y54_N29
-\buttons[0]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_buttons(0),
-	o => \buttons[0]~input_o\);
+	i => ww_clk50MHz,
+	o => \clk50MHz~input_o\);
 
 -- Location: IOIBUF_X49_Y54_N29
 \buttons[1]~input\ : fiftyfivenm_io_ibuf

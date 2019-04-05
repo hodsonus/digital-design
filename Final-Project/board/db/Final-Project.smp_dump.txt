@@ -1,0 +1,11 @@
+
+State Machine - |top_level|controller:U_CONTROLLER|state
+Name state.HALT state.AFTER_I_TYPE state.AFTER_R_TYPE state.I_TYPE state.R_TYPE state.DECODE_INSTRUCTION state.LOAD_IR state.INSTRUCTION_FETCH 
+state.INSTRUCTION_FETCH 0 0 0 0 0 0 0 0 
+state.LOAD_IR 0 0 0 0 0 0 1 1 
+state.DECODE_INSTRUCTION 0 0 0 0 0 1 0 1 
+state.R_TYPE 0 0 0 0 1 0 0 1 
+state.I_TYPE 0 0 0 1 0 0 0 1 
+state.AFTER_R_TYPE 0 0 1 0 0 0 0 1 
+state.AFTER_I_TYPE 0 1 0 0 0 0 0 1 
+state.HALT 1 0 0 0 0 0 0 1 

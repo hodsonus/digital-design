@@ -37,10 +37,12 @@ architecture FSM of controller is
 
     type STATE_TYPE is (INSTRUCTION_FETCH, LOAD_IR, DECODE_INSTRUCTION,
                         R_TYPE, I_TYPE,
-                        AFTER_R_TYPE,
+                        AFTER_R_TYPE, AFTER_I_TYPE,
                         HALT); 
     signal state, next_state : STATE_TYPE;
-    signal IR5downto0_ext : unsigned(7 downto 0);
+
+    signal IR5downto0_ext : unsigned(7 downto 0); -- this is done so we can match on hex codes instead of straight up binary
+    signal IR31downto26_ext : unsigned(7 downto 0); -- same as above
 
 begin --FSM
 
@@ -53,11 +55,13 @@ begin --FSM
         end if;
     end process;
 
-    IR5downto0_ext <= resize(unsigned(IR5downto0),8);
+    IR5downto0_ext <= resize(unsigned(IR5downto0),8); -- _ext -> "extended" version of the signal
+    IR31downto26_ext <= resize(unsigned(IR31downto26),8); -- _ext -> "extended" version of the signal
 
-    process(IR31downto26, IR5downto0_ext, state)
+    process(IR31downto26_ext, IR5downto0_ext, state)
     begin --process
 
+        -- set default values for any of the combinational logic decided in this process
         PCWriteCond <= '0';
         PCWrite     <= '0';
         IorD        <= '0';
@@ -73,6 +77,9 @@ begin --FSM
         ALUSrcB     <= "00";
         RegWrite    <= '0';
         RegDst      <= '0';
+        ALU_LO_HI   <= "00";
+        LO_en       <= '0';
+        HI_en       <= '0'; 
         next_state  <= state;
 
         case state is
@@ -106,9 +113,12 @@ begin --FSM
             -- decode the op code and determine what type of instruction we are implementing
             when DECODE_INSTRUCTION =>
 
-                if (IR31downto26 = "000000") then next_state <= R_TYPE;
-                --elsif () then next_state <= I_TYPE; TODO
-                elsif (IR31downto26 = "111111") then next_state <= HALT;
+                if (IR31downto26_ext = x"00") then next_state <= R_TYPE;
+                elsif (IR31downto26_ext = x"09" or IR31downto26_ext = x"10" or
+                        IR31downto26_ext = x"0C" or IR31downto26_ext = x"0D" or
+                        IR31downto26_ext = x"0E" or IR31downto26_ext = x"0A" or
+                        IR31downto26_ext = x"0B") then next_state <= I_TYPE;
+                elsif (IR31downto26_ext = x"3F") then next_state <= HALT;
                 end if;
 
             -- decode the r type instructions EVEN FURTHER, selecting the individual function that is desired and setting the appropriate ALU function
@@ -119,12 +129,11 @@ begin --FSM
                 ALUSrcA <= '1';
                 ALUSrcB <= "00";
 
-                -- by default, move to the state that stores ALUOut into s1 by default
+                -- by default, move to the state that stores ALUOut into s1
                 next_state <= AFTER_R_TYPE;
 
                 -- decode the instruction even further
                 case IR5downto0_ext is
-
                     when x"21" => -- add - unsigned
                         OpSelect <= OP_ADD_U;
                     when x"23" => -- sub unsigned
@@ -166,7 +175,7 @@ begin --FSM
                         RegWrite <= '1'; -- enable writing to the registers file
                         next_state <= INSTRUCTION_FETCH; -- we are done with this instruction after this clock edge, so move back to the beginnning state
                     when x"08" => -- jump register
-                        -- TODO
+                        -- TODO, week 3 deliverable ?
                         next_state <= INSTRUCTION_FETCH;
                     when others => report "Invalid R Type instruction while decoding." severity note;
                 end case;
@@ -178,13 +187,57 @@ begin --FSM
                 MemToReg <= '0'; -- select the outputs of the ALU from MemoryDataReg and the outputs of the ALU
                 RegDst <= '1'; -- the destination register is IR(15 downto 11) (the same thing as 'rd' in the MIPs manual)
                 RegWrite <= '1'; -- enable the write to the register file
-                next_state <= INSTRUCTION_FETCH; -- move back to the instruction fetch stage and do it all over again!
+                next_state <= INSTRUCTION_FETCH; -- move back to the instruction fetch state and do it all over again!
 
+            -- decode the i type instructions EVEN FURTHER, choosing whether to interpret the immediate value as signed or unsigned
             when I_TYPE =>
-                -- TODO??
 
-            when HALT => -- fake instruction to stop the computer from repeatedly fetching and executing bad instructions
-                next_state <= state;
+                -- select the registered output A from the instruction register. IR(25 downto 21) (which is rs) with ALUSrcA
+                -- select the immediate value from the IR, either signed or unsigned (dependent on instuction) with ALUSrcB
+                ALUSrcA <= '1';
+                ALUSrcB <= "10";
+
+                -- by default, move to the state that stores ALUOut into s1
+                next_state <= AFTER_I_TYPE;
+
+                -- decode the instruction even further
+                case IR31downto26_ext is
+                    when x"09" => -- add immediate unsigned
+                        IsSigned <= '1';
+                        OpSelect <= OP_ADD_U;
+                    when x"10" => -- sub immediate unsigned (not MIPS)
+                        IsSigned <= '1';
+                        OpSelect <= OP_SUB_U;
+                    when x"0C" => -- andi
+                        IsSigned <= '0';
+                        OpSelect <= OP_AND;
+                    when x"0D" => -- ori
+                        IsSigned <= '0';
+                        OpSelect <= OP_OR;
+                    when x"0E" => -- xori
+                        IsSigned <= '0';
+                        OpSelect <= OP_XOR;
+                    when x"0A" => -- slti -set on less than immediate signed
+                        IsSigned <= '1';
+                        OpSelect <= OP_SLT_S;
+                    when x"0B" => -- sltiu- set on less than immediate unsigned
+                        IsSigned <= '1';
+                        OpSelect <= OP_SLT_U;
+                    when others => report "Invalid I Type instruction while decoding. We should not be in this state if this happened." severity note;
+                end case;
+
+            -- this state stores ALUOut into the register specified by IR(20 downto 16) (this is S1 in the excel instructions sheet and 'rt' in the MIPS manual)
+            when AFTER_I_TYPE =>
+
+                ALU_LO_HI <= "00"; -- select ALUOut from ALUOut, LO, and HI
+                MemToReg <= '0'; -- select the outputs of the ALU from MemoryDataReg and the outputs of the ALU
+                RegDst <= '0'; -- the destination register is IR(20 downto 16) (the same thing as 'rt' in the MIPs manual)
+                RegWrite <= '1'; -- enable the write to the register file
+                next_state <= INSTRUCTION_FETCH; -- move back to the instruction fetch state and do it all over again!
+
+            -- fake instruction to stop the computer from repeatedly fetching and executing bad instructions. useful for week 2 deliverables
+            when HALT =>
+                next_state <= state; -- loop endlessly
         end case;
     end process;
 end FSM;
