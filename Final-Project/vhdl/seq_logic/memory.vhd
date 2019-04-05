@@ -38,27 +38,16 @@ architecture IO_WRAP of memory is
 
 begin --IO_WRAP
 
-    -- decode the three inputs to the circuit (as below) and assert the
-    -- internal signals to turn the components on and off and select the
-    -- proper one
-    process(address, MemRead, MemWrite)
+    -- before the clock edge hits, we want to ensure that we are capturing the input to the circuit in the proper place
+    -- therefore, the logic that selects between writing to the out port or the ram MUST be combinational logic
+    process(address, MemWrite)
     begin --process
 
-        -- disable the two output components by default, select the output
-        -- of zero by default
+        -- disable the two output components by default
         OutPort_en <= '0';
         Ram_en <= '0';
-        OutMuxSel <= "11";
-
-        if (MemRead = '1') then
-            if (address = x"0000FFF8") then -- mux select input 0 -> InPort0 
-                OutMuxSel <= "00"; -- INPORT0 -> $0000FFF8
-            elsif (address = x"0000FFFC") then -- mux select input 1 -> InPort01
-                OutMuxSel <= "01";  -- INPORT1 -> $0000FFFC
-            else -- mux select input 2 -> RAM
-                OutMuxSel <= "10"; -- RAM -> any address other then the above
-            end if;
-        elsif (MemWrite = '1') then
+        
+        if (MemWrite = '1') then
             if (address = x"0000FFFC") then -- write to the output port and not the RAM
                 OutPort_en <= '1'; -- OUTPORT -> $0000FFFC
             else -- write to the RAM and not the output port
@@ -66,6 +55,24 @@ begin --IO_WRAP
             end if; 
         end if;
 
+        -- setting the enables appropriately (as above) allows the capture into ONE of those when the clock edge comes
+    end process;
+
+    process (clk,rst)
+    begin -- process
+        if (rst = '1') then -- select the 0 output of the mux. this is not the output from ANY of the inputs to the mux that we care about
+            OutMuxSel <= "11";
+        elsif (rising_edge(clk)) then 
+            if (MemRead = '1') then -- update the mux select if we're reading
+                if (address = x"0000FFF8") then -- mux select input 0 -> InPort0 
+                    OutMuxSel <= "00"; -- INPORT0 -> $0000FFF8
+                elsif (address = x"0000FFFC") then -- mux select input 1 -> InPort01
+                    OutMuxSel <= "01";  -- INPORT1 -> $0000FFFC
+                else -- mux select input 2 -> RAM
+                    OutMuxSel <= "10"; -- RAM -> any address other then the above
+                end if;
+            end if;
+        end if;
     end process;
 
     -- selects between InPort0, InPort1, and RamOut for the main output
@@ -114,7 +121,7 @@ begin --IO_WRAP
             output => InPort1
         );
 
-    -- ram output is not registered
+    -- ram output is not registered, i think this should be registered
     -- 256 32-bit words, mapped to address 0, and is initialized with a mif 
     -- file that contains the program that will execute
     U_RAM: entity work.ram
