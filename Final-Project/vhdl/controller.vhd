@@ -29,7 +29,8 @@ entity controller is
         LO_en        : out std_logic; -- condition for updating the LO reg, output from the controller
         HI_en        : out std_logic; -- condition for updating the HI reg, output from the controller
         IR31downto26 : in  std_logic_vector(5 downto 0); -- IR31-26 (the OPCode): Will be decoded by the controller to determine what instruction to execute.
-        IR5downto0   : in  std_logic_vector(5 downto 0) -- Necessary to further decode R Type instructions
+        IR5downto0   : in  std_logic_vector(5 downto 0); -- Necessary to further decode R Type instructions
+        IR20downto16 : in  std_logic_vector(4 downto 0) -- Necessary to discern between BGEZ and BLTZ instructions
     );
 end controller;
 
@@ -41,6 +42,7 @@ architecture FSM of controller is
                         MEMORY_ADDRESS_COMPUTATION,
                         MEMORY_ACCESS_READ, LOAD_MEMORY_DATA_REG, MEMORY_READ_COMPLETION,
                         MEMORY_ACCESS_WRITE,
+                        BRANCH_COMPLETION,
                         HALT); 
     signal state, next_state : STATE_TYPE;
 
@@ -116,14 +118,31 @@ begin --FSM
             -- decode the op code and determine what type of instruction we are implementing
             when INSTRUCTION_DECODE =>
 
-                if (IR31downto26_ext = x"00") then next_state <= R_TYPE_EXECUTION;
+                -- add together PC+4 and the signed branch offset. at the end of this instruction, the value will be coming out of the ALUOut register
+                ALUSrcA <= '0'; -- PC+4 into ALU Input A
+                IsSigned <= '1'; -- sign extend IR(15 downto 0) to 32 bits
+                ALUSrcB <= "11"; -- load in the sign extended version of IR(15 downto 0) that has been shifted to the left twice
+                OPSelect <= OP_ADD_U; -- add these things together
+
+                if (IR31downto26_ext = x"00")
+                    then next_state <= R_TYPE_EXECUTION;
+
                 elsif (IR31downto26_ext = x"09" or IR31downto26_ext = x"10" or
                         IR31downto26_ext = x"0C" or IR31downto26_ext = x"0D" or
                         IR31downto26_ext = x"0E" or IR31downto26_ext = x"0A" or
                         IR31downto26_ext = x"0B") then next_state <= I_TYPE_EXECUTION;
-                elsif (IR31downto26_ext = x"23" or
-                        IR31downto26_ext = x"2B") then next_state <= MEMORY_ADDRESS_COMPUTATION;
-                elsif (IR31downto26_ext = x"3F") then next_state <= HALT;
+
+                elsif (IR31downto26_ext = x"23" or IR31downto26_ext = x"2B")
+                    then next_state <= MEMORY_ADDRESS_COMPUTATION;
+
+                elsif(IR31downto26_ext = x"04" or IR31downto26_ext = x"05" or
+                        IR31downto26_ext = x"06" or IR31downto26_ext = x"07" or
+                        IR31downto26_ext = x"01")
+                    then next_state <= BRANCH_COMPLETION;
+
+                elsif (IR31downto26_ext = x"3F")
+                    then next_state <= HALT;
+
                 end if;
 
             -- decode the r type instructions EVEN FURTHER, selecting the individual function that is desired and setting the appropriate ALU function
@@ -298,6 +317,35 @@ begin --FSM
                 IorD <= '1'; -- select the ALUOut register to write to the memory with 
                 MemWrite <= '1'; -- enable writing
                 next_state <= INSTRUCTION_FETCH;
+
+            -- in this state, the precomputed address that we can jump to is located at the output of the ALUOut register
+            -- we want to use the PCWriteCond here, as it is a 'soft' suggestion that we write to the PC that is also dependent
+            -- on whether the ALU wants to branch or not
+            when BRANCH_COMPLETION => 
+
+                PCWriteCond <= '1'; -- a soft suggestion to write to the PC, also dependent on Branch
+                next_state <= INSTRUCTION_FETCH; -- regardless if we branch or not, next state is the instruction fetch
+                ALUSrcA <= '1'; -- select register A to input to the ALU (register A -> IR(25 downto 21))
+                ALUSrcB <= "00"; -- select register B to input to the ALU (register B -> IR(20 downto 16))
+
+                case IR31downto26_ext is
+                    when x"04" => -- branch on equal
+                        OpSelect <= OP_BEQ;
+                    when x"05" => -- branch not equal
+                        OpSelect <= OP_BNE;
+                    when x"06" => -- Branch on Less Than or Equal to Zero
+                        OpSelect <= OP_BLTE;
+                    when x"07" => -- Branch on Greater Than Zero
+                        OpSelect <= OP_BGT;
+                    when x"01" => -- Branch on Less Than Zero OR Branch on Greater Than or Equal to Zero
+                        if (IR20downto16 = "00001") then -- it's a branch greater than or equal to zero
+                            OpSelect <= OP_BGTE;
+                        elsif(IR20downto16 = "00000") then -- it's a branch less than
+                            OpSelect <= OP_BLT;
+                        else report "Unable to determine if BLTZ or BGEZ." severity note;
+                        end if;
+                    when others => report "Invalid branch instruction while decoding. We should not be in this state if this happened." severity note;
+                end case;
 
             -- fake instruction to stop the computer from repeatedly fetching and executing bad instructions. useful for week 2 deliverables
             when HALT =>

@@ -32,7 +32,8 @@ entity datapath is
         LO_en        : in  std_logic; -- condition for updating the LO reg, output from the controller
         HI_en        : in  std_logic; -- condition for updating the HI reg, output from the controller
         IR31downto26 : out std_logic_vector(5 downto 0); -- IR31-26 (the OPCode): Will be decoded by the controller to determine what instruction to execute.
-        IR5downto0   : out std_logic_vector(5 downto 0); -- IR31-26 (the OPCode): Will be decoded by the controller to determine what instruction to execute.
+        IR5downto0   : out std_logic_vector(5 downto 0); -- Necessary to discern between the different R type instructions
+        IR20downto16 : out  std_logic_vector(4 downto 0); -- Necessary to discern between BGEZ and BLTZ instructions
         OutPort      : out std_logic_vector(31 downto 0) -- Output to the 7 segment LEDS
     );
 end datapath;
@@ -307,5 +308,6 @@ begin --STR
 
     IR31downto26 <= IR(31 downto 26);
     IR5downto0 <= IR(5 downto 0);
+    IR20downto16 <= IR(20 downto 16);
 
 end STR;

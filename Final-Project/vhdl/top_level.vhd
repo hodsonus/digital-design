@@ -56,6 +56,7 @@ architecture STR of top_level is
     signal IR5downto0: std_logic_vector(5 downto 0);
 
     signal OpSelect  : std_logic_vector(ALU_SEL_SIZE-1 downto 0);
+    signal IR20downto16 : std_logic_vector(4 downto 0);
 
     signal HI_en       : std_logic;
     signal LO_en       : std_logic;
@@ -96,6 +97,7 @@ begin --STR
             RegDst      => RegDst,
             IR31downto26=> IR31downto26,
             IR5downto0  => IR5downto0,
+            IR20downto16 => IR20downto16,
             HI_en     => HI_en,
             LO_en     => LO_en,
             ALU_LO_HI => ALU_LO_HI
@@ -122,6 +124,7 @@ begin --STR
             RegDst      => RegDst,
             IR31downto26=> IR31downto26,
             IR5downto0  => IR5downto0,
+            IR20downto16 => IR20downto16,
             HI_en     => HI_en,
             LO_en     => LO_en,
             ALU_LO_HI => ALU_LO_HI
