@@ -35,9 +35,12 @@ end controller;
 
 architecture FSM of controller is
 
-    type STATE_TYPE is (INSTRUCTION_FETCH, LOAD_IR, DECODE_INSTRUCTION,
-                        R_TYPE, I_TYPE,
-                        AFTER_R_TYPE, AFTER_I_TYPE,
+    type STATE_TYPE is (INSTRUCTION_FETCH, LOAD_IR, INSTRUCTION_DECODE,
+                        R_TYPE_EXECUTION, I_TYPE_EXECUTION,
+                        R_TYPE_COMPLETION, I_TYPE_COMPLETION,
+                        MEMORY_ADDRESS_COMPUTATION,
+                        MEMORY_ACCESS_READ, LOAD_MEMORY_DATA_REG, MEMORY_READ_COMPLETION,
+                        MEMORY_ACCESS_WRITE,
                         HALT); 
     signal state, next_state : STATE_TYPE;
 
@@ -108,21 +111,23 @@ begin --FSM
                 IRWrite <= '1';
 
                 -- move to decoding the instructions as after the next clock cycle the IR will be outputting the instruction
-                next_state <= DECODE_INSTRUCTION;
+                next_state <= INSTRUCTION_DECODE;
 
             -- decode the op code and determine what type of instruction we are implementing
-            when DECODE_INSTRUCTION =>
+            when INSTRUCTION_DECODE =>
 
-                if (IR31downto26_ext = x"00") then next_state <= R_TYPE;
+                if (IR31downto26_ext = x"00") then next_state <= R_TYPE_EXECUTION;
                 elsif (IR31downto26_ext = x"09" or IR31downto26_ext = x"10" or
                         IR31downto26_ext = x"0C" or IR31downto26_ext = x"0D" or
                         IR31downto26_ext = x"0E" or IR31downto26_ext = x"0A" or
-                        IR31downto26_ext = x"0B") then next_state <= I_TYPE;
+                        IR31downto26_ext = x"0B") then next_state <= I_TYPE_EXECUTION;
+                elsif (IR31downto26_ext = x"23" or
+                        IR31downto26_ext = x"2B") then next_state <= MEMORY_ADDRESS_COMPUTATION;
                 elsif (IR31downto26_ext = x"3F") then next_state <= HALT;
                 end if;
 
             -- decode the r type instructions EVEN FURTHER, selecting the individual function that is desired and setting the appropriate ALU function
-            when R_TYPE =>
+            when R_TYPE_EXECUTION =>
 
                 -- select the two registered outputs from the instruction register (registers A and B). IR(25 downto 21) (which is rs)
                 -- and IR(20 downto 16) (which is rt) are available at the outside of the registers in this state
@@ -130,7 +135,7 @@ begin --FSM
                 ALUSrcB <= "00";
 
                 -- by default, move to the state that stores ALUOut into s1
-                next_state <= AFTER_R_TYPE;
+                next_state <= R_TYPE_COMPLETION;
 
                 -- decode the instruction even further
                 case IR5downto0_ext is
@@ -181,7 +186,7 @@ begin --FSM
                 end case;
 
             -- this state stores ALUOut into the register specified by IR 15 downto 11 (this is S1 in the excel instructions sheet?)
-            when AFTER_R_TYPE =>
+            when R_TYPE_COMPLETION =>
 
                 ALU_LO_HI <= "00"; -- select ALUOut from ALUOut, LO, and HI
                 MemToReg <= '0'; -- select the outputs of the ALU from MemoryDataReg and the outputs of the ALU
@@ -190,7 +195,7 @@ begin --FSM
                 next_state <= INSTRUCTION_FETCH; -- move back to the instruction fetch state and do it all over again!
 
             -- decode the i type instructions EVEN FURTHER, choosing whether to interpret the immediate value as signed or unsigned
-            when I_TYPE =>
+            when I_TYPE_EXECUTION =>
 
                 -- select the registered output A from the instruction register. IR(25 downto 21) (which is rs) with ALUSrcA
                 -- select the immediate value from the IR, either signed or unsigned (dependent on instuction) with ALUSrcB
@@ -198,7 +203,7 @@ begin --FSM
                 ALUSrcB <= "10";
 
                 -- by default, move to the state that stores ALUOut into s1
-                next_state <= AFTER_I_TYPE;
+                next_state <= I_TYPE_COMPLETION;
 
                 -- decode the instruction even further
                 case IR31downto26_ext is
@@ -223,17 +228,76 @@ begin --FSM
                     when x"0B" => -- sltiu- set on less than immediate unsigned
                         IsSigned <= '1';
                         OpSelect <= OP_SLT_U;
-                    when others => report "Invalid I Type instruction while decoding. We should not be in this state if this happened." severity note;
+                    when others =>
+                        report "Invalid I Type instruction while decoding. We should not be in this state if this happened." severity note;
+                        next_state <= INSTRUCTION_FETCH;
                 end case;
 
             -- this state stores ALUOut into the register specified by IR(20 downto 16) (this is S1 in the excel instructions sheet and 'rt' in the MIPS manual)
-            when AFTER_I_TYPE =>
+            when I_TYPE_COMPLETION =>
 
                 ALU_LO_HI <= "00"; -- select ALUOut from ALUOut, LO, and HI
                 MemToReg <= '0'; -- select the outputs of the ALU from MemoryDataReg and the outputs of the ALU
                 RegDst <= '0'; -- the destination register is IR(20 downto 16) (the same thing as 'rt' in the MIPs manual)
                 RegWrite <= '1'; -- enable the write to the register file
                 next_state <= INSTRUCTION_FETCH; -- move back to the instruction fetch state and do it all over again!
+
+            -- when we are in this state, that means we either are completing a load word or a store word instruction
+            -- we must compute the address that this is happening at (that is, $s2 + offset or alternatively, IR(25 downto 21) + IR(15 downto 0))
+            -- at the end of this state, the memory address that has been computed will be stored in ALUOut
+            when MEMORY_ADDRESS_COMPUTATION => 
+
+                ALUSrcA <= '1'; -- select the output from RegA, that is, IR(25 downto 21)
+                IsSigned <= '0'; -- this is not a signed memory address computation
+                ALUSrcB <= "10"; -- select IR(15 downto 0), 0 extended to 32 bits
+                OpSelect <= OP_ADD_U; -- add them unsigned
+
+                if (IR31downto26_ext = x"23") then next_state <= MEMORY_ACCESS_READ;
+                elsif (IR31downto26_ext = x"2B") then next_state <= MEMORY_ACCESS_WRITE;
+                else 
+                    report "Invalid memory access instruction while decoding. We should not be in this state if this happened." severity note;
+                    next_state <= INSTRUCTION_FETCH;
+                end if;
+
+            -- in this state, the computed memory address should be at the output of the ALUOut register
+            -- take this, and read from the memory.
+            -- this state is used for the load word instruction
+            when MEMORY_ACCESS_READ =>
+
+                IorD <= '1'; -- select the ALUOut register to read from the memory with
+                MemRead <= '1'; -- select the option to read from the memory
+                next_state <= LOAD_MEMORY_DATA_REG;
+
+            -- at this state, the result of the read from RAM should be at the input of the memory data register
+            -- if we wait one cycle it should be clocked into this register and then we can use it
+            -- if there are problems here, it probably has to do with this data being available here
+            when LOAD_MEMORY_DATA_REG =>
+                
+                -- do nothing, we want to save the data we just read from the offsetted address into memory
+                -- data so that we can use it to store in the next state
+                next_state <= MEMORY_READ_COMPLETION;
+
+            -- in this state, we must write the data available in the memory data register to the address
+            -- specified by the load word instruction. this address is available in IR(20 downto 16)
+            when MEMORY_READ_COMPLETION =>
+            
+                RegDst <= '0'; -- select the IR(20 downto 16) for the address to write to
+                MemToReg <= '1'; -- select the memroy data register to get the data to write
+                RegWrite <= '1'; -- enable writing to the registers file
+                next_state <= INSTRUCTION_FETCH; -- move back to the beginning, this is the end of the load word instruction
+
+            -- in this state, the computed memory address should be at the output of the ALUOut register
+            -- take this, and write to the memory.
+            -- we want to write the contents of IR(20 downto 16) ('rt' in the manual) to the memory
+            -- this is available in RegB already! this is the only thing that we can write to the memory
+            -- so it is available by default. enable writing to the memory and select the correct address
+            -- and we are done
+            -- this state is used for the store word instruction
+            when MEMORY_ACCESS_WRITE =>
+            
+                IorD <= '1'; -- select the ALUOut register to write to the memory with 
+                MemWrite <= '1'; -- enable writing
+                next_state <= INSTRUCTION_FETCH;
 
             -- fake instruction to stop the computer from repeatedly fetching and executing bad instructions. useful for week 2 deliverables
             when HALT =>
