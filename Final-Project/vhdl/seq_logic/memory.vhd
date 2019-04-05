@@ -121,7 +121,7 @@ begin --IO_WRAP
             output => InPort1
         );
 
-    -- ram output is not registered, i think this should be registered
+    -- ram output is not registered, TODO?? I think this should be registered
     -- 256 32-bit words, mapped to address 0, and is initialized with a mif 
     -- file that contains the program that will execute
     U_RAM: entity work.ram
