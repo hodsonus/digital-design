@@ -156,7 +156,7 @@ begin --TB
         -- assert(data = x"00000001") report "Read from inport 1 incorrect (should show 0x00000001)" severity warning;
         report "Read from inport 1 happened here." severity note;
 
-        wait for 150 ms;
+        wait for 15 ns;
         done <= '1';
         report "DONE!!!!!!" severity note;
         wait;

@@ -1,5 +1,5 @@
 Fitter report for top_level
-Mon Apr 01 23:18:48 2019
+Wed Apr 03 17:57:47 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Apr 01 23:18:48 2019       ;
+; Fitter Status                      ; Successful - Wed Apr 03 17:57:47 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_level                                   ;
 ; Top-level Entity Name              ; top_level                                   ;
@@ -194,7 +194,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in Y:/GitHub/digital-design/Final-Project/board/output_files/top_level.pin.
+The pin-out file can be found in //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/output_files/top_level.pin.
 
 
 +---------------------------------------------------------------------+
@@ -1406,8 +1406,8 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
@@ -1415,17 +1415,17 @@ Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
-Info (144001): Generated suppressed messages file Y:/GitHub/digital-design/Final-Project/board/output_files/top_level.fit.smsg
+Info (144001): Generated suppressed messages file //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/output_files/top_level.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5387 megabytes
-    Info: Processing ended: Mon Apr 01 23:18:50 2019
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 5389 megabytes
+    Info: Processing ended: Wed Apr 03 17:57:49 2019
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in Y:/GitHub/digital-design/Final-Project/board/output_files/top_level.fit.smsg.
+The suppressed messages can be found in //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/output_files/top_level.fit.smsg.
 
 

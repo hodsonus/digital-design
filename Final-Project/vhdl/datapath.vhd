@@ -8,30 +8,32 @@ use work.MIPS_LIB.all;
 
 entity datapath is
     port(
-        clk         : in  std_logic; -- 50 MHz internal clock
-        rst         : in  std_logic; -- rst for the entire circuit, does NOT reset the input ports
-
-        InPort1_en  : in  std_logic;
-        InPort0_en  : in  std_logic;
-        InPort      : in  std_logic_vector(31 downto 0); -- InPort0/InPort1, 23 0's concatenated with switche(8 downto 0)
-        OutPort     : out std_logic_vector(31 downto 0); -- Output to the 7 segment LEDS
-
-        PCWriteCond : in  std_logic; -- enables the PC register if the “Branch” signal is asserted.
-        PCWrite     : in  std_logic; -- enables the PC register.
-        IorD        : in  std_logic; -- select between the PC or the ALU output as the memory address.
-        MemRead     : in  std_logic; -- enables memory read.
-        MemWrite    : in  std_logic; -- enables memory write.
-        MemToReg    : in  std_logic; -- select between “Memory data register” or “ALU output” as input to “write data” signal.
-        IRWrite     : in  std_logic; -- enables the instruction register.
-        JumpAndLink : in  std_logic; -- when asserted, $s31 will be selected as the write register.
-        IsSigned    : in  std_logic; -- when asserted, “Sign Extended” will output a 32-bit sign extended representation of 16-bit input.
-        PCSource    : in  std_logic_vector(1 downto 0); -- select between the “ALU output”, “ALU OUT Reg”, or a “shifted to left PC” as an input to PC.
-        ALUOp       : in  std_logic_vector(ALU_SEL_SIZE-1 downto 0); -- used by the ALU controller to determine the desired operation to be executed by the ALU. It is up to you to determine how to use this signal. There are many possible ways of implementing the required functionality.
-        ALUSrcA     : in  std_logic; -- select between RegA or Pc as the Input1 of the ALU.
-        ALUSrcB     : in  std_logic_vector(1 downto 0); -- select between RegB, “4”, IR15-0, or “shifted IR15-0” as the Input2 of the ALU.
-        RegWrite    : in  std_logic; -- enables the register file
-        RegDst      : in  std_logic; -- select between IR20-16 or IR15-11 as the input to the “Write Reg”
-        OPCode      : out std_logic_vector(5 downto 0) -- IR31-26 (the OPCode): Will be decoded by the controller to determine what instruction to execute.
+        clk          : in  std_logic; -- 50 MHz internal clock
+        rst          : in  std_logic; -- rst for the entire circuit, does NOT reset the input ports
+        InPort1_en   : in  std_logic;
+        InPort0_en   : in  std_logic;
+        InPort       : in  std_logic_vector(31 downto 0); -- InPort0/InPort1, 23 0's concatenated with switche(8 downto 0)
+        PCWriteCond  : in  std_logic; -- enables the PC register if the “Branch” signal is asserted.
+        PCWrite      : in  std_logic; -- enables the PC register.
+        IorD         : in  std_logic; -- select between the PC or the ALU output as the memory address.
+        MemRead      : in  std_logic; -- enables memory read.
+        MemWrite     : in  std_logic; -- enables memory write.
+        MemToReg     : in  std_logic; -- select between “Memory data register” or “ALU output” as input to “write data” signal.
+        IRWrite      : in  std_logic; -- enables the instruction register.
+        JumpAndLink  : in  std_logic; -- when asserted, $s31 will be selected as the write register.
+        IsSigned     : in  std_logic; -- when asserted, “Sign Extended” will output a 32-bit sign extended representation of 16-bit input.
+        PCSource     : in  std_logic_vector(1 downto 0); -- select between the “ALU output”, “ALU OUT Reg”, or a “shifted to left PC” as an input to PC.
+        OpSelect     : in  std_logic_vector(ALU_SEL_SIZE-1 downto 0); -- used by the controller to determine the desired operation to be executed by the ALU. It is up to you to determine how to use this signal. There are many possible ways of implementing the required functionality.
+        ALUSrcA      : in  std_logic; -- select between RegA or Pc as the Input1 of the ALU.
+        ALUSrcB      : in  std_logic_vector(1 downto 0); -- select between RegB, “4”, IR15-0, or “shifted IR15-0” as the Input2 of the ALU.
+        RegWrite     : in  std_logic; -- enables the register file
+        RegDst       : in  std_logic; -- select between IR20-16 or IR15-11 as the input to the “Write Reg”
+        ALU_LO_HI    : in  std_logic_vector(1 downto 0); -- select between the ALUOut, LO, and HI registers to write to the register file
+        LO_en        : in  std_logic; -- condition for updating the LO reg, output from the controller
+        HI_en        : in  std_logic; -- condition for updating the HI reg, output from the controller
+        IR31downto26 : out std_logic_vector(5 downto 0); -- IR31-26 (the OPCode): Will be decoded by the controller to determine what instruction to execute.
+        IR5downto0   : out std_logic_vector(5 downto 0); -- IR31-26 (the OPCode): Will be decoded by the controller to determine what instruction to execute.
+        OutPort      : out std_logic_vector(31 downto 0) -- Output to the 7 segment LEDS
     );
 end datapath;
 
@@ -52,20 +54,16 @@ architecture STR of datapath is
     signal RegBOut        : std_logic_vector(31 downto 0); -- ALU Source B Register
     signal ALUInputA      : std_logic_vector(31 downto 0); -- ALU Input A
     signal ALUInputB      : std_logic_vector(31 downto 0); -- ALU Input B
-    signal OPSelect       : std_logic_vector(ALU_SEL_SIZE-1 downto 0); -- the signal from ALU contorl to ALU, controls the operation that the ALU performs
     signal PCInput        : std_logic_vector(31 downto 0); -- selects between ALUOut,ALUOutReg, and a combination of IR25:0 and PC31:28 (Mux4BSrc2)
     signal HI             : std_logic_vector(31 downto 0); -- HI bit of the output of the ALU. Only set when the operation last performed by the ALU was a mult
     signal HIReg          : std_logic_vector(31 downto 0); -- registered version of HI
     signal LO             : std_logic_vector(31 downto 0); -- LO bit of the output of the ALU. The same as ALUOut
     signal LOReg          : std_logic_vector(31 downto 0); -- registered version of LO
     signal Branch         : std_logic; -- set by the ALU, it enables the PC to load in a new value
-    signal ALU_LO_HI      : std_logic_vector(1 downto 0); -- set by the ALU control, it selects between ALUOut, LOReg, and HIReg
     signal Mux4ASrc2      : std_logic_vector(31 downto 0); -- IR15:0, sign extended to 32 bits
     signal Mux4ASrc3      : std_logic_vector(31 downto 0); -- Mux4ASrc2, but shifted left twice (multiplied by 4)
     signal Mux4BSrc2      : std_logic_vector(31 downto 0); -- a combination of IR25:0 and PC31:28 that potentially becomes PCInput and feeds into the PC
     signal PC_en          : std_logic; -- condition for updating the PC, ((Branch and PCWriteCond) or PCWrite)
-    signal HI_en          : std_logic; -- condition for updating the HI reg, output from the ALU control
-    signal LO_en          : std_logic; -- condition for updating the LO reg, output from the ALU control
 begin --STR
 
     U_PROGRAM_COUNTER: entity work.reg
@@ -229,16 +227,6 @@ begin --STR
             output => ALUInputB
         );
 
-    U_ALU_CONTROLLER: entity work.alu_ctrl
-        port map (
-            ALUOp       => ALUOp,
-            instruction => IR(5 downto 0),
-            OPSelect    => OpSelect,
-            ALU_LO_HI   => ALU_LO_HI,
-            HI_en       => HI_en,
-            LO_en       => LO_en
-        );
-
     U_ALU: entity work.alu
         generic map (
             WIDTH => 32
@@ -317,6 +305,7 @@ begin --STR
             output => HIReg
         );
 
-    OpCode <= IR(31 downto 26);
+    IR31downto26 <= IR(31 downto 26);
+    IR5downto0 <= IR(5 downto 0);
 
 end STR;

@@ -48,12 +48,18 @@ architecture STR of top_level is
     signal JumpAndLink : std_logic; -- when asserted, $s31 will be selected as the write register. Input to the datapath, output from the controller.
     signal IsSigned    : std_logic; -- when asserted, “Sign Extended” will output a 32-bit sign extended representation of 16-bit input. Input to the datapath, output from the controller.
     signal PCSource    : std_logic_vector(1 downto 0); -- select between the “ALU output”, “ALU OUT Reg”, or a “shifted to left PC” as an input to PC. Input to the datapath, output from the controller.
-    signal ALUOp       : std_logic_vector(ALU_SEL_SIZE-1 downto 0); -- used by the ALU controller to determine the desired operation to be executed by the ALU. It is up to you to determine how to use this signal. There are many possible ways of implementing the required functionality. Input to the datapath, output from the controller.
     signal ALUSrcA     : std_logic; -- select between RegA or Pc as the Input1 of the ALU. Input to the datapath, output from the controller.
     signal ALUSrcB     : std_logic_vector(1 downto 0); -- select between RegB, “4”, IR15-0, or “shifted IR15-0” as the Input2 of the ALU. Input to the datapath, output from the controller.
     signal RegWrite    : std_logic; -- enables the register file. Input to the datapath, output from the controller.
     signal RegDst      : std_logic; -- select between IR20-16 or IR15-11 as the input to the “Write Reg”. Input to the datapath, output from the controller.
-    signal OPCode      : std_logic_vector(5 downto 0); -- IR31-26 (the OPCode): Will be decoded by the controller to determine what instruction to execute. Input to the CONTROLLER, output from the datapath.
+    signal IR31downto26: std_logic_vector(5 downto 0); -- IR31-26 (the OPCode): Will be decoded by the controller to determine what instruction to execute. Input to the CONTROLLER, output from the datapath.
+    signal IR5downto0: std_logic_vector(5 downto 0);
+
+    signal OpSelect  : std_logic_vector(ALU_SEL_SIZE-1 downto 0);
+
+    signal HI_en       : std_logic;
+    signal LO_en       : std_logic;
+    signal ALU_LO_HI   : std_logic_vector(1 downto 0);
 begin --STR
 
     rst <= not buttons(1);
@@ -83,12 +89,16 @@ begin --STR
             JumpAndLink => JumpAndLink,
             IsSigned    => IsSigned,
             PCSource    => PCSource,
-            ALUOp       => ALUOp,
+            OpSelect       => OpSelect,
             ALUSrcA     => ALUSrcA,
             ALUSrcB     => ALUSrcB,
             RegWrite    => RegWrite,
             RegDst      => RegDst,
-            OPCode      => OPCode
+            IR31downto26=> IR31downto26,
+            IR5downto0  => IR5downto0,
+            HI_en     => HI_en,
+            LO_en     => LO_en,
+            ALU_LO_HI => ALU_LO_HI
         );
 
     U_CONTROLLER: entity work.controller
@@ -105,12 +115,16 @@ begin --STR
             JumpAndLink => JumpAndLink,
             IsSigned    => IsSigned,
             PCSource    => PCSource,
-            ALUOp       => ALUOp,
+            OpSelect       => OpSelect,
             ALUSrcA     => ALUSrcA,
             ALUSrcB     => ALUSrcB,
             RegWrite    => RegWrite,
             RegDst      => RegDst,
-            OPCode      => OPCode
+            IR31downto26=> IR31downto26,
+            IR5downto0  => IR5downto0,
+            HI_en     => HI_en,
+            LO_en     => LO_en,
+            ALU_LO_HI => ALU_LO_HI
         );
 
         led <= "0000000000";
