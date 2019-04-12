@@ -1,0 +1,13 @@
+Depth = 256;
+Width = 32;
+Address_radix = hex;
+Data_radix = bin;
+% Program RAM Data %
+Content
+  Begin
+  --OPCODE   BASE  DST    OFFSET (ACTUAL ADDRESS)
+00 : 10001100000100001111111111111000;		-- lw $s0, FFF8($zero)  (0x8C10FFF8)   // load the size of the table from Inport0 to S0/R16
+01 : 10101100000100001111111111111100;		-- sw $s3, FFFC($zero)  (0xAC13FFFC)   // store s3 to the outport1
+02 : 11111111111111111111111111111111;		-- halt the program
+
+End;

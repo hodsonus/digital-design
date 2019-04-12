@@ -43,7 +43,7 @@ architecture STR of top_level is
     signal IorD        : std_logic; -- select between the PC or the ALU output as the memory address. Input to the datapath, output from the controller.
     signal MemRead     : std_logic; -- enables memory read. Input to the datapath, output from the controller.
     signal MemWrite    : std_logic; -- enables memory write. Input to the datapath, output from the controller.
-    signal MemToReg    : std_logic; -- select between “Memory data register” or “ALU output” as input to “write data” signal. Input to the datapath, output from the controller.
+    signal MemToReg    : std_logic_vector(1 downto 0); -- select between “Memory data register” or “ALU output” as input to “write data” signal. Input to the datapath, output from the controller.
     signal IRWrite     : std_logic; -- enables the instruction register. Input to the datapath, output from the controller.
     signal JumpAndLink : std_logic; -- when asserted, $s31 will be selected as the write register. Input to the datapath, output from the controller.
     signal IsSigned    : std_logic; -- when asserted, “Sign Extended” will output a 32-bit sign extended representation of 16-bit input. Input to the datapath, output from the controller.
@@ -73,61 +73,58 @@ begin --STR
         port map (
             clk         => clk50MHz, -- 50 MHz internal clock
             rst         => rst, -- rst for the entire circuit, does NOT reset the input ports
-
             InPort1_en  => InPort1_en,
             InPort0_en  => InPort0_en,
-            
-            InPort     => InPort, -- InPort0/InPort1, concatenate 23 '0's with switches(8 downto 0)
+            InPort      => InPort, -- InPort0/InPort1, concatenate 23 '0's with switches(8 downto 0)
             OutPort     => OutPort, -- output to the 7 segment LEDS
-
-            PCWriteCond => PCWriteCond,
-            PCWrite     => PCWrite,
-            IorD        => IorD,
-            MemRead     => MemRead,
-            MemWrite    => MemWrite,
-            MemToReg    => MemToReg,
-            IRWrite     => IRWrite,
-            JumpAndLink => JumpAndLink,
-            IsSigned    => IsSigned,
-            PCSource    => PCSource,
-            OpSelect       => OpSelect,
-            ALUSrcA     => ALUSrcA,
-            ALUSrcB     => ALUSrcB,
-            RegWrite    => RegWrite,
-            RegDst      => RegDst,
-            IR31downto26=> IR31downto26,
-            IR5downto0  => IR5downto0,
+            PCWriteCond  => PCWriteCond,
+            PCWrite      => PCWrite,
+            IorD         => IorD,
+            MemRead      => MemRead,
+            MemWrite     => MemWrite,
+            MemToReg     => MemToReg,
+            IRWrite      => IRWrite,
+            JumpAndLink  => JumpAndLink,
+            IsSigned     => IsSigned,
+            PCSource     => PCSource,
+            OpSelect     => OpSelect,
+            ALUSrcA      => ALUSrcA,
+            ALUSrcB      => ALUSrcB,
+            RegWrite     => RegWrite,
+            RegDst       => RegDst,
+            IR31downto26 => IR31downto26,
+            IR5downto0   => IR5downto0,
             IR20downto16 => IR20downto16,
-            HI_en     => HI_en,
-            LO_en     => LO_en,
-            ALU_LO_HI => ALU_LO_HI
+            HI_en        => HI_en,
+            LO_en        => LO_en,
+            ALU_LO_HI    => ALU_LO_HI
         );
 
     U_CONTROLLER: entity work.controller
         port map (
-            clk         => clk50MHz, -- 50 MHz internal clock
-            rst         => rst, -- rst for the entire circuit, does NOT reset the input ports
-            PCWriteCond => PCWriteCond,
-            PCWrite     => PCWrite,
-            IorD        => IorD,
-            MemRead     => MemRead,
-            MemWrite    => MemWrite,
-            MemToReg    => MemToReg,
-            IRWrite     => IRWrite,
-            JumpAndLink => JumpAndLink,
-            IsSigned    => IsSigned,
-            PCSource    => PCSource,
-            OpSelect       => OpSelect,
-            ALUSrcA     => ALUSrcA,
-            ALUSrcB     => ALUSrcB,
-            RegWrite    => RegWrite,
-            RegDst      => RegDst,
-            IR31downto26=> IR31downto26,
-            IR5downto0  => IR5downto0,
+            clk          => clk50MHz, -- 50 MHz internal clock
+            rst          => rst, -- rst for the entire circuit, does NOT reset the input ports
+            PCWriteCond  => PCWriteCond,
+            PCWrite      => PCWrite,
+            IorD         => IorD,
+            MemRead      => MemRead,
+            MemWrite     => MemWrite,
+            MemToReg     => MemToReg,
+            IRWrite      => IRWrite,
+            JumpAndLink  => JumpAndLink,
+            IsSigned     => IsSigned,
+            PCSource     => PCSource,
+            OpSelect     => OpSelect,
+            ALUSrcA      => ALUSrcA,
+            ALUSrcB      => ALUSrcB,
+            RegWrite     => RegWrite,
+            RegDst       => RegDst,
+            IR31downto26 => IR31downto26,
+            IR5downto0   => IR5downto0,
             IR20downto16 => IR20downto16,
-            HI_en     => HI_en,
-            LO_en     => LO_en,
-            ALU_LO_HI => ALU_LO_HI
+            HI_en        => HI_en,
+            LO_en        => LO_en,
+            ALU_LO_HI    => ALU_LO_HI
         );
 
         led <= "0000000000";

@@ -3,58 +3,53 @@ Width = 32;
 Address_radix = hex;
 Data_radix = bin;
 % Program RAM Data %					--  This program will load a series of different positive integer and display them in the ascending order
-Content							-- To use this program correctly follow this steps
-							-- Step1:	select the size then enable Inport0
-							-- step2: 	select the first entry then enable inport1
-							-- step3:	press the  reset button
-							-- step3: 	change the entry value and enable inport1 for size-1 times
-							-- All the entries will get displayed continuously in the ascending order
-  Begin
+Content							
 
-												--  In this part, we will load the size of the series and the unique entries
-												--  The entries will be stored in table starts with the address 0xC4 
+					--See the end for where to place the table size and table itself. Don't have the table reach address 80.
 
-00 : 00100100000100100000000011000100	;		-- addiu $s2, $zero, address		// load the table address to S2/R18
-01 : 10001100000100001111111111111000	;		-- lw $s0, FFF8($zero)     		// load the size of the table from Inport0 to S0/R16				
-02 : 00000010000000000100000000100001	;		-- add $t0, $s0, $Zero			// copy the size of the table to t0/R8, will be used as a counter
-03 : 10001100000100011111111111111100	;		-- lw $s1, FFFC($zer0)			// load the first entry of the table from Inport1 to S1/R17
+Begin
+
+
+00 : 00100100000100100000001000000000	;		--addiu $s2, $zero, address		// load the table address to S2/R18
+01 : 10001100000100000000000101000000	;		--lw $s0, 50($zero)     		// load the size of the table from Inport0 to S0/R16				
+02 : 00000010000000000100000000100001	;		--add $t0, $s0, $zero			// copy the size of the table to t0/R8, will be used as a counter
+03 : 00100100000101000000000101000100	;		--addiu $s4, $zero, address 	// s4 points to beginning of table
+04 : 10001110100100010000000000000000	;		--lw $s1, 0($s4)			// load the first entry of the table from Inport1 to S1/R17
 
          					--Store :
-04 : 10101110010100010000000000000000	;		-- sw $s1, 0($s2)			// store S1/R17 in the address pointed by S2/R18
-05 : 00100110010100100000000000000100	;		-- addui $S2, $s2, 4			// increment address 
-06 : 01000001000010000000000000000001	;		-- subiu $t0, $t0, 1			// decrement the counter
-07 : 00010000000010000000000000000100	;		-- beq   $t0, $zero, sort		// if the counter = 0, branch to "Sort", else load the next entry
-						--loop :
-08 : 10001100000100111111111111111100	;		-- lw $s3, FFFC($zero)			// load the next entry to S3/R19
-09 : 00010010011100011111111111111110	;		-- beq $s3, $s1, loop			// keep loading until the user changes the value in Inport1
-0A : 00000010011000001000100000100001	; 		-- add $s1, $s3, $zero	 		// copy S3 to S1 and jump to "Store"
-0B : 00001000000000000000000000000100	;		-- j store				// jump to "Store"
+05 : 10101110010100010000000000000000	;		--sw $s1, 0($s2)			// store S1/R17 in the address pointed by S2/R18
+06 : 00100110010100100000000000000100	;		--addui $S2, $s2, 4			// increment address 
+07 : 01000001000010000000000000000001	;		--subiu $t0, $t0, 1			// decrement the counter
+08 : 00010000000010000000000000000011	;		--beq   $t0, $zero, sort		// if the counter = 0, branch to "Sort", else load the next entry
+09 : 00100110100101000000000000000100	;		--addui $s4, $s4, 4			// increment pointer
+0A : 10001110100100010000000000000000	;		--lw $s1, 0($s4)			// load the next entry to S3/R19
+0B : 00001000000000000000000000000101	;		--j store					// jump to "Store"
 
 												-- IN this part we will apply the Bubble sort to sort 
 												-- all the entries in the same memory space
 		
 						-- Sort:		
-0C : 00100100000101000000000000000001	;		-- addui $S4, $Zero, 1			// load immediate 1 to S4/R20 , the counter for the innerloop
-0D : 00100100000101010000000000000001	;		-- addui $S5, $Zero, 1			// load immediate 1 to S5/R21 , the counter for the outerloop
+0C : 00100100000101000000000000000001	;		--X addui $S4, $Zero, 1			// load immediate 1 to S4/R20 , the counter for the innerloop
+0D : 00100100000101010000000000000001	;		--X addui $S5, $Zero, 1			// load immediate 1 to S5/R21 , the counter for the outerloop
 
 						-- InnerLoop_init:
-0E : 00100100000100100000000011000100	;		-- addiu $s2, $zero, address		// load the table address to S2/R18
+0E : 00100100000100100000001000000000	;		--X addiu $s2, $zero, address		// load the table address to S2/R18
 
 
 						-- InnerLoop:
-0F : 00000010000101000100100000100011	;		-- Subu $t1, $s0, s4			// t1 = size - s4
-10 : 00010001001000000000000000001001	;		-- beq $t1, $zero, OUTERLOOP		// if t1 ==0,break and check the outerloop
-11 : 10001110010010100000000000000000	;		-- lw $t2, 0($s2)			// load from mem[s2] to t2
-12 : 10001110010010110000000000000100	;		-- lw $t3, 4($s2)			// load form mem[s2+4] to t3
-13 : 00000001011010100110000000101011	;		-- sltu $t4, $t3, $t2			// if t3 < t2, t4 = 1; else t4 =0
-14 : 00010001100000000000000000000010	;		-- beq $t4, $zero, skip			// if t4 == 0, branch to skip
+0F : 00000010000101000100100000100011	;		--X Subu $t1, $s0, s4			// t1 = size - s4
+10 : 00010001001000000000000000001001	;		--X beq $t1, $zero, OUTERLOOP		// if t1 ==0,break and check the outerloop
+11 : 10001110010010100000000000000000	;		--X lw $t2, 0($s2)			// load from mem[s2] to t2
+12 : 10001110010010110000000000000100	;		--X lw $t3, 4($s2)			// load form mem[s2+4] to t3
+13 : 00000001011010100110000000101011	;		--X sltu $t4, $t3, $t2			// if t3 < t2, t4 = 1; else t4 =0
+14 : 00010001100000000000000000000010	;		--X beq $t4, $zero, skip			// if t4 == 0, branch to skip
 15 : 10101110010010110000000000000000	;		-- sw $t3, 0($s2)			// swap the two entries
 16 : 10101110010010100000000000000100	;		-- sw $t2, 4($s2)
 
 						-- skip :
-17 : 00100110100101000000000000000001	;		-- addiu $s4, $s4, 1			// increment the innerCounter
-18 : 00100110010100100000000000000100	;		-- addiu $s2, $s2, 4			// increment the address
-19 : 00001000000000000000000000001111	;		-- j InnerLoop				// repeat
+17 : 00100110100101000000000000000001	;		--X addiu $s4, $s4, 1			// increment the innerCounter
+18 : 00100110010100100000000000000100	;		--X addiu $s2, $s2, 4			// increment the address
+19 : 00001000000000000000000000001111	;		--X j InnerLoop				// repeat
 
 						-- OUTERLOOP:
 1A : 00000010000101010100100000100011	;		-- Subu $t1, $s0, s5			// t1 = size - s5
@@ -68,7 +63,7 @@ Content							-- To use this program correctly follow this steps
 												-- and store them in the ouport0
 
 						--display:		
-1F : 00100100000100100000000011000100	;		-- addiu $s2, $zero, address		// load the table address to S2/R18
+1F : 00100100000100100000001000000000	;		-- addiu $s2, $zero, address		// load the table address to S2/R18
 20 : 00000000000000001001100000100001	;		-- add	$s3, $zero, $zero		// reset S3 to 0, we could use a different register
 
 						--next_val:
@@ -101,5 +96,40 @@ Content							-- To use this program correctly follow this steps
 30 : 00001000000000000000000000100001	;		-- j next_val				// else jump the next value in the table
 
 
+-- this is where you will put your custom values and table size.
+-- for this default program, the table size is D (in Hex).
+-- the output order should be (in Hex):
+-- 2, 3, 4, 7, 8, C, 10, 38, 55, 88, 308, 12600, A5A5A5 
+
+50 : 00000000000000000000000000001101; -- put the number of values here 
+
+51 : 00000000000000000000000000001100; -- fill in your values here
+52 : 00000000000000000000000000000011;
+53 : 00000000000000000000000000000010;
+54 : 00000000000000000000001100001000;
+55 : 00000000000000010010011000000000;
+56 : 00000000000000000000000010001000;
+57 : 00000000101001011010010110100101;
+58 : 00000000000000000000000000010000;
+59 : 00000000000000000000000000111000;
+5A : 00000000000000000000000000000111;
+5B : 00000000000000000000000000001000; 
+5C : 00000000000000000000000001010101; 
+5D : 00000000000000000000000000000100;
+5E : 00000000000000000000000000000000;
+5F : 00000000000000000000000000000000;
+60 : 00000000000000000000000000000000;
+61 : 00000000000000000000000000000000;
+62 : 00000000000000000000000000000000;
+63 : 00000000000000000000000000000000;
+64 : 00000000000000000000000000000000;
+65 : 00000000000000000000000000000000; 
+66 : 00000000000000000000000000000000; 
+67 : 00000000000000000000000000000000;
+68 : 00000000000000000000000000000000;
+69 : 00000000000000000000000000000000;
+6A : 00000000000000000000000000000000;
+6B : 00000000000000000000000000000000;
+6C : 00000000000000000000000000000000;
 
 End;

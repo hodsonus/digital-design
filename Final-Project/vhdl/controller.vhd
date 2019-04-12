@@ -15,7 +15,7 @@ entity controller is
         IorD         : out std_logic; -- select between the PC or the ALU output as the memory address.
         MemRead      : out std_logic; -- enables memory read.
         MemWrite     : out std_logic; -- enables memory write.
-        MemToReg     : out std_logic; -- select between “Memory data register” or “ALU output” as input to “write data” signal.
+        MemToReg     : out std_logic_vector(1 downto 0); -- select between “Memory data register” or “ALU output” as input to “write data” signal.
         IRWrite      : out std_logic; -- enables the instruction register.
         JumpAndLink  : out std_logic; -- when asserted, $s31 will be selected as the write register.
         IsSigned     : out std_logic; -- when asserted, “Sign Extended” will output a 32-bit sign extended representation of 16-bit input.
@@ -43,6 +43,8 @@ architecture FSM of controller is
                         MEMORY_ACCESS_READ, LOAD_MEMORY_DATA_REG, MEMORY_READ_COMPLETION,
                         MEMORY_ACCESS_WRITE,
                         BRANCH_COMPLETION,
+                        WRITE_RETURN_ADDR,
+                        JUMP, JUMP_REGISTER,
                         HALT); 
     signal state, next_state : STATE_TYPE;
 
@@ -72,7 +74,7 @@ begin --FSM
         IorD        <= '0';
         MemRead     <= '0';
         MemWrite    <= '0';
-        MemToReg    <= '0';
+        MemToReg    <= "00";
         IRWrite     <= '0';
         JumpAndLink <= '0';
         IsSigned    <= '0';
@@ -130,7 +132,8 @@ begin --FSM
                 elsif (IR31downto26_ext = x"09" or IR31downto26_ext = x"10" or
                         IR31downto26_ext = x"0C" or IR31downto26_ext = x"0D" or
                         IR31downto26_ext = x"0E" or IR31downto26_ext = x"0A" or
-                        IR31downto26_ext = x"0B") then next_state <= I_TYPE_EXECUTION;
+                        IR31downto26_ext = x"0B")
+                    then next_state <= I_TYPE_EXECUTION;
 
                 elsif (IR31downto26_ext = x"23" or IR31downto26_ext = x"2B")
                     then next_state <= MEMORY_ADDRESS_COMPUTATION;
@@ -139,6 +142,12 @@ begin --FSM
                         IR31downto26_ext = x"06" or IR31downto26_ext = x"07" or
                         IR31downto26_ext = x"01")
                     then next_state <= BRANCH_COMPLETION;
+
+                elsif (IR31downto26_ext = x"02")
+                    then next_state <= JUMP;
+
+                elsif (IR31downto26_ext = x"03") -- JAL
+                    then next_state <= WRITE_RETURN_ADDR;
 
                 elsif (IR31downto26_ext = x"3F")
                     then next_state <= HALT;
@@ -188,19 +197,18 @@ begin --FSM
                         OpSelect <= OP_SLT_U;
                     when x"10" =>  -- mfhi -move from Hi
                         ALU_LO_HI <= "10"; -- output the HI register from the ALU ouputs mux
-                        MemToReg <= '0'; -- select the output of the ALU outputs mux to be written to the registers file
+                        MemToReg <= "00"; -- select the output of the ALU outputs mux to be written to the registers file
                         RegDst <= '1'; -- select IR(15 downto 11) to be written to (this is the same as 'rd' in the MIPs instruction set manual)
                         RegWrite <= '1'; -- enable writing to the registers file
                         next_state <= INSTRUCTION_FETCH; -- we are done with this instruction after this clock edge, so move back to the beginnning state
                     when x"12" => -- mflo -move from LO
                         ALU_LO_HI <= "01"; -- output the LO register from the ALU ouputs mux
-                        MemToReg <= '0'; -- select the output of the ALU outputs mux to be written to the registers file
+                        MemToReg <= "00"; -- select the output of the ALU outputs mux to be written to the registers file
                         RegDst <= '1'; -- select IR(15 downto 11) to be written to (this is the same as 'rd' in the MIPs instruction set manual)
                         RegWrite <= '1'; -- enable writing to the registers file
                         next_state <= INSTRUCTION_FETCH; -- we are done with this instruction after this clock edge, so move back to the beginnning state
                     when x"08" => -- jump register
-                        -- TODO, week 3 deliverable ?
-                        next_state <= INSTRUCTION_FETCH;
+                        next_state <= JUMP_REGISTER;
                     when others => report "Invalid R Type instruction while decoding." severity note;
                 end case;
 
@@ -208,7 +216,7 @@ begin --FSM
             when R_TYPE_COMPLETION =>
 
                 ALU_LO_HI <= "00"; -- select ALUOut from ALUOut, LO, and HI
-                MemToReg <= '0'; -- select the outputs of the ALU from MemoryDataReg and the outputs of the ALU
+                MemToReg <= "00"; -- select the outputs of the ALU from MemoryDataReg and the outputs of the ALU
                 RegDst <= '1'; -- the destination register is IR(15 downto 11) (the same thing as 'rd' in the MIPs manual)
                 RegWrite <= '1'; -- enable the write to the register file
                 next_state <= INSTRUCTION_FETCH; -- move back to the instruction fetch state and do it all over again!
@@ -256,7 +264,7 @@ begin --FSM
             when I_TYPE_COMPLETION =>
 
                 ALU_LO_HI <= "00"; -- select ALUOut from ALUOut, LO, and HI
-                MemToReg <= '0'; -- select the outputs of the ALU from MemoryDataReg and the outputs of the ALU
+                MemToReg <= "00"; -- select the outputs of the ALU from MemoryDataReg and the outputs of the ALU
                 RegDst <= '0'; -- the destination register is IR(20 downto 16) (the same thing as 'rt' in the MIPs manual)
                 RegWrite <= '1'; -- enable the write to the register file
                 next_state <= INSTRUCTION_FETCH; -- move back to the instruction fetch state and do it all over again!
@@ -301,7 +309,7 @@ begin --FSM
             when MEMORY_READ_COMPLETION =>
             
                 RegDst <= '0'; -- select the IR(20 downto 16) for the address to write to
-                MemToReg <= '1'; -- select the memroy data register to get the data to write
+                MemToReg <= "01"; -- select the memroy data register to get the data to write
                 RegWrite <= '1'; -- enable writing to the registers file
                 next_state <= INSTRUCTION_FETCH; -- move back to the beginning, this is the end of the load word instruction
 
@@ -346,6 +354,25 @@ begin --FSM
                         end if;
                     when others => report "Invalid branch instruction while decoding. We should not be in this state if this happened." severity note;
                 end case;
+
+            when WRITE_RETURN_ADDR =>
+                MemToReg <= "10"; -- select the PC to write to the registers file
+                JumpAndLink <= '1'; -- enable jump and link so that r31 is written to
+                RegWrite <= '1'; -- enable writing to the registers file
+                next_state <= JUMP; -- move to jump so that we can jump!
+
+            -- this state isnt strictly necesary but was added to keep the decode instruction state consistent
+            when JUMP =>
+                PCSource <= "10"; -- select IR(25 downto 0) to write to the PC register
+                PCWrite <= '1'; -- enable writing
+                next_state <= INSTRUCTION_FETCH; -- jump is simple - move back to the beginning now
+
+            -- in this state, the effective address that we want to jump to is contained within RegA
+            when JUMP_REGISTER =>
+                --route using PCSource and PCWrite
+                PCSource <= "11"; -- selecgt RegA to write to the PC
+                PCWrite <= '1'; -- enable writing
+                next_state <= INSTRUCTION_FETCH; -- move back to the beginning
 
             -- fake instruction to stop the computer from repeatedly fetching and executing bad instructions. useful for week 2 deliverables
             when HALT =>

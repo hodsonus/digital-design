@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Fri Apr 05 12:15:40 2019
+Thu Apr 11 22:39:04 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -21,7 +21,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  13. General Register Statistics
  14. Inverted Register Statistics
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_uru3:auto_generated
+ 16. Source assignments for datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated
  17. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER
  18. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX
  19. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0
@@ -87,15 +87,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 05 12:15:40 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 11 22:39:03 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_level                                   ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3,744                                       ;
-;     Total combinational functions  ; 2,612                                       ;
-;     Dedicated logic registers      ; 1,336                                       ;
-; Total registers                    ; 1336                                        ;
+; Total logic elements               ; 3,849                                       ;
+;     Total combinational functions  ; 2,749                                       ;
+;     Dedicated logic registers      ; 1,340                                       ;
+; Total registers                    ; 1340                                        ;
 ; Total pins                         ; 71                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 8,192                                       ;
@@ -205,46 +205,47 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                            ;
-+----------------------------------------------------------------------------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                                                   ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                                       ; Library ;
-+----------------------------------------------------------------------------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------------------------------------+---------+
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/alu/alu.vhd                  ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/alu/alu.vhd                  ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_4x1.vhd       ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_4x1.vhd       ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_2x1.vhd       ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_2x1.vhd       ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/extender.vhd      ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/extender.vhd      ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/decoder7seg.vhd   ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/decoder7seg.vhd   ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/registers_file.vhd ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/registers_file.vhd ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/reg.vhd            ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/reg.vhd            ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/memory.vhd         ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/memory.vhd         ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd                ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd                ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/MIPS_LIB.vhd                 ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/MIPS_LIB.vhd                 ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd                 ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd                 ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd               ; yes             ; User VHDL File              ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd               ;         ;
-; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/ram.vhd            ; yes             ; User Wizard-Generated File  ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/ram.vhd            ;         ;
-; altsyncram.tdf                                                                                     ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                              ;         ;
-; stratix_ram_block.inc                                                                              ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                       ;         ;
-; lpm_mux.inc                                                                                        ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                 ;         ;
-; lpm_decode.inc                                                                                     ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc                              ;         ;
-; aglobal171.inc                                                                                     ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                              ;         ;
-; a_rdenreg.inc                                                                                      ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                               ;         ;
-; altrom.inc                                                                                         ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                                  ;         ;
-; altram.inc                                                                                         ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                  ;         ;
-; altdpram.inc                                                                                       ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                ;         ;
-; altsyncram_uru3.tdf                                                                                ; yes             ; Auto-Found AHDL File        ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/db/altsyncram_uru3.tdf      ;         ;
-; lpm_mult.tdf                                                                                       ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf                                ;         ;
-; lpm_add_sub.inc                                                                                    ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc                             ;         ;
-; multcore.inc                                                                                       ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.inc                                ;         ;
-; bypassff.inc                                                                                       ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/bypassff.inc                                ;         ;
-; altshift.inc                                                                                       ; yes             ; Megafunction                ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.inc                                ;         ;
-; mult_qgs.tdf                                                                                       ; yes             ; Auto-Found AHDL File        ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/db/mult_qgs.tdf             ;         ;
-; mult_tns.tdf                                                                                       ; yes             ; Auto-Found AHDL File        ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/db/mult_tns.tdf             ;         ;
-+----------------------------------------------------------------------------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
++-------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                  ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                       ; Library ;
++-------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; ../vhdl/alu/alu.vhd                                               ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/alu/alu.vhd                  ;         ;
+; ../vhdl/comb_logic/mux_4x1.vhd                                    ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_4x1.vhd       ;         ;
+; ../vhdl/comb_logic/mux_2x1.vhd                                    ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/mux_2x1.vhd       ;         ;
+; ../vhdl/comb_logic/extender.vhd                                   ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/extender.vhd      ;         ;
+; ../vhdl/comb_logic/decoder7seg.vhd                                ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/comb_logic/decoder7seg.vhd   ;         ;
+; ../vhdl/seq_logic/registers_file.vhd                              ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/registers_file.vhd ;         ;
+; ../vhdl/seq_logic/reg.vhd                                         ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/reg.vhd            ;         ;
+; ../vhdl/seq_logic/memory.vhd                                      ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/memory.vhd         ;         ;
+; ../vhdl/top_level.vhd                                             ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd                ;         ;
+; ../vhdl/MIPS_LIB.vhd                                              ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/MIPS_LIB.vhd                 ;         ;
+; ../vhdl/datapath.vhd                                              ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd                 ;         ;
+; ../vhdl/controller.vhd                                            ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd               ;         ;
+; ../vhdl/seq_logic/ram.vhd                                         ; yes             ; User Wizard-Generated File             ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/ram.vhd            ;         ;
+; altsyncram.tdf                                                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                              ;         ;
+; stratix_ram_block.inc                                             ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                       ;         ;
+; lpm_mux.inc                                                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                 ;         ;
+; lpm_decode.inc                                                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc                              ;         ;
+; aglobal171.inc                                                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                              ;         ;
+; a_rdenreg.inc                                                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                               ;         ;
+; altrom.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                                  ;         ;
+; altram.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                  ;         ;
+; altdpram.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                ;         ;
+; db/altsyncram_4k04.tdf                                            ; yes             ; Auto-Generated Megafunction            ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/db/altsyncram_4k04.tdf      ;         ;
+; y:/github/digital-design/final-project/test-cases/bubble_sort.mif ; yes             ; Auto-Found Memory Initialization File  ; y:/github/digital-design/final-project/test-cases/bubble_sort.mif                                  ;         ;
+; lpm_mult.tdf                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf                                ;         ;
+; lpm_add_sub.inc                                                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc                             ;         ;
+; multcore.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.inc                                ;         ;
+; bypassff.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/bypassff.inc                                ;         ;
+; altshift.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.inc                                ;         ;
+; db/mult_qgs.tdf                                                   ; yes             ; Auto-Generated Megafunction            ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/db/mult_qgs.tdf             ;         ;
+; db/mult_tns.tdf                                                   ; yes             ; Auto-Generated Megafunction            ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/db/mult_tns.tdf             ;         ;
++-------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -252,20 +253,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 3,744          ;
+; Estimated Total logic elements              ; 3,849          ;
 ;                                             ;                ;
-; Total combinational functions               ; 2612           ;
+; Total combinational functions               ; 2749           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 1984           ;
-;     -- 3 input functions                    ; 508            ;
-;     -- <=2 input functions                  ; 120            ;
+;     -- 4 input functions                    ; 2067           ;
+;     -- 3 input functions                    ; 578            ;
+;     -- <=2 input functions                  ; 104            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 2321           ;
+;     -- normal mode                          ; 2458           ;
 ;     -- arithmetic mode                      ; 291            ;
 ;                                             ;                ;
-; Total registers                             ; 1336           ;
-;     -- Dedicated logic registers            ; 1336           ;
+; Total registers                             ; 1340           ;
+;     -- Dedicated logic registers            ; 1340           ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 71             ;
@@ -274,9 +275,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 16             ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clk50MHz~input ;
-; Maximum fan-out                             ; 1368           ;
-; Total fan-out                               ; 15609          ;
-; Average fan-out                             ; 3.77           ;
+; Maximum fan-out                             ; 1372           ;
+; Total fan-out                               ; 16187          ;
+; Average fan-out                             ; 3.78           ;
 +---------------------------------------------+----------------+
 
 
@@ -285,33 +286,35 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top_level                                      ; 2612 (2)            ; 1336 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 71   ; 0            ; 0          ; |top_level                                                                                                              ; top_level       ; work         ;
-;    |controller:U_CONTROLLER|                    ; 55 (55)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|controller:U_CONTROLLER                                                                                      ; controller      ; work         ;
-;    |datapath:U_DATAPATH|                        ; 2513 (0)            ; 1324 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH                                                                                          ; datapath        ; work         ;
-;       |alu:U_ALU|                               ; 903 (732)           ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU                                                                                ; alu             ; work         ;
+; |top_level                                      ; 2749 (2)            ; 1340 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 71   ; 0            ; 0          ; |top_level                                                                                                              ; top_level       ; work         ;
+;    |controller:U_CONTROLLER|                    ; 79 (79)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|controller:U_CONTROLLER                                                                                      ; controller      ; work         ;
+;    |datapath:U_DATAPATH|                        ; 2626 (4)            ; 1324 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH                                                                                          ; datapath        ; work         ;
+;       |alu:U_ALU|                               ; 958 (787)           ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU                                                                                ; alu             ; work         ;
 ;          |lpm_mult:Mult0|                       ; 92 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0                                                                 ; lpm_mult        ; work         ;
 ;             |mult_qgs:auto_generated|           ; 92 (92)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated                                         ; mult_qgs        ; work         ;
 ;          |lpm_mult:Mult1|                       ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1                                                                 ; lpm_mult        ; work         ;
 ;             |mult_tns:auto_generated|           ; 79 (79)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated                                         ; mult_tns        ; work         ;
-;       |memory:U_MEMORY|                         ; 71 (30)             ; 44 (2)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY                                                                          ; memory          ; work         ;
+;       |extender:U_SIGN_EXTEND_MUX_4A|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A                                                            ; extender        ; work         ;
+;       |memory:U_MEMORY|                         ; 69 (28)             ; 44 (2)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY                                                                          ; memory          ; work         ;
 ;          |mux_4x1:U_OUT_MUX|                    ; 41 (41)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX                                                        ; mux_4x1         ; work         ;
 ;          |ram:U_RAM|                            ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM                                                                ; ram             ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;                |altsyncram_uru3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_uru3:auto_generated ; altsyncram_uru3 ; work         ;
+;                |altsyncram_4k04:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated ; altsyncram_4k04 ; work         ;
 ;          |reg:IN_PORT_0|                        ; 0 (0)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0                                                            ; reg             ; work         ;
 ;          |reg:IN_PORT_1|                        ; 0 (0)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1                                                            ; reg             ; work         ;
 ;          |reg:U_OUT_PORT|                       ; 0 (0)               ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|reg:U_OUT_PORT                                                           ; reg             ; work         ;
-;       |mux_2x1:U_MUX_2x1_A|                     ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A                                                                      ; mux_2x1         ; work         ;
+;       |mux_2x1:U_MUX_2x1_A|                     ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A                                                                      ; mux_2x1         ; work         ;
 ;       |mux_2x1:U_MUX_2x1_B|                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B                                                                      ; mux_2x1         ; work         ;
 ;       |mux_2x1:U_MUX_2x1_C|                     ; 66 (66)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_C                                                                      ; mux_2x1         ; work         ;
-;       |mux_2x1:U_MUX_2x1_D|                     ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_D                                                                      ; mux_2x1         ; work         ;
-;       |mux_4x1:U_MUX_4x1_A|                     ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A                                                                      ; mux_4x1         ; work         ;
+;       |mux_2x1:U_MUX_2x1_D|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_D                                                                      ; mux_2x1         ; work         ;
+;       |mux_4x1:U_MUX_4x1_A|                     ; 48 (48)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A                                                                      ; mux_4x1         ; work         ;
+;       |mux_4x1:U_MUX_4x1_B|                     ; 41 (41)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B                                                                      ; mux_4x1         ; work         ;
 ;       |reg:U_ALU_OUT_REGISTER|                  ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER                                                                   ; reg             ; work         ;
 ;       |reg:U_HI_REGISTER|                       ; 1 (1)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER                                                                        ; reg             ; work         ;
 ;       |reg:U_INSTRUCTION_REGISTER|              ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER                                                               ; reg             ; work         ;
 ;       |reg:U_LO_REGISTER|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_LO_REGISTER                                                                        ; reg             ; work         ;
 ;       |reg:U_MEMORY_DATA_REGISTER|              ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER                                                               ; reg             ; work         ;
-;       |reg:U_PROGRAM_COUNTER|                   ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER                                                                    ; reg             ; work         ;
+;       |reg:U_PROGRAM_COUNTER|                   ; 1 (1)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER                                                                    ; reg             ; work         ;
 ;       |reg:U_REGISTER_A|                        ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A                                                                         ; reg             ; work         ;
 ;       |reg:U_REGISTER_B|                        ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B                                                                         ; reg             ; work         ;
 ;       |registers_file:U_REGISTERS_FILE|         ; 1388 (1388)         ; 1024 (1024)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE                                                          ; registers_file  ; work         ;
@@ -325,13 +328,13 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                       ;
-+-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
-; Name                                                                                                                    ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
-+-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
-; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_uru3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; None ;
-+-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                    ;
++-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+-------------------------------------------------------------------+
+; Name                                                                                                                    ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                                               ;
++-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+-------------------------------------------------------------------+
+; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; Y:/GitHub/digital-design/Final-Project/test-cases/bubble_sort.mif ;
++-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+-------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -362,25 +365,29 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top_level|controller:U_CONTROLLER|state                                                                                                                                                                                                                                                                                                                       ;
-+----------------------------------+------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
-; Name                             ; state.HALT ; state.MEMORY_ACCESS_WRITE ; state.MEMORY_READ_COMPLETION ; state.LOAD_MEMORY_DATA_REG ; state.MEMORY_ACCESS_READ ; state.MEMORY_ADDRESS_COMPUTATION ; state.I_TYPE_COMPLETION ; state.R_TYPE_COMPLETION ; state.I_TYPE_EXECUTION ; state.R_TYPE_EXECUTION ; state.INSTRUCTION_DECODE ; state.LOAD_IR ; state.INSTRUCTION_FETCH ;
-+----------------------------------+------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
-; state.INSTRUCTION_FETCH          ; 0          ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 0                       ;
-; state.LOAD_IR                    ; 0          ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 1             ; 1                       ;
-; state.INSTRUCTION_DECODE         ; 0          ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 1                        ; 0             ; 1                       ;
-; state.R_TYPE_EXECUTION           ; 0          ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 1                      ; 0                        ; 0             ; 1                       ;
-; state.I_TYPE_EXECUTION           ; 0          ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 1                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.R_TYPE_COMPLETION          ; 0          ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 1                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.I_TYPE_COMPLETION          ; 0          ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 1                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.MEMORY_ADDRESS_COMPUTATION ; 0          ; 0                         ; 0                            ; 0                          ; 0                        ; 1                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.MEMORY_ACCESS_READ         ; 0          ; 0                         ; 0                            ; 0                          ; 1                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.LOAD_MEMORY_DATA_REG       ; 0          ; 0                         ; 0                            ; 1                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.MEMORY_READ_COMPLETION     ; 0          ; 0                         ; 1                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.MEMORY_ACCESS_WRITE        ; 0          ; 1                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.HALT                       ; 1          ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-+----------------------------------+------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|controller:U_CONTROLLER|state                                                                                                                                                                                                                                                                                                                                                                                                              ;
++----------------------------------+------------+---------------------+------------+-------------------------+-------------------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
+; Name                             ; state.HALT ; state.JUMP_REGISTER ; state.JUMP ; state.WRITE_RETURN_ADDR ; state.BRANCH_COMPLETION ; state.MEMORY_ACCESS_WRITE ; state.MEMORY_READ_COMPLETION ; state.LOAD_MEMORY_DATA_REG ; state.MEMORY_ACCESS_READ ; state.MEMORY_ADDRESS_COMPUTATION ; state.I_TYPE_COMPLETION ; state.R_TYPE_COMPLETION ; state.I_TYPE_EXECUTION ; state.R_TYPE_EXECUTION ; state.INSTRUCTION_DECODE ; state.LOAD_IR ; state.INSTRUCTION_FETCH ;
++----------------------------------+------------+---------------------+------------+-------------------------+-------------------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
+; state.INSTRUCTION_FETCH          ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 0                       ;
+; state.LOAD_IR                    ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 1             ; 1                       ;
+; state.INSTRUCTION_DECODE         ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 1                        ; 0             ; 1                       ;
+; state.R_TYPE_EXECUTION           ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 1                      ; 0                        ; 0             ; 1                       ;
+; state.I_TYPE_EXECUTION           ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 1                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.R_TYPE_COMPLETION          ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 1                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.I_TYPE_COMPLETION          ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 1                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.MEMORY_ADDRESS_COMPUTATION ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 1                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.MEMORY_ACCESS_READ         ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 1                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.LOAD_MEMORY_DATA_REG       ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 1                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.MEMORY_READ_COMPLETION     ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 1                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.MEMORY_ACCESS_WRITE        ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 1                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.BRANCH_COMPLETION          ; 0          ; 0                   ; 0          ; 0                       ; 1                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.WRITE_RETURN_ADDR          ; 0          ; 0                   ; 0          ; 1                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.JUMP                       ; 0          ; 0                   ; 1          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.JUMP_REGISTER              ; 0          ; 1                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.HALT                       ; 1          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
++----------------------------------+------------+---------------------+------------+-------------------------+-------------------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -400,10 +407,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1336  ;
+; Total registers                              ; 1340  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1318  ;
+; Number of registers using Synchronous Load   ; 28    ;
+; Number of registers using Asynchronous Clear ; 1322  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1196  ;
 ; Number of registers using Preset             ; 0     ;
@@ -421,32 +428,36 @@ Encoding Type:  One-Hot
 +--------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
-; 16:1               ; 32 bits   ; 320 LEs       ; 64 LEs               ; 256 LEs                ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER|output[11]              ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B|output[10]               ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A|output[14]               ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX|Mux31   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux31                 ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux0                  ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux23                 ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_C|output[3]             ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 27 LEs               ; 0 LEs                  ; No         ; |top_level|controller:U_CONTROLLER|next_state                            ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top_level|controller:U_CONTROLLER|next_state.MEMORY_ADDRESS_COMPUTATION ;
-; 20:1               ; 7 bits    ; 91 LEs        ; 63 LEs               ; 28 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux13                           ;
-; 19:1               ; 8 bits    ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux18                           ;
-; 21:1               ; 4 bits    ; 56 LEs        ; 36 LEs               ; 20 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux7                            ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux27                           ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux3                            ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux28                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[0]         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[31]        ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[10]        ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B|output[28]             ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 64 LEs               ; 608 LEs                ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER|output[6]             ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A|output[3]              ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX|Mux24 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux31               ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux8                ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux22               ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_C|output[0]           ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_level|controller:U_CONTROLLER|Selector2                           ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 8 LEs                ; 76 LEs                 ; No         ; |top_level|controller:U_CONTROLLER|next_state                          ;
+; 65:1               ; 5 bits    ; 215 LEs       ; 35 LEs               ; 180 LEs                ; No         ; |top_level|controller:U_CONTROLLER|next_state.WRITE_RETURN_ADDR        ;
+; 36:1               ; 7 bits    ; 168 LEs       ; 63 LEs               ; 105 LEs                ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux13                         ;
+; 35:1               ; 8 bits    ; 184 LEs       ; 72 LEs               ; 112 LEs                ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux18                         ;
+; 37:1               ; 4 bits    ; 96 LEs        ; 40 LEs               ; 56 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux4                          ;
+; 36:1               ; 4 bits    ; 96 LEs        ; 36 LEs               ; 60 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux24                         ;
+; 38:1               ; 2 bits    ; 50 LEs        ; 22 LEs               ; 28 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux3                          ;
+; 37:1               ; 2 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux29                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_uru3:auto_generated ;
+; Source assignments for datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                    ;
 +---------------------------------+--------------------+------+-----------------------------------------------------------------------+
@@ -496,62 +507,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +----------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component ;
-+------------------------------------+-------------------------------------------------+-------------------------------------+
-; Parameter Name                     ; Value                                           ; Type                                ;
-+------------------------------------+-------------------------------------------------+-------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                                               ; Untyped                             ;
-; AUTO_CARRY_CHAINS                  ; ON                                              ; AUTO_CARRY                          ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                             ; IGNORE_CARRY                        ;
-; AUTO_CASCADE_CHAINS                ; ON                                              ; AUTO_CASCADE                        ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                             ; IGNORE_CASCADE                      ;
-; WIDTH_BYTEENA                      ; 1                                               ; Untyped                             ;
-; OPERATION_MODE                     ; SINGLE_PORT                                     ; Untyped                             ;
-; WIDTH_A                            ; 32                                              ; Signed Integer                      ;
-; WIDTHAD_A                          ; 8                                               ; Signed Integer                      ;
-; NUMWORDS_A                         ; 256                                             ; Signed Integer                      ;
-; OUTDATA_REG_A                      ; UNREGISTERED                                    ; Untyped                             ;
-; ADDRESS_ACLR_A                     ; NONE                                            ; Untyped                             ;
-; OUTDATA_ACLR_A                     ; NONE                                            ; Untyped                             ;
-; WRCONTROL_ACLR_A                   ; NONE                                            ; Untyped                             ;
-; INDATA_ACLR_A                      ; NONE                                            ; Untyped                             ;
-; BYTEENA_ACLR_A                     ; NONE                                            ; Untyped                             ;
-; WIDTH_B                            ; 1                                               ; Signed Integer                      ;
-; WIDTHAD_B                          ; 1                                               ; Signed Integer                      ;
-; NUMWORDS_B                         ; 0                                               ; Signed Integer                      ;
-; INDATA_REG_B                       ; CLOCK1                                          ; Untyped                             ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                          ; Untyped                             ;
-; RDCONTROL_REG_B                    ; CLOCK1                                          ; Untyped                             ;
-; ADDRESS_REG_B                      ; CLOCK1                                          ; Untyped                             ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                    ; Untyped                             ;
-; BYTEENA_REG_B                      ; CLOCK1                                          ; Untyped                             ;
-; INDATA_ACLR_B                      ; NONE                                            ; Untyped                             ;
-; WRCONTROL_ACLR_B                   ; NONE                                            ; Untyped                             ;
-; ADDRESS_ACLR_B                     ; NONE                                            ; Untyped                             ;
-; OUTDATA_ACLR_B                     ; NONE                                            ; Untyped                             ;
-; RDCONTROL_ACLR_B                   ; NONE                                            ; Untyped                             ;
-; BYTEENA_ACLR_B                     ; NONE                                            ; Untyped                             ;
-; WIDTH_BYTEENA_A                    ; 1                                               ; Signed Integer                      ;
-; WIDTH_BYTEENA_B                    ; 1                                               ; Signed Integer                      ;
-; RAM_BLOCK_TYPE                     ; AUTO                                            ; Untyped                             ;
-; BYTE_SIZE                          ; 8                                               ; Signed Integer                      ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                       ; Untyped                             ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                            ; Untyped                             ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                            ; Untyped                             ;
-; INIT_FILE                          ; Y:/GitHub/digital-design/Final-Project/prog.mif ; Untyped                             ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                          ; Untyped                             ;
-; MAXIMUM_DEPTH                      ; 0                                               ; Signed Integer                      ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                                          ; Untyped                             ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                          ; Untyped                             ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                                          ; Untyped                             ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                          ; Untyped                             ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                 ; Untyped                             ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                 ; Untyped                             ;
-; ENABLE_ECC                         ; FALSE                                           ; Untyped                             ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                           ; Untyped                             ;
-; WIDTH_ECCSTATUS                    ; 3                                               ; Signed Integer                      ;
-; DEVICE_FAMILY                      ; MAX 10                                          ; Untyped                             ;
-; CBXI_PARAMETER                     ; altsyncram_uru3                                 ; Untyped                             ;
-+------------------------------------+-------------------------------------------------+-------------------------------------+
++------------------------------------+-------------------------------------------------------------------+-------------------+
+; Parameter Name                     ; Value                                                             ; Type              ;
++------------------------------------+-------------------------------------------------------------------+-------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                                 ; Untyped           ;
+; AUTO_CARRY_CHAINS                  ; ON                                                                ; AUTO_CARRY        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                                               ; IGNORE_CARRY      ;
+; AUTO_CASCADE_CHAINS                ; ON                                                                ; AUTO_CASCADE      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                                               ; IGNORE_CASCADE    ;
+; WIDTH_BYTEENA                      ; 1                                                                 ; Untyped           ;
+; OPERATION_MODE                     ; SINGLE_PORT                                                       ; Untyped           ;
+; WIDTH_A                            ; 32                                                                ; Signed Integer    ;
+; WIDTHAD_A                          ; 8                                                                 ; Signed Integer    ;
+; NUMWORDS_A                         ; 256                                                               ; Signed Integer    ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                                      ; Untyped           ;
+; ADDRESS_ACLR_A                     ; NONE                                                              ; Untyped           ;
+; OUTDATA_ACLR_A                     ; NONE                                                              ; Untyped           ;
+; WRCONTROL_ACLR_A                   ; NONE                                                              ; Untyped           ;
+; INDATA_ACLR_A                      ; NONE                                                              ; Untyped           ;
+; BYTEENA_ACLR_A                     ; NONE                                                              ; Untyped           ;
+; WIDTH_B                            ; 1                                                                 ; Signed Integer    ;
+; WIDTHAD_B                          ; 1                                                                 ; Signed Integer    ;
+; NUMWORDS_B                         ; 0                                                                 ; Signed Integer    ;
+; INDATA_REG_B                       ; CLOCK1                                                            ; Untyped           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                            ; Untyped           ;
+; RDCONTROL_REG_B                    ; CLOCK1                                                            ; Untyped           ;
+; ADDRESS_REG_B                      ; CLOCK1                                                            ; Untyped           ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                                      ; Untyped           ;
+; BYTEENA_REG_B                      ; CLOCK1                                                            ; Untyped           ;
+; INDATA_ACLR_B                      ; NONE                                                              ; Untyped           ;
+; WRCONTROL_ACLR_B                   ; NONE                                                              ; Untyped           ;
+; ADDRESS_ACLR_B                     ; NONE                                                              ; Untyped           ;
+; OUTDATA_ACLR_B                     ; NONE                                                              ; Untyped           ;
+; RDCONTROL_ACLR_B                   ; NONE                                                              ; Untyped           ;
+; BYTEENA_ACLR_B                     ; NONE                                                              ; Untyped           ;
+; WIDTH_BYTEENA_A                    ; 1                                                                 ; Signed Integer    ;
+; WIDTH_BYTEENA_B                    ; 1                                                                 ; Signed Integer    ;
+; RAM_BLOCK_TYPE                     ; AUTO                                                              ; Untyped           ;
+; BYTE_SIZE                          ; 8                                                                 ; Signed Integer    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                         ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                              ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                              ; Untyped           ;
+; INIT_FILE                          ; Y:/GitHub/digital-design/Final-Project/test-cases/bubble_sort.mif ; Untyped           ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                                            ; Untyped           ;
+; MAXIMUM_DEPTH                      ; 0                                                                 ; Signed Integer    ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                                                            ; Untyped           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                            ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                                                            ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                            ; Untyped           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                                   ; Untyped           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                                   ; Untyped           ;
+; ENABLE_ECC                         ; FALSE                                                             ; Untyped           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                             ; Untyped           ;
+; WIDTH_ECCSTATUS                    ; 3                                                                 ; Signed Integer    ;
+; DEVICE_FAMILY                      ; MAX 10                                                            ; Untyped           ;
+; CBXI_PARAMETER                     ; altsyncram_4k04                                                   ; Untyped           ;
++------------------------------------+-------------------------------------------------------------------+-------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -871,7 +882,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port      ; Type  ; Severity ; Details                              ;
 +-----------+-------+----------+--------------------------------------+
 ; in2[1..0] ; Input ; Info     ; Stuck at GND                         ;
-; in3       ; Input ; Info     ; Stuck at GND                         ;
 +-----------+-------+----------+--------------------------------------+
 
 
@@ -957,26 +967,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 71                          ;
-; cycloneiii_ff         ; 1336                        ;
-;     CLR               ; 140                         ;
+; cycloneiii_ff         ; 1340                        ;
+;     CLR               ; 144                         ;
 ;     ENA               ; 18                          ;
-;     ENA CLR           ; 1178                        ;
-; cycloneiii_lcell_comb ; 2620                        ;
+;     ENA CLR           ; 1150                        ;
+;     ENA CLR SLD       ; 28                          ;
+; cycloneiii_lcell_comb ; 2757                        ;
 ;     arith             ; 291                         ;
 ;         2 data inputs ; 38                          ;
 ;         3 data inputs ; 253                         ;
-;     normal            ; 2329                        ;
+;     normal            ; 2466                        ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 78                          ;
-;         3 data inputs ; 255                         ;
-;         4 data inputs ; 1984                        ;
+;         2 data inputs ; 62                          ;
+;         3 data inputs ; 325                         ;
+;         4 data inputs ; 2067                        ;
 ; cycloneiii_mac_mult   ; 8                           ;
 ; cycloneiii_mac_out    ; 8                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 5.34                        ;
+; Max LUT depth         ; 12.50                       ;
+; Average LUT depth     ; 5.67                        ;
 +-----------------------+-----------------------------+
 
 
@@ -995,7 +1006,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Apr 05 12:14:44 2019
+    Info: Processing started: Thu Apr 11 22:37:15 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Final-Project -c top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1029,18 +1040,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file //vmwar
 Info (12021): Found 1 design units, including 0 entities, in source file //vmware-host/shared folders/github/digital-design/final-project/vhdl/mips_lib.vhd
     Info (12022): Found design unit 1: MIPS_LIB File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/MIPS_LIB.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file //vmware-host/shared folders/github/digital-design/final-project/vhdl/datapath.vhd
-    Info (12022): Found design unit 1: datapath-STR File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 40
+    Info (12022): Found design unit 1: datapath-STR File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 41
     Info (12023): Found entity 1: datapath File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file //vmware-host/shared folders/github/digital-design/final-project/vhdl/controller.vhd
-    Info (12022): Found design unit 1: controller-FSM File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 36
+    Info (12022): Found design unit 1: controller-FSM File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 37
     Info (12023): Found entity 1: controller File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file //vmware-host/shared folders/github/digital-design/final-project/vhdl/seq_logic/ram.vhd
     Info (12022): Found design unit 1: ram-SYN File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/ram.vhd Line: 54
     Info (12023): Found entity 1: ram File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/ram.vhd Line: 42
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
-Info (12128): Elaborating entity "datapath" for hierarchy "datapath:U_DATAPATH" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 71
-Info (12128): Elaborating entity "reg" for hierarchy "datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 69
-Info (12128): Elaborating entity "memory" for hierarchy "datapath:U_DATAPATH|memory:U_MEMORY" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 83
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:U_DATAPATH" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 72
+Info (12128): Elaborating entity "reg" for hierarchy "datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 70
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:U_DATAPATH|memory:U_MEMORY" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 84
 Info (12128): Elaborating entity "mux_4x1" for hierarchy "datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/memory.vhd Line: 81
 Info (12128): Elaborating entity "ram" for hierarchy "datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/memory.vhd Line: 127
 Info (12128): Elaborating entity "altsyncram" for hierarchy "datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/seq_logic/ram.vhd Line: 61
@@ -1066,7 +1077,7 @@ Info (12133): Instantiated megafunction "datapath:U_DATAPATH|memory:U_MEMORY|ram
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "Y:/GitHub/digital-design/Final-Project/prog.mif"
+    Info (12134): Parameter "init_file" = "Y:/GitHub/digital-design/Final-Project/test-cases/bubble_sort.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "256"
@@ -1096,16 +1107,17 @@ Info (12133): Instantiated megafunction "datapath:U_DATAPATH|memory:U_MEMORY|ram
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Warning (12125): Using design file db/altsyncram_uru3.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: altsyncram_uru3 File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/db/altsyncram_uru3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_uru3" for hierarchy "datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_uru3:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File Y:/GitHub/digital-design/Final-Project/prog.mif -- setting all initial values to 0 File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "mux_2x1" for hierarchy "datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 122
-Info (12128): Elaborating entity "mux_2x1" for hierarchy "datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 133
-Info (12128): Elaborating entity "registers_file" for hierarchy "datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 155
-Info (12128): Elaborating entity "extender" for hierarchy "datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 204
-Info (12128): Elaborating entity "alu" for hierarchy "datapath:U_DATAPATH|alu:U_ALU" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 230
-Info (12128): Elaborating entity "controller" for hierarchy "controller:U_CONTROLLER" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 104
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4k04.tdf
+    Info (12023): Found entity 1: altsyncram_4k04 File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/db/altsyncram_4k04.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_4k04" for hierarchy "datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 123
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 134
+Info (12128): Elaborating entity "registers_file" for hierarchy "datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 156
+Info (12128): Elaborating entity "extender" for hierarchy "datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 205
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:U_DATAPATH|alu:U_ALU" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 231
+Info (12128): Elaborating entity "controller" for hierarchy "controller:U_CONTROLLER" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 103
+Warning (10492): VHDL Process Statement warning at controller.vhd(349): signal "IR20downto16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 349
+Warning (10492): VHDL Process Statement warning at controller.vhd(351): signal "IR20downto16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 351
 Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED5" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 132
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "datapath:U_DATAPATH|alu:U_ALU|Mult0" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/alu/alu.vhd Line: 39
@@ -1161,16 +1173,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3960 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4065 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 3841 logic cells
+    Info (21061): Implemented 3946 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 16 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Fri Apr 05 12:15:40 2019
-    Info: Elapsed time: 00:00:56
-    Info: Total CPU time (on all processors): 00:01:05
+    Info: Peak virtual memory: 4856 megabytes
+    Info: Processing ended: Thu Apr 11 22:39:04 2019
+    Info: Elapsed time: 00:01:49
+    Info: Total CPU time (on all processors): 00:01:20
 
 

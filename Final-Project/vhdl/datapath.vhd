@@ -18,7 +18,7 @@ entity datapath is
         IorD         : in  std_logic; -- select between the PC or the ALU output as the memory address.
         MemRead      : in  std_logic; -- enables memory read.
         MemWrite     : in  std_logic; -- enables memory write.
-        MemToReg     : in  std_logic; -- select between “Memory data register” or “ALU output” as input to “write data” signal.
+        MemToReg     : in  std_logic_vector(1 downto 0); -- select between “Memory data register” or “ALU output” as input to “write data” signal.
         IRWrite      : in  std_logic; -- enables the instruction register.
         JumpAndLink  : in  std_logic; -- when asserted, $s31 will be selected as the write register.
         IsSigned     : in  std_logic; -- when asserted, “Sign Extended” will output a 32-bit sign extended representation of 16-bit input.
@@ -142,7 +142,7 @@ begin --STR
             output => WriteRegister
         );
 
-    U_MUX_2x1_C: entity work.mux_2x1
+    U_MUX_4x1_D: entity work.mux_4x1
         generic map (
             WIDTH => 32
         )
@@ -150,6 +150,8 @@ begin --STR
             sel    => MemToReg,
             in0    => ALUOutSeletion,
             in1    => MemDataReg,
+            in2    => PC,
+            in3    => std_logic_vector(to_unsigned(0,32)), -- not a choice we ever make
             output => WriteData
         );
 
@@ -253,7 +255,7 @@ begin --STR
             in0    => ALUOut,
             in1    => ALUOutReg,
             in2    => Mux4BSrc2,
-            in3    => std_logic_vector(to_unsigned(0, 32)), --the constant, 0. not on the datapath, this is not a selection we normally want to make
+            in3    => RegAOut, -- Used for the JR instruction, not on the original datapath that was provided
             output => PCInput
         );
 
