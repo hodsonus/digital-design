@@ -1,5 +1,5 @@
 Fitter report for top_level
-Thu Apr 11 22:40:20 2019
+Thu Apr 11 23:34:36 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -72,15 +72,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Apr 11 22:40:20 2019       ;
+; Fitter Status                      ; Successful - Thu Apr 11 23:34:36 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_level                                   ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 2,840 / 49,760 ( 6 % )                      ;
-;     Total combinational functions  ; 2,750 / 49,760 ( 6 % )                      ;
+; Total logic elements               ; 2,864 / 49,760 ( 6 % )                      ;
+;     Total combinational functions  ; 2,785 / 49,760 ( 6 % )                      ;
 ;     Dedicated logic registers      ; 1,340 / 49,760 ( 3 % )                      ;
 ; Total registers                    ; 1340                                        ;
 ; Total pins                         ; 71 / 360 ( 20 % )                           ;
@@ -158,12 +158,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.14        ;
+; Average used               ; 1.13        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  14.2%      ;
+;     Processor 2            ;  13.4%      ;
 +----------------------------+-------------+
 
 
@@ -173,8 +173,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 4300 ) ; 0.00 % ( 0 / 4300 )        ; 0.00 % ( 0 / 4300 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 4300 ) ; 0.00 % ( 0 / 4300 )        ; 0.00 % ( 0 / 4300 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 4335 ) ; 0.00 % ( 0 / 4335 )        ; 0.00 % ( 0 / 4335 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 4335 ) ; 0.00 % ( 0 / 4335 )        ; 0.00 % ( 0 / 4335 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -197,7 +197,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 4284 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 4319 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -213,26 +213,26 @@ The pin-out file can be found in /GitHub/digital-design/Final-Project/board/outp
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Total logic elements                        ; 2,840 / 49,760 ( 6 % )      ;
-;     -- Combinational with no register       ; 1500                        ;
-;     -- Register only                        ; 90                          ;
-;     -- Combinational with a register        ; 1250                        ;
+; Total logic elements                        ; 2,864 / 49,760 ( 6 % )      ;
+;     -- Combinational with no register       ; 1524                        ;
+;     -- Register only                        ; 79                          ;
+;     -- Combinational with a register        ; 1261                        ;
 ;                                             ;                             ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 2067                        ;
-;     -- 3 input functions                    ; 578                         ;
-;     -- <=2 input functions                  ; 105                         ;
-;     -- Register only                        ; 90                          ;
+;     -- 4 input functions                    ; 2064                        ;
+;     -- 3 input functions                    ; 613                         ;
+;     -- <=2 input functions                  ; 108                         ;
+;     -- Register only                        ; 79                          ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 2459                        ;
+;     -- normal mode                          ; 2494                        ;
 ;     -- arithmetic mode                      ; 291                         ;
 ;                                             ;                             ;
 ; Total registers*                            ; 1,340 / 51,509 ( 3 % )      ;
 ;     -- Dedicated logic registers            ; 1,340 / 49,760 ( 3 % )      ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )           ;
 ;                                             ;                             ;
-; Total LABs:  partially or completely used   ; 213 / 3,110 ( 7 % )         ;
+; Total LABs:  partially or completely used   ; 239 / 3,110 ( 8 % )         ;
 ; Virtual pins                                ; 0                           ;
 ; I/O pins                                    ; 71 / 360 ( 20 % )           ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )              ;
@@ -252,11 +252,11 @@ The pin-out file can be found in /GitHub/digital-design/Final-Project/board/outp
 ; Remote update blocks                        ; 0 / 1 ( 0 % )               ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )               ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )               ;
-; Average interconnect usage (total/H/V)      ; 3.4% / 3.2% / 3.7%          ;
-; Peak interconnect usage (total/H/V)         ; 40.5% / 39.1% / 42.5%       ;
+; Average interconnect usage (total/H/V)      ; 3.5% / 3.4% / 3.6%          ;
+; Peak interconnect usage (total/H/V)         ; 48.3% / 45.5% / 52.2%       ;
 ; Maximum fan-out                             ; 1342                        ;
 ; Highest non-global fan-out                  ; 1322                        ;
-; Total fan-out                               ; 15989                       ;
+; Total fan-out                               ; 16077                       ;
 ; Average fan-out                             ; 3.67                        ;
 +---------------------------------------------+-----------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -270,26 +270,26 @@ The pin-out file can be found in /GitHub/digital-design/Final-Project/board/outp
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 2840 / 49760 ( 6 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 1500                 ; 0                              ;
-;     -- Register only                        ; 90                   ; 0                              ;
-;     -- Combinational with a register        ; 1250                 ; 0                              ;
+; Total logic elements                        ; 2864 / 49760 ( 6 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 1524                 ; 0                              ;
+;     -- Register only                        ; 79                   ; 0                              ;
+;     -- Combinational with a register        ; 1261                 ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 2067                 ; 0                              ;
-;     -- 3 input functions                    ; 578                  ; 0                              ;
-;     -- <=2 input functions                  ; 105                  ; 0                              ;
-;     -- Register only                        ; 90                   ; 0                              ;
+;     -- 4 input functions                    ; 2064                 ; 0                              ;
+;     -- 3 input functions                    ; 613                  ; 0                              ;
+;     -- <=2 input functions                  ; 108                  ; 0                              ;
+;     -- Register only                        ; 79                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 2459                 ; 0                              ;
+;     -- normal mode                          ; 2494                 ; 0                              ;
 ;     -- arithmetic mode                      ; 291                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 1340                 ; 0                              ;
 ;     -- Dedicated logic registers            ; 1340 / 49760 ( 3 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 213 / 3110 ( 7 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 239 / 3110 ( 8 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 71                   ; 0                              ;
@@ -308,8 +308,8 @@ The pin-out file can be found in /GitHub/digital-design/Final-Project/board/outp
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 16275                ; 8                              ;
-;     -- Registered Connections               ; 5622                 ; 0                              ;
+;     -- Total Connections                    ; 16363                ; 8                              ;
+;     -- Registered Connections               ; 5672                 ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -1014,11 +1014,11 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; led5_dp     ; Incomplete set of assignments ;
 ; clk50MHz    ; Incomplete set of assignments ;
 ; buttons[1]  ; Incomplete set of assignments ;
-; switches[6] ; Incomplete set of assignments ;
+; switches[8] ; Incomplete set of assignments ;
 ; switches[9] ; Incomplete set of assignments ;
 ; buttons[0]  ; Incomplete set of assignments ;
 ; switches[7] ; Incomplete set of assignments ;
-; switches[8] ; Incomplete set of assignments ;
+; switches[6] ; Incomplete set of assignments ;
 ; switches[2] ; Incomplete set of assignments ;
 ; switches[4] ; Incomplete set of assignments ;
 ; switches[0] ; Incomplete set of assignments ;
@@ -1033,44 +1033,44 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top_level                                      ; 2840 (3)    ; 1340 (0)                  ; 0 (0)         ; 8192        ; 1    ; 1          ; 16           ; 0       ; 8         ; 71   ; 0            ; 1500 (3)     ; 90 (0)            ; 1250 (0)         ; 0          ; |top_level                                                                                                              ; top_level       ; work         ;
-;    |controller:U_CONTROLLER|                    ; 81 (81)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 58 (58)      ; 2 (2)             ; 21 (21)          ; 0          ; |top_level|controller:U_CONTROLLER                                                                                      ; controller      ; work         ;
-;    |datapath:U_DATAPATH|                        ; 2726 (4)    ; 1324 (0)                  ; 0 (0)         ; 8192        ; 1    ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 1402 (4)     ; 88 (0)            ; 1236 (0)         ; 0          ; |top_level|datapath:U_DATAPATH                                                                                          ; datapath        ; work         ;
-;       |alu:U_ALU|                               ; 958 (787)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 886 (718)    ; 0 (0)             ; 72 (69)          ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU                                                                                ; alu             ; work         ;
-;          |lpm_mult:Mult0|                       ; 92 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 90 (0)       ; 0 (0)             ; 2 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0                                                                 ; lpm_mult        ; work         ;
-;             |mult_qgs:auto_generated|           ; 92 (92)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 90 (90)      ; 0 (0)             ; 2 (2)            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated                                         ; mult_qgs        ; work         ;
-;          |lpm_mult:Mult1|                       ; 79 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 78 (0)       ; 0 (0)             ; 1 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1                                                                 ; lpm_mult        ; work         ;
-;             |mult_tns:auto_generated|           ; 79 (79)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 78 (78)      ; 0 (0)             ; 1 (1)            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated                                         ; mult_tns        ; work         ;
+; |top_level                                      ; 2864 (3)    ; 1340 (0)                  ; 0 (0)         ; 8192        ; 1    ; 1          ; 16           ; 0       ; 8         ; 71   ; 0            ; 1524 (3)     ; 79 (0)            ; 1261 (0)         ; 0          ; |top_level                                                                                                              ; top_level       ; work         ;
+;    |controller:U_CONTROLLER|                    ; 83 (83)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 61 (61)      ; 2 (2)             ; 20 (20)          ; 0          ; |top_level|controller:U_CONTROLLER                                                                                      ; controller      ; work         ;
+;    |datapath:U_DATAPATH|                        ; 2749 (4)    ; 1324 (0)                  ; 0 (0)         ; 8192        ; 1    ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 1425 (4)     ; 77 (0)            ; 1247 (0)         ; 0          ; |top_level|datapath:U_DATAPATH                                                                                          ; datapath        ; work         ;
+;       |alu:U_ALU|                               ; 951 (780)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 884 (714)    ; 0 (0)             ; 67 (66)          ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU                                                                                ; alu             ; work         ;
+;          |lpm_mult:Mult0|                       ; 92 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 91 (0)       ; 0 (0)             ; 1 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0                                                                 ; lpm_mult        ; work         ;
+;             |mult_qgs:auto_generated|           ; 92 (92)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 91 (91)      ; 0 (0)             ; 1 (1)            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated                                         ; mult_qgs        ; work         ;
+;          |lpm_mult:Mult1|                       ; 79 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 79 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1                                                                 ; lpm_mult        ; work         ;
+;             |mult_tns:auto_generated|           ; 79 (79)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 79 (79)      ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated                                         ; mult_tns        ; work         ;
 ;       |extender:U_SIGN_EXTEND_MUX_4A|           ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0          ; |top_level|datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A                                                            ; extender        ; work         ;
-;       |memory:U_MEMORY|                         ; 103 (29)    ; 44 (2)                    ; 0 (0)         ; 8192        ; 1    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 28 (0)            ; 58 (12)          ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY                                                                          ; memory          ; work         ;
+;       |memory:U_MEMORY|                         ; 104 (30)    ; 44 (2)                    ; 0 (0)         ; 8192        ; 1    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 24 (0)            ; 64 (14)          ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY                                                                          ; memory          ; work         ;
 ;          |mux_4x1:U_OUT_MUX|                    ; 41 (41)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 41 (41)          ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX                                                        ; mux_4x1         ; work         ;
 ;          |ram:U_RAM|                            ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 1    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM                                                                ; ram             ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 1    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;                |altsyncram_4k04:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 1    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated ; altsyncram_4k04 ; work         ;
 ;          |reg:IN_PORT_0|                        ; 9 (9)       ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 9 (9)            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0                                                            ; reg             ; work         ;
 ;          |reg:IN_PORT_1|                        ; 9 (9)       ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 9 (9)             ; 0 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1                                                            ; reg             ; work         ;
-;          |reg:U_OUT_PORT|                       ; 24 (24)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 19 (19)           ; 5 (5)            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|reg:U_OUT_PORT                                                           ; reg             ; work         ;
-;       |mux_2x1:U_MUX_2x1_A|                     ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 8 (8)            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A                                                                      ; mux_2x1         ; work         ;
-;       |mux_2x1:U_MUX_2x1_B|                     ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 1 (1)            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B                                                                      ; mux_2x1         ; work         ;
-;       |mux_2x1:U_MUX_2x1_C|                     ; 66 (66)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 63 (63)      ; 0 (0)             ; 3 (3)            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_C                                                                      ; mux_2x1         ; work         ;
+;          |reg:U_OUT_PORT|                       ; 24 (24)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 15 (15)           ; 9 (9)            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|reg:U_OUT_PORT                                                           ; reg             ; work         ;
+;       |mux_2x1:U_MUX_2x1_A|                     ; 10 (10)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 6 (6)            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A                                                                      ; mux_2x1         ; work         ;
+;       |mux_2x1:U_MUX_2x1_B|                     ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B                                                                      ; mux_2x1         ; work         ;
 ;       |mux_2x1:U_MUX_2x1_D|                     ; 32 (32)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (32)      ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_D                                                                      ; mux_2x1         ; work         ;
-;       |mux_4x1:U_MUX_4x1_A|                     ; 48 (48)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 36 (36)      ; 0 (0)             ; 12 (12)          ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A                                                                      ; mux_4x1         ; work         ;
-;       |mux_4x1:U_MUX_4x1_B|                     ; 41 (41)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 16 (16)          ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B                                                                      ; mux_4x1         ; work         ;
-;       |reg:U_ALU_OUT_REGISTER|                  ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 24 (24)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER                                                                   ; reg             ; work         ;
-;       |reg:U_HI_REGISTER|                       ; 33 (33)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 32 (32)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER                                                                        ; reg             ; work         ;
-;       |reg:U_INSTRUCTION_REGISTER|              ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 11 (11)           ; 21 (21)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER                                                               ; reg             ; work         ;
+;       |mux_4x1:U_MUX_4x1_A|                     ; 48 (48)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 21 (21)          ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A                                                                      ; mux_4x1         ; work         ;
+;       |mux_4x1:U_MUX_4x1_B|                     ; 41 (41)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 15 (15)          ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B                                                                      ; mux_4x1         ; work         ;
+;       |mux_4x1:U_MUX_4x1_D|                     ; 98 (98)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 84 (84)      ; 0 (0)             ; 14 (14)          ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D                                                                      ; mux_4x1         ; work         ;
+;       |reg:U_ALU_OUT_REGISTER|                  ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 26 (26)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER                                                                   ; reg             ; work         ;
+;       |reg:U_HI_REGISTER|                       ; 34 (34)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 32 (32)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER                                                                        ; reg             ; work         ;
+;       |reg:U_INSTRUCTION_REGISTER|              ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 10 (10)           ; 22 (22)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER                                                               ; reg             ; work         ;
 ;       |reg:U_LO_REGISTER|                       ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 31 (31)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_LO_REGISTER                                                                        ; reg             ; work         ;
 ;       |reg:U_MEMORY_DATA_REGISTER|              ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER                                                               ; reg             ; work         ;
-;       |reg:U_PROGRAM_COUNTER|                   ; 33 (33)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 17 (17)           ; 15 (15)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER                                                                    ; reg             ; work         ;
-;       |reg:U_REGISTER_A|                        ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A                                                                         ; reg             ; work         ;
-;       |reg:U_REGISTER_B|                        ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B                                                                         ; reg             ; work         ;
-;       |registers_file:U_REGISTERS_FILE|         ; 1413 (1413) ; 1024 (1024)               ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 330 (330)    ; 23 (23)           ; 1060 (1060)      ; 0          ; |top_level|datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE                                                          ; registers_file  ; work         ;
-;    |decoder7seg:U_LED0|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; 0          ; |top_level|decoder7seg:U_LED0                                                                                           ; decoder7seg     ; work         ;
-;    |decoder7seg:U_LED1|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|decoder7seg:U_LED1                                                                                           ; decoder7seg     ; work         ;
+;       |reg:U_PROGRAM_COUNTER|                   ; 33 (33)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 18 (18)           ; 14 (14)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER                                                                    ; reg             ; work         ;
+;       |reg:U_REGISTER_A|                        ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 31 (31)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A                                                                         ; reg             ; work         ;
+;       |reg:U_REGISTER_B|                        ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 31 (31)          ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B                                                                         ; reg             ; work         ;
+;       |registers_file:U_REGISTERS_FILE|         ; 1420 (1420) ; 1024 (1024)               ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 340 (340)    ; 16 (16)           ; 1064 (1064)      ; 0          ; |top_level|datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE                                                          ; registers_file  ; work         ;
+;    |decoder7seg:U_LED0|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|decoder7seg:U_LED0                                                                                           ; decoder7seg     ; work         ;
+;    |decoder7seg:U_LED1|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; 0          ; |top_level|decoder7seg:U_LED1                                                                                           ; decoder7seg     ; work         ;
 ;    |decoder7seg:U_LED2|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|decoder7seg:U_LED2                                                                                           ; decoder7seg     ; work         ;
-;    |decoder7seg:U_LED3|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; 0          ; |top_level|decoder7seg:U_LED3                                                                                           ; decoder7seg     ; work         ;
-;    |decoder7seg:U_LED4|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|decoder7seg:U_LED4                                                                                           ; decoder7seg     ; work         ;
-;    |decoder7seg:U_LED5|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|decoder7seg:U_LED5                                                                                           ; decoder7seg     ; work         ;
+;    |decoder7seg:U_LED3|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |top_level|decoder7seg:U_LED3                                                                                           ; decoder7seg     ; work         ;
+;    |decoder7seg:U_LED4|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; 0          ; |top_level|decoder7seg:U_LED4                                                                                           ; decoder7seg     ; work         ;
+;    |decoder7seg:U_LED5|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; 0          ; |top_level|decoder7seg:U_LED5                                                                                           ; decoder7seg     ; work         ;
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1140,14 +1140,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led5_dp     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk50MHz    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; buttons[1]  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; switches[6] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; switches[9] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; buttons[0]  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; switches[7] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; switches[8] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; switches[2] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; switches[4] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; switches[0] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; switches[9] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; buttons[0]  ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; switches[7] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; switches[6] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; switches[2] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; switches[4] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; switches[0] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; switches[1] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; switches[5] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; switches[3] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
@@ -1186,72 +1186,72 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:U_OUT_PORT|output[22]      ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:U_OUT_PORT|output[23]      ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[0]                     ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[27]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[26]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[25]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[24]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[23]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[22]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[21]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[20]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[19]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[18]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[17]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[16]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[9]                ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[10]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[11]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[12]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[13]               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[15]               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[14]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[13]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[12]               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[6]                ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[5]                ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[4]                ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[3]                ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[2]                ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[11]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[1]                ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[16]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[17]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[18]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[19]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[20]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[21]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[22]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[23]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[24]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[25]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[26]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[27]               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[0]                ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[10]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[9]                ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[8]                ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[1]                ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[2]                ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[3]                ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[4]                ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[5]                ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[7]                ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[8]                ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.MEMORY_ACCESS_WRITE                  ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[2]               ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.MEMORY_ACCESS_READ                   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[15]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[14]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[13]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[12]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[6]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[5]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[4]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[3]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[11]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[10]              ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[9]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[8]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[10]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[11]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[12]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[13]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[15]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[6]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[14]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[3]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[4]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[5]               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[7]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[8]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[29]               ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[29]              ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[31]               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[31]              ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[30]               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[30]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[29]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[29]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[16]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[17]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[18]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[19]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[20]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[21]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[22]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[23]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[24]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[25]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[26]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[27]              ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[1]               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[28]               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[28]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[27]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[26]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[25]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[24]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[23]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[22]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[21]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[20]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[19]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[18]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[17]              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[1]               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[0]               ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER|output[16]              ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[1]                     ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[2]                     ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[3]                     ; 1                 ; 6       ;
@@ -1319,21 +1319,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[27]          ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[28]          ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[30]          ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[5]                     ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[9]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[8]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[0]                     ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.BRANCH_COMPLETION                    ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.I_TYPE_EXECUTION                     ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.R_TYPE_EXECUTION                     ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[4]                     ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[6]           ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[9]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[2]                     ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[7]           ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[8]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[6]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[1]                     ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[27]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[26]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[29]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[28]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[31]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[30]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[23]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[22]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[25]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[24]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[21]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[20]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[19]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[18]                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[2]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[4]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[0]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[1]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[5]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[3]           ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[10]          ; 1                 ; 6       ;
+;      - controller:U_CONTROLLER|state.INSTRUCTION_DECODE                   ; 1                 ; 6       ;
+;      - controller:U_CONTROLLER|state.INSTRUCTION_FETCH                    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[5]                     ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[4]                     ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[9]                     ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[8]                     ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[7]                     ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[6]                     ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[3]                     ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[2]                     ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[17]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[16]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[15]                    ; 1                 ; 6       ;
@@ -1342,39 +1367,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[12]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[11]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[10]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[10]          ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[2]           ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[4]           ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[0]           ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[1]           ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[5]           ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[3]           ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[0]                     ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[1]                     ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[29]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[27]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[28]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[26]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[31]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[30]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[25]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[23]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[22]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[24]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[21]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[20]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[19]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_A|output[18]                    ; 1                 ; 6       ;
-;      - controller:U_CONTROLLER|state.INSTRUCTION_DECODE                   ; 1                 ; 6       ;
-;      - controller:U_CONTROLLER|state.INSTRUCTION_FETCH                    ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.JUMP                                 ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.JUMP_REGISTER                        ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[11]          ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[12]          ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[15]          ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[31]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[13]          ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[14]          ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[15]          ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[24]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[25]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[26]                    ; 1                 ; 6       ;
@@ -1382,11 +1381,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[28]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[29]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[30]                    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[25]          ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[24]          ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[23]          ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[22]          ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_REGISTER_B|output[31]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[21]          ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[22]          ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[23]          ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[24]          ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER|output[25]          ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[25][1]    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[21][1]    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[17][1]    ; 1                 ; 6       ;
@@ -2127,43 +2127,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - controller:U_CONTROLLER|state.MEMORY_READ_COMPLETION               ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[0]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[0]           ; 1                 ; 6       ;
+;      - controller:U_CONTROLLER|state.WRITE_RETURN_ADDR                    ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.R_TYPE_COMPLETION                    ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.I_TYPE_COMPLETION                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|memory:U_MEMORY|OutMuxSel[0]                   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|memory:U_MEMORY|OutMuxSel[1]                   ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.LOAD_IR                              ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[22][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[26][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[18][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[30][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[25][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[21][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[17][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[29][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[20][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[24][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[16][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[28][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[27][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[23][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[19][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[31][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[10][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[9][29]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[8][29]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[11][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[5][29]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[6][29]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[4][29]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[7][29]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[2][29]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[1][29]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[0][29]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[3][29]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[13][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[14][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[12][29]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[15][29]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[22][27]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[26][27]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[18][27]   ; 1                 ; 6       ;
@@ -2196,38 +2165,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[14][27]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[12][27]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[15][27]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[21][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[25][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[17][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[29][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[26][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[22][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[18][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[30][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[24][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[20][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[16][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[28][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[23][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[27][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[19][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[31][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[6][28]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[5][28]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[4][28]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[7][28]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[9][28]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[10][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[8][28]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[11][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[1][28]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[2][28]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[0][28]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[3][28]    ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[14][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[13][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[12][28]   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[15][28]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[21][26]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[25][26]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[17][26]   ; 1                 ; 6       ;
@@ -2260,6 +2197,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[13][26]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[12][26]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[15][26]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[22][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[26][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[18][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[30][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[25][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[21][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[17][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[29][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[20][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[24][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[16][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[28][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[27][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[23][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[19][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[31][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[10][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[9][29]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[8][29]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[11][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[5][29]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[6][29]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[4][29]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[7][29]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[2][29]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[1][29]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[0][29]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[3][29]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[13][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[14][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[12][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[15][29]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[21][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[25][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[17][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[29][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[26][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[22][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[18][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[30][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[24][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[20][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[16][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[28][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[23][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[27][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[19][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[31][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[6][28]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[5][28]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[4][28]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[7][28]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[9][28]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[10][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[8][28]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[11][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[1][28]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[2][28]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[0][28]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[3][28]    ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[14][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[13][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[12][28]   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[15][28]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[22][31]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[26][31]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[18][31]   ; 1                 ; 6       ;
@@ -2388,7 +2389,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[13][24]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[12][24]   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[15][24]   ; 1                 ; 6       ;
-;      - controller:U_CONTROLLER|state.WRITE_RETURN_ADDR                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_LO_REGISTER|output[1]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[1]                    ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[1]           ; 1                 ; 6       ;
@@ -2459,18 +2459,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[23]                   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[23]          ; 1                 ; 6       ;
 ;      - controller:U_CONTROLLER|state.LOAD_MEMORY_DATA_REG                 ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_LO_REGISTER|output[29]                   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[29]                   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[29]          ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_LO_REGISTER|output[27]                   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[27]                   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[27]          ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_LO_REGISTER|output[28]                   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[28]                   ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[28]          ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_LO_REGISTER|output[26]                   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[26]                   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[26]          ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_LO_REGISTER|output[29]                   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[29]                   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[29]          ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_LO_REGISTER|output[28]                   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[28]                   ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[28]          ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_LO_REGISTER|output[31]                   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[31]                   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[31]          ; 1                 ; 6       ;
@@ -2483,30 +2483,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - datapath:U_DATAPATH|reg:U_LO_REGISTER|output[24]                   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_HI_REGISTER|output[24]                   ; 1                 ; 6       ;
 ;      - datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER|output[24]          ; 1                 ; 6       ;
-; switches[6]                                                               ;                   ;         ;
-;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[6]        ; 0                 ; 6       ;
-;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[6]~feeder ; 0                 ; 6       ;
-; switches[9]                                                               ;                   ;         ;
-;      - InPort0_en                                                         ; 0                 ; 6       ;
-;      - InPort1_en                                                         ; 0                 ; 6       ;
-; buttons[0]                                                                ;                   ;         ;
-;      - InPort0_en                                                         ; 1                 ; 6       ;
-;      - InPort1_en                                                         ; 1                 ; 6       ;
-; switches[7]                                                               ;                   ;         ;
-;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[7]        ; 0                 ; 6       ;
-;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[7]~feeder ; 0                 ; 6       ;
 ; switches[8]                                                               ;                   ;         ;
 ;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[8]        ; 0                 ; 6       ;
 ;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[8]~feeder ; 0                 ; 6       ;
+; switches[9]                                                               ;                   ;         ;
+;      - InPort0_en                                                         ; 1                 ; 6       ;
+;      - InPort1_en                                                         ; 1                 ; 6       ;
+; buttons[0]                                                                ;                   ;         ;
+;      - InPort0_en                                                         ; 0                 ; 6       ;
+;      - InPort1_en                                                         ; 0                 ; 6       ;
+; switches[7]                                                               ;                   ;         ;
+;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[7]        ; 0                 ; 6       ;
+;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[7]~feeder ; 0                 ; 6       ;
+; switches[6]                                                               ;                   ;         ;
+;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[6]        ; 0                 ; 6       ;
+;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[6]~feeder ; 0                 ; 6       ;
 ; switches[2]                                                               ;                   ;         ;
-;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[2]        ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[2]~feeder ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[2]        ; 0                 ; 6       ;
+;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[2]~feeder ; 0                 ; 6       ;
 ; switches[4]                                                               ;                   ;         ;
-;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[4]        ; 1                 ; 6       ;
-;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[4]~feeder ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[4]        ; 0                 ; 6       ;
+;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[4]~feeder ; 0                 ; 6       ;
 ; switches[0]                                                               ;                   ;         ;
-;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[0]        ; 0                 ; 6       ;
-;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[0]~feeder ; 0                 ; 6       ;
+;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[0]        ; 1                 ; 6       ;
+;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[0]~feeder ; 1                 ; 6       ;
 ; switches[1]                                                               ;                   ;         ;
 ;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[1]        ; 0                 ; 6       ;
 ;      - datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[1]~feeder ; 0                 ; 6       ;
@@ -2519,56 +2519,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                              ;
-+-----------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                            ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; InPort0_en                                                      ; LCCOMB_X58_Y25_N4  ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; InPort1_en                                                      ; LCCOMB_X58_Y25_N30 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; buttons[1]                                                      ; PIN_A7             ; 1322    ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; clk50MHz                                                        ; PIN_P11            ; 1342    ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; controller:U_CONTROLLER|LO_en~0                                 ; LCCOMB_X52_Y17_N20 ; 65      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; controller:U_CONTROLLER|MemRead                                 ; LCCOMB_X55_Y20_N30 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; controller:U_CONTROLLER|state.JUMP_REGISTER                     ; FF_X52_Y17_N5      ; 38      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; controller:U_CONTROLLER|state.LOAD_IR                           ; FF_X49_Y21_N7      ; 33      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|PC_en~3                                     ; LCCOMB_X50_Y15_N22 ; 29      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|memory:U_MEMORY|OutPort_en~0                ; LCCOMB_X55_Y20_N6  ; 24      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|memory:U_MEMORY|Ram_en~0                    ; LCCOMB_X55_Y20_N2  ; 2       ; Write enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[31]~0          ; LCCOMB_X45_Y18_N2  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~11 ; LCCOMB_X45_Y27_N12 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~12 ; LCCOMB_X43_Y27_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~13 ; LCCOMB_X49_Y26_N16 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~15 ; LCCOMB_X56_Y27_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~17 ; LCCOMB_X56_Y26_N12 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~18 ; LCCOMB_X56_Y27_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~19 ; LCCOMB_X56_Y26_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~2  ; LCCOMB_X50_Y21_N0  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~21 ; LCCOMB_X49_Y26_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~23 ; LCCOMB_X45_Y27_N6  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~24 ; LCCOMB_X43_Y27_N22 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~25 ; LCCOMB_X49_Y26_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~27 ; LCCOMB_X45_Y27_N28 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~28 ; LCCOMB_X50_Y21_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~29 ; LCCOMB_X49_Y26_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~30 ; LCCOMB_X49_Y26_N26 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~32 ; LCCOMB_X49_Y26_N28 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~33 ; LCCOMB_X45_Y27_N18 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~34 ; LCCOMB_X45_Y27_N24 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~35 ; LCCOMB_X44_Y27_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~36 ; LCCOMB_X45_Y27_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~37 ; LCCOMB_X45_Y27_N0  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~38 ; LCCOMB_X43_Y27_N12 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~39 ; LCCOMB_X43_Y27_N26 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~40 ; LCCOMB_X49_Y26_N8  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~41 ; LCCOMB_X45_Y27_N2  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~42 ; LCCOMB_X46_Y26_N10 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~43 ; LCCOMB_X49_Y26_N2  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~5  ; LCCOMB_X51_Y21_N26 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~6  ; LCCOMB_X51_Y21_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~7  ; LCCOMB_X50_Y21_N18 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|Decoder0~9  ; LCCOMB_X49_Y26_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+-----------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                 ;
++--------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                               ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; InPort0_en                                                         ; LCCOMB_X44_Y31_N24 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; InPort1_en                                                         ; LCCOMB_X44_Y31_N30 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; buttons[1]                                                         ; PIN_A7             ; 1322    ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clk50MHz                                                           ; PIN_P11            ; 1342    ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; controller:U_CONTROLLER|LO_en~0                                    ; LCCOMB_X35_Y16_N16 ; 65      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; controller:U_CONTROLLER|MemRead                                    ; LCCOMB_X32_Y16_N12 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; controller:U_CONTROLLER|state.JUMP_REGISTER                        ; FF_X35_Y16_N9      ; 38      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; controller:U_CONTROLLER|state.LOAD_IR                              ; FF_X32_Y16_N7      ; 33      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|PC_en~3                                        ; LCCOMB_X32_Y14_N16 ; 29      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|memory:U_MEMORY|OutPort_en~0                   ; LCCOMB_X32_Y16_N26 ; 24      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|memory:U_MEMORY|Ram_en~0                       ; LCCOMB_X32_Y16_N16 ; 2       ; Write enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[29]~0             ; LCCOMB_X26_Y14_N22 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[0][3]~31  ; LCCOMB_X29_Y23_N26 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[10][3]~25 ; LCCOMB_X27_Y22_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[11][3]~28 ; LCCOMB_X29_Y21_N0  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[12][3]~35 ; LCCOMB_X32_Y20_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[13][3]~33 ; LCCOMB_X29_Y21_N10 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[14][3]~34 ; LCCOMB_X26_Y19_N6  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[15][3]~36 ; LCCOMB_X32_Y20_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[16][3]~15 ; LCCOMB_X36_Y21_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[17][3]~11 ; LCCOMB_X30_Y21_N6  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[18][3]~7  ; LCCOMB_X25_Y22_N6  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[19][3]~19 ; LCCOMB_X32_Y20_N12 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[1][3]~30  ; LCCOMB_X25_Y22_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[20][3]~14 ; LCCOMB_X36_Y21_N28 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[21][3]~9  ; LCCOMB_X29_Y23_N16 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[22][3]~6  ; LCCOMB_X25_Y19_N28 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[23][3]~17 ; LCCOMB_X29_Y23_N22 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[24][3]~13 ; LCCOMB_X36_Y21_N10 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[25][3]~10 ; LCCOMB_X32_Y21_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[26][3]~5  ; LCCOMB_X27_Y22_N22 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[27][3]~18 ; LCCOMB_X30_Y21_N18 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[28][3]~16 ; LCCOMB_X32_Y20_N22 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[29][3]~12 ; LCCOMB_X30_Y21_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[2][3]~29  ; LCCOMB_X25_Y22_N16 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[30][3]~8  ; LCCOMB_X29_Y19_N12 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[31][3]~20 ; LCCOMB_X32_Y20_N8  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[3][3]~32  ; LCCOMB_X32_Y20_N10 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[4][3]~23  ; LCCOMB_X25_Y21_N24 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[5][3]~21  ; LCCOMB_X29_Y23_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[6][3]~22  ; LCCOMB_X25_Y19_N22 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[7][3]~24  ; LCCOMB_X26_Y19_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[8][3]~27  ; LCCOMB_X30_Y21_N28 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE|regs[9][3]~26  ; LCCOMB_X32_Y21_N0  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
++--------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2576,7 +2576,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk50MHz ; PIN_P11  ; 1342    ; 99                                   ; Global Clock         ; GCLK19           ; --                        ;
+; clk50MHz ; PIN_P11  ; 1342    ; 78                                   ; Global Clock         ; GCLK19           ; --                        ;
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -2594,7 +2594,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-------------------------------------------------------------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                                                    ; Type ; Mode        ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF                                                               ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-------------------------------------------------------------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; Single Clock ; 256          ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 8192 ; 256                         ; 32                          ; --                          ; --                          ; 8192                ; 1    ; Y:/GitHub/digital-design/Final-Project/test-cases/bubble_sort.mif ; M9K_X53_Y20_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; Single Clock ; 256          ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 8192 ; 256                         ; 32                          ; --                          ; --                          ; 8192                ; 1    ; Y:/GitHub/digital-design/Final-Project/test-cases/bubble_sort.mif ; M9K_X33_Y16_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-------------------------------------------------------------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -2661,22 +2661,22 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------------------------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 ; Name                                                                              ; Mode                       ; Location           ; Sign Representation ; Has Input Shift Register Chain ; Data A Input Register ; Data B Input Register ; Pipeline Register ; Output Register ;
 +-----------------------------------------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
-; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|w569w[0]     ; Simple Multiplier (18-bit) ; DSPOUT_X48_Y14_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_mult1 ;                            ; DSPMULT_X48_Y14_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
-; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|w513w[0]     ; Simple Multiplier (18-bit) ; DSPOUT_X48_Y18_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_mult1 ;                            ; DSPMULT_X48_Y18_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
-; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_out4     ; Simple Multiplier (18-bit) ; DSPOUT_X48_Y20_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_mult3 ;                            ; DSPMULT_X48_Y20_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
-; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_out6     ; Simple Multiplier (18-bit) ; DSPOUT_X48_Y21_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_mult5 ;                            ; DSPMULT_X48_Y21_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
-; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_out4     ; Simple Multiplier (18-bit) ; DSPOUT_X48_Y17_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_mult3 ;                            ; DSPMULT_X48_Y17_N0 ; Mixed               ;                                ; no                    ; no                    ; no                ;                 ;
-; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_out6     ; Simple Multiplier (18-bit) ; DSPOUT_X48_Y16_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_mult5 ;                            ; DSPMULT_X48_Y16_N0 ; Mixed               ;                                ; no                    ; no                    ; no                ;                 ;
-; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_out8     ; Simple Multiplier (18-bit) ; DSPOUT_X48_Y19_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_mult7 ;                            ; DSPMULT_X48_Y19_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
-; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_out8     ; Simple Multiplier (18-bit) ; DSPOUT_X48_Y15_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_mult7 ;                            ; DSPMULT_X48_Y15_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|w569w[0]     ; Simple Multiplier (18-bit) ; DSPOUT_X28_Y9_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_mult1 ;                            ; DSPMULT_X28_Y9_N0  ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
+; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|w513w[0]     ; Simple Multiplier (18-bit) ; DSPOUT_X28_Y10_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_mult1 ;                            ; DSPMULT_X28_Y10_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
+; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_out4     ; Simple Multiplier (18-bit) ; DSPOUT_X28_Y13_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_mult3 ;                            ; DSPMULT_X28_Y13_N0 ; Mixed               ;                                ; no                    ; no                    ; no                ;                 ;
+; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_out6     ; Simple Multiplier (18-bit) ; DSPOUT_X28_Y14_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_mult5 ;                            ; DSPMULT_X28_Y14_N0 ; Mixed               ;                                ; no                    ; no                    ; no                ;                 ;
+; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_out4     ; Simple Multiplier (18-bit) ; DSPOUT_X28_Y12_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_mult3 ;                            ; DSPMULT_X28_Y12_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
+; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_out6     ; Simple Multiplier (18-bit) ; DSPOUT_X28_Y15_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_mult5 ;                            ; DSPMULT_X28_Y15_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
+; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_out8     ; Simple Multiplier (18-bit) ; DSPOUT_X28_Y11_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated|mac_mult7 ;                            ; DSPMULT_X28_Y11_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
+; datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_out8     ; Simple Multiplier (18-bit) ; DSPOUT_X28_Y8_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated|mac_mult7 ;                            ; DSPMULT_X28_Y8_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
 +-----------------------------------------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 
 
@@ -2685,174 +2685,174 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 6,132 / 148,641 ( 4 % ) ;
-; C16 interconnects     ; 128 / 5,382 ( 2 % )     ;
-; C4 interconnects      ; 3,829 / 106,704 ( 4 % ) ;
-; Direct links          ; 760 / 148,641 ( < 1 % ) ;
+; Block interconnects   ; 6,276 / 148,641 ( 4 % ) ;
+; C16 interconnects     ; 158 / 5,382 ( 3 % )     ;
+; C4 interconnects      ; 3,710 / 106,704 ( 3 % ) ;
+; Direct links          ; 784 / 148,641 ( < 1 % ) ;
 ; Global clocks         ; 1 / 20 ( 5 % )          ;
-; Local interconnects   ; 1,320 / 49,760 ( 3 % )  ;
+; Local interconnects   ; 1,286 / 49,760 ( 3 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 119 / 5,406 ( 2 % )     ;
-; R4 interconnects      ; 4,710 / 147,764 ( 3 % ) ;
+; R24 interconnects     ; 174 / 5,406 ( 3 % )     ;
+; R4 interconnects      ; 4,759 / 147,764 ( 3 % ) ;
 +-----------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 13.33) ; Number of LABs  (Total = 213) ;
+; Number of Logic Elements  (Average = 11.98) ; Number of LABs  (Total = 239) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 5                             ;
-; 2                                           ; 3                             ;
-; 3                                           ; 6                             ;
-; 4                                           ; 4                             ;
-; 5                                           ; 2                             ;
-; 6                                           ; 3                             ;
-; 7                                           ; 7                             ;
-; 8                                           ; 4                             ;
-; 9                                           ; 2                             ;
-; 10                                          ; 4                             ;
-; 11                                          ; 4                             ;
-; 12                                          ; 8                             ;
-; 13                                          ; 12                            ;
-; 14                                          ; 9                             ;
-; 15                                          ; 34                            ;
-; 16                                          ; 106                           ;
+; 1                                           ; 19                            ;
+; 2                                           ; 8                             ;
+; 3                                           ; 7                             ;
+; 4                                           ; 3                             ;
+; 5                                           ; 3                             ;
+; 6                                           ; 8                             ;
+; 7                                           ; 3                             ;
+; 8                                           ; 3                             ;
+; 9                                           ; 8                             ;
+; 10                                          ; 5                             ;
+; 11                                          ; 8                             ;
+; 12                                          ; 3                             ;
+; 13                                          ; 15                            ;
+; 14                                          ; 27                            ;
+; 15                                          ; 35                            ;
+; 16                                          ; 84                            ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 2.44) ; Number of LABs  (Total = 213) ;
+; LAB-wide Signals  (Average = 2.28) ; Number of LABs  (Total = 239) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 171                           ;
-; 1 Clock                            ; 171                           ;
-; 1 Clock enable                     ; 58                            ;
-; 1 Sync. load                       ; 19                            ;
-; 2 Clock enables                    ; 101                           ;
+; 1 Async. clear                     ; 178                           ;
+; 1 Clock                            ; 178                           ;
+; 1 Clock enable                     ; 66                            ;
+; 1 Sync. load                       ; 20                            ;
+; 2 Clock enables                    ; 103                           ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 19.33) ; Number of LABs  (Total = 213) ;
+; Number of Signals Sourced  (Average = 17.33) ; Number of LABs  (Total = 239) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 2                             ;
-; 1                                            ; 6                             ;
-; 2                                            ; 3                             ;
-; 3                                            ; 0                             ;
+; 1                                            ; 18                            ;
+; 2                                            ; 8                             ;
+; 3                                            ; 3                             ;
 ; 4                                            ; 2                             ;
-; 5                                            ; 2                             ;
-; 6                                            ; 4                             ;
-; 7                                            ; 2                             ;
-; 8                                            ; 6                             ;
+; 5                                            ; 3                             ;
+; 6                                            ; 6                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 3                             ;
 ; 9                                            ; 0                             ;
-; 10                                           ; 2                             ;
-; 11                                           ; 1                             ;
-; 12                                           ; 4                             ;
-; 13                                           ; 2                             ;
-; 14                                           ; 4                             ;
-; 15                                           ; 8                             ;
-; 16                                           ; 27                            ;
-; 17                                           ; 16                            ;
-; 18                                           ; 11                            ;
-; 19                                           ; 7                             ;
-; 20                                           ; 11                            ;
-; 21                                           ; 10                            ;
-; 22                                           ; 12                            ;
-; 23                                           ; 5                             ;
-; 24                                           ; 9                             ;
-; 25                                           ; 6                             ;
-; 26                                           ; 5                             ;
-; 27                                           ; 3                             ;
-; 28                                           ; 10                            ;
+; 10                                           ; 4                             ;
+; 11                                           ; 5                             ;
+; 12                                           ; 9                             ;
+; 13                                           ; 3                             ;
+; 14                                           ; 1                             ;
+; 15                                           ; 11                            ;
+; 16                                           ; 29                            ;
+; 17                                           ; 11                            ;
+; 18                                           ; 14                            ;
+; 19                                           ; 5                             ;
+; 20                                           ; 8                             ;
+; 21                                           ; 14                            ;
+; 22                                           ; 9                             ;
+; 23                                           ; 1                             ;
+; 24                                           ; 8                             ;
+; 25                                           ; 10                            ;
+; 26                                           ; 10                            ;
+; 27                                           ; 9                             ;
+; 28                                           ; 6                             ;
 ; 29                                           ; 4                             ;
-; 30                                           ; 10                            ;
-; 31                                           ; 4                             ;
-; 32                                           ; 15                            ;
+; 30                                           ; 6                             ;
+; 31                                           ; 6                             ;
+; 32                                           ; 10                            ;
 +----------------------------------------------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                          ;
 +--------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 12.87) ; Number of LABs  (Total = 213) ;
+; Number of Signals Sourced Out  (Average = 11.76) ; Number of LABs  (Total = 239) ;
 +--------------------------------------------------+-------------------------------+
 ; 0                                                ; 2                             ;
-; 1                                                ; 7                             ;
-; 2                                                ; 2                             ;
-; 3                                                ; 7                             ;
-; 4                                                ; 5                             ;
-; 5                                                ; 2                             ;
-; 6                                                ; 8                             ;
-; 7                                                ; 7                             ;
-; 8                                                ; 11                            ;
-; 9                                                ; 21                            ;
-; 10                                               ; 10                            ;
-; 11                                               ; 10                            ;
+; 1                                                ; 19                            ;
+; 2                                                ; 8                             ;
+; 3                                                ; 2                             ;
+; 4                                                ; 8                             ;
+; 5                                                ; 7                             ;
+; 6                                                ; 11                            ;
+; 7                                                ; 6                             ;
+; 8                                                ; 8                             ;
+; 9                                                ; 16                            ;
+; 10                                               ; 13                            ;
+; 11                                               ; 24                            ;
 ; 12                                               ; 12                            ;
-; 13                                               ; 8                             ;
+; 13                                               ; 7                             ;
 ; 14                                               ; 7                             ;
-; 15                                               ; 12                            ;
-; 16                                               ; 25                            ;
-; 17                                               ; 6                             ;
-; 18                                               ; 13                            ;
-; 19                                               ; 5                             ;
-; 20                                               ; 7                             ;
-; 21                                               ; 4                             ;
-; 22                                               ; 8                             ;
-; 23                                               ; 4                             ;
-; 24                                               ; 5                             ;
-; 25                                               ; 3                             ;
-; 26                                               ; 2                             ;
+; 15                                               ; 10                            ;
+; 16                                               ; 23                            ;
+; 17                                               ; 11                            ;
+; 18                                               ; 4                             ;
+; 19                                               ; 10                            ;
+; 20                                               ; 8                             ;
+; 21                                               ; 3                             ;
+; 22                                               ; 7                             ;
+; 23                                               ; 2                             ;
+; 24                                               ; 6                             ;
+; 25                                               ; 4                             ;
+; 26                                               ; 1                             ;
 +--------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 26.43) ; Number of LABs  (Total = 213) ;
+; Number of Distinct Inputs  (Average = 24.34) ; Number of LABs  (Total = 239) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 0                             ;
-; 2                                            ; 2                             ;
-; 3                                            ; 0                             ;
-; 4                                            ; 2                             ;
-; 5                                            ; 0                             ;
+; 2                                            ; 1                             ;
+; 3                                            ; 4                             ;
+; 4                                            ; 12                            ;
+; 5                                            ; 1                             ;
 ; 6                                            ; 1                             ;
-; 7                                            ; 2                             ;
-; 8                                            ; 1                             ;
-; 9                                            ; 3                             ;
-; 10                                           ; 4                             ;
-; 11                                           ; 0                             ;
-; 12                                           ; 7                             ;
-; 13                                           ; 3                             ;
+; 7                                            ; 4                             ;
+; 8                                            ; 2                             ;
+; 9                                            ; 0                             ;
+; 10                                           ; 3                             ;
+; 11                                           ; 6                             ;
+; 12                                           ; 8                             ;
+; 13                                           ; 4                             ;
 ; 14                                           ; 1                             ;
-; 15                                           ; 4                             ;
-; 16                                           ; 5                             ;
-; 17                                           ; 1                             ;
-; 18                                           ; 5                             ;
-; 19                                           ; 3                             ;
-; 20                                           ; 5                             ;
+; 15                                           ; 3                             ;
+; 16                                           ; 2                             ;
+; 17                                           ; 3                             ;
+; 18                                           ; 4                             ;
+; 19                                           ; 4                             ;
+; 20                                           ; 1                             ;
 ; 21                                           ; 6                             ;
-; 22                                           ; 5                             ;
-; 23                                           ; 4                             ;
-; 24                                           ; 10                            ;
-; 25                                           ; 6                             ;
-; 26                                           ; 3                             ;
+; 22                                           ; 10                            ;
+; 23                                           ; 5                             ;
+; 24                                           ; 15                            ;
+; 25                                           ; 8                             ;
+; 26                                           ; 11                            ;
 ; 27                                           ; 9                             ;
-; 28                                           ; 6                             ;
+; 28                                           ; 8                             ;
 ; 29                                           ; 7                             ;
-; 30                                           ; 15                            ;
-; 31                                           ; 13                            ;
-; 32                                           ; 11                            ;
-; 33                                           ; 16                            ;
-; 34                                           ; 17                            ;
-; 35                                           ; 11                            ;
-; 36                                           ; 12                            ;
-; 37                                           ; 12                            ;
+; 30                                           ; 16                            ;
+; 31                                           ; 6                             ;
+; 32                                           ; 12                            ;
+; 33                                           ; 21                            ;
+; 34                                           ; 10                            ;
+; 35                                           ; 5                             ;
+; 36                                           ; 14                            ;
+; 37                                           ; 11                            ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -2977,11 +2977,11 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ; led5_dp            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk50MHz           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; buttons[1]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; switches[6]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; switches[8]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; switches[9]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; buttons[0]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; switches[7]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; switches[8]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; switches[6]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; switches[2]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; switches[4]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; switches[0]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -3033,6 +3033,8 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
+; clk50MHz        ; clk50MHz             ; 1.0               ;
++-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
@@ -3042,11 +3044,21 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                 ; Destination Register                                                                                                                         ; Delay Added in ns ;
 +-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-; datapath:U_DATAPATH|reg:U_REGISTER_B|output[16] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a16~porta_datain_reg0 ; 0.065             ;
-; datapath:U_DATAPATH|reg:U_REGISTER_B|output[13] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a13~porta_datain_reg0 ; 0.065             ;
-; datapath:U_DATAPATH|reg:U_REGISTER_B|output[6]  ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a6~porta_datain_reg0  ; 0.049             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[29] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a29~porta_datain_reg0 ; 0.159             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[12] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a12~porta_datain_reg0 ; 0.157             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[13] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a13~porta_datain_reg0 ; 0.157             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[23] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a23~porta_datain_reg0 ; 0.097             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[22] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a22~porta_datain_reg0 ; 0.097             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[31] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a31~porta_datain_reg0 ; 0.097             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[15] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a15~porta_datain_reg0 ; 0.097             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[7]  ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a7~porta_datain_reg0  ; 0.031             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[0]  ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a0~porta_datain_reg0  ; 0.031             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[10] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a10~porta_datain_reg0 ; 0.030             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[16] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a16~porta_datain_reg0 ; 0.024             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[6]  ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a6~porta_datain_reg0  ; 0.023             ;
+; datapath:U_DATAPATH|reg:U_REGISTER_B|output[14] ; datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated|ram_block1a14~porta_datain_reg0 ; 0.022             ;
 +-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 3 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 13 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -3085,33 +3097,33 @@ Info (176353): Automatically promoted node clk50MHz~input (placed in PIN P11 (CL
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:06
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:07
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:20
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:19
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 2% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 30% of the available device resources in the region that extends from location X45_Y11 to location X55_Y21
+    Info (170196): Router estimated peak interconnect usage is 37% of the available device resources in the region that extends from location X22_Y11 to location X32_Y21
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:14
-Info (11888): Total time spent on timing analysis during the Fitter is 3.61 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:17
+Info (11888): Total time spent on timing analysis during the Fitter is 4.25 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:10
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:12
 Info (144001): Generated suppressed messages file /GitHub/digital-design/Final-Project/board/output_files/top_level.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5493 megabytes
-    Info: Processing ended: Thu Apr 11 22:40:23 2019
-    Info: Elapsed time: 00:01:16
-    Info: Total CPU time (on all processors): 00:01:26
+    Info: Peak virtual memory: 5488 megabytes
+    Info: Processing ended: Thu Apr 11 23:34:38 2019
+    Info: Elapsed time: 00:01:31
+    Info: Total CPU time (on all processors): 00:01:34
 
 
 +----------------------------+

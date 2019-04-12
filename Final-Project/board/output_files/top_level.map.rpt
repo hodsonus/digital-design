@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Thu Apr 11 22:39:04 2019
+Thu Apr 11 23:33:05 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -32,7 +32,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  24. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER
  25. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A
  26. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B
- 27. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_C
+ 27. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D
  28. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_REGISTER_A
  29. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_REGISTER_B
  30. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_D
@@ -54,14 +54,15 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  46. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A"
  47. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_REGISTER_B"
  48. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_REGISTER_A"
- 49. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER"
- 50. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1"
- 51. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0"
- 52. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX"
- 53. Port Connectivity Checks: "datapath:U_DATAPATH"
- 54. Post-Synthesis Netlist Statistics for Top Partition
- 55. Elapsed Time Per Partition
- 56. Analysis & Synthesis Messages
+ 49. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D"
+ 50. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER"
+ 51. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1"
+ 52. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0"
+ 53. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX"
+ 54. Port Connectivity Checks: "datapath:U_DATAPATH"
+ 55. Post-Synthesis Netlist Statistics for Top Partition
+ 56. Elapsed Time Per Partition
+ 57. Analysis & Synthesis Messages
 
 
 
@@ -87,13 +88,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 11 22:39:03 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 11 23:33:05 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_level                                   ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3,849                                       ;
-;     Total combinational functions  ; 2,749                                       ;
+; Total logic elements               ; 3,884                                       ;
+;     Total combinational functions  ; 2,784                                       ;
 ;     Dedicated logic registers      ; 1,340                                       ;
 ; Total registers                    ; 1340                                        ;
 ; Total pins                         ; 71                                          ;
@@ -237,7 +238,7 @@ refer to the applicable agreement for further details.
 ; altram.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                  ;         ;
 ; altdpram.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                ;         ;
 ; db/altsyncram_4k04.tdf                                            ; yes             ; Auto-Generated Megafunction            ; //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/db/altsyncram_4k04.tdf      ;         ;
-; y:/github/digital-design/final-project/test-cases/bubble_sort.mif ; yes             ; Auto-Found Memory Initialization File  ; y:/github/digital-design/final-project/test-cases/bubble_sort.mif                                  ;         ;
+; Y:/GitHub/digital-design/Final-Project/test-cases/bubble_sort.mif ; yes             ; Auto-Found Memory Initialization File  ; Y:/GitHub/digital-design/Final-Project/test-cases/bubble_sort.mif                                  ;         ;
 ; lpm_mult.tdf                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf                                ;         ;
 ; lpm_add_sub.inc                                                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc                             ;         ;
 ; multcore.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.inc                                ;         ;
@@ -253,16 +254,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 3,849          ;
+; Estimated Total logic elements              ; 3,884          ;
 ;                                             ;                ;
-; Total combinational functions               ; 2749           ;
+; Total combinational functions               ; 2784           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 2067           ;
-;     -- 3 input functions                    ; 578            ;
-;     -- <=2 input functions                  ; 104            ;
+;     -- 4 input functions                    ; 2064           ;
+;     -- 3 input functions                    ; 613            ;
+;     -- <=2 input functions                  ; 107            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 2458           ;
+;     -- normal mode                          ; 2493           ;
 ;     -- arithmetic mode                      ; 291            ;
 ;                                             ;                ;
 ; Total registers                             ; 1340           ;
@@ -276,7 +277,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clk50MHz~input ;
 ; Maximum fan-out                             ; 1372           ;
-; Total fan-out                               ; 16187          ;
+; Total fan-out                               ; 16286          ;
 ; Average fan-out                             ; 3.78           ;
 +---------------------------------------------+----------------+
 
@@ -286,16 +287,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top_level                                      ; 2749 (2)            ; 1340 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 71   ; 0            ; 0          ; |top_level                                                                                                              ; top_level       ; work         ;
-;    |controller:U_CONTROLLER|                    ; 79 (79)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|controller:U_CONTROLLER                                                                                      ; controller      ; work         ;
-;    |datapath:U_DATAPATH|                        ; 2626 (4)            ; 1324 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH                                                                                          ; datapath        ; work         ;
-;       |alu:U_ALU|                               ; 958 (787)           ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU                                                                                ; alu             ; work         ;
+; |top_level                                      ; 2784 (2)            ; 1340 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 71   ; 0            ; 0          ; |top_level                                                                                                              ; top_level       ; work         ;
+;    |controller:U_CONTROLLER|                    ; 81 (81)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|controller:U_CONTROLLER                                                                                      ; controller      ; work         ;
+;    |datapath:U_DATAPATH|                        ; 2659 (4)            ; 1324 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH                                                                                          ; datapath        ; work         ;
+;       |alu:U_ALU|                               ; 951 (780)           ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU                                                                                ; alu             ; work         ;
 ;          |lpm_mult:Mult0|                       ; 92 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0                                                                 ; lpm_mult        ; work         ;
 ;             |mult_qgs:auto_generated|           ; 92 (92)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated                                         ; mult_qgs        ; work         ;
 ;          |lpm_mult:Mult1|                       ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1                                                                 ; lpm_mult        ; work         ;
 ;             |mult_tns:auto_generated|           ; 79 (79)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1|mult_tns:auto_generated                                         ; mult_tns        ; work         ;
 ;       |extender:U_SIGN_EXTEND_MUX_4A|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A                                                            ; extender        ; work         ;
-;       |memory:U_MEMORY|                         ; 69 (28)             ; 44 (2)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY                                                                          ; memory          ; work         ;
+;       |memory:U_MEMORY|                         ; 70 (29)             ; 44 (2)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY                                                                          ; memory          ; work         ;
 ;          |mux_4x1:U_OUT_MUX|                    ; 41 (41)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX                                                        ; mux_4x1         ; work         ;
 ;          |ram:U_RAM|                            ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM                                                                ; ram             ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
@@ -303,21 +304,21 @@ refer to the applicable agreement for further details.
 ;          |reg:IN_PORT_0|                        ; 0 (0)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0                                                            ; reg             ; work         ;
 ;          |reg:IN_PORT_1|                        ; 0 (0)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1                                                            ; reg             ; work         ;
 ;          |reg:U_OUT_PORT|                       ; 0 (0)               ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|reg:U_OUT_PORT                                                           ; reg             ; work         ;
-;       |mux_2x1:U_MUX_2x1_A|                     ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A                                                                      ; mux_2x1         ; work         ;
-;       |mux_2x1:U_MUX_2x1_B|                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B                                                                      ; mux_2x1         ; work         ;
-;       |mux_2x1:U_MUX_2x1_C|                     ; 66 (66)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_C                                                                      ; mux_2x1         ; work         ;
+;       |mux_2x1:U_MUX_2x1_A|                     ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A                                                                      ; mux_2x1         ; work         ;
+;       |mux_2x1:U_MUX_2x1_B|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B                                                                      ; mux_2x1         ; work         ;
 ;       |mux_2x1:U_MUX_2x1_D|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_D                                                                      ; mux_2x1         ; work         ;
 ;       |mux_4x1:U_MUX_4x1_A|                     ; 48 (48)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A                                                                      ; mux_4x1         ; work         ;
 ;       |mux_4x1:U_MUX_4x1_B|                     ; 41 (41)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B                                                                      ; mux_4x1         ; work         ;
+;       |mux_4x1:U_MUX_4x1_D|                     ; 98 (98)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D                                                                      ; mux_4x1         ; work         ;
 ;       |reg:U_ALU_OUT_REGISTER|                  ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER                                                                   ; reg             ; work         ;
-;       |reg:U_HI_REGISTER|                       ; 1 (1)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER                                                                        ; reg             ; work         ;
+;       |reg:U_HI_REGISTER|                       ; 2 (2)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER                                                                        ; reg             ; work         ;
 ;       |reg:U_INSTRUCTION_REGISTER|              ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER                                                               ; reg             ; work         ;
 ;       |reg:U_LO_REGISTER|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_LO_REGISTER                                                                        ; reg             ; work         ;
 ;       |reg:U_MEMORY_DATA_REGISTER|              ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER                                                               ; reg             ; work         ;
 ;       |reg:U_PROGRAM_COUNTER|                   ; 1 (1)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER                                                                    ; reg             ; work         ;
 ;       |reg:U_REGISTER_A|                        ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A                                                                         ; reg             ; work         ;
 ;       |reg:U_REGISTER_B|                        ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B                                                                         ; reg             ; work         ;
-;       |registers_file:U_REGISTERS_FILE|         ; 1388 (1388)         ; 1024 (1024)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE                                                          ; registers_file  ; work         ;
+;       |registers_file:U_REGISTERS_FILE|         ; 1395 (1395)         ; 1024 (1024)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE                                                          ; registers_file  ; work         ;
 ;    |decoder7seg:U_LED0|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED0                                                                                           ; decoder7seg     ; work         ;
 ;    |decoder7seg:U_LED1|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED1                                                                                           ; decoder7seg     ; work         ;
 ;    |decoder7seg:U_LED2|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED2                                                                                           ; decoder7seg     ; work         ;
@@ -433,25 +434,25 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[0]         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[1]         ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[31]        ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[10]        ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B|output[28]             ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 64 LEs               ; 608 LEs                ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER|output[6]             ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A|output[3]              ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX|Mux24 ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[11]        ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B|output[19]             ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 64 LEs               ; 608 LEs                ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER|output[28]            ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A|output[12]             ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX|Mux25 ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux31               ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux8                ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux22               ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_C|output[0]           ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_level|controller:U_CONTROLLER|Selector2                           ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux6                ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux24               ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_level|controller:U_CONTROLLER|Selector0                           ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D|Mux30               ;
 ; 64:1               ; 2 bits    ; 84 LEs        ; 8 LEs                ; 76 LEs                 ; No         ; |top_level|controller:U_CONTROLLER|next_state                          ;
 ; 65:1               ; 5 bits    ; 215 LEs       ; 35 LEs               ; 180 LEs                ; No         ; |top_level|controller:U_CONTROLLER|next_state.WRITE_RETURN_ADDR        ;
-; 36:1               ; 7 bits    ; 168 LEs       ; 63 LEs               ; 105 LEs                ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux13                         ;
+; 36:1               ; 7 bits    ; 168 LEs       ; 63 LEs               ; 105 LEs                ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux14                         ;
 ; 35:1               ; 8 bits    ; 184 LEs       ; 72 LEs               ; 112 LEs                ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux18                         ;
-; 37:1               ; 4 bits    ; 96 LEs        ; 40 LEs               ; 56 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux4                          ;
-; 36:1               ; 4 bits    ; 96 LEs        ; 36 LEs               ; 60 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux24                         ;
-; 38:1               ; 2 bits    ; 50 LEs        ; 22 LEs               ; 28 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux3                          ;
+; 37:1               ; 4 bits    ; 96 LEs        ; 40 LEs               ; 56 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux7                          ;
+; 36:1               ; 4 bits    ; 96 LEs        ; 36 LEs               ; 60 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux25                         ;
+; 38:1               ; 2 bits    ; 50 LEs        ; 22 LEs               ; 28 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux2                          ;
 ; 37:1               ; 2 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux29                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
@@ -617,7 +618,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_C ;
+; Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D ;
 +----------------+-------+-------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                        ;
 +----------------+-------+-------------------------------------------------------------+
@@ -915,6 +916,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------+
 
 
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; in3  ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
 +----------------------------------------------------------------------------+
 ; Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER" ;
 +------+-------+----------+--------------------------------------------------+
@@ -972,22 +982,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 18                          ;
 ;     ENA CLR           ; 1150                        ;
 ;     ENA CLR SLD       ; 28                          ;
-; cycloneiii_lcell_comb ; 2757                        ;
+; cycloneiii_lcell_comb ; 2792                        ;
 ;     arith             ; 291                         ;
 ;         2 data inputs ; 38                          ;
 ;         3 data inputs ; 253                         ;
-;     normal            ; 2466                        ;
+;     normal            ; 2501                        ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 62                          ;
-;         3 data inputs ; 325                         ;
-;         4 data inputs ; 2067                        ;
+;         2 data inputs ; 65                          ;
+;         3 data inputs ; 360                         ;
+;         4 data inputs ; 2064                        ;
 ; cycloneiii_mac_mult   ; 8                           ;
 ; cycloneiii_mac_out    ; 8                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.50                       ;
-; Average LUT depth     ; 5.67                        ;
+; Average LUT depth     ; 5.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -996,7 +1006,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:16     ;
+; Top            ; 00:00:14     ;
 +----------------+--------------+
 
 
@@ -1006,7 +1016,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Apr 11 22:37:15 2019
+    Info: Processing started: Thu Apr 11 23:31:19 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Final-Project -c top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1110,11 +1120,14 @@ Info (12133): Instantiated megafunction "datapath:U_DATAPATH|memory:U_MEMORY|ram
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4k04.tdf
     Info (12023): Found entity 1: altsyncram_4k04 File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/board/db/altsyncram_4k04.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_4k04" for hierarchy "datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (113028): 178 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 2 warnings found, and 2 warnings are reported. File: Y:/GitHub/digital-design/Final-Project/test-cases/bubble_sort.mif Line: 1
+    Warning (113027): Addresses ranging from 49 to 79 are not initialized File: Y:/GitHub/digital-design/Final-Project/test-cases/bubble_sort.mif Line: 1
+    Warning (113027): Addresses ranging from 109 to 255 are not initialized File: Y:/GitHub/digital-design/Final-Project/test-cases/bubble_sort.mif Line: 1
 Info (12128): Elaborating entity "mux_2x1" for hierarchy "datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 123
 Info (12128): Elaborating entity "mux_2x1" for hierarchy "datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 134
-Info (12128): Elaborating entity "registers_file" for hierarchy "datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 156
-Info (12128): Elaborating entity "extender" for hierarchy "datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 205
-Info (12128): Elaborating entity "alu" for hierarchy "datapath:U_DATAPATH|alu:U_ALU" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 231
+Info (12128): Elaborating entity "registers_file" for hierarchy "datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 158
+Info (12128): Elaborating entity "extender" for hierarchy "datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 207
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:U_DATAPATH|alu:U_ALU" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 233
 Info (12128): Elaborating entity "controller" for hierarchy "controller:U_CONTROLLER" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 103
 Warning (10492): VHDL Process Statement warning at controller.vhd(349): signal "IR20downto16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 349
 Warning (10492): VHDL Process Statement warning at controller.vhd(351): signal "IR20downto16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 351
@@ -1173,16 +1186,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4065 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4100 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 3946 logic cells
+    Info (21061): Implemented 3981 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 16 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Thu Apr 11 22:39:04 2019
-    Info: Elapsed time: 00:01:49
-    Info: Total CPU time (on all processors): 00:01:20
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Thu Apr 11 23:33:05 2019
+    Info: Elapsed time: 00:01:46
+    Info: Total CPU time (on all processors): 00:01:16
 
 
