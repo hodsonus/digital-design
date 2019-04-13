@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Thu Apr 11 23:33:05 2019
+Fri Apr 12 16:59:32 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -18,51 +18,52 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  10. Analysis & Synthesis IP Cores Summary
  11. State Machine - |top_level|controller:U_CONTROLLER|state
  12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated
- 17. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER
- 18. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX
- 19. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0
- 20. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1
- 21. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|reg:U_OUT_PORT
- 23. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER
- 24. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER
- 25. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A
- 26. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B
- 27. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D
- 28. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_REGISTER_A
- 29. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_REGISTER_B
- 30. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_D
- 31. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A
- 32. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A
- 33. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|alu:U_ALU
- 34. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B
- 35. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_C
- 36. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER
- 37. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_LO_REGISTER
- 38. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_HI_REGISTER
- 39. Parameter Settings for Inferred Entity Instance: datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0
- 40. Parameter Settings for Inferred Entity Instance: datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1
- 41. altsyncram Parameter Settings by Entity Instance
- 42. lpm_mult Parameter Settings by Entity Instance
- 43. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER"
- 44. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_C"
- 45. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B"
- 46. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A"
- 47. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_REGISTER_B"
- 48. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_REGISTER_A"
- 49. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D"
- 50. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER"
- 51. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1"
- 52. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0"
- 53. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX"
- 54. Port Connectivity Checks: "datapath:U_DATAPATH"
- 55. Post-Synthesis Netlist Statistics for Top Partition
- 56. Elapsed Time Per Partition
- 57. Analysis & Synthesis Messages
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component|altsyncram_4k04:auto_generated
+ 18. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER
+ 19. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX
+ 20. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0
+ 21. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1
+ 22. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|ram:U_RAM|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|memory:U_MEMORY|reg:U_OUT_PORT
+ 24. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER
+ 25. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER
+ 26. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A
+ 27. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B
+ 28. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D
+ 29. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_REGISTER_A
+ 30. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_REGISTER_B
+ 31. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_D
+ 32. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A
+ 33. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A
+ 34. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|alu:U_ALU
+ 35. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B
+ 36. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_C
+ 37. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER
+ 38. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_LO_REGISTER
+ 39. Parameter Settings for User Entity Instance: datapath:U_DATAPATH|reg:U_HI_REGISTER
+ 40. Parameter Settings for Inferred Entity Instance: datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0
+ 41. Parameter Settings for Inferred Entity Instance: datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1
+ 42. altsyncram Parameter Settings by Entity Instance
+ 43. lpm_mult Parameter Settings by Entity Instance
+ 44. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER"
+ 45. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_C"
+ 46. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B"
+ 47. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A"
+ 48. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_REGISTER_B"
+ 49. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_REGISTER_A"
+ 50. Port Connectivity Checks: "datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D"
+ 51. Port Connectivity Checks: "datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER"
+ 52. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1"
+ 53. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0"
+ 54. Port Connectivity Checks: "datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX"
+ 55. Port Connectivity Checks: "datapath:U_DATAPATH"
+ 56. Post-Synthesis Netlist Statistics for Top Partition
+ 57. Elapsed Time Per Partition
+ 58. Analysis & Synthesis Messages
 
 
 
@@ -88,13 +89,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 11 23:33:05 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 12 16:59:32 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_level                                   ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3,884                                       ;
-;     Total combinational functions  ; 2,784                                       ;
+; Total logic elements               ; 3,922                                       ;
+;     Total combinational functions  ; 2,822                                       ;
 ;     Dedicated logic registers      ; 1,340                                       ;
 ; Total registers                    ; 1340                                        ;
 ; Total pins                         ; 71                                          ;
@@ -254,16 +255,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 3,884          ;
+; Estimated Total logic elements              ; 3,922          ;
 ;                                             ;                ;
-; Total combinational functions               ; 2784           ;
+; Total combinational functions               ; 2822           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 2064           ;
-;     -- 3 input functions                    ; 613            ;
-;     -- <=2 input functions                  ; 107            ;
+;     -- 4 input functions                    ; 2119           ;
+;     -- 3 input functions                    ; 594            ;
+;     -- <=2 input functions                  ; 109            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 2493           ;
+;     -- normal mode                          ; 2531           ;
 ;     -- arithmetic mode                      ; 291            ;
 ;                                             ;                ;
 ; Total registers                             ; 1340           ;
@@ -277,8 +278,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clk50MHz~input ;
 ; Maximum fan-out                             ; 1372           ;
-; Total fan-out                               ; 16286          ;
-; Average fan-out                             ; 3.78           ;
+; Total fan-out                               ; 16405          ;
+; Average fan-out                             ; 3.77           ;
 +---------------------------------------------+----------------+
 
 
@@ -287,10 +288,10 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top_level                                      ; 2784 (2)            ; 1340 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 71   ; 0            ; 0          ; |top_level                                                                                                              ; top_level       ; work         ;
-;    |controller:U_CONTROLLER|                    ; 81 (81)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|controller:U_CONTROLLER                                                                                      ; controller      ; work         ;
-;    |datapath:U_DATAPATH|                        ; 2659 (4)            ; 1324 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH                                                                                          ; datapath        ; work         ;
-;       |alu:U_ALU|                               ; 951 (780)           ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU                                                                                ; alu             ; work         ;
+; |top_level                                      ; 2822 (2)            ; 1340 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 71   ; 0            ; 0          ; |top_level                                                                                                              ; top_level       ; work         ;
+;    |controller:U_CONTROLLER|                    ; 79 (79)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|controller:U_CONTROLLER                                                                                      ; controller      ; work         ;
+;    |datapath:U_DATAPATH|                        ; 2699 (4)            ; 1324 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH                                                                                          ; datapath        ; work         ;
+;       |alu:U_ALU|                               ; 954 (783)           ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU                                                                                ; alu             ; work         ;
 ;          |lpm_mult:Mult0|                       ; 92 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0                                                                 ; lpm_mult        ; work         ;
 ;             |mult_qgs:auto_generated|           ; 92 (92)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult0|mult_qgs:auto_generated                                         ; mult_qgs        ; work         ;
 ;          |lpm_mult:Mult1|                       ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|alu:U_ALU|lpm_mult:Mult1                                                                 ; lpm_mult        ; work         ;
@@ -307,15 +308,15 @@ refer to the applicable agreement for further details.
 ;       |mux_2x1:U_MUX_2x1_A|                     ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_A                                                                      ; mux_2x1         ; work         ;
 ;       |mux_2x1:U_MUX_2x1_B|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_B                                                                      ; mux_2x1         ; work         ;
 ;       |mux_2x1:U_MUX_2x1_D|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_2x1:U_MUX_2x1_D                                                                      ; mux_2x1         ; work         ;
-;       |mux_4x1:U_MUX_4x1_A|                     ; 48 (48)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A                                                                      ; mux_4x1         ; work         ;
-;       |mux_4x1:U_MUX_4x1_B|                     ; 41 (41)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B                                                                      ; mux_4x1         ; work         ;
+;       |mux_4x1:U_MUX_4x1_A|                     ; 49 (49)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A                                                                      ; mux_4x1         ; work         ;
+;       |mux_4x1:U_MUX_4x1_B|                     ; 68 (68)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_B                                                                      ; mux_4x1         ; work         ;
 ;       |mux_4x1:U_MUX_4x1_D|                     ; 98 (98)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D                                                                      ; mux_4x1         ; work         ;
 ;       |reg:U_ALU_OUT_REGISTER|                  ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_ALU_OUT_REGISTER                                                                   ; reg             ; work         ;
 ;       |reg:U_HI_REGISTER|                       ; 2 (2)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER                                                                        ; reg             ; work         ;
 ;       |reg:U_INSTRUCTION_REGISTER|              ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_INSTRUCTION_REGISTER                                                               ; reg             ; work         ;
 ;       |reg:U_LO_REGISTER|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_LO_REGISTER                                                                        ; reg             ; work         ;
 ;       |reg:U_MEMORY_DATA_REGISTER|              ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_MEMORY_DATA_REGISTER                                                               ; reg             ; work         ;
-;       |reg:U_PROGRAM_COUNTER|                   ; 1 (1)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER                                                                    ; reg             ; work         ;
+;       |reg:U_PROGRAM_COUNTER|                   ; 10 (10)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER                                                                    ; reg             ; work         ;
 ;       |reg:U_REGISTER_A|                        ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A                                                                         ; reg             ; work         ;
 ;       |reg:U_REGISTER_B|                        ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B                                                                         ; reg             ; work         ;
 ;       |registers_file:U_REGISTERS_FILE|         ; 1395 (1395)         ; 1024 (1024)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:U_DATAPATH|registers_file:U_REGISTERS_FILE                                                          ; registers_file  ; work         ;
@@ -366,29 +367,30 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top_level|controller:U_CONTROLLER|state                                                                                                                                                                                                                                                                                                                                                                                                              ;
-+----------------------------------+------------+---------------------+------------+-------------------------+-------------------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
-; Name                             ; state.HALT ; state.JUMP_REGISTER ; state.JUMP ; state.WRITE_RETURN_ADDR ; state.BRANCH_COMPLETION ; state.MEMORY_ACCESS_WRITE ; state.MEMORY_READ_COMPLETION ; state.LOAD_MEMORY_DATA_REG ; state.MEMORY_ACCESS_READ ; state.MEMORY_ADDRESS_COMPUTATION ; state.I_TYPE_COMPLETION ; state.R_TYPE_COMPLETION ; state.I_TYPE_EXECUTION ; state.R_TYPE_EXECUTION ; state.INSTRUCTION_DECODE ; state.LOAD_IR ; state.INSTRUCTION_FETCH ;
-+----------------------------------+------------+---------------------+------------+-------------------------+-------------------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
-; state.INSTRUCTION_FETCH          ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 0                       ;
-; state.LOAD_IR                    ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 1             ; 1                       ;
-; state.INSTRUCTION_DECODE         ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 1                        ; 0             ; 1                       ;
-; state.R_TYPE_EXECUTION           ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 1                      ; 0                        ; 0             ; 1                       ;
-; state.I_TYPE_EXECUTION           ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 1                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.R_TYPE_COMPLETION          ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 1                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.I_TYPE_COMPLETION          ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 1                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.MEMORY_ADDRESS_COMPUTATION ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 1                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.MEMORY_ACCESS_READ         ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 1                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.LOAD_MEMORY_DATA_REG       ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 1                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.MEMORY_READ_COMPLETION     ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 1                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.MEMORY_ACCESS_WRITE        ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 1                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.BRANCH_COMPLETION          ; 0          ; 0                   ; 0          ; 0                       ; 1                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.WRITE_RETURN_ADDR          ; 0          ; 0                   ; 0          ; 1                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.JUMP                       ; 0          ; 0                   ; 1          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.JUMP_REGISTER              ; 0          ; 1                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-; state.HALT                       ; 1          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
-+----------------------------------+------------+---------------------+------------+-------------------------+-------------------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|controller:U_CONTROLLER|state                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++----------------------------------+------------+---------------------+------------+-------------------------+-------------------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+-------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
+; Name                             ; state.HALT ; state.JUMP_REGISTER ; state.JUMP ; state.WRITE_RETURN_ADDR ; state.BRANCH_COMPLETION ; state.MEMORY_ACCESS_WRITE ; state.MEMORY_READ_COMPLETION ; state.LOAD_MEMORY_DATA_REG ; state.MEMORY_ACCESS_READ ; state.MEMORY_ADDRESS_COMPUTATION ; state.I_TYPE_COMPLETION ; state.R_TYPE_COMPLETION ; state.R_TYPE_WAIT ; state.I_TYPE_EXECUTION ; state.R_TYPE_EXECUTION ; state.INSTRUCTION_DECODE ; state.LOAD_IR ; state.INSTRUCTION_FETCH ;
++----------------------------------+------------+---------------------+------------+-------------------------+-------------------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+-------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
+; state.INSTRUCTION_FETCH          ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 0                       ;
+; state.LOAD_IR                    ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 1             ; 1                       ;
+; state.INSTRUCTION_DECODE         ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 1                        ; 0             ; 1                       ;
+; state.R_TYPE_EXECUTION           ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 1                      ; 0                        ; 0             ; 1                       ;
+; state.I_TYPE_EXECUTION           ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 1                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.R_TYPE_WAIT                ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 1                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.R_TYPE_COMPLETION          ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 1                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.I_TYPE_COMPLETION          ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 1                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.MEMORY_ADDRESS_COMPUTATION ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 1                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.MEMORY_ACCESS_READ         ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 1                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.LOAD_MEMORY_DATA_REG       ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 1                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.MEMORY_READ_COMPLETION     ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 1                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.MEMORY_ACCESS_WRITE        ; 0          ; 0                   ; 0          ; 0                       ; 0                       ; 1                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.BRANCH_COMPLETION          ; 0          ; 0                   ; 0          ; 0                       ; 1                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.WRITE_RETURN_ADDR          ; 0          ; 0                   ; 0          ; 1                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.JUMP                       ; 0          ; 0                   ; 1          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.JUMP_REGISTER              ; 0          ; 1                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
+; state.HALT                       ; 1          ; 0                   ; 0          ; 0                       ; 0                       ; 0                         ; 0                            ; 0                          ; 0                        ; 0                                ; 0                       ; 0                       ; 0                 ; 0                      ; 0                      ; 0                        ; 0             ; 1                       ;
++----------------------------------+------------+---------------------+------------+-------------------------+-------------------------+---------------------------+------------------------------+----------------------------+--------------------------+----------------------------------+-------------------------+-------------------------+-------------------+------------------------+------------------------+--------------------------+---------------+-------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -398,9 +400,20 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------------+----------------------------------------+
 ; datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_1|output[9..31] ; Stuck at GND due to stuck port data_in ;
 ; datapath:U_DATAPATH|memory:U_MEMORY|reg:IN_PORT_0|output[9..31] ; Stuck at GND due to stuck port data_in ;
+; controller:U_CONTROLLER|state.R_TYPE_WAIT                       ; Stuck at GND due to stuck port data_in ;
 ; controller:U_CONTROLLER|state.HALT                              ; Lost fanout                            ;
-; Total Number of Removed Registers = 47                          ;                                        ;
+; Total Number of Removed Registers = 48                          ;                                        ;
 +-----------------------------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                    ;
++-------------------------------------------+---------------------------+----------------------------------------+
+; Register name                             ; Reason for Removal        ; Registers Removed due to This Register ;
++-------------------------------------------+---------------------------+----------------------------------------+
+; controller:U_CONTROLLER|state.R_TYPE_WAIT ; Stuck at GND              ; controller:U_CONTROLLER|state.HALT     ;
+;                                           ; due to stuck port data_in ;                                        ;
++-------------------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -410,7 +423,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Total registers                              ; 1340  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 28    ;
+; Number of registers using Synchronous Load   ; 4     ;
 ; Number of registers using Asynchronous Clear ; 1322  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1196  ;
@@ -429,32 +442,32 @@ Encoding Type:  One-Hot
 +--------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[1]         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[31]        ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[11]        ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B|output[19]             ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 64 LEs               ; 608 LEs                ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER|output[28]            ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A|output[12]             ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX|Mux25 ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux31               ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux6                ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux24               ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_level|controller:U_CONTROLLER|Selector0                           ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D|Mux30               ;
-; 64:1               ; 2 bits    ; 84 LEs        ; 8 LEs                ; 76 LEs                 ; No         ; |top_level|controller:U_CONTROLLER|next_state                          ;
-; 65:1               ; 5 bits    ; 215 LEs       ; 35 LEs               ; 180 LEs                ; No         ; |top_level|controller:U_CONTROLLER|next_state.WRITE_RETURN_ADDR        ;
-; 36:1               ; 7 bits    ; 168 LEs       ; 63 LEs               ; 105 LEs                ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux14                         ;
-; 35:1               ; 8 bits    ; 184 LEs       ; 72 LEs               ; 112 LEs                ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux18                         ;
-; 37:1               ; 4 bits    ; 96 LEs        ; 40 LEs               ; 56 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux7                          ;
-; 36:1               ; 4 bits    ; 96 LEs        ; 36 LEs               ; 60 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux25                         ;
-; 38:1               ; 2 bits    ; 50 LEs        ; 22 LEs               ; 28 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux2                          ;
-; 37:1               ; 2 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux29                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[0]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[31]          ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_PROGRAM_COUNTER|output[19]          ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_B|output[3]                ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 64 LEs               ; 608 LEs                ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_HI_REGISTER|output[28]              ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|datapath:U_DATAPATH|reg:U_REGISTER_A|output[24]               ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|memory:U_MEMORY|mux_4x1:U_OUT_MUX|Mux25   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux31                 ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux7                  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_A|Mux26                 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_level|controller:U_CONTROLLER|Selector2                             ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |top_level|datapath:U_DATAPATH|mux_4x1:U_MUX_4x1_D|Mux2                  ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 8 LEs                ; 76 LEs                 ; No         ; |top_level|controller:U_CONTROLLER|next_state                            ;
+; 65:1               ; 5 bits    ; 215 LEs       ; 35 LEs               ; 180 LEs                ; No         ; |top_level|controller:U_CONTROLLER|next_state.MEMORY_ADDRESS_COMPUTATION ;
+; 36:1               ; 7 bits    ; 168 LEs       ; 63 LEs               ; 105 LEs                ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux14                           ;
+; 35:1               ; 8 bits    ; 184 LEs       ; 72 LEs               ; 112 LEs                ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux16                           ;
+; 37:1               ; 4 bits    ; 96 LEs        ; 40 LEs               ; 56 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux7                            ;
+; 36:1               ; 4 bits    ; 96 LEs        ; 36 LEs               ; 60 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux25                           ;
+; 38:1               ; 2 bits    ; 50 LEs        ; 22 LEs               ; 28 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux2                            ;
+; 37:1               ; 2 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |top_level|datapath:U_DATAPATH|alu:U_ALU|Mux29                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------+
@@ -980,24 +993,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 1340                        ;
 ;     CLR               ; 144                         ;
 ;     ENA               ; 18                          ;
-;     ENA CLR           ; 1150                        ;
-;     ENA CLR SLD       ; 28                          ;
-; cycloneiii_lcell_comb ; 2792                        ;
+;     ENA CLR           ; 1174                        ;
+;     ENA CLR SLD       ; 4                           ;
+; cycloneiii_lcell_comb ; 2830                        ;
 ;     arith             ; 291                         ;
 ;         2 data inputs ; 38                          ;
 ;         3 data inputs ; 253                         ;
-;     normal            ; 2501                        ;
+;     normal            ; 2539                        ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 65                          ;
-;         3 data inputs ; 360                         ;
-;         4 data inputs ; 2064                        ;
+;         2 data inputs ; 67                          ;
+;         3 data inputs ; 341                         ;
+;         4 data inputs ; 2119                        ;
 ; cycloneiii_mac_mult   ; 8                           ;
 ; cycloneiii_mac_out    ; 8                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.50                       ;
-; Average LUT depth     ; 5.73                        ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 5.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1006,7 +1019,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:14     ;
+; Top            ; 00:00:17     ;
 +----------------+--------------+
 
 
@@ -1016,7 +1029,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Apr 11 23:31:19 2019
+    Info: Processing started: Fri Apr 12 16:56:56 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Final-Project -c top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1129,8 +1142,8 @@ Info (12128): Elaborating entity "registers_file" for hierarchy "datapath:U_DATA
 Info (12128): Elaborating entity "extender" for hierarchy "datapath:U_DATAPATH|extender:U_SIGN_EXTEND_MUX_4A" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 207
 Info (12128): Elaborating entity "alu" for hierarchy "datapath:U_DATAPATH|alu:U_ALU" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/datapath.vhd Line: 233
 Info (12128): Elaborating entity "controller" for hierarchy "controller:U_CONTROLLER" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 103
-Warning (10492): VHDL Process Statement warning at controller.vhd(349): signal "IR20downto16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 349
-Warning (10492): VHDL Process Statement warning at controller.vhd(351): signal "IR20downto16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 351
+Warning (10492): VHDL Process Statement warning at controller.vhd(355): signal "IR20downto16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 355
+Warning (10492): VHDL Process Statement warning at controller.vhd(357): signal "IR20downto16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/controller.vhd Line: 357
 Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED5" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/top_level.vhd Line: 132
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "datapath:U_DATAPATH|alu:U_ALU|Mult0" File: //vmware-host/Shared Folders/GitHub/digital-design/Final-Project/vhdl/alu/alu.vhd Line: 39
@@ -1186,16 +1199,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4100 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4138 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 3981 logic cells
+    Info (21061): Implemented 4019 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 16 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4861 megabytes
-    Info: Processing ended: Thu Apr 11 23:33:05 2019
-    Info: Elapsed time: 00:01:46
-    Info: Total CPU time (on all processors): 00:01:16
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Fri Apr 12 16:59:32 2019
+    Info: Elapsed time: 00:02:36
+    Info: Total CPU time (on all processors): 00:01:47
 
 

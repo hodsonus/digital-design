@@ -38,6 +38,7 @@ architecture FSM of controller is
 
     type STATE_TYPE is (INSTRUCTION_FETCH, LOAD_IR, INSTRUCTION_DECODE,
                         R_TYPE_EXECUTION, I_TYPE_EXECUTION,
+                        R_TYPE_WAIT,
                         R_TYPE_COMPLETION, I_TYPE_COMPLETION,
                         MEMORY_ADDRESS_COMPUTATION,
                         MEMORY_ACCESS_READ, LOAD_MEMORY_DATA_REG, MEMORY_READ_COMPLETION,
@@ -212,6 +213,10 @@ begin --FSM
                     when others => report "Invalid R Type instruction while decoding." severity note;
                 end case;
 
+            -- waiting stage , waits for ALUOutReg to get its value
+            when R_TYPE_WAIT =>
+                next_state <= R_TYPE_COMPLETION;
+
             -- this state stores ALUOut into the register specified by IR 15 downto 11 (this is S1 in the excel instructions sheet?)
             when R_TYPE_COMPLETION =>
 
@@ -335,6 +340,7 @@ begin --FSM
                 next_state <= INSTRUCTION_FETCH; -- regardless if we branch or not, next state is the instruction fetch
                 ALUSrcA <= '1'; -- select register A to input to the ALU (register A -> IR(25 downto 21))
                 ALUSrcB <= "00"; -- select register B to input to the ALU (register B -> IR(20 downto 16))
+                PCSource <= "01";
 
                 case IR31downto26_ext is
                     when x"04" => -- branch on equal
