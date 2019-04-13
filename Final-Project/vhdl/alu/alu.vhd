@@ -58,15 +58,15 @@ begin --BHV
                 ResultHi <= (others => '0');
                 Branch <= '0';
             when OP_SHR_L  => --shift right logical
-                Result <= std_logic_vector(SHIFT_RIGHT(unsigned(Input1), to_integer(unsigned(ShiftAmt))));
+                Result <= std_logic_vector(SHIFT_RIGHT(unsigned(Input2), to_integer(unsigned(ShiftAmt))));
                 ResultHi <= (others => '0');
                 Branch <= '0';
             when OP_SHL_L  => --shift left logical
-                Result <= std_logic_vector(SHIFT_LEFT(unsigned(Input1), to_integer(unsigned(ShiftAmt))));
+                Result <= std_logic_vector(SHIFT_LEFT(unsigned(Input2), to_integer(unsigned(ShiftAmt))));
                 ResultHi <= (others => '0');
                 Branch <= '0';
             when OP_SHR_A  => --shift right arithmetic
-                Result <= std_logic_vector(SHIFT_RIGHT(signed(Input1), to_integer(unsigned(ShiftAmt))));
+                Result <= std_logic_vector(SHIFT_RIGHT(signed(Input2), to_integer(unsigned(ShiftAmt))));
                 ResultHi <= (others => '0');
                 Branch <= '0';
             when OP_SLT_S  => --set less than, signed

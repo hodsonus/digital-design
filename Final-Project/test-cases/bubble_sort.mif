@@ -37,21 +37,6 @@ Begin
 --   InnerLoop_init:
 0E : 00100100000100100000001000000000;   -- 0x24120200   --X addiu $s2, $zero, address       // load the table address to S2/R18
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 --   InnerLoop:
 0F : 00000010000101000100100000100011;   -- 0x2144823    --X Subu $t1, $s0, s4           // t1/r9 = size - s4/r20
 10 : 00010001001000000000000000001001;   -- 0x11200009   --X beq $t1, $zero, outerloop   // if t1 ==0,break and check the outerloop
@@ -74,7 +59,6 @@ Begin
 1D : 00100110101101010000000000000001;   -- 0x26B50001   -- addiu $s5, $s5, 1            // increment S5
 1E : 00001000000000000000000000001110;   -- 0x0800000E   -- j InnerLoop_init             // jump to the innerloop
 
-
 -- In this part, we will load value from the memory
 -- and store them in the ouport0
 
@@ -88,7 +72,6 @@ Begin
 
 -- the following nested loop will provide a 
 -- delay of 1s between every 2 displays
-
 
 23 : 00100100000011000000000001111111;  -- 0x240C007F   -- addiu $t4, $zero, 0x7F        // load t4 with the value 0x7F
 

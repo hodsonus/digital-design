@@ -13,10 +13,10 @@ Content
 03 : 00110010011101000000000000000101	;		-- andi $s4, $s3, 5	 / 	and immediate s4 = s3 and 5		// s4/r20 = 4
 04 : 00110110100101010000000000001001	;		-- ori $s5, $s4, 9	 / 	or immediate s5 = s4 or 9		// s5/r21 = D
 05 : 00111010100101100000000000000110	;		-- xori $s6, $s4, 6	 / 	xorimmediate s6 = s4 xor 6		// s6/r22 = 2
-06 : 00000000000101011011100010000010	;		-- srl $s7, $s5, 2	 / 	shift right s7 = s5 shifted right twice	// s7/r23 = 3
-07 : 00000000000101111100000011000000	;		-- sll $s7, $s5, 3	 / 	shift left s8 = s7 shifted left 3 times // s8/24 = 18
+06 : 00000000000101011011100010000010	;		-- 0x15B882 srl $s7, $s5, 2	 / 	shift right s7 = s5 shifted right twice	// s7/r23 = 3
+07 : 00000000000101111100000011000000	;		-- 0x17C0C0 sll $s7, $s5, 3	 / 	shift left s8 = s7 shifted left 3 times // s8/24 = 18
 08 : 10001100000110010000000000110000	;		-- lw $s9, 0C($zero)	 / 	load word in adress 0C + zero to s9	// s9/r25 = F00000FF
-09 : 00000000000110011101000010000011	;		-- sra $s10, $s9, 2	 /  s10 = s9 shifted arith right  2 times 	// s10/r26 = FC00003F
+09 : 00000000000110011101000010000011	;		-- 0x19D083 sra $s10, $s9, 2	 /  s10 = s9 shifted arith right  2 times 	// s10/r26 = FC00003F
 0A : 00001000000000000000000000001010	;		-- j  0A		 / 	infinite loop
 0B : 00000000000000000000000000000011	;		-- 3
 0C : 11110000000000000000000011111111	; 		-- F00000FF
